@@ -2505,7 +2505,7 @@ function $hs_htermInitAndRunIO(args, onComplete, onException) {
   function execHaskell() {
     var profileName = lib.f.parseQuery(document.location.search)['profile'];
     var terminal = new hterm.Terminal(profileName);
-    terminal.decorate(document.querySelector('#terminal'));
+    terminal.decorate(document.querySelector('#terminal'), function() {
 
     $hs_setTerminal(terminal);
 
@@ -2517,7 +2517,7 @@ function $hs_htermInitAndRunIO(args, onComplete, onException) {
         terminal.setCursorVisible(true);
         terminal.installKeyboard();
         $hs_runIO(args, onComplete, onException);
-      }, 0);
+      }, 0)});
   }
 
   // lib.ensureRuntimeDependencies();
@@ -2620,4 +2620,3 @@ function debugBelch2(f, args) {
   }
   catch(e) {}
 };
-

@@ -1,0 +1,5 @@
+*
+!.gitignore
+!/ghcjs-hello.jsexe
+!/advgame.jsexe
+
