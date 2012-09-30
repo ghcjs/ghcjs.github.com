@@ -289,10 +289,10 @@ function $hs_writeArrayzh(a, n, b, s) {
     a[n] = b;
     return s;
 };
-function $hs_sizeofArrayzh(a, s) {
+function $hs_sizzeofArrayzh(a, s) {
     return [s, $hs_int(a.length)];
 };
-function $hs_sizeofMutableArrayzh(a, s) {
+function $hs_sizzeofMutableArrayzh(a, s) {
     return [s, $hs_int(a.length)];
 };
 function $hs_indexArrayzh(a, n) {
@@ -314,23 +314,27 @@ if(WORD_SIZE_IN_BITS==32) {
 
     /**
      * @param {!number} n
+     */
+    malloc = function(n) {
+        var x = (n+3) & 0xFFFFFFFC;
+        var result = [new ArrayBuffer(x), 0, $hs_ptrBase];
+        result[0].ptrs=[];
+        $hs_ptrBase += n;
+        return result;
+    };
+    /**
+     * @param {!number} n
      * @param {Object=} s
      */
     $hs_newByteArrayzh = function(n, s) {
-        var result = [new ArrayBuffer(n), 0, $hs_ptrBase];
-        result[0].ptrs=[];
-        $hs_ptrBase += n;
-        return [s, result];
+        return [s, malloc(n)];
     };
     /**
      * @param {!number} n
      * @param {Object=} s
      */
     $hs_newPinnedByteArrayzh = function(n, s) {
-        var result = [new ArrayBuffer(n), 0, $hs_ptrBase];
-        result[0].ptrs=[];
-        $hs_ptrBase += n;
-        return [s, result];
+        return [s, malloc(n)];
     };
     /**
      * @param {!number} n
@@ -339,35 +343,64 @@ if(WORD_SIZE_IN_BITS==32) {
      */
     $hs_newAlignedPinnedByteArrayzh = function(n, k, s) {
         $hs_ptrBase += $hs_ptrBase%k;
-        var result = [new ArrayBuffer(n), 0, $hs_ptrBase];
-        result[0].ptrs=[];
-        $hs_ptrBase += n;
-        return [s, result];
+        return [s, malloc(n)];
+    };
+
+    $hs_ptrKey = function(ptr) {
+      if(typeof(ptr) === 'string') return -1 >>> 0;
+      if(typeof(ptr) === 'function') return -2 >>> 0;
+      return ptr === null ? 0 : ptr[2];
+    };
+
+    /**
+     * @param {!number} p
+     * @param {!number} n
+     * @param {Object=} ptr
+     */
+    $hs_pokePtr = function (p, n, ptr) {
+      var x = p[1]+(n<<2);
+      p[0].ptrs[x] = ptr;
+      // Store a value in the array itself too so we can check it later
+      (new Uint32Array(p[0],x))[0] = $hs_ptrKey(ptr);
+    };
+
+    /**
+     * @param {!number} p
+     * @param {!number} n
+     */
+    $hs_peekPtr = function (p, n) {
+      var x = p[1]+(n<<2);
+      var ptr = p[0].ptrs[x];
+      // If this is not the right pointer throw an error
+      if((new Uint32Array(p[0],x))[0] !== $hs_ptrKey(ptr))
+          throw "Pointer Error";
+      return ptr;
     };
 }
 if (WORD_SIZE_IN_BITS==64) {
     // ByteArray support
     var $hs_ptrBase = goog.math.Long.ZERO;
 
+    malloc = function(n) {
+        var x = (n.toInt()+3) & 0xFFFFFFFC;
+        var result = [new ArrayBuffer(x), 0, $hs_ptrBase];
+        result[0].ptrs=[];
+        $hs_ptrBase = $hs_ptrBase.add(n);
+        return result;
+    };
     /**
      * @param {!goog.math.Long} n
      * @param {Object=} s
      */
     $hs_newByteArrayzh = function(n, s) {
-        var result = [new ArrayBuffer(n.toInt()), 0, $hs_ptrBase];
-        result[0].ptrs=[];
-        $hs_ptrBase = $hs_ptrBase.add(n);
-        return [s, result];
+        return [s, malloc(n)];
     };
     /**
      * @param {!goog.math.Long} n
      * @param {Object=} s
      */
     $hs_newPinnedByteArrayzh = function(n, s) {
-        var result = [new ArrayBuffer(n.toInt()), 0, $hs_ptrBase];
-        result[0].ptrs=[];
-        $hs_ptrBase = $hs_ptrBase.add(n);
-        return [s, result];
+        return [s, malloc(n)];
     };
     /**
      * @param {!goog.math.Long} n
@@ -376,13 +409,45 @@ if (WORD_SIZE_IN_BITS==64) {
      */
     $hs_newAlignedPinnedByteArrayzh = function(n, k, s) {
         $hs_ptrBase = $hs_ptrBase.add(goog.math.Long.fromInt($hs_ptrBase.toInt() % k.toInt()));
-        var result = [new ArrayBuffer(n.toNumber()), 0, $hs_ptrBase];
-        result[0].ptrs=[];
-        $hs_ptrBase = $hs_ptrBase.add(n);
-        return [s, result];
+        return [s, malloc(n)];
+    };
+
+    $hs_ptrKey = function(ptr) {
+      if(typeof(ptr) === 'string') return -1 >>> 0;
+      if(typeof(ptr) === 'function') return -2 >>> 0;
+      return ptr === null ? 0 : ptr[2].toNumber();
+    };
+
+    /**
+     * @param {!number} p
+     * @param {!number} n
+     * @param {Object=} ptr
+     */
+    $hs_pokePtr = function (p, n, ptr) {
+      var x = p[1]+(n.toNumber()<<3);
+      p[0].ptrs[x] = ptr;
+      // Store a value in the array itself too so we can check it later
+      (new Uint32Array(p[0],x))[0] = $hs_ptrKey(ptr);
+    };
+
+    /**
+     * @param {!number} p
+     * @param {!number} n
+     */
+    $hs_peekPtr = function (p, n) {
+      var x = p[1]+(n.toNumber()<<3);
+      var ptr = p[0].ptrs[x];
+
+      ptr = ptr || null; // unitialized pointers as null
+
+      // If this is not the right pointer throw an error
+      if((new Uint32Array(p[0],x))[0] !== $hs_ptrKey(ptr))
+          throw "Pointer Error";
+      return ptr;
     };
 }
-
+function free(p) {
+};
 function $hs_byteArrayContentszh(a) {
     return a;
 };
@@ -392,11 +457,11 @@ function $hs_sameMutableByteArrayzh(a, b) {
 function $hs_unsafeFreezzeByteArrayzh(a, s) {
     return [s, a];
 };
-function $hs_sizeofByteArrayzh(a) {
-    return new Uint8Array(a[0]).length;
+function $hs_sizzeofByteArrayzh(a) {
+    return $hs_int(new Uint8Array(a[0]).length);
 };
-function $hs_sizeofMutableByteArrayzh(a) {
-    return new Uint8Array(a[0]).length;
+function $hs_sizzeofMutableByteArrayzh(a) {
+    return $hs_int(new Uint8Array(a[0]).length);
 };
 function $hs_indexCharArrayzh(a, n) {
     return String.fromCharCode(new Uint8Array(a[0])[n]);
@@ -504,16 +569,8 @@ function $hs_indexWordArrayzh(a, n) {
         return goog.math.Long.fromBits(x[0], x[1]);
     }
 };
-function $hs_checkPointer(p, n) {
-    if(!((p === null && n === 0) || p === n))
-        throw "Pointer Error";
-};
 function $hs_indexAddrArrayzh(a, n) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[n];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0])[n]);
-    return res;
+    return $hs_peekPtr(a, n);
 };
 function $hs_indexFloatArrayzh(a, n) {
     n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
@@ -524,11 +581,7 @@ function $hs_indexDoubleArrayzh(a, n) {
     return new Float64Array(a[0])[n];
 };
 function $hs_indexStablePtrArrayzh(a, n) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[n];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0])[n]);
-    return res;
+    return $hs_peekPtr(a, n);
 };
 function $hs_indexInt8Arrayzh(a, n) {
     if(WORD_SIZE_IN_BITS == 32) {
@@ -609,11 +662,7 @@ function $hs_readWordArrayzh(a, n, s) {
     }
 };
 function $hs_readAddrArrayzh(a, n, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[n];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0])[n]);
-    return [s, res];
+    return [s, $hs_peekPtr(a, n)];
 };
 function $hs_readFloatArrayzh(a, n, s) {
     n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
@@ -624,11 +673,7 @@ function $hs_readDoubleArrayzh(a, n, s) {
     return [s, new Float64Array(a[0])[n]];
 };
 function $hs_readStablePtrArrayzh(a, n, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[n];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0])[n]);
-    return [s, res];
+    return [s, $hs_peekPtr(a, n)];
 };
 function $hs_readInt8Arrayzh(a, n, s) {
     if(WORD_SIZE_IN_BITS == 32) {
@@ -717,9 +762,7 @@ function $hs_writeWordArrayzh(a, n, v, s) {
     }
 };
 function $hs_writeAddrArrayzh(a, n, v, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    a[0].ptrs[n] = v;
-    new Uint32Array(a[0])[n] = (v === null ? 0 : v[2]);
+    $hs_pokePtr(a, n, v);
     return s;
 };
 function $hs_writeFloatArrayzh(a, n, v, s) {
@@ -733,9 +776,7 @@ function $hs_writeDoubleArrayzh(a, n, v, s) {
     return s;
 };
 function $hs_writeStablePtrArrayzh(a, n, v, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    a[0].ptrs[n] = v;
-    new Uint32Array(a[0])[n] = (v === null ? 0 : v[2]);
+    $hs_pokePtr(a, n, v);
     return s;
 };
 function $hs_writeInt8Arrayzh(a, n, v, s) {
@@ -830,7 +871,7 @@ function $hs_copyMutableByteArrayzh(src, soff, dest, doff, count, s) {
 };
 function $hs_plusAddrzh(a, n) {
     n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    if(typeof(a) === 'string')
+    if(a === null || typeof(a) === 'string')
         return [a, n, n];
     else
         return [a[0],a[1]+n,a[2]+n];
@@ -909,11 +950,7 @@ function $hs_indexWordOffAddrzh(a, n) {
     }
 };
 function $hs_indexAddrOffAddrzh(a, n) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[a[1]+(n<<2)];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0],a[1]+(n<<2))[0]);
-    return res;
+    return $hs_peekPtr(a, n);
 };
 function $hs_indexFloatOffAddrzh(a, n) {
     n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
@@ -924,11 +961,7 @@ function $hs_indexDoubleOffAddrzh(a, n) {
     return new Float64Array(a[0],a[1]+(n<<3))[0];
 };
 function $hs_indexStablePtrOffAddrzh(a, n) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[a[1]+(n<<2)];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0],a[1]+(n<<2))[0]);
-    return res;
+    return $hs_peekPtr(a, n);
 };
 function $hs_indexInt8OffAddrzh(a, n) {
     if(WORD_SIZE_IN_BITS==32) {
@@ -1017,11 +1050,7 @@ function $hs_readWordOffAddrzh(a, n, s) {
     }
 };
 function $hs_readAddrOffAddrzh(a, n, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[a[1]+(n<<2)];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0],a[1]+(n<<2))[0]);
-    return [s, res];
+    return [s, $hs_peekPtr(a, n)];
 };
 function $hs_readFloatOffAddrzh(a, n, s) {
     n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
@@ -1032,11 +1061,7 @@ function $hs_readDoubleOffAddrzh(a, n, s) {
     return [s, new Float64Array(a[0],a[1]+(n<<3))[0]];
 };
 function $hs_readStablePtrOffAddrzh(a, n, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    var res = a[0].ptrs[a[1]+(n<<2)];
-    if(HS_DEBUG)
-      $hs_checkPointer(res, new Uint32Array(a[0],a[1]+(n<<2))[0])
-    return [s, res];
+    return [s, $hs_peekPtr(a, n)];
 };
 function $hs_readInt8OffAddrzh(a, n, s) {
     n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
@@ -1072,9 +1097,12 @@ function $hs_readInt64OffAddrzh(a, n, s) {
 function $hs_readWord8OffAddrzh(a, n, s) {
     n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
     if(typeof(a) === 'string')
-        return [s, a.charCodeAt(n)];
+        var res = n==a.length?0:a.charCodeAt(n);
+    else if(typeof(a[0]) === 'string')
+        var res = n==a[0].length?0:a[0].charCodeAt(a[1]+n);
     else
-        return [s, goog.math.Long.fromBits(new Uint8Array(a[0],a[1]+n)[0], 0)];
+        var res = new Uint8Array(a[0],a[1]+n)[0];
+    return [s, WORD_SIZE_IN_BITS==32 ? res : goog.math.Long.fromBits(res)];
 };
 function $hs_readWord16OffAddrzh(a, n, s) {
     if(WORD_SIZE_IN_BITS==32) {
@@ -1132,9 +1160,7 @@ function $hs_writeWordOffAddrzh(a, n, v, s) {
     }
 };
 function $hs_writeAddrOffAddrzh(a, n, v, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    a[0].ptrs[n] = v;
-    (new Uint32Array(a[0],a[1]+(n<<2)))[0] = (v === null ? 0 : v[2]);
+    $hs_pokePtr(a, n, v);
     return s;
 };
 function $hs_writeFloatOffAddrzh(a, n, v, s) {
@@ -1148,9 +1174,7 @@ function $hs_writeDoubleOffAddrzh(a, n, v, s) {
     return s;
 };
 function $hs_writeStablePtrOffAddrzh(a, n, v, s) {
-    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
-    a[0].ptrs[n] = v;
-    (new Uint32Array(a[0],a[1]+(n<<2)))[0] = (v === null ? 0 : v[2]);
+    $hs_peekPtr(a, n, v);
     return s;
 };
 function $hs_writeInt8OffAddrzh(a, n, v, s) {
@@ -1212,22 +1236,6 @@ function $hs_logDebug(str) {
 
 var $hs_logger = goog.debug.Logger.getLogger('hs');
 
-function $hs_utf32(s) {
-    var res = $hs_newByteArrayzh($hs_int((s.length<<2)+4))[1];
-    var dest = new Uint32Array(res[0]);
-    for(var i=0;i!=s.length;i++)
-        dest[i]=s.charCodeAt(i);
-    dest[i]=0;
-    return res;
-};
-function $hs_fromUtf32(s) {
-    var res = "";
-    var src = new Uint32Array(s[0],s[1]);
-    var len = src[src.length-1] === 0 ? src.length - 1 : src.length;
-    for(var i=0;i!=len;i++)
-        res=res+String.fromCharCode(src[i]);
-    return res;
-};
 function $hs_ascii(s) {
     var res = $hs_newByteArrayzh($hs_int(s.length+1))[1];
     var dest = new Uint8Array(res[0]);
@@ -1546,6 +1554,26 @@ function _hs_text_decode_utf8(dest, doffptr, src, srcend)
 
     return [src[0], s, src[2] + (s - src[1])];
 };
+function $hs_toStringOfBytes(src, len) {
+    var res = "";
+    var srcarray = new Uint8Array(src[0],0);
+    var s = src[1];
+    var end = s + len;
+    for (var i = s; i !== end; i++) {
+      res += String.fromCharCode(srcarray[i]);
+    }
+    return res;
+};
+function $hs_toStringOfWords(src, len) {
+    var res = "";
+    var srcarray = new Uint16Array(src[0],0);
+    var s = src[1];
+    var end = s + len;
+    for (var i = s; i !== end; i++) {
+      res += String.fromCharCode(srcarray[i]);
+    }
+    return res;
+};
 function $hs_fromUtf8(src) {
     var res = "";
     var srcarray = new Uint8Array(src[0],0);
@@ -1713,7 +1741,7 @@ function u_towupper(a) { return $hs_int(String.fromCharCode(a).toUpperCase().cha
 function rtsSupportsBoundThreads() { return $hs_int(0); };
 function getOrSetGHCConcSignalSignalHandlerStore(x) { return x; };
 function stg_sig_install(a,b,c) { return $hs_int(-1); };
-function localeEncoding() { return $hs_ascii("UTF-32LE"); };
+function localeEncoding() { return $hs_ascii("UTF-8"); };
 function hs_iconv_open(to,from) { return $hs_int(1); };
 function hs_iconv_close(h) { return $hs_int(0); };
 
@@ -1884,7 +1912,7 @@ function hs_word64ToWord(i) {
 function hs_word64ToInt64(i) {
    return i; };
 
-errno = 0;
+var errno = 0;
 function __hscore_get_errno() {
     HS_RTS_TRACE && $hs_logger.info('__hscore_get_errno');
     return $hs_int(errno);
@@ -1894,7 +1922,7 @@ function __hscore_set_errno(e) {
     errno = e;
 };
 function strerror(e) {
-    return $hs_utf32("Error "+e);
+    return $hs_toUtf8("Error "+e);
 }
 function __hscore_s_isreg(m) {
     HS_RTS_TRACE && $hs_logger.info('__hscore_s_isreg');
@@ -1985,8 +2013,18 @@ function __hscore_st_ino(st) {
     return $hs_int(0);
 };
 function __hscore_stat(f, buf) {
-    var p = $hs_fromUtf32(f);
+    var p = $hs_fromUtf8(f);
     HS_RTS_TRACE && $hs_logger.info('__hscore_stat '+p);
+    var result=$hs_findFile(p);
+    if(result===-1) {
+        var url = $hs_getFileURL(p);
+        if(url!==null) {
+          // Let's just assume it exists for now
+          return $hs_int(0);
+        }
+        errno = 2 // ENOENT
+        return $hs_int(-1);
+    }
     return $hs_int(0);
 };
 function __hscore_fstat(fd, buf) {
@@ -1994,7 +2032,7 @@ function __hscore_fstat(fd, buf) {
     return $hs_int(0);
 };
 function __hscore_lstat(f, buf) {
-    var p = $hs_fromUtf32(f);
+    var p = $hs_fromUtf8(f);
     HS_RTS_TRACE && $hs_logger.info('__hscore_lstat '+p);
     return $hs_int(0);
 };
@@ -2048,7 +2086,7 @@ function $hs_getFileURL(f) {
 };
 function $hs_MemFile(text) {
   this.isatty = false;
-  this.text = text;
+  this.text = lib.encodeUTF8(text);
   this.fptr = 0;
   this.waitingToRead = [];
 };
@@ -2059,25 +2097,20 @@ $hs_MemFile.prototype.read = function(p, s) {
         return 0;
     }
 
-    var maxChars = s>>>2;
     if( n > maxChars )
         n = maxChars;
 
     var end = this.fptr + n;
-    var dest = new Uint32Array(p[0], p[1]);
+    var dest = new Uint8Array(p[0], p[1]);
     for(var i=this.fptr;i!=end;i++)
         dest[i]=this.text.charCodeAt(i);
     this.fptr=end;
 
-    HS_RTS_TRACE && $hs_logger.info('read : '+(n<<2));
-    return n<<2;
+    HS_RTS_TRACE && $hs_logger.info('read : '+n);
+    return n;
 };
 $hs_MemFile.prototype.write = function(p, s) {
-    var len = s>>>2;
-    var src = new Uint32Array(p[0], p[1]);
-    var res = "";
-    for(var i=0;i!=len;i++)
-        res=res+String.fromCharCode(src[i]);
+    var res = (new lib.UTF8Decoder()).decode($hs_toStringOfBytes(p, $hs_intToNumber(s)))
 
     if(this.fptr <= this.text.length)
         this.text=this.text+res;
@@ -2099,14 +2132,8 @@ $hs_ConsoleOut.prototype.read = function(p, s) {
     return 0;
 };
 $hs_ConsoleOut.prototype.write = function(p, s) {
-  var len = s>>>2;
-  var src = new Uint32Array(p[0], p[1]);
-  var res = "";
-  for(var i=0;i!=len;i++) {
-    var c = src[i];
-    res=res+(c==10?"\r\n":String.fromCharCode(c));
-  }
-  console.log(res);
+  var res = (new lib.UTF8Decoder()).decode($hs_toStringOfBytes(p, $hs_intToNumber(s)))
+  console.log(res.replace("\n","\r\n"));
   return s;
 };
 $hs_ConsoleOut.prototype.ready = function() {
@@ -2121,14 +2148,8 @@ $hs_TerminalOut.prototype.read = function(p, s) {
   return 0;
 };
 $hs_TerminalOut.prototype.write = function(p, s) {
-  var len = s>>>2;
-  var src = new Uint32Array(p[0], p[1]);
-  var res = "";
-  for(var i=0;i!=len;i++) {
-    var c = src[i];
-    res=res+(c==10?"\r\n":String.fromCharCode(c));
-  }
-  this.terminal.io.print(res);
+  var res = (new lib.UTF8Decoder()).decode($hs_toStringOfBytes(p, $hs_intToNumber(s)))
+  this.terminal.io.print(res.replace("\n","\r\n"));
   return s;
 };
 $hs_TerminalOut.prototype.ready = function() {
@@ -2149,7 +2170,7 @@ function $hs_TerminalIn(terminal) {
     else {
        terminal.io.print(s);
     }
-    _this.buffer = _this.buffer + s;
+    _this.buffer = _this.buffer + lib.encodeUTF8(s);
 
     // Wake any waiting threads
     var wake = _this.waitingToRead;
@@ -2167,18 +2188,18 @@ $hs_TerminalIn.prototype.read = function(p, s) {
         return 0;
     }
 
-    var maxChars = s>>>2;
+    var maxChars = s;
     if( n > maxChars )
         n = maxChars;
 
-    var dest = new Uint32Array(p[0], p[1]);
+    var dest = new Uint8Array(p[0], p[1]);
     for(var i=0;i!=n;i++)
         dest[i]=this.buffer.charCodeAt(i);
 
     this.buffer = this.buffer.substr(i);
 
-    HS_RTS_TRACE && $hs_logger.info('read : '+(n<<2));
-    return n<<2;
+    HS_RTS_TRACE && $hs_logger.info('read : '+ n);
+    return n;
 };
 $hs_TerminalIn.prototype.write = function(p, s) {
   return -1;
@@ -2204,6 +2225,9 @@ function fdReady(fd, write) {
         return $hs_int(-1);
     return $hs_int(f.ready(write) ? 1 : 0);
 };
+function dup(fd) {
+    return fd;
+};
 function $hs_findFile(f) {
     for(var i=0;i!==$hs_allFiles.length;i++) {
         if(f===$hs_allFiles[i].path)
@@ -2212,7 +2236,7 @@ function $hs_findFile(f) {
     return -1;
 };
 function __hscore_open(f,h,m) {
-    var p = $hs_fromUtf32(f);
+    var p = $hs_fromUtf8(f);
     HS_RTS_TRACE && $hs_logger.info('__hscore_open '+p);
     var result=$hs_findFile(p);
     if(result===-1) {
@@ -2277,16 +2301,18 @@ function __hscore_select(nfds, readfds, writefds, exceptfds, timeout) {
 };
 
 environ = {};
-environ['TMPDIR'] = $hs_utf32("/tmp");
+environ['TMPDIR'] = "/tmp";
+environ['HOME'] = "/home";
+environ['TERM'] = "xterm";
 function __hscore_environ() {
     HS_RTS_TRACE && $hs_logger.info('__hscore_environ');
     return environ;
 };
 function getenv(e) {
-    var s = $hs_fromUtf32(e);
+    var s = $hs_fromUtf8(e);
     HS_RTS_TRACE && $hs_logger.info('getenv '+s);
     var v = environ[s];
-    return v===undefined?null:v;
+    return v===undefined?null:$hs_toUtf8(v);
 };
 function lockFile(fd, dev, ino, for_writing) {
     HS_RTS_TRACE && $hs_logger.info('lockFile');
@@ -2317,6 +2343,19 @@ function write(fd, p, s) {
         return $hs_int(-1);
     return $hs_int(f.write(p, s));
 };
+function __hsunix_long_path_size() {
+    return $hs_int(1024);
+};
+function getcwd(b, size) {
+    var s = $hs_intToNumber(size);
+    var cwd = "/home";
+    memcpy(b, cwd, s < (cwd.length + 1) ? s : (cwd.length + 1));
+    return b;
+};
+function mkdir(path, mode) {
+    // TODO add something here
+    return $hs_int(0);
+};
 function ghc_strlen(s) {
     return s.indexOf('\x00');
 };
@@ -2330,6 +2369,60 @@ var $hs_loaded = [];
 var $hs_loadPath = "./";
 var $hs_loading = false;
 
+// Support for labels
+var $hs_exports = {}
+function $hs_labelData(l, size) {
+    return $hs_exports[l] || null;
+};
+function $hs_labelFunction(l, size) {
+    return $hs_exports[l] || null;
+};
+function $hs_export(n, ptr) {
+  $hs_exports[n] = malloc($hs_int(8));
+  $hs_pokePtr($hs_exports[n], $hs_int(0), ptr);
+};
+/**
+ * @param {Object} ptr
+ * @param {...Object} var_args
+ */
+function $hs_dynamicCall(ptr, var_args) {
+  var f = $hs_peekPtr(ptr, $hs_int(0));
+  var remainingArguments = Array.prototype.slice.call(arguments, 1, arguments.length);
+  f.apply(f, remainingArguments);
+};
+$hs_export('cur_term', malloc($hs_int(64)));
+$hs_export('del_curterm', function() {});
+function set_curterm(t) {
+};
+var $hs_terminfo = {};
+var $hs_ESC = String.fromCharCode(27);
+$hs_terminfo["cup"] = $hs_ESC + "[%i%p1%d;%p2%dH";
+$hs_terminfo["cnorm"] = $hs_ESC + "[?12l" + $hs_ESC + "[?25h";
+$hs_terminfo["civis"] = $hs_ESC + "[?25l";
+$hs_terminfo["setaf"] = $hs_ESC + "[3%p1%dm";
+$hs_terminfo["setab"] = $hs_ESC + "[4%p1%dm";
+$hs_terminfo["sgr0"] = $hs_ESC + "(B" + $hs_ESC + "[m";
+$hs_terminfo["clear"] = $hs_ESC + "[H" + $hs_ESC + "[2J";
+function tigetstr(capname) {
+  return $hs_terminfo[$hs_fromUtf8(capname)] || null;
+};
+function tcgetattr(fd, ios) {
+  return $hs_int(0);
+};
+function tcsetattr(fd, action, ios) {
+  return $hs_int(0);
+};
+function vty_set_term_timing() {
+};
+function __hsunix_SIGWINCH() {
+  return $hs_int(28);
+};
+function vty_c_get_window_size() {
+  return $hs_int(20*0x10000 + 20);
+};
+function vty_mk_wcswidth(s, len) {
+  return $hs_int($hs_toUtf8($hs_toStringOfWords(s, len)));
+};
 /**
  * @param {Array.<Object>}      args
  * @param {function(!string)}   onComplete
@@ -2566,6 +2659,9 @@ function gettimeofday(tp, tzp) {
         return goog.math.Long.ZERO;
     }
 };
+function __hscore_gettimeofday(tp, tzp) {
+    return gettimeofday(tp, tzp);
+};
 function ghc_wrapper_d1rx_getrusage(who, usage) {
     var x = new Int32Array(usage[0], usage[1]);
     var t = new Date().getTime();
@@ -2582,11 +2678,49 @@ function ghc_wrapper_d1rx_getrusage(who, usage) {
         return goog.math.Long.ZERO;
     }
 };
+function ghc_wrapper_d1rG_getrusage(who, usage) {
+    var x = new Int32Array(usage[0], usage[1]);
+    var t = new Date().getTime();
+    if(WORD_SIZE_IN_BITS==32) {
+        x[0] = (t/1000) | 0;
+        x[1] = ((t%1000)*1000) | 0;
+        return 0;
+    }
+    else {
+        x[0] = (t/1000) | 0;
+        x[1] = 0;
+        x[2] = ((t%1000)*1000) | 0;
+        x[3] = 0;
+        return goog.math.Long.ZERO;
+    }
+};
+function ghc_wrapper_d1s8_getrusage(who, usage) {
+    var x = new Int32Array(usage[0], usage[1]);
+    var t = new Date().getTime();
+    if(WORD_SIZE_IN_BITS==32) {
+        x[0] = (t/1000) | 0;
+        x[1] = ((t%1000)*1000) | 0;
+        return 0;
+    }
+    else {
+        x[0] = (t/1000) | 0;
+        x[1] = 0;
+        x[2] = ((t%1000)*1000) | 0;
+        x[3] = 0;
+        return goog.math.Long.ZERO;
+    }
+};
+function ghc_wrapper_d2jT_fcntl(a, b) {
+    return $hs_int(0);
+};
+function ghc_wrapper_d2jH_fcntl(a, b, c) {
+    return $hs_int(0);
+};
 function g_object_ref(p) {
   return p;
 };
 function g_free(p) {
-}
+};
 function ghcjs_currentWindow() {
   return window;
 };
@@ -2610,13 +2744,28 @@ function webkit_dom_event_target_add_event_listener_closure(obj, eventName, f, b
 };
 function errorBelch2(f, args) {
   try {
-    console.log("Error: " + $hs_fromUtf32(f) + " " + $hs_fromUtf32(args));
+    console.log("Error: " + $hs_fromUtf8(f) + " " + $hs_fromUtf8(args));
   }
   catch(e) {}
 };
 function debugBelch2(f, args) {
   try {
-    console.log("Debug: " + $hs_fromUtf32(f) + " " + $hs_fromUtf32(args));
+    console.log("Debug: " + $hs_fromUtf8(f) + " " + $hs_fromUtf8(args));
   }
   catch(e) {}
 };
+function getProgArgv(p_argc, p_argv) {
+    (new Int32Array(p_argc[0], p_argc[1]))[0] = 1;
+    var argv = malloc($hs_int(8));
+    $hs_pokePtr(argv, $hs_int(0), "application");
+    $hs_pokePtr(p_argv, $hs_int(0), argv);
+};
+function shutdownHaskellAndExit(n) {
+};
+function setupterm(term, fildes, erret) {
+    (new Int32Array(erret[0], erret[1]))[0] = 1;
+    return 0;
+};
+$hs_export('gtk2hs_g_object_unref_from_mainloop', function(o) {
+});
+
