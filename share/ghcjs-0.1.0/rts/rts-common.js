@@ -347,9 +347,13 @@ if(WORD_SIZE_IN_BITS==32) {
     };
 
     $hs_ptrKey = function(ptr) {
-      if(typeof(ptr) === 'string') return -1 >>> 0;
-      if(typeof(ptr) === 'function') return -2 >>> 0;
-      return ptr === null ? 0 : ptr[2];
+      if(ptr === null) return 0 >>> 0;
+      if(ptr === undefined) return -1 >>> 0;
+      if(typeof(ptr) === 'string') return -2 >>> 0;
+      if(typeof(ptr) === 'function') return -3 >>> 0;
+      if(typeof(ptr) === 'number') return -4 >>> 0;
+      if(typeof(ptr) === 'boolean') return -5 >>> 0;
+      return -6 >>> 0;
     };
 
     /**
@@ -359,7 +363,7 @@ if(WORD_SIZE_IN_BITS==32) {
      */
     $hs_pokePtr = function (p, n, ptr) {
       var x = p[1]+(n<<2);
-      p[0].ptrs[x] = ptr;
+      p[0].ptrs[x>>2] = ptr;
       // Store a value in the array itself too so we can check it later
       (new Uint32Array(p[0],x))[0] = $hs_ptrKey(ptr);
     };
@@ -370,7 +374,8 @@ if(WORD_SIZE_IN_BITS==32) {
      */
     $hs_peekPtr = function (p, n) {
       var x = p[1]+(n<<2);
-      var ptr = p[0].ptrs[x];
+      var ptr = p[0].ptrs[x>>2];
+      if(ptr === undefined && (new Uint32Array(p[0],x))[0] === 0) ptr = null;
       // If this is not the right pointer throw an error
       if((new Uint32Array(p[0],x))[0] !== $hs_ptrKey(ptr))
           throw "Pointer Error";
@@ -413,9 +418,13 @@ if (WORD_SIZE_IN_BITS==64) {
     };
 
     $hs_ptrKey = function(ptr) {
-      if(typeof(ptr) === 'string') return -1 >>> 0;
-      if(typeof(ptr) === 'function') return -2 >>> 0;
-      return ptr === null ? 0 : ptr[2].toNumber();
+      if(ptr === null) return 0 >>> 0;
+      if(ptr === undefined) return -1 >>> 0;
+      if(typeof(ptr) === 'string') return -2 >>> 0;
+      if(typeof(ptr) === 'function') return -3 >>> 0;
+      if(typeof(ptr) === 'number') return -4 >>> 0;
+      if(typeof(ptr) === 'boolean') return -5 >>> 0;
+      return -6 >>> 0;
     };
 
     /**
@@ -425,7 +434,7 @@ if (WORD_SIZE_IN_BITS==64) {
      */
     $hs_pokePtr = function (p, n, ptr) {
       var x = p[1]+(n.toNumber()<<3);
-      p[0].ptrs[x] = ptr;
+      p[0].ptrs[x>>3] = ptr;
       // Store a value in the array itself too so we can check it later
       (new Uint32Array(p[0],x))[0] = $hs_ptrKey(ptr);
     };
@@ -436,11 +445,9 @@ if (WORD_SIZE_IN_BITS==64) {
      */
     $hs_peekPtr = function (p, n) {
       var x = p[1]+(n.toNumber()<<3);
-      var ptr = p[0].ptrs[x];
-
-      ptr = ptr || null; // unitialized pointers as null
-
+      var ptr = p[0].ptrs[x>>3];
       // If this is not the right pointer throw an error
+      if(ptr === undefined && (new Uint32Array(p[0],x))[0] === 0) ptr = null;
       if((new Uint32Array(p[0],x))[0] !== $hs_ptrKey(ptr))
           throw "Pointer Error";
       return ptr;
@@ -560,13 +567,19 @@ function $hs_indexIntArrayzh(a, n) {
 };
 function $hs_indexWordArrayzh(a, n) {
     if(WORD_SIZE_IN_BITS==32) {
-        // fixme there should be something better than checking this manually
-        if(a instanceof goog.math.Integer) return $hs_absolute(a).getBits(n);
-        else return new Uint32Array(a[0])[n];
+        if(a instanceof goog.math.Integer) {
+            return $hs_absoluste(a).getBits(n);
+        }
+        return new Uint32Array(a[0])[n];
     }
     else {
-        var x = new Int32Array(a[0], n.toNumber()<<3);
-        return goog.math.Long.fromBits(x[0], x[1]);
+        var n2 = n.toNumber()<<1;
+        if(a instanceof goog.math.Integer) {
+            var positive = $hs_absolute(a);
+            return goog.math.Long.fromBits(positive.getBits(n2), positive.getBits(n2+1));
+        }
+        var x = new Int32Array(a[0]);
+        return goog.math.Long.fromBits(x[n2], x[n2+1]);
     }
 };
 function $hs_indexAddrArrayzh(a, n) {
@@ -1105,12 +1118,14 @@ function $hs_readWord8OffAddrzh(a, n, s) {
     return [s, WORD_SIZE_IN_BITS==32 ? res : goog.math.Long.fromBits(res)];
 };
 function $hs_readWord16OffAddrzh(a, n, s) {
-    if(WORD_SIZE_IN_BITS==32) {
-        return [s, new Uint16Array(a[0],a[1]+(n<<1))[0]];
-    }
-    else {
-        return [s, goog.math.Long.fromBits(new Uint16Array(a[0],a[1]+(n.toNumber()<<1))[0], 0)];
-    }
+    n = WORD_SIZE_IN_BITS==32 ? n : n.toNumber();
+    if(typeof(a) === 'string')
+        var res = n==a.length?0:a.charCodeAt(n);
+    else if(typeof(a[0]) === 'string')
+        var res = n==a[0].length?0:a[0].charCodeAt((a[1]>>>1)+n);
+    else
+        var res = new Uint16Array(a[0],a[1]+n<<1)[0];
+    return [s, WORD_SIZE_IN_BITS==32 ? res : goog.math.Long.fromBits(res)];
 };
 function $hs_readWord32OffAddrzh(a, n, s) {
     if(WORD_SIZE_IN_BITS==32) {
@@ -1296,6 +1311,28 @@ function integer_cmm_divModIntegerzh(sa, abits, sb, bbits) {
     }
     return $hs_googToGMP(d).concat($hs_googToGMP(m));
 };
+function integer_cmm_divIntegerzh(sa, abits, sb, bbits) {
+    var a = $hs_gmpToGoog(sa, abits);
+    var b = $hs_gmpToGoog(sb, bbits);
+    var d = a.divide(b);
+    var m = a.subtract(d.multiply(b));
+    if(a.isNegative()!==b.isNegative() && !m.isZero()) {
+        // Take one off d and add b onto m
+        d = d.add(goog.math.Integer.fromInt(-1));
+    }
+    return $hs_googToGMP(d);
+};
+function integer_cmm_modIntegerzh(sa, abits, sb, bbits) {
+    var a = $hs_gmpToGoog(sa, abits);
+    var b = $hs_gmpToGoog(sb, bbits);
+    var d = a.divide(b);
+    var m = a.subtract(d.multiply(b));
+    if(a.isNegative()!==b.isNegative() && !m.isZero()) {
+        // Take one off d and add b onto m
+        m = m.add(b);
+    }
+    return $hs_googToGMP(m);
+};
 function integer_cmm_divExactIntegerzh(sa, abits, sb, bbits) {
     return $hs_googToGMP($hs_gmpToGoog(sa, abits).divide($hs_gmpToGoog(sb, bbits)));
 };
@@ -1317,18 +1354,19 @@ function $hs_gcd(a, b) {
         big = small;
         small = r;
     }
-    return $hs_googToGMP(big);
+    return big;
 };
 function integer_cmm_gcdIntegerzh(sa, abits, sb, bbits) {
-    return $hs_gcd($hs_gmpToGoog(sa, abits), $hs_gmpToGoog(sb, bbits));
+    return $hs_googToGMP($hs_gcd($hs_gmpToGoog(sa, abits), $hs_gmpToGoog(sb, bbits)));
 };
 function integer_cmm_gcdIntegerIntzh(sa, abits, b) {
     if(WORD_SIZE_IN_BITS==32) {
-        return $hs_gcd($hs_gmpToGoog(sa, abits), goog.math.Integer.fromInt(b));
+        return $hs_gcd($hs_gmpToGoog(sa, abits), goog.math.Integer.fromInt(b)).getBits(0);
     }
     else {
-        return $hs_gcd($hs_gmpToGoog(sa, abits),
+        var a = $hs_gcd($hs_gmpToGoog(sa, abits),
             goog.math.Integer.fromBits([b.getLowBits(), b.getHighBits()]));
+        return goog.math.Long.fromBits(a.getBits(0), a.getBits(1));
     }
 };
 function integer_cmm_gcdIntzh(a, b) {
@@ -1758,6 +1796,8 @@ function $hs_unsignedCompare(a,b) {
 
 
 if(WORD_SIZE_IN_BITS == 32) {
+    $hs_quotRemIntzh = function(a, b) {
+       return [(a / b) | 0, (a % b) | 0]; };
     // Safer 32 bit multiplication than just a * b
     $hs_timesIntzh = function(a, b) {
        return goog.math.Long(a,0).multiply(goog.math.Long(b,0)).getLowBits(); };
@@ -1769,6 +1809,8 @@ if(WORD_SIZE_IN_BITS == 64) {
        return a.div(b); };
     $hs_remIntzh = function(a, b) {
        return a.modulo(b); };
+    $hs_quotRemIntzh = function(a, b) {
+       return [a.div(b), a.modulo(b)]; };
     $hs_int2Wordzh = function(a) {
        return a; };
     $hs_int2Floatzh = function(a) {
@@ -1834,7 +1876,6 @@ if(WORD_SIZE_IN_BITS == 64) {
     $hs_narrow32Wordzh = function(i) {
        return goog.math.Long.fromBits(i.getLowBits(), 0); };
 }
-
 function hs_gtWord64(a, b) {
    return $hs_unsignedCompare(a, b) > 0 ? 1 : 0; };
 function hs_geWord64(a, b) {
@@ -2084,6 +2125,9 @@ function $hs_getFileURL(f) {
     }
     return null;
 };
+/**
+ * @constructor
+ */
 function $hs_MemFile(text) {
   this.isatty = false;
   this.text = lib.encodeUTF8(text);
@@ -2125,6 +2169,9 @@ $hs_MemFile.prototype.ready = function() {
   // Do not change to write !== 0 (implicit cast makes it work with goog.math.Long
   return write != 0 || f.text.length > f.fptr;
 }
+/**
+ * @constructor
+ */
 function $hs_ConsoleOut(terminal) {
   this.isatty = true;
 };
@@ -2140,6 +2187,9 @@ $hs_ConsoleOut.prototype.ready = function() {
   // Do not change to write !== 0 (implicit cast makes it work with goog.math.Long
   return write != 0;
 }
+/**
+ * @constructor
+ */
 function $hs_TerminalOut(terminal) {
   this.isatty = true;
   this.terminal = terminal;
@@ -2156,6 +2206,9 @@ $hs_TerminalOut.prototype.ready = function() {
   // Do not change to write !== 0 (implicit cast makes it work with goog.math.Long
   return write != 0;
 }
+/**
+ * @constructor
+ */
 function $hs_TerminalIn(terminal) {
   this.isatty = true;
   this.terminal = terminal;
@@ -2336,12 +2389,24 @@ function read(fd, p, s) {
         return $hs_int(-1);
     return $hs_int(f.read(p, s));
 };
+function ghc_wrapper_d2fd_read(fd, p, s) {
+    return read(fd, p, s);
+};
+function ghc_wrapper_d2e8_read(fd, p, s) {
+    return read(fd, p, s);
+};
 function write(fd, p, s) {
     HS_RTS_TRACE && $hs_logger.info('write');
     var f = $hs_allFiles[fd];
     if (f === undefined || f === null)
         return $hs_int(-1);
     return $hs_int(f.write(p, s));
+};
+function ghc_wrapper_d2eq_write(fd, p, s) {
+    return write(fd, p, s);
+};
+function ghc_wrapper_d2dl_write(fd, p, s) {
+    return write(fd, p, s);
 };
 function __hsunix_long_path_size() {
     return $hs_int(1024);
@@ -2710,6 +2775,38 @@ function ghc_wrapper_d1s8_getrusage(who, usage) {
         return goog.math.Long.ZERO;
     }
 };
+function ghc_wrapper_d1nl_getrusage(who, usage) {
+    var x = new Int32Array(usage[0], usage[1]);
+    var t = new Date().getTime();
+    if(WORD_SIZE_IN_BITS==32) {
+        x[0] = (t/1000) | 0;
+        x[1] = ((t%1000)*1000) | 0;
+        return 0;
+    }
+    else {
+        x[0] = (t/1000) | 0;
+        x[1] = 0;
+        x[2] = ((t%1000)*1000) | 0;
+        x[3] = 0;
+        return goog.math.Long.ZERO;
+    }
+};
+function ghc_wrapper_d1mM_getrusage(who, usage) {
+    var x = new Int32Array(usage[0], usage[1]);
+    var t = new Date().getTime();
+    if(WORD_SIZE_IN_BITS==32) {
+        x[0] = (t/1000) | 0;
+        x[1] = ((t%1000)*1000) | 0;
+        return 0;
+    }
+    else {
+        x[0] = (t/1000) | 0;
+        x[1] = 0;
+        x[2] = ((t%1000)*1000) | 0;
+        x[3] = 0;
+        return goog.math.Long.ZERO;
+    }
+};
 function ghc_wrapper_d2jT_fcntl(a, b) {
     return $hs_int(0);
 };
@@ -2729,6 +2826,199 @@ function ghcjs_currentDocument() {
 };
 function webkit_web_view_get_dom_document(w) {
   return w.document;
+};
+function webkit_web_view_get_main_frame(w) {
+  return w;
+};
+function webkit_web_frame_get_global_context(f) {
+  return f;
+};
+function JSContextGetGlobalObject(ctx) {
+    return ctx;
+};
+function JSObjectGetProperty(ctx, this_, name, pexception) {
+    try {
+        return this_[name];
+    }
+    catch(e) {
+        $hs_pokePtr(pexception, $hs_int(0), e);
+    }
+};
+function JSObjectGetPropertyAtIndex(ctx, this_, n, pexception) {
+    try {
+        return this_[n];
+    }
+    catch(e) {
+        $hs_pokePtr(pexception, $hs_int(0), e);
+    }
+};
+function JSObjectSetProperty(ctx, this_, name, value, attrs, pexception) {
+    try {
+        this_[name] = value;
+    }
+    catch(e) {
+        $hs_pokePtr(pexception, $hs_int(0), e);
+    }
+};
+function JSObjectSetPropertyAtIndex(ctx, this_, n, value, attrs, pexception) {
+    try {
+        this_[n] = value;
+    }
+    catch(e) {
+        $hs_pokePtr(pexception, $hs_int(0), e);
+    }
+};
+function JSObjectMakeFunctionWithCallback(ctx, name, callback) {
+    var f = function() {
+        var argv = malloc($hs_int(8*arguments.length));
+        var pexception = malloc($hs_int(8));
+        for(var i = 0; i != arguments.length; ++i)
+            $hs_pokePtr(argv, $hs_int(i), arguments[i]);
+        $hs_runIO([
+            callback,
+            $d(1, [ctx]),
+            $d(1, [f]),
+            $d(1, [this]),
+            $d(1, [$hs_int(arguments.length)]),
+            $d(1, [argv]),
+            $d(1, [pexception])]);
+        var e = $hs_peekPtr(pexception, $hs_int(0))
+        if(e !== null) throw e;
+    }
+
+    return f;
+};
+function JSObjectCallAsFunction(ctx, f, this_, argc, argv, pexception) {
+    try {
+        return f.apply(this_, argv[0].ptrs.slice(0, $hs_intToNumber(argc)));
+    }
+    catch(e) {
+        $hs_pokePtr(pexception, $hs_int(0), e);
+    }
+};
+function JSObjectCallAsConstructor(ctx, f, argc, argv, pexception) {
+    try {
+        var n = $hs_intToNumber(argc);
+        var a = argv[0].ptrs;
+        switch(n) {
+            case 0 : return new f();
+            case 1 : return new f(a[0]);
+            case 2 : return new f(a[0],a[1]);
+            case 3 : return new f(a[0],a[1],a[2]);
+            case 4 : return new f(a[0],a[1],a[2],a[3]);
+            case 5 : return new f(a[0],a[1],a[2],a[3],a[4]);
+            case 6 : return new f(a[0],a[1],a[2],a[3],a[4],a[5]);
+            case 6 : return new f(a[0],a[1],a[2],a[3],a[4],a[5],a[6]);
+            default:
+                var ret;
+                var temp = function() {
+                    ret = f.apply(this, a.slice(0, n));
+                };
+                temp.prototype = f.prototype;
+                var instance = new temp();
+                return ret instanceof Object ? ret : instance;
+        }
+    }
+    catch(e) {
+        $hs_pokePtr(pexception, $hs_int(0), e);
+    }
+};
+function JSObjectMakeArray(ctx, l, p, pexception) {
+    try {
+        return p[0].ptrs.slice(0, $hs_intToNumber(l));
+    }
+    catch(e) {
+        $hs_pokePtr(pexception, $hs_int(0), e);
+    }
+};
+function JSValueGetType(ctx, v) {
+  if(v === undefined)        return $hs_int(0);
+  if(v === null)             return $hs_int(1);
+  if(typeof v === "boolean") return $hs_int(2);
+  if(typeof v === "number")  return $hs_int(3);
+  if(typeof v === "string")  return $hs_int(4);
+  if(typeof v === "object")  return $hs_int(5);
+};
+function JSStringCreateWithCharacters(p, len) {
+    return $hs_toStringOfWords(p, $hs_intToNumber(len));
+};
+function JSStringCreateWithUTF8CString(p) {
+  return $hs_fromUtf8(p);
+};
+function JSValueMakeBoolean(ctx, b) {
+  return b != 0; // != not !== so that goog.math.Long works
+};
+function JSValueMakeFromJSONString(ctx, string) {
+  try {
+    return ctx.JSON.parse(string);
+  }
+  catch(e) {
+    return null;
+  }
+};
+function JSValueMakeNull(ctx) {
+  return null;
+};
+function JSValueMakeNumber(ctx, n) {
+  return n;
+};
+function JSValueMakeString(ctx, s) {
+  return s;
+};
+function JSValueMakeUndefined(ctx) {
+  return undefined;
+};
+function JSValueProtect(ctx, v) {
+};
+function JSValueUnprotect(ctx, v) {
+};
+function JSValueToBoolean(ctx, v) {
+  return $hs_int(v?1:0);
+};
+function JSValueToBoolean(ctx, v) {
+  return $hs_int(v?1:0);
+};
+function JSValueToNumber(ctx, v, e) {
+  return Number(v);
+};
+function JSValueToObject(ctx, v, e) {
+  return v;
+};
+function JSValueToStringCopy(ctx, v, e) {
+  return v.toString();
+};
+function JSStringIsEqual(a, b) {
+  return $hs_int(a == b?1:0);
+};
+function JSStringIsStrictEqual(a, b) {
+  return $hs_int(a === b?1:0);
+};
+function JSStringGetLength(s) {
+    return $hs_int(s.length);
+};
+function JSStringGetCharactersPtr(s) {
+    return s;
+};
+function JSEvaluateScript(ctx, script, thisObject, sourceURL, startingLineNumber, exception) {
+  return eval(script);
+};
+function JSValueIsUndefined(ctx, v) {
+  return $hs_int(v === undefined?1:0);
+};
+function JSValueIsNull(ctx, v) {
+  return $hs_int(v === null?1:0);
+};
+function JSValueIsBoolean(ctx, v) {
+  return $hs_int(typeof v === "boolean"?1:0)
+};
+function JSValueIsNumber(ctx, v) {
+  return $hs_int(typeof v === "number"?1:0)
+};
+function JSValueIsString(ctx, v) {
+  return $hs_int(typeof v === "string"?1:0)
+};
+function JSValueIsObject(ctx, v) {
+  return $hs_int(typeof v === "object"?1:0)
 };
 function gtk2hs_closure_new(f) {
   return f;
@@ -2768,4 +3058,7 @@ function setupterm(term, fildes, erret) {
 };
 $hs_export('gtk2hs_g_object_unref_from_mainloop', function(o) {
 });
+function createAdjustor(cconv, hptr, wptr, type) {
+    return hptr;
+};
 

@@ -4,7 +4,7 @@
 
 'use strict';
 
-lib.rtdep('lib.fs');
+lib.rtdep('lib.fs', 'lib.Storage');
 
 /**
  * @fileoverview Declares the hterm.* namespace and some basic shared utilities
@@ -20,9 +20,15 @@ var hterm = {};
  *     initialization is complete.
  */
 hterm.init = function(opt_onInit) {
+  if (window.chrome != undefined && chrome.storage && chrome.storage.sync) {
+    hterm.defaultStorage = new lib.Storage.Chrome(chrome.storage.sync);
+  } else {
+    hterm.defaultStorage = new lib.Storage.Local();
+  }
+
   // Eventually this init may need to be async, hence the callback.
   if (opt_onInit)
-    opt_onInit();
+    setTimeout(opt_onInit);
 };
 
 /**
@@ -67,6 +73,8 @@ hterm.pasteFromClipboard = function(document) {
  *
  * @param {integer} width The width of this record.
  * @param {integer} height The height of this record.
+ *
+ * @constructor
  */
 hterm.Size = function(width, height) {
   this.width = width;
@@ -141,6 +149,8 @@ hterm.Size.prototype.toString = function() {
  * @param {integer} column The column of this record.
  * @param {boolean} opt_overflow Optional boolean indicating that the RowCol
  *     has overflowed.
+ *
+ * @constructor
  */
 hterm.RowCol = function(row, column, opt_overflow) {
   this.row = row;

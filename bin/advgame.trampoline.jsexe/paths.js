@@ -1,0 +1,1 @@
+$hs_path = ["/home/hamish/.cabal/lib/mtl-2.1.2/ghc-7.6.1.20121129","/home/hamish/.cabal/lib/transformers-0.3.0.0/ghc-7.6.1.20121129","/home/hamish/ghcjs/lib/ghc-7.6.1.20121129/base-4.6.0.0","/home/hamish/ghcjs/lib/ghc-7.6.1.20121129/integer-gmp-0.5.0.0","/home/hamish/ghcjs/lib/ghc-7.6.1.20121129/ghc-prim-0.3.0.0"]

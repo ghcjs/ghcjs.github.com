@@ -14,9 +14,6 @@ function $tr_Jump(method, object, args) {
             throw "Not a function!";
         if(object === undefined)
             throw "Object undefined!";
-        for(var i = 0; i !== args.length; i++)
-            if(args[i] === undefined)
-                throw "Undefined args!"
     }
     this.method = method;
     this.object = object;
@@ -45,9 +42,6 @@ function $tr_Call(method, object, args, rest, live) {
             throw "Not a function!";
         if(object === undefined)
             throw "Object undefined!";
-        for(var i = 0; i !== args.length; i++)
-            if(args[i] === undefined)
-                throw "Undefined args!"
         if (typeof rest !== 'function')
             throw "Not a function!";
         if(HS_WEAKS) {
@@ -804,6 +798,7 @@ $Thunk.prototype = {
 //            }
             _this.result = res;
             _this.live = [];
+            _this.evaluateOnce = null;
             _this.evaluate = function () { return new $tr_Result(_this.result); };
             return new $tr_Result(_this.result);
         }, []);
@@ -865,6 +860,7 @@ $Data.prototype = {
 //            }
             _this.v = res;
             _this.notEvaluated = false;
+            _this.evaluateOnce = null;
             _this.evaluate = function () { return new $tr_Result(_this); };
             return new $tr_Result(_this);
         }, []);
@@ -935,9 +931,6 @@ function $d(tag, v, info) {
     if(HS_DEBUG) {
         if (!(v instanceof Array))
             throw "Not an array!";
-        for(var n = 0; n !== v.length; n++)
-            if(v[n] === undefined)
-                throw "Undefined";
         return new $DataValue(tag, v, info);
     }
     return new $DataValue(tag, v);
@@ -1330,6 +1323,9 @@ if(HS_WEAKS) {
 function $hs_mkWeakzh(o, b, c, s) {
     return [s, new $tr_Weak(o, b, c, s)];
 };
+function $hs_mkWeakNoFinalizzerzh(o, b, s) {
+    return [s, new $tr_Weak(o, b, null, s)];
+};
 function $hs_mkWeakForeignEnvzh(o, b, w, x, y, z, s) {
     HS_WEAKS && $hs_logger.warning("Weak Foreign Ignored");
     // return [s, new $tr_Weak(o, b, c, s)];
@@ -1421,7 +1417,7 @@ function getGCStats(a) {
     var t = new Date().getTime() - sc.currentRunStart + sc.cpuSeconds;
     if(WORD_SIZE_IN_BITS==32) {
         throw "Todo identify the correct offset"
-        return 0;
+        // return 0;
     }
     else {
         (new Float64Array(a[0],a[1]+128))[0] = t/1000;

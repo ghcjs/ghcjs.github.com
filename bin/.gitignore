@@ -3,4 +3,7 @@
 !/ghcjs-hello.jsexe
 !/advgame.jsexe
 !/multiple-pages.jsexe
+!/ghcjs-hello.trampoline.jsexe
+!/advgame.trampoline.jsexe
+!/multiple-pages.trampoline.jsexe
 
