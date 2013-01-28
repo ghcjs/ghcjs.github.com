@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Language.Javascript.JSC.Value</title><link href="ocean.css" rel="stylesheet" type="text/css" title="Ocean" /><script src="haddock-util.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+window.onload = function () {pageLoad();setSynopsis("mini_Language-Javascript-JSC-Value.html");};
+//]]>
+</script></head><body><div id="package-header"><ul class="links" id="page-menu"><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul><p class="caption">jsc-0.0.1: High level interface for webkit-javascriptcore</p></div><div id="content"><div id="module-header"><table class="info"><tr><th>Safe Haskell</th><td>None</td></tr></table><p class="caption">Language.Javascript.JSC.Value</p></div><div id="table-of-contents"><p class="caption">Contents</p><ul><li><a href="#g:1">JavaScript value references
+</a></li><li><a href="#g:2">Haskell types for JavaScript values
+</a></li><li><a href="#g:3">Converting JavaScript values
+</a></li><li><a href="#g:4">Make JavaScript values from Haskell ones
+</a></li><li><a href="#g:5">Conver to and from JSValue
+</a></li></ul></div><div id="description"><p class="caption">Description</p><div class="doc"><p>Deals with JavaScript values.  These can be
+</p><ul><li> null
+</li><li> undefined
+</li><li> true | false
+</li><li> a double precision floating point number
+</li><li> a string
+</li><li> an object
+</li></ul></div></div><div id="synopsis"><p id="control.syn" class="caption expander" onclick="toggleSection('syn')">Synopsis</p><ul id="section.syn" class="hide" onclick="toggleSection('syn')"><li class="src short"><span class="keyword">type</span> <a href="#t:JSValueRef">JSValueRef</a> = Ptr OpaqueJSValue</li><li class="src short"><span class="keyword">class</span>  <a href="#t:MakeValueRef">MakeValueRef</a> a  <span class="keyword">where</span><ul class="subs"><li><a href="#v:makeValueRef">makeValueRef</a> :: a -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li></ul></li><li class="src short"><span class="keyword">data</span>  <a href="#t:JSNull">JSNull</a>  = <a href="#v:JSNull">JSNull</a></li><li class="src short"><span class="keyword">type</span> <a href="#t:JSUndefined">JSUndefined</a> = ()</li><li class="src short"><span class="keyword">type</span> <a href="#t:JSBool">JSBool</a> = Bool</li><li class="src short"><span class="keyword">type</span> <a href="#t:JSNumber">JSNumber</a> = Double</li><li class="src short"><span class="keyword">type</span> <a href="#t:JSString">JSString</a> = Text</li><li class="src short"><span class="keyword">data</span>  <a href="#t:JSValue">JSValue</a> <ul class="subs"><li>= <a href="#v:ValNull">ValNull</a>  </li><li>| <a href="#v:ValUndefined">ValUndefined</a>  </li><li>| <a href="#v:ValBool">ValBool</a> <a href="Language-Javascript-JSC-Value.html#t:JSBool">JSBool</a>  </li><li>| <a href="#v:ValNumber">ValNumber</a> <a href="Language-Javascript-JSC-Value.html#t:JSNumber">JSNumber</a>  </li><li>| <a href="#v:ValString">ValString</a> <a href="Language-Javascript-JSC-Value.html#t:JSString">JSString</a>  </li><li>| <a href="#v:ValObject">ValObject</a> <a href="Language-Javascript-JSC-Object.html#t:JSObjectRef">JSObjectRef</a>  </li></ul></li><li class="src short"><a href="#v:valToBool">valToBool</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSBool">JSBool</a></li><li class="src short"><a href="#v:valToNumber">valToNumber</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSNumber">JSNumber</a></li><li class="src short"><a href="#v:valToStr">valToStr</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-String.html#t:JSStringRef">JSStringRef</a></li><li class="src short"><a href="#v:valToObject">valToObject</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Object.html#t:JSObjectRef">JSObjectRef</a></li><li class="src short"><a href="#v:valToText">valToText</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> Text</li><li class="src short"><a href="#v:val">val</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> value =&gt; value -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li><li class="src short"><a href="#v:valMakeNull">valMakeNull</a> :: <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li><li class="src short"><a href="#v:valMakeUndefined">valMakeUndefined</a> :: <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li><li class="src short"><a href="#v:valMakeBool">valMakeBool</a> :: <a href="Language-Javascript-JSC-Value.html#t:JSBool">JSBool</a> -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li><li class="src short"><a href="#v:valMakeNumber">valMakeNumber</a> :: <a href="Language-Javascript-JSC-Value.html#t:JSNumber">JSNumber</a> -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li><li class="src short"><a href="#v:valMakeString">valMakeString</a> :: Text -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li><li class="src short"><a href="#v:deRefVal">deRefVal</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></li><li class="src short"><a href="#v:valMakeRef">valMakeRef</a> :: <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a> -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></li></ul></div><div id="interface"><h1 id="g:1">JavaScript value references
+</h1><div class="top"><p class="src"><span class="keyword">type</span> <a name="t:JSValueRef" class="def">JSValueRef</a> = Ptr OpaqueJSValue</p></div><div class="top"><p class="src"><span class="keyword">class</span>  <a name="t:MakeValueRef" class="def">MakeValueRef</a> a  <span class="keyword">where</span></p><div class="doc"><p>Anything that can be used to make a JavaScript value reference
+</p></div><div class="subs methods"><p class="caption">Methods</p><p class="src"><a name="v:makeValueRef" class="def">makeValueRef</a> :: a -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></p></div><div class="subs instances"><p id="control.i:MakeValueRef" class="caption collapser" onclick="toggleSection('i:MakeValueRef')">Instances</p><div id="section.i:MakeValueRef" class="show"><table><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> Bool</td><td class="doc"><p>Make a JavaScript boolean value
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> Double</td><td class="doc"><p>Makes a JavaScript number
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> String</td><td class="doc"><p>Makes a JavaScript string
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> Text</td><td class="doc"><p>Makes a JavaScript string
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></td><td class="doc"><p>If we already have a JSValueRef we are fine
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Properties.html#t:JSPropRef">JSPropRef</a></td><td class="doc"><p>We can use a property as a value.
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></td><td class="doc"><p>Makes a JavaScript value from a <code><a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></code> ADT.
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Value.html#t:JSUndefined">JSUndefined</a></td><td class="doc"><p>Makes an <code>undefined</code> JavaScript value
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Value.html#t:JSNull">JSNull</a></td><td class="doc"><p>Makes a <code>null</code> JavaScript value
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Object.html#t:JSCallAsFunction">JSCallAsFunction</a></td><td class="doc"><p>A callback to Haskell can be used as a JavaScript value.  This will create
+   an anonymous JavaScript function object.  Use <code><a href="Language-Javascript-JSC-Object.html#v:function">function</a></code> to create one with
+   a name.
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> v =&gt; <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> (<a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> v)</td><td class="doc"><p>JSValueRef can be made by evaluating a function in <code><a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a></code> as long
+   as it returns something we can make into a JSValueRef.
+</p></td></tr></table></div></div></div><h1 id="g:2">Haskell types for JavaScript values
+</h1><div class="top"><p class="src"><span class="keyword">data</span>  <a name="t:JSNull" class="def">JSNull</a>  </p><div class="subs constructors"><p class="caption">Constructors</p><table><tr><td class="src"><a name="v:JSNull" class="def">JSNull</a></td><td class="doc"><p>Type that represents a value that can only be null.
+   Haskell of course has no null so we are adding this type.
+</p></td></tr></table></div><div class="subs instances"><p id="control.i:JSNull" class="caption collapser" onclick="toggleSection('i:JSNull')">Instances</p><div id="section.i:JSNull" class="show"><table><tr><td class="src"><a href="Language-Javascript-JSC-Classes.html#t:MakeObjectRef">MakeObjectRef</a> <a href="Language-Javascript-JSC-Value.html#t:JSNull">JSNull</a></td><td class="doc empty">&nbsp;</td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Classes.html#t:MakeArgRefs">MakeArgRefs</a> <a href="Language-Javascript-JSC-Value.html#t:JSNull">JSNull</a></td><td class="doc"><p>Makes an argument list with just a single <code>null</code> JavaScript value
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Value.html#t:JSNull">JSNull</a></td><td class="doc"><p>Makes a <code>null</code> JavaScript value
+</p></td></tr></table></div></div></div><div class="top"><p class="src"><span class="keyword">type</span> <a name="t:JSUndefined" class="def">JSUndefined</a></p><div class="subs arguments"><p class="caption">Arguments</p><table><tr><td class="src">&nbsp;= ()</td><td class="doc"><p>A type that can only be undefined in JavaScript.  Using ()
+   because functions in JavaScript that have no return, impicitly
+   return undefined.
+</p></td></tr></table></div></div><div class="top"><p class="src"><span class="keyword">type</span> <a name="t:JSBool" class="def">JSBool</a></p><div class="subs arguments"><p class="caption">Arguments</p><table><tr><td class="src">&nbsp;= Bool</td><td class="doc"><p>JavaScript boolean values map the <code>Bool</code> haskell type.
+</p></td></tr></table></div></div><div class="top"><p class="src"><span class="keyword">type</span> <a name="t:JSNumber" class="def">JSNumber</a></p><div class="subs arguments"><p class="caption">Arguments</p><table><tr><td class="src">&nbsp;= Double</td><td class="doc"><p>A number in JavaScript maps nicely to <code>Double</code>.
+</p></td></tr></table></div></div><div class="top"><p class="src"><span class="keyword">type</span> <a name="t:JSString" class="def">JSString</a></p><div class="subs arguments"><p class="caption">Arguments</p><table><tr><td class="src">&nbsp;= Text</td><td class="doc"><p>JavaScript strings can be represented with the Haskell <code>Text</code> type.
+</p></td></tr></table></div></div><div class="top"><p class="src"><span class="keyword">data</span>  <a name="t:JSValue" class="def">JSValue</a>  </p><div class="doc"><p>An algebraic data type that can represent a JavaScript value.  Any JavaScriptCore
+   <code><a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></code> can be converted into this type.
+</p></div><div class="subs constructors"><p class="caption">Constructors</p><table><tr><td class="src"><a name="v:ValNull" class="def">ValNull</a></td><td class="doc"><p>null
+</p></td></tr><tr><td class="src"><a name="v:ValUndefined" class="def">ValUndefined</a></td><td class="doc"><p>undefined
+</p></td></tr><tr><td class="src"><a name="v:ValBool" class="def">ValBool</a> <a href="Language-Javascript-JSC-Value.html#t:JSBool">JSBool</a></td><td class="doc"><p>true or false
+</p></td></tr><tr><td class="src"><a name="v:ValNumber" class="def">ValNumber</a> <a href="Language-Javascript-JSC-Value.html#t:JSNumber">JSNumber</a></td><td class="doc"><p>a number
+</p></td></tr><tr><td class="src"><a name="v:ValString" class="def">ValString</a> <a href="Language-Javascript-JSC-Value.html#t:JSString">JSString</a></td><td class="doc"><p>a string
+</p></td></tr><tr><td class="src"><a name="v:ValObject" class="def">ValObject</a> <a href="Language-Javascript-JSC-Object.html#t:JSObjectRef">JSObjectRef</a></td><td class="doc"><p>an object
+</p></td></tr></table></div><div class="subs instances"><p id="control.i:JSValue" class="caption collapser" onclick="toggleSection('i:JSValue')">Instances</p><div id="section.i:JSValue" class="show"><table><tr><td class="src">Eq <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></td><td class="doc empty">&nbsp;</td></tr><tr><td class="src">Show <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></td><td class="doc empty">&nbsp;</td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Classes.html#t:MakeArgRefs">MakeArgRefs</a> <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></td><td class="doc"><p>Makes an argument list with just a single JavaScript value from a <code><a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></code> ADT.
+</p></td></tr><tr><td class="src"><a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></td><td class="doc"><p>Makes a JavaScript value from a <code><a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></code> ADT.
+</p></td></tr></table></div></div></div><h1 id="g:3">Converting JavaScript values
+</h1><div class="top"><p class="src"><a name="v:valToBool" class="def">valToBool</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSBool">JSBool</a></p><div class="doc"><p>Given a JavaScript value get its boolean value.
+   All values in JavaScript convert to bool.
+</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool JSNull
+</code></strong>False
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool ()
+</code></strong>False
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool True
+</code></strong>True
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool False
+</code></strong>False
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool (1.0 :: Double)
+</code></strong>True
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool (0.0 :: Double)
+</code></strong>False
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool &quot;&quot;
+</code></strong>False
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToBool &quot;1&quot;
+</code></strong>True
+</pre></div></div><div class="top"><p class="src"><a name="v:valToNumber" class="def">valToNumber</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSNumber">JSNumber</a></p><div class="doc"><p>Given a JavaScript value get its numeric value.
+   May throw JSException.
+</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber JSNull
+</code></strong>0.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber ()
+</code></strong>NaN
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber True
+</code></strong>1.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber False
+</code></strong>0.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber (1.0 :: Double)
+</code></strong>0.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber (0.0 :: Double)
+</code></strong>0.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber &quot;&quot;
+</code></strong>0.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToNumber &quot;1&quot;
+</code></strong>1.0
+</pre></div></div><div class="top"><p class="src"><a name="v:valToStr" class="def">valToStr</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-String.html#t:JSStringRef">JSStringRef</a></p><div class="doc"><p>Given a JavaScript value get its string value (as a JavaScript string).
+   May throw JSException.
+</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr JSNull &gt;&gt;= strToText
+</code></strong>&quot;null&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr () &gt;&gt;= strToText
+</code></strong>&quot;undefined&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr True &gt;&gt;= strToText
+</code></strong>&quot;true&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr False &gt;&gt;= strToText
+</code></strong>&quot;false&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr (1.0 :: Double) &gt;&gt;= strToText
+</code></strong>&quot;1&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr (0.0 :: Double) &gt;&gt;= strToText
+</code></strong>&quot;0&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr &quot;&quot; &gt;&gt;= strToText
+</code></strong>&quot;&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToStr &quot;1&quot; &gt;&gt;= strToText
+</code></strong>&quot;1&quot;
+</pre></div></div><div class="top"><p class="src"><a name="v:valToObject" class="def">valToObject</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Object.html#t:JSObjectRef">JSObjectRef</a></p><div class="doc"><p>Given a JavaScript value get its object value.
+   May throw JSException.
+</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ (valToObject JSNull &gt;&gt;= valToText) `catch` \ (JSException e) -&gt; valToText e
+</code></strong>&quot;TypeError: 'null' is not an object&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ (valToObject () &gt;&gt;= valToText) `catch` \ (JSException e) -&gt; valToText e
+</code></strong>&quot;TypeError: 'undefined' is not an object&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToObject True
+</code></strong>&quot;true&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToObject False
+</code></strong>&quot;false&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToObject (1.0 :: Double)
+</code></strong>&quot;1&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToObject (0.0 :: Double)
+</code></strong>&quot;0&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToObject &quot;&quot;
+</code></strong>&quot;&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToObject &quot;1&quot;
+</code></strong>&quot;1&quot;
+</pre></div></div><div class="top"><p class="src"><a name="v:valToText" class="def">valToText</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> Text</p><div class="doc"><p>Given a JavaScript value get its string value (as a Haskell <code>Text</code>).
+   May throw JSException.
+</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText JSNull
+</code></strong>&quot;null&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText ()
+</code></strong>&quot;undefined&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText True
+</code></strong>&quot;true&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText False
+</code></strong>&quot;false&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText (1.0 :: Double)
+</code></strong>&quot;1&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText (0.0 :: Double)
+</code></strong>&quot;0&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText &quot;&quot;
+</code></strong>&quot;&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToText &quot;1&quot;
+</code></strong>&quot;1&quot;
+</pre></div></div><h1 id="g:4">Make JavaScript values from Haskell ones
+</h1><div class="top"><p class="src"><a name="v:val" class="def">val</a></p><div class="subs arguments"><p class="caption">Arguments</p><table><tr><td class="src">:: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> value</td><td class="doc empty">&nbsp;</td></tr><tr><td class="src">=&gt; value</td><td class="doc"><p>value to convert to a JavaScript value
+</p></td></tr><tr><td class="src">-&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></td><td class="doc empty">&nbsp;</td></tr></table></div><div class="doc"><p>Convert to a JavaScript value (just an alias for <code><a href="Language-Javascript-JSC-Value.html#v:makeValueRef">makeValueRef</a></code>)
+</p></div></div><div class="top"><p class="src"><a name="v:valMakeNull" class="def">valMakeNull</a> :: <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></p><div class="doc"><p>Make a <code>null</code> JavaScript value
+</p></div></div><div class="top"><p class="src"><a name="v:valMakeUndefined" class="def">valMakeUndefined</a> :: <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></p><div class="doc"><p>Make an <code>undefined</code> JavaScript value
+</p></div></div><div class="top"><p class="src"><a name="v:valMakeBool" class="def">valMakeBool</a> :: <a href="Language-Javascript-JSC-Value.html#t:JSBool">JSBool</a> -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></p><div class="doc"><p>Make a JavaScript boolean value
+</p></div></div><div class="top"><p class="src"><a name="v:valMakeNumber" class="def">valMakeNumber</a> :: <a href="Language-Javascript-JSC-Value.html#t:JSNumber">JSNumber</a> -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></p><div class="doc"><p>Make a JavaScript number
+</p></div></div><div class="top"><p class="src"><a name="v:valMakeString" class="def">valMakeString</a> :: Text -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></p><div class="doc"><p>Make a JavaScript string
+</p></div></div><h1 id="g:5">Conver to and from JSValue
+</h1><div class="top"><p class="src"><a name="v:deRefVal" class="def">deRefVal</a> :: <a href="Language-Javascript-JSC-Value.html#t:MakeValueRef">MakeValueRef</a> val =&gt; val -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></p><div class="doc"><p>Derefernce a value reference.
+</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal JSNull
+</code></strong>ValNull
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal ()
+</code></strong>ValUndefined
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal True
+</code></strong>ValBool True
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal False
+</code></strong>ValBool False
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal (1.0 :: Double)
+</code></strong>ValNumber 1.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal (0.0 :: Double)
+</code></strong>ValNumber 0.0
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal &quot;&quot;
+</code></strong>ValString &quot;&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ deRefVal &quot;1&quot;
+</code></strong>ValString &quot;1&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valToObject True &gt;&gt;= deRefVal
+</code></strong>ValObject 0x...
+</pre></div></div><div class="top"><p class="src"><a name="v:valMakeRef" class="def">valMakeRef</a> :: <a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a> -&gt; <a href="Language-Javascript-JSC-Monad.html#t:JSC">JSC</a> <a href="Language-Javascript-JSC-Value.html#t:JSValueRef">JSValueRef</a></p><div class="doc"><p>Make a JavaScript value out of a <code><a href="Language-Javascript-JSC-Value.html#t:JSValue">JSValue</a></code> ADT.
+</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valMakeRef ValNull
+</code></strong>&quot;null&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valMakeRef ValUndefined
+</code></strong>&quot;undefined&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valMakeRef (ValBool True)
+</code></strong>&quot;true&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valMakeRef (ValNumber 1)
+</code></strong>&quot;1&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>runjs $ valMakeRef (ValString $ pack &quot;Hello&quot;)
+</code></strong>&quot;Hello&quot;
+</pre></div></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.13.1</p></div></body></html>
