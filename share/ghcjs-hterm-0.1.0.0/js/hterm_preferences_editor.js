@@ -53,8 +53,6 @@ window.onload = function() {
  *
  * @param {string} opt_profileId Optional profile name to read settings from;
  *     defaults to the "default" profile.
- *
- * @constructor
  */
 hterm.PreferencesEditor = function(opt_profileId) {
   this.selectProfile(opt_profileId || 'default');

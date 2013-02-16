@@ -29,8 +29,6 @@ lib.rtdep('hterm.PubSub', 'hterm.Size');
  *
  * @param {RowProvider} rowProvider An object capable of providing rows as
  *     raw text or row nodes.
- *
- * @constructor
  */
 hterm.ScrollPort = function(rowProvider) {
   hterm.PubSub.addBehavior(this);
@@ -90,8 +88,6 @@ hterm.ScrollPort = function(rowProvider) {
  * DOM to find the containing row node and sort out which comes first.
  *
  * @param {hterm.ScrollPort} scrollPort The parent hterm.ScrollPort instance.
- *
- * @constructor
  */
 hterm.ScrollPort.Selection = function(scrollPort) {
   this.scrollPort_ = scrollPort;

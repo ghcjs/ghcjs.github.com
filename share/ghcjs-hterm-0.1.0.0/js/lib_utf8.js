@@ -12,8 +12,6 @@
 
 /**
  * A stateful UTF-8 decoder.
- *
- * @constructor
  */
 lib.UTF8Decoder = function() {
   // The number of bytes left in the current sequence.

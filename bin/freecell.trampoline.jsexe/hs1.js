@@ -371,7 +371,7 @@ var $$SystemziGlibziAttributes_set1=$f(3,function(j,k,l){
   },[o,j,m]);
  },[j],"a");
  m.J(k,l);
-},[],"in `glib-0.12.3.1:System.Glib.Attributes'");
+},[],"in `glib-0.12.4:System.Glib.Attributes'");
 var $$SystemziGlibziFFI_nullForeignPtr1=$f(1,function(J){
  var Q=$hs_noDuplicatezh(J);
  var K=$hs_newMutVarzh($$GHCziForeignPtr_mallocForeignPtr3,Q);
@@ -380,7 +380,7 @@ var $$SystemziGlibziFFI_nullForeignPtr1=$f(1,function(J){
  var O=$d(1,[N],"sat");
  var P=$d(1,[null,O],"sat");
  $r([L,P]);
-},[],"in `glib-0.12.3.1:System.Glib.FFI'");
+},[],"in `glib-0.12.4:System.Glib.FFI'");
 var $$SystemziGlibziFFI_nullForeignPtr=$t(function(){
  $$GHCziIO_unsafeDupablePerformIO.J($$SystemziGlibziFFI_nullForeignPtr1);
 },[],"at System/Glib/FFI.hs:66:1");
@@ -398,60 +398,60 @@ var $$SystemziGlibziFFI_zdwa=$f(3,function(R,S,T){
   },[R]);
  },[R,S],"sat");
  $$GHCziForeignPtr_zdwa7.J(R,U,T);
-},[],"in `glib-0.12.3.1:System.Glib.FFI'");
+},[],"in `glib-0.12.4:System.Glib.FFI'");
 var $$SystemziGlibziGError_zdfShowGErrorzuzdcshow=$f(1,function(m){
  $M(m,function(n){
   var o=n.v[2];
   $A(o);
  },[]);
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfShowGErrorzuzdcshowsPrec=$f(3,function(p,q,r){
  $M(q,function(s){
   var t=s.v[2];
   $$GHCziBase_zpzp.J(t,r);
  },[r]);
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfShowGError1=$f(2,function(u,v){
  $M(u,function(w){
   var x=w.v[2];
   $$GHCziBase_zpzp.J(x,v);
  },[v]);
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfShowGErrorzuzdcshowList=$f(2,function(y,z){
  $$GHCziShow_showListzuzu.J($$SystemziGlibziGError_zdfShowGError1,y,z);
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfShowGError=$D(1,function(){
  $r([$$SystemziGlibziGError_zdfShowGErrorzuzdcshowsPrec,$$SystemziGlibziGError_zdfShowGErrorzuzdcshow,$$SystemziGlibziGError_zdfShowGErrorzuzdcshowList]);
 },"at System/Glib/GError.chs:101:10");
 var $$SystemziGlibziGError_zdfTypeableGErrorzuds=$t(function(){
- $$GHCziCString_unpackCStringzh.J("glib-0.12.3.1");
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+ $$GHCziCString_unpackCStringzh.J("glib-0.12.4");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfTypeableGErrorzuds1=$t(function(){
  $$GHCziCString_unpackCStringzh.J("System.Glib.GError");
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfTypeableGErrorzuds2=$t(function(){
  $$GHCziCString_unpackCStringzh.J("GError");
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfTypeableGErrorzuwild=$D(1,function(){
- $r([goog.math.Long.fromBits(3582374661,870224196),goog.math.Long.fromBits(3787932476,2058929238),$$SystemziGlibziGError_zdfTypeableGErrorzuds,$$SystemziGlibziGError_zdfTypeableGErrorzuds1,$$SystemziGlibziGError_zdfTypeableGErrorzuds2]);
-},"in `glib-0.12.3.1:System.Glib.GError'");
+ $r([goog.math.Long.fromBits(141055287,4229544161),goog.math.Long.fromBits(642030925,1978522154),$$SystemziGlibziGError_zdfTypeableGErrorzuds,$$SystemziGlibziGError_zdfTypeableGErrorzuds1,$$SystemziGlibziGError_zdfTypeableGErrorzuds2]);
+},"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfTypeableGError1=$D(1,function(){
- $r([goog.math.Long.fromBits(3582374661,870224196),goog.math.Long.fromBits(3787932476,2058929238),$$SystemziGlibziGError_zdfTypeableGErrorzuwild,$$GHCziTypes_ZMZN]);
-},"in `glib-0.12.3.1:System.Glib.GError'");
+ $r([goog.math.Long.fromBits(141055287,4229544161),goog.math.Long.fromBits(642030925,1978522154),$$SystemziGlibziGError_zdfTypeableGErrorzuwild,$$GHCziTypes_ZMZN]);
+},"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfTypeableGErrorzuzdctypeOf=$f(1,function(u2){
  $A($$SystemziGlibziGError_zdfTypeableGError1);
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfExceptionGErrorzuzdcfromException=$f(1,function(v2){
  $M(v2,function(w2){
   var x2=w2.v[0],y2=w2.v[1];
   $$GHCziException_zdp1Exception.C([x2,y2],function(z2){
    var A2=z2.v[0],B2=z2.v[1];
-   var C2=$hs_eqWordzh(A2,goog.math.Long.fromBits(3582374661,870224196));
+   var C2=$hs_eqWordzh(A2,goog.math.Long.fromBits(141055287,4229544161));
    switch(C2.g){
    case 1:
     $R(1,[],"Nothing");break;
    case 2:
-    var D2=$hs_eqWordzh(B2,goog.math.Long.fromBits(3787932476,2058929238));
+    var D2=$hs_eqWordzh(B2,goog.math.Long.fromBits(642030925,1978522154));
     switch(D2.g){
     case 1:
      $R(1,[],"Nothing");break;
@@ -461,13 +461,13 @@ var $$SystemziGlibziGError_zdfExceptionGErrorzuzdcfromException=$f(1,function(v2
    }
   },[y2]);
  },[]);
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_zdfExceptionGError=$D(1,function(){
  $r([$$SystemziGlibziGError_zdfTypeableGErrorzuzdctypeOf,$$SystemziGlibziGError_zdfShowGError,$$SystemziGlibziGError_zdfExceptionGErrorzuzdctoException,$$SystemziGlibziGError_zdfExceptionGErrorzuzdcfromException]);
 },"at System/Glib/GError.chs:104:10");
 var $$SystemziGlibziGError_zdfExceptionGErrorzuzdctoException=$f(1,function(b1){
  $R(1,[$$SystemziGlibziGError_zdfExceptionGError,b1],"SomeException");
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGError_throwGError=$f(1,function(E2){
  $$GHCziException_throw2.J(E2,$$SystemziGlibziGError_zdfExceptionGErrorzuzdctoException);
 },[],"at System/Glib/GError.chs:188:1");
@@ -476,7 +476,7 @@ var $$SystemziGlibziGError_failOnGError2=$f(1,function(W2){
   var Y2=X2.v[0],Z2=X2.v[1];
   $$GHCziException_zdp1Exception.C([Y2,Z2],function(a3){
    var b3=a3.v[0],c3=a3.v[1];
-   var d3=$hs_eqWordzh(b3,goog.math.Long.fromBits(3582374661,870224196));
+   var d3=$hs_eqWordzh(b3,goog.math.Long.fromBits(141055287,4229544161));
    switch(d3.g){
    case 1:
     var e3=$f(1,function(b1){
@@ -484,7 +484,7 @@ var $$SystemziGlibziGError_failOnGError2=$f(1,function(W2){
     },[X2],"sat");
     $A(e3);break;
    case 2:
-    var f3=$hs_eqWordzh(c3,goog.math.Long.fromBits(3787932476,2058929238));
+    var f3=$hs_eqWordzh(c3,goog.math.Long.fromBits(642030925,1978522154));
     switch(f3.g){
     case 1:
      var g3=$f(1,function(b1){
@@ -500,10 +500,10 @@ var $$SystemziGlibziGError_failOnGError2=$f(1,function(W2){
    }
   },[Z2,X2]);
  },[]);
-},[],"in `glib-0.12.3.1:System.Glib.GError'");
+},[],"in `glib-0.12.4:System.Glib.GError'");
 var $$SystemziGlibziGObject_makeNewGObject2=$t(function(){
  $$GHCziCString_unpackCStringzh.J("makeNewGObject: object is NULL");
-},[],"in `glib-0.12.3.1:System.Glib.GObject'");
+},[],"in `glib-0.12.4:System.Glib.GObject'");
 var $$SystemziGlibziGObject_zdwa1=$f(4,function(d1,e1,f1,g1){
  f1.C([g1],function(h1){
   var i1=h1[0],j1=h1[1];
@@ -532,7 +532,7 @@ var $$SystemziGlibziGObject_zdwa1=$f(4,function(d1,e1,f1,g1){
    }
   },[e1,d1,i1]);
  },[e1,d1]);
-},[],"in `glib-0.12.3.1:System.Glib.GObject'");
+},[],"in `glib-0.12.4:System.Glib.GObject'");
 var $$SystemziGlibziGType_typeInstanceIsA=$f(2,function(b,c){
  var d=$f(1,function(e){
   var o=$hs_noDuplicatezh(e);
@@ -563,7 +563,7 @@ var $$SystemziGlibziGType_typeInstanceIsA=$f(2,function(b,c){
 },[],"at System/Glib/GType.chs:45:1");
 var $$SystemziGlibziGTypeConstants_string1=$D(1,function(){
  $r([goog.math.Long.fromBits(64,0)]);
-},"in `glib-0.12.3.1:System.Glib.GTypeConstants'");
+},"in `glib-0.12.4:System.Glib.GTypeConstants'");
 var $$SystemziGlibziGValueTypes_gzuvaluezusetzustring=$f(3,function(a,b,c){
  $$SystemziGlibziGValueTypes$c.J(a,b,c);
 },[],"at System/Glib/GValueTypes.chs:287:3");
@@ -596,10 +596,10 @@ var $$SystemziGlibziGValueTypes_zdwa4=$f(2,function(W2,X2){
    $r([b3,$$GHCziTypes_ZMZN]);break;
   }
  },[X2]);
-},[],"in `glib-0.12.3.1:System.Glib.GValueTypes'");
+},[],"in `glib-0.12.4:System.Glib.GValueTypes'");
 var $$SystemziGlibziGValueTypes_valueGetString1=$f(2,function(b,c){
  $$SystemziGlibziGValueTypes_zdwa4.J(b,c);
-},[],"in `glib-0.12.3.1:System.Glib.GValueTypes'");
+},[],"in `glib-0.12.4:System.Glib.GValueTypes'");
 var $$SystemziGlibziGValueTypes$c=$F(3,function(j6,k6,l6){
  $M(j6,function(m6){
   var n6=m6.v[0];
@@ -620,10 +620,10 @@ var $$SystemziGlibziMainLoop_priorityHigh=$D(1,function(){
 },"at System/Glib/MainLoop.chs:207:1");
 var $$SystemziGlibziMainLoop_idleAdd3=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
-},"in `glib-0.12.3.1:System.Glib.MainLoop'");
+},"in `glib-0.12.4:System.Glib.MainLoop'");
 var $$SystemziGlibziMainLoop_idleAdd2=$D(1,function(){
  $r([goog.math.Long.fromBits(1,0)]);
-},"in `glib-0.12.3.1:System.Glib.MainLoop'");
+},"in `glib-0.12.4:System.Glib.MainLoop'");
 var $$SystemziGlibziMainLoop_timeoutAdd2=$f(4,function(o5,p5,q5,r5){
  var s5=$f(1,function(t5){
   o5.C([t5],function(u5){
@@ -665,7 +665,7 @@ var $$SystemziGlibziMainLoop_timeoutAdd2=$f(4,function(o5,p5,q5,r5){
    },[D5,F5,C5]);
   },[q5,D5,C5]);
  },[p5,q5]);
-},[],"in `glib-0.12.3.1:System.Glib.MainLoop'");
+},[],"in `glib-0.12.4:System.Glib.MainLoop'");
 var $$SystemziGlibziMainLoop$a=$F(2,function(u6,v6){
  var w6=[v6,u6];
  var x6=w6[0],y6=w6[1];
@@ -720,7 +720,7 @@ var $$SystemziGlibziProperties_newAttrFromBoolProperty2=$f(7,function(a,b,c,d,e,
    $$GHCziForeign_charIsRepresentable3.J(l,d,n,k);
   },[a,e,d,b,c,f]);
  },[g,a,e,d,b,c,f]);
-},[],"in `glib-0.12.3.1:System.Glib.Properties'");
+},[],"in `glib-0.12.4:System.Glib.Properties'");
 var $$SystemziGlibziProperties_newAttrFromBoolProperty4=$f(6,function(B4,C4,D4,E4,F4,G4){
  $M($$GHCziIOziEncoding_getForeignEncoding1,function(H4){
   var I4=H4.v[0];
@@ -766,13 +766,13 @@ var $$SystemziGlibziProperties_newAttrFromBoolProperty4=$f(6,function(B4,C4,D4,E
    $$GHCziForeign_charIsRepresentable3.J(L4,E4,N4,K4);
   },[B4,F4,E4,C4,D4]);
  },[G4,B4,F4,E4,C4,D4]);
-},[],"in `glib-0.12.3.1:System.Glib.Properties'");
+},[],"in `glib-0.12.4:System.Glib.Properties'");
 var $$SystemziGlibziSignals_connectGeneric3=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
-},"in `glib-0.12.3.1:System.Glib.Signals'");
+},"in `glib-0.12.4:System.Glib.Signals'");
 var $$SystemziGlibziSignals_connectGeneric2=$D(1,function(){
  $r([goog.math.Long.fromBits(1,0)]);
-},"in `glib-0.12.3.1:System.Glib.Signals'");
+},"in `glib-0.12.4:System.Glib.Signals'");
 var $$SystemziGlibziSignals_connectGeneric1=$f(6,function(N1,O1,P1,Q1,R1,S1){
  var T1=[S1,R1];
  var U1=T1[0],V1=T1[1];
@@ -820,7 +820,7 @@ var $$SystemziGlibziSignals_connectGeneric1=$f(6,function(N1,O1,P1,Q1,R1,S1){
    },[Q1]);
   },[N1,Q1,P1,O1,Y1]);
  },[X1,N1,Q1,P1,O1,Y1]);
-},[],"in `glib-0.12.3.1:System.Glib.Signals'");
+},[],"in `glib-0.12.4:System.Glib.Signals'");
 var $$SystemziGlibziTypes_toGObject=$f(1,function(a){
  $M(a,function(b){
   var c=b.v[0];
@@ -1188,7 +1188,7 @@ var $$SystemziGlibziUTFString$l=$F(1,function(U8){
 },"lvl10");
 var $$GraphicsziUIziGtkziAbstractziObject_makeNewObject2=$t(function(){
  $$GHCziCString_unpackCStringzh.J("makeNewObject: object is NULL");
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Abstract.Object'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Abstract.Object'");
 var $$GraphicsziUIziGtkziAbstractziObject_zdwa=$f(4,function(D,E,F,G){
  F.C([G],function(H){
   var I=H[0],J=H[1];
@@ -1217,13 +1217,13 @@ var $$GraphicsziUIziGtkziAbstractziObject_zdwa=$f(4,function(D,E,F,G){
    }
   },[E,D,I]);
  },[E,D]);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Abstract.Object'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Abstract.Object'");
 var $$GraphicsziUIziGtkziAbstractziWidget_afterDestroy2=$t(function(){
  $$GHCziCString_unpackCStringzh.J("destroy");
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Abstract.Widget'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Abstract.Widget'");
 var $$GraphicsziUIziGtkziGeneralziGeneral_mainQuit=$f(1,function(a){
  $$GraphicsziUIziGtkziGeneralziGeneral$b.J(a);
-},[],"at Graphics/UI/Gtk/General/General.chs:237:1");
+},[],"at Graphics/UI/Gtk/General/General.chs:241:1");
 var $$GraphicsziUIziGtkziGeneralziGeneral_timeoutAdd2=$f(4,function(h1,i1,j1,k1){
  var l1=$f(1,function(m1){
   var $ff=gdk_threads_enter();
@@ -1238,7 +1238,7 @@ var $$GraphicsziUIziGtkziGeneralziGeneral_timeoutAdd2=$f(4,function(h1,i1,j1,k1)
   },[]);
  },[h1],"sat");
  $$SystemziGlibziMainLoop_timeoutAdd2.J(l1,i1,j1,k1);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.General.General'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.General.General'");
 var $$GraphicsziUIziGtkziGeneralziGeneral_initGUI=$f(1,function(a){
  $$GraphicsziUIziGtkziGeneralziGeneral$j.J(a);
 },[],"at Graphics/UI/Gtk/General/General.chs:143:1");
@@ -1255,7 +1255,7 @@ var $$GraphicsziUIziGtkziGeneralziGeneral$d=$T(function(){
  $$GHCziErr_error.J($$GraphicsziUIziGtkziGeneralziGeneral$c);
 },"lvl1");
 var $$GraphicsziUIziGtkziGeneralziGeneral$e=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at Graphics/UI/Gtk/General/General.chs:157:9-16");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at Graphics/UI/Gtk/General/General.chs:158:9-16");
 },"a2");
 var $$GraphicsziUIziGtkziGeneralziGeneral$f=$F(2,function(S2,T2){
  $M(S2,function(U2){
@@ -1351,188 +1351,321 @@ var $$GraphicsziUIziGtkziGeneralziGeneral$i=$F(1,function(f4){
  },[]);
 },"a5");
 var $$GraphicsziUIziGtkziGeneralziGeneral$j=$F(1,function(n4){
+ var $ff=gtk2hs_initialise();
+ var o4=[n4,$ff];
+ var p4=o4[0];
  var $ff=rtsSupportsBoundThreads();
- var o4=[$$GHCziPrim_realWorldzh,$ff];
- var p4=o4[1];
- $M(p4,function(q4){
-  switch(q4.toString()){
+ var q4=[$$GHCziPrim_realWorldzh,$ff];
+ var r4=q4[1];
+ $M(r4,function(s4){
+  switch(s4.toString()){
   case "0":
-   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(n4);break;
+   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(p4);break;
   default:
    var $ff=gtk2hs_threads_initialise();
-   var r4=[n4,$ff];
-   var s4=r4[0];
-   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(s4);
+   var t4=[p4,$ff];
+   var u4=t4[0];
+   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(u4);
   }
- },[n4]);
+ },[p4]);
 },"a6");
 var $$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop=$D(1,function(){
  $r([$hs_labelFunction("gtk2hs_g_object_unref_from_mainloop",null)]);
 },"at Graphics/UI/Gtk/General/Threading.hs:37:3");
-var $$GraphicsziUIziGtkziTypes_mkScrolledWindow1=$f(1,function(K5){
- $A(K5);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
-var $$GraphicsziUIziGtkziTypes_mkWindow1=$f(1,function(G6){
- $A(G6);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
-var $$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow1=$f(1,function(Y9){
- $A(Y9);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
-var $$GraphicsziUIziGtkziTypes_zdfGObjectClassAboutDialog1=$f(1,function(aa){
- $A(aa);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_mkScrolledWindow1=$f(1,function(u7){
+ $A(u7);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow1=$f(1,function(R7){
+ $A(R7);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_mkWindow1=$f(1,function(S7){
+ $A(S7);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_zdfGObjectClassAboutDialog1=$f(1,function(ja){
+ $A(ja);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
 var $$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow=$D(1,function(){
  $r([$$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow1,$$GraphicsziUIziGtkziTypes_zdfGObjectClassAboutDialog1]);
-},"at Graphics/UI/Gtk/Types.chs:2243:10");
+},"at Graphics/UI/Gtk/Types.chs:2255:10");
 var $$GraphicsziUIziGtkziWindowsziWindow_windowNew2=$f(1,function(xo){
  var $ff=gtk_window_new(goog.math.Long.fromBits(0,0));
  var yo=[xo,$ff];
  var zo=yo[0],Ao=yo[1];
  var Bo=$d(1,[Ao],"sat");
  $r([zo,Bo]);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Windows.Window'");
-var $$LanguageziJavascriptziJSCziObject_mkJSObjectCallAsFunctionCallback=$f(2,function(d,e){
- $$LanguageziJavascriptziJSCziObject$a.J(d,e);
-},[],"at src/Language/Javascript/JSC/Object.hs:248:3");
-var $$LanguageziJavascriptziJSCziObject_zdfMakeObjectRefZMZN2=$f(2,function(f,g){
- $A(f);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Object'");
-var $$LanguageziJavascriptziJSCziObject_objCallAsFunction=$f(5,function(U,V,W,X,Y){
- var Z=$t(function(){
-  U.J(X);
- },[X,U],"lvl3");
- var a1=$f(2,function(b1,c1){
-  Z.C([b1,c1],function(d1){
-   var e1=d1[0],f1=d1[1];
-   var g1=$f(3,function(h1,i1,j1){
-    $M(h1,function(k1){
-     var l1=k1.v[0];
-     $M(b1,function(m1){
-      var n1=m1.v[0];
-      $M(V,function(o1){
-       var p1=o1.v[0];
-       $M(W,function(q1){
-	var r1=q1.v[0];
-	$M(i1,function(s1){
-	 var t1=s1.v[0];
-	 $M(Y,function(u1){
-	  var v1=u1.v[0];
-	  var A1=$hs_int2Wordzh(l1);
-	  var $ff=JSObjectCallAsFunction(n1,p1,r1,A1,t1,v1);
-	  var w1=[j1,$ff];
-	  var x1=w1[0],y1=w1[1];
-	  var z1=$d(1,[y1],"sat");
-	  $r([x1,z1]);
-	 },[n1,p1,r1,l1,t1,j1]);
-	},[Y,n1,p1,r1,l1,j1]);
-       },[i1,Y,n1,p1,l1,j1]);
-      },[W,i1,Y,n1,l1,j1]);
-     },[V,W,i1,Y,l1,j1]);
-    },[b1,V,W,i1,Y,j1]);
-   },[b1,V,W,Y],"sat");
-   $$ForeignziMarshalziArray_withArrayLen.J($$ForeignziStorable_zdfStorablePtr,f1,g1,e1);
-  },[b1,V,W,Y]);
- },[Z,V,W,Y],"sat");
- $A(a1);
-},[],"at src/Language/Javascript/JSC/Object.hs:180:1");
-var $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4=$f(5,function(B1,C1,D1,E1,F1){
- var G1=$f(3,function(H1,I1,J1){
-  $M(H1,function(K1){
-   switch(K1.g){
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Windows.Window'");
+var $$LanguageziJavascriptziJSCziArguments_zdfMakeArgRefsZMZN1=$f(2,function(l,m){
+ $r([m,$$GHCziTypes_ZMZN]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Arguments'");
+var $$LanguageziJavascriptziJSCziArguments_zdfMakeArgRefsZMZNzuzdcmakeArgRefs=$f(2,function(n,o){
+ var p=$f(1,function(q){
+  $M(q,function(r){
+   switch(r.g){
    case 1:
-    $M(B1,function(L1){
-     var M1=L1.v[0];
-     $M(I1,function(N1){
-      switch(N1.toString()){
-      case "0":
-       $M($$DataziTextziInternal_empty,function(P1){
-	$r([J1,P1]);
-       },[J1]);break;
-      default:
-       var O1=$d(1,[M1,goog.math.Long.fromBits(0,0),N1],"sat");
-       $r([J1,O1]);
-      }
-     },[J1,M1]);
-    },[I1,J1]);break;
+    $A($$LanguageziJavascriptziJSCziArguments_zdfMakeArgRefsZMZN1);break;
    case 2:
-    var Q1=K1.v[0],R1=K1.v[1];
-    $M(Q1,function(S1){
-     var T1=S1.v[0];
-     $M(R1,function(U1){
-      var W1=$hs_ordzh(T1);
-      var V1=$t(function(){
-       $r(W1.lessThan(goog.math.Long.fromBits(65536,0))?$$GHCziTypes_True:$$GHCziTypes_False);
-      },[W1],"lvl3");
-      var Y1=W1.subtract(goog.math.Long.fromBits(65536,0));
-      var X1=$f(2,function(Z1,a2){
-       $M(C1,function(b2){
-	var c2=b2.v[0];
-	var d2=Z1.greaterThanOrEqual(c2)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(d2.g){
+    var s=r.v[0],t=r.v[1];
+    var u=$t(function(){
+     n.J(s);
+    },[s,n],"m");
+    var v=$t(function(){
+     p.J(t);
+    },[t,p],"ys1");
+    var w=$f(2,function(x,y){
+     u.C([x,y],function(z){
+      var A=z[0],B=z[1];
+      v.C([x,A],function(C){
+       var D=C[0],E=C[1];
+       var F=$d(2,[B,E],"sat");
+       $r([D,F]);
+      },[B]);
+     },[v,x]);
+    },[u,v],"sat");
+    $A(w);break;
+   }
+  },[n,p]);
+ },[n],"go");
+ p.J(o);
+},[],"at src/Language/Javascript/JSC/Classes.hs:41:5");
+var $$LanguageziJavascriptziJSCziException_zdfShowJSException2=$t(function(){
+ $$GHCziCString_unpackCStringzh.J("JSException ");
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdwzdcshowsPrec=$f(3,function(a,b,c){
+ var d=a.greaterThanOrEqual(goog.math.Long.fromBits(11,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+ switch(d.g){
+ case 1:
+  var e=$t(function(){
+   $M(b,function(f){
+    var g=f.v[0];
+    $$GHCziPtr_zdwzdcshowsPrec.J(g,c);
+   },[c]);
+  },[b,c],"sat");
+  $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziException_zdfShowJSException2,e);break;
+ case 2:
+  var h=$t(function(){
+   var i=$t(function(){
+    $M(b,function(j){
+     var k=j.v[0];
+     var l=$d(2,[$$GHCziShow_shows10,c],"sat");
+     $$GHCziPtr_zdwzdcshowsPrec.J(k,l);
+    },[c]);
+   },[b,c],"sat");
+   $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziException_zdfShowJSException2,i);
+  },[b,c],"sat");
+  $R(2,[$$GHCziShow_shows11,h],":");break;
+ }
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfShowJSExceptionzuzdcshowsPrec=$f(3,function(m,n,o){
+ $M(m,function(p){
+  var q=p.v[0];
+  $M(n,function(r){
+   var s=r.v[0];
+   $$LanguageziJavascriptziJSCziException_zdwzdcshowsPrec.J(q,s,o);
+  },[q,o]);
+ },[n,o]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfShowJSException1=$f(2,function(t,u){
+ $M(t,function(v){
+  var w=v.v[0];
+  $$LanguageziJavascriptziJSCziException_zdwzdcshowsPrec.J(goog.math.Long.fromBits(0,0),w,u);
+ },[u]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfShowJSExceptionzuzdcshowList=$f(2,function(x,y){
+ $$GHCziShow_showListzuzu.J($$LanguageziJavascriptziJSCziException_zdfShowJSException1,x,y);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfShowJSExceptionzuzdcshow=$f(1,function(z){
+ $M(z,function(A){
+  var B=A.v[0];
+  $$LanguageziJavascriptziJSCziException_zdwzdcshowsPrec.J(goog.math.Long.fromBits(0,0),B,$$GHCziTypes_ZMZN);
+ },[]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfShowJSException=$D(1,function(){
+ $r([$$LanguageziJavascriptziJSCziException_zdfShowJSExceptionzuzdcshowsPrec,$$LanguageziJavascriptziJSCziException_zdfShowJSExceptionzuzdcshow,$$LanguageziJavascriptziJSCziException_zdfShowJSExceptionzuzdcshowList]);
+},"at src/Language/Javascript/JSC/Exception.hs:27:53");
+var $$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuds=$t(function(){
+ $$GHCziCString_unpackCStringzh.J("jsc-0.1.0.0");
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuds1=$t(function(){
+ $$GHCziCString_unpackCStringzh.J("Language.Javascript.JSC.Exception");
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuds2=$t(function(){
+ $$GHCziCString_unpackCStringzh.J("JSException");
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuwild=$D(1,function(){
+ $r([goog.math.Long.fromBits(2528410406,1757401885),goog.math.Long.fromBits(2076139165,4138716075),$$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuds,$$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuds1,$$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuds2]);
+},"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfTypeableJSException1=$D(1,function(){
+ $r([goog.math.Long.fromBits(2528410406,1757401885),goog.math.Long.fromBits(2076139165,4138716075),$$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuwild,$$GHCziTypes_ZMZN]);
+},"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuzdctypeOf=$f(1,function(C){
+ $A($$LanguageziJavascriptziJSCziException_zdfTypeableJSException1);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdcfromException=$f(1,function(D){
+ $M(D,function(E){
+  var F=E.v[0],G=E.v[1];
+  $$GHCziException_zdp1Exception.C([F,G],function(H){
+   var I=H.v[0],J=H.v[1];
+   var K=$hs_eqWordzh(I,goog.math.Long.fromBits(2528410406,1757401885));
+   switch(K.g){
+   case 1:
+    $R(1,[],"Nothing");break;
+   case 2:
+    var L=$hs_eqWordzh(J,goog.math.Long.fromBits(2076139165,4138716075));
+    switch(L.g){
+    case 1:
+     $R(1,[],"Nothing");break;
+    case 2:
+     $R(2,[G],"Just");break;
+    }break;
+   }
+  },[G]);
+ },[]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziException_zdfExceptionJSException=$D(1,function(){
+ $r([$$LanguageziJavascriptziJSCziException_zdfTypeableJSExceptionzuzdctypeOf,$$LanguageziJavascriptziJSCziException_zdfShowJSException,$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException,$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdcfromException]);
+},"at src/Language/Javascript/JSC/Exception.hs:29:10");
+var $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException=$f(1,function(y){
+ $R(1,[$$LanguageziJavascriptziJSCziException_zdfExceptionJSException,y],"SomeException");
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Exception'");
+var $$LanguageziJavascriptziJSCziObject_mkJSObjectCallAsFunctionCallback=$f(2,function(e,f){
+ $$LanguageziJavascriptziJSCziObject$a.J(e,f);
+},[],"at src/Language/Javascript/JSC/Object.hs:245:3");
+var $$LanguageziJavascriptziJSCziObject_objCallAsFunction=$f(5,function(o,p,q,r,s){
+ var t=$t(function(){
+  o.J(r);
+ },[r,o],"lvl3");
+ var u=$f(2,function(v,w){
+  t.C([v,w],function(x){
+   var y=x[0],z=x[1];
+   var A=$f(3,function(B,C,D){
+    $M(B,function(E){
+     var F=E.v[0];
+     $M(v,function(G){
+      var H=G.v[0];
+      $M(p,function(I){
+       var J=I.v[0];
+       $M(q,function(K){
+	var L=K.v[0];
+	$M(C,function(M){
+	 var N=M.v[0];
+	 $M(s,function(O){
+	  var P=O.v[0];
+	  var U=$hs_int2Wordzh(F);
+	  var $ff=JSObjectCallAsFunction(H,J,L,U,N,P);
+	  var Q=[D,$ff];
+	  var R=Q[0],S=Q[1];
+	  var T=$d(1,[S],"sat");
+	  $r([R,T]);
+	 },[H,J,L,F,N,D]);
+	},[s,H,J,L,F,D]);
+       },[C,s,H,J,F,D]);
+      },[q,C,s,H,F,D]);
+     },[p,q,C,s,F,D]);
+    },[v,p,q,C,s,D]);
+   },[v,p,q,s],"sat");
+   $$ForeignziMarshalziArray_withArrayLen.J($$ForeignziStorable_zdfStorablePtr,z,A,y);
+  },[v,p,q,s]);
+ },[t,p,q,s],"sat");
+ $A(u);
+},[],"at src/Language/Javascript/JSC/Object.hs:336:1");
+var $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4=$f(5,function(e2,f2,g2,h2,i2){
+ var j2=$f(3,function(k2,l2,m2){
+  $M(k2,function(n2){
+   switch(n2.g){
+   case 1:
+    $M(e2,function(o2){
+     var p2=o2.v[0];
+     $M(l2,function(q2){
+      switch(q2.toString()){
+      case "0":
+       $M($$DataziTextziInternal_empty,function(s2){
+	$r([m2,s2]);
+       },[m2]);break;
+      default:
+       var r2=$d(1,[p2,goog.math.Long.fromBits(0,0),q2],"sat");
+       $r([m2,r2]);
+      }
+     },[m2,p2]);
+    },[l2,m2]);break;
+   case 2:
+    var t2=n2.v[0],u2=n2.v[1];
+    $M(t2,function(v2){
+     var w2=v2.v[0];
+     $M(u2,function(x2){
+      var z2=$hs_ordzh(w2);
+      var y2=$t(function(){
+       $r(z2.lessThan(goog.math.Long.fromBits(65536,0))?$$GHCziTypes_True:$$GHCziTypes_False);
+      },[z2],"lvl3");
+      var B2=z2.subtract(goog.math.Long.fromBits(65536,0));
+      var A2=$f(2,function(C2,D2){
+       $M(f2,function(E2){
+	var F2=E2.v[0];
+	var G2=C2.greaterThanOrEqual(F2)?$$GHCziTypes_True:$$GHCziTypes_False;
+	switch(G2.g){
 	case 1:
-	 $M(V1,function(e2){
-	  switch(e2.g){
+	 $M(y2,function(H2){
+	  switch(H2.g){
 	  case 1:
-	   $M(B1,function(f2){
-	    var g2=f2.v[0];
-	    var u2=$hs_uncheckedIShiftRAzh(Y1,goog.math.Long.fromBits(10,0));
-	    var t2=u2.add(goog.math.Long.fromBits(55296,0));
-	    var s2=$hs_int2Wordzh(t2);
-	    var r2=$hs_narrow16Wordzh(s2);
-	    var l2=$hs_writeWord16Arrayzh(g2,I1,r2,a2);
-	    var q2=$hs_int2Wordzh(Y1);
-	    var p2=q2.and(goog.math.Long.fromBits(1023,0));
-	    var o2=$hs_word2Intzh(p2);
-	    var n2=o2.add(goog.math.Long.fromBits(56320,0));
-	    var m2=$hs_int2Wordzh(n2);
-	    var k2=$hs_narrow16Wordzh(m2);
-	    var j2=I1.add(goog.math.Long.fromBits(1,0));
-	    var i2=$hs_writeWord16Arrayzh(g2,j2,k2,l2);
-	    var h2=I1.add(goog.math.Long.fromBits(2,0));
-	    G1.J(U1,h2,i2);
-	   },[B1,I1,Y1,C1,a2,U1,G1]);break;
+	   $M(e2,function(I2){
+	    var J2=I2.v[0];
+	    var X2=$hs_uncheckedIShiftRAzh(B2,goog.math.Long.fromBits(10,0));
+	    var W2=X2.add(goog.math.Long.fromBits(55296,0));
+	    var V2=$hs_int2Wordzh(W2);
+	    var U2=$hs_narrow16Wordzh(V2);
+	    var O2=$hs_writeWord16Arrayzh(J2,l2,U2,D2);
+	    var T2=$hs_int2Wordzh(B2);
+	    var S2=T2.and(goog.math.Long.fromBits(1023,0));
+	    var R2=$hs_word2Intzh(S2);
+	    var Q2=R2.add(goog.math.Long.fromBits(56320,0));
+	    var P2=$hs_int2Wordzh(Q2);
+	    var N2=$hs_narrow16Wordzh(P2);
+	    var M2=l2.add(goog.math.Long.fromBits(1,0));
+	    var L2=$hs_writeWord16Arrayzh(J2,M2,N2,O2);
+	    var K2=l2.add(goog.math.Long.fromBits(2,0));
+	    j2.J(x2,K2,L2);
+	   },[e2,l2,B2,f2,D2,x2,j2]);break;
 	  case 2:
-	   $M(B1,function(v2){
-	    var w2=v2.v[0];
-	    var A2=$hs_int2Wordzh(W1);
-	    var z2=$hs_narrow16Wordzh(A2);
-	    var y2=$hs_writeWord16Arrayzh(w2,I1,z2,a2);
-	    var x2=I1.add(goog.math.Long.fromBits(1,0));
-	    G1.J(U1,x2,y2);
-	   },[B1,I1,W1,C1,a2,U1,G1]);break;
+	   $M(e2,function(Y2){
+	    var Z2=Y2.v[0];
+	    var d3=$hs_int2Wordzh(z2);
+	    var c3=$hs_narrow16Wordzh(d3);
+	    var b3=$hs_writeWord16Arrayzh(Z2,l2,c3,D2);
+	    var a3=l2.add(goog.math.Long.fromBits(1,0));
+	    j2.J(x2,a3,b3);
+	   },[e2,l2,z2,f2,D2,x2,j2]);break;
 	  }
-	 },[B1,I1,W1,Y1,C1,a2,U1,G1]);break;
+	 },[e2,l2,z2,B2,f2,D2,x2,j2]);break;
 	case 2:
-	 var U2=c2.add(goog.math.Long.fromBits(1,0));
-	 var M2=$hs_uncheckedIShiftLzh(U2,goog.math.Long.fromBits(1,0));
-	 var B2=M2.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(B2.g){
+	 var x3=F2.add(goog.math.Long.fromBits(1,0));
+	 var p3=$hs_uncheckedIShiftLzh(x3,goog.math.Long.fromBits(1,0));
+	 var e3=p3.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+	 switch(e3.g){
 	 case 1:
-	  var T2=$hs_int2Wordzh(M2);
-	  var S2=T2.and(goog.math.Long.fromBits(0,1073741824));
-	  var C2=$hs_word2Intzh(S2);
-	  switch(C2.toString()){
+	  var w3=$hs_int2Wordzh(p3);
+	  var v3=w3.and(goog.math.Long.fromBits(0,1073741824));
+	  var f3=$hs_word2Intzh(v3);
+	  switch(f3.toString()){
 	  case "0":
-	   var R2=$hs_uncheckedIShiftLzh(M2,goog.math.Long.fromBits(1,0));
-	   var D2=$hs_newByteArrayzh(R2,a2);
-	   var E2=D2[0],F2=D2[1];
-	   var G2=c2.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(G2.g){
+	   var u3=$hs_uncheckedIShiftLzh(p3,goog.math.Long.fromBits(1,0));
+	   var g3=$hs_newByteArrayzh(u3,D2);
+	   var h3=g3[0],i3=g3[1];
+	   var j3=F2.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+	   switch(j3.g){
 	   case 1:
-	    $M(B1,function(H2){
-	     var I2=H2.v[0];
-	     var O2=$hs_int2Wordzh(c2);
-	     var $ff=_hs_text_memcpy(F2,goog.math.Long.fromBits(0,0),I2,goog.math.Long.fromBits(0,0),O2);
-	     var J2=[E2,$ff];
-	     var K2=J2[0];
-	     var L2=$d(1,[M2],"sat");
-	     var N2=$d(1,[F2],"sat");
-	     $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4.J(N2,L2,K1,I1,K2);
-	    },[I1,c2,M2,F2,E2,K1]);break;
+	    $M(e2,function(k3){
+	     var l3=k3.v[0];
+	     var r3=$hs_int2Wordzh(F2);
+	     var $ff=_hs_text_memcpy(i3,goog.math.Long.fromBits(0,0),l3,goog.math.Long.fromBits(0,0),r3);
+	     var m3=[h3,$ff];
+	     var n3=m3[0];
+	     var o3=$d(1,[p3],"sat");
+	     var q3=$d(1,[i3],"sat");
+	     $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4.J(q3,o3,n2,l2,n3);
+	    },[l2,F2,p3,i3,h3,n2]);break;
 	   case 2:
-	    var P2=$d(1,[M2],"sat");
-	    var Q2=$d(1,[F2],"sat");
-	    $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4.J(Q2,P2,K1,I1,E2);break;
+	    var s3=$d(1,[p3],"sat");
+	    var t3=$d(1,[i3],"sat");
+	    $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4.J(t3,s3,n2,l2,h3);break;
 	   }break;
 	  default:
 	   $$LanguageziJavascriptziJSCziObject$d.J($$GHCziPrim_realWorldzh);
@@ -1541,315 +1674,137 @@ var $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4=$f(5,function(B1
 	  $$LanguageziJavascriptziJSCziObject$d.J($$GHCziPrim_realWorldzh);break;
 	 }break;
 	}
-       },[B1,I1,W1,V1,Y1,C1,Z1,a2,U1,G1,K1]);
-      },[B1,I1,W1,V1,Y1,C1,U1,G1,K1],"a1");
-      $M(V1,function(V2){
-       switch(V2.g){
+       },[e2,l2,z2,y2,B2,f2,C2,D2,x2,j2,n2]);
+      },[e2,l2,z2,y2,B2,f2,x2,j2,n2],"a1");
+      $M(y2,function(y3){
+       switch(y3.g){
        case 1:
-	var W2=I1.add(goog.math.Long.fromBits(1,0));
-	X1.J(W2,J1);break;
+	var z3=l2.add(goog.math.Long.fromBits(1,0));
+	A2.J(z3,m2);break;
        case 2:
-	X1.J(I1,J1);break;
+	A2.J(l2,m2);break;
        }
-      },[B1,I1,J1,W1,V1,Y1,C1,U1,G1,K1,X1]);
-     },[B1,I1,J1,T1,C1,G1,K1]);
-    },[B1,I1,J1,R1,C1,G1,K1]);break;
+      },[e2,l2,m2,z2,y2,B2,f2,x2,j2,n2,A2]);
+     },[e2,l2,m2,w2,f2,j2,n2]);
+    },[e2,l2,m2,u2,f2,j2,n2]);break;
    }
-  },[B1,I1,J1,C1,G1]);
- },[B1,C1],"$wa2");
- G1.J(D1,E1,F1);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Object'");
+  },[e2,l2,m2,f2,j2]);
+ },[e2,f2],"$wa");
+ j2.J(g2,h2,i2);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Object'");
 var $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR3=$D(1,function(){
  $r([goog.math.Long.fromBits(4,0)]);
-},"in `jsc-0.0.1:Language.Javascript.JSC.Object'");
-var $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2=$f(4,function(X2,Y2,Z2,a3){
- var b3=$f(7,function(c3,d3,e3,f3,g3,h3,i3){
-  var j3=$f(2,function(k3,l3){
-   $M(k3,function(m3){
-    var n3=m3.v[0],o3=m3.v[1];
-    $$GHCziException_zdp2Exception.C([n3],function(p3){
-     $$GHCziShow_showsPrec.C([p3,$$GHCziShow_shows26,o3,$$GHCziTypes_ZMZN],function(q3){
-      $$GHCziBase_map.C([$$DataziTextziInternal_safe,q3],function(r3){
-       var s3=$f(1,function(t3){
-	var u3=$hs_newByteArrayzh(goog.math.Long.fromBits(8,0),t3);
-	var v3=u3[0],w3=u3[1];
-	var x3=$d(1,[w3],"sat");
-	$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4.J(x3,$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR3,r3,goog.math.Long.fromBits(0,0),v3);
-       },[r3],"sat");
-       $$GHCziST_runSTRep.C([s3],function(y3){
-	var z3=y3.v[0],A3=y3.v[1],B3=y3.v[2];
-	$$LanguageziJavascriptziJSCziValue_zdwa1.C([z3,A3,B3,c3,l3],function(C3){
-	 var D3=C3[0],E3=C3[1];
-	 $M(h3,function(F3){
-	  var G3=F3.v[0];
-	  $M(E3,function(H3){
-	   var I3=H3.v[0];
-	   var P3=$hs_writeAddrOffAddrzh(G3,goog.math.Long.fromBits(0,0),I3,D3);
-	   $M(c3,function(J3){
-	    var K3=J3.v[0];
-	    var $ff=JSValueMakeUndefined(K3);
-	    var L3=[P3,$ff];
-	    var M3=L3[0],N3=L3[1];
-	    var O3=$d(1,[N3],"sat");
-	    $r([M3,O3]);
-	   },[P3]);
-	  },[c3,G3,D3]);
-	 },[c3,E3,D3]);
-	},[c3,h3]);
-       },[c3,l3,h3]);
-      },[c3,l3,h3]);
-     },[c3,l3,h3]);
-    },[c3,o3,l3,h3]);
-   },[c3,l3,h3]);
-  },[c3,h3],"sat");
-  var Q3=$f(1,function(R3){
-   $M(f3,function(S3){
-    var T3=S3.v[0];
-    var Z3=$hs_word2Intzh(T3);
-    $$ForeignziMarshalziArray_zdwa8.C([$$ForeignziStorable_zdfStorablePtr,Z3,g3,R3],function(U3){
-     var V3=U3[0],W3=U3[1];
-     Y2.C([d3,e3,W3,c3,V3],function(X3){
-      var Y3=X3[0];
-      $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_jsvaluemakeundefined1.J(c3,Y3);
-     },[c3]);
-    },[d3,e3,c3,Y2]);
-   },[g3,R3,d3,e3,c3,Y2]);
-  },[f3,g3,d3,e3,c3,Y2],"sat");
-  $k($hs_catchzh,[Q3,j3,i3]);
- },[Y2],"sat");
- $$LanguageziJavascriptziJSCziObject_mkJSObjectCallAsFunctionCallback.C([b3,a3],function(a4){
-  var b4=a4[0],c4=a4[1];
-  $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectmakefunctionwithcallback1.J(Z2,X2,c4,b4);
- },[Z2,X2]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Object'");
-var $$LanguageziJavascriptziJSCziObject_zdwa=$f(3,function(L8,M8,N8){
- var $ff=JSContextGetGlobalObject(M8);
- var O8=[N8,$ff];
- var P8=O8[0],Q8=O8[1];
- var R8=$d(1,[M8],"ds");
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$LanguageziJavascriptziJSCziObject_zdfMakeObjectRefZMZN2,L8,R8,P8],function(S8){
-  var T8=S8[0],U8=S8[1];
-  var V8=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),T8);
-  var W8=V8[0],X8=V8[1];
-  var Y8=$hs_unsafeFreezzeByteArrayzh(X8,W8);
-  var Z8=Y8[0],a9=Y8[1];
-  var t9=$hs_byteArrayContentszh(a9);
-  var u9=$hs_writeAddrOffAddrzh(t9,goog.math.Long.fromBits(0,0),null,Z8);
-  $M(U8,function(b9){
-   var c9=b9.v[0];
-   var $ff=JSObjectGetProperty(M8,Q8,c9,t9);
-   var d9=[u9,$ff];
-   var e9=d9[0],f9=d9[1];
-   var g9=$hs_readAddrOffAddrzh(t9,goog.math.Long.fromBits(0,0),e9);
-   var h9=g9[0],i9=g9[1];
-   var j9=$hs_eqAddrzh(i9,null);
-   switch(j9.g){
-   case 1:
-    $$LanguageziJavascriptziJSCziValue_zdwa4.C([i9,M8,h9],function(k9){
-     var l9=k9[0],m9=k9[1];
-     var n9=$t(function(){
-      var o9=$d(1,[i9],"sat");
-      var p9=$t(function(){
-       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(m9);
-      },[m9],"sat");
-      var q9=$d(1,[p9,o9],"sat");
-      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(q9);
-     },[i9,m9],"sat");
-     $r($hs_raiseIOzh(n9,l9));
-    },[i9]);break;
-   case 2:
-    var s9=$hs_touchzh(a9,h9);
-    var r9=$d(1,[f9],"sat");
-    $$LanguageziJavascriptziJSCziValue_deRefVal2.J(r9,R8,s9);break;
-   }
-  },[M8,R8,a9,t9,Q8,u9]);
- },[M8,R8,Q8]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Object'");
-var $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2=$f(3,function(A9,B9,C9){
- $M(A9,function(D9){
-  switch(D9.g){
-  case 1:
-   var E9=D9.v[0],F9=D9.v[1];
-   var G9=$f(3,function(H9,I9,J9){
-    $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectgetproperty1.J(I9,E9,F9,H9,J9);
-   },[E9,F9],"sat");
-   $$LanguageziJavascriptziJSCziValue_rethrow1.J(G9,B9,C9);break;
-  case 2:
-   var K9=D9.v[0],L9=D9.v[1];
-   var M9=$f(3,function(N9,O9,P9){
-    $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectgetpropertyatindex1.J(O9,K9,L9,N9,P9);
-   },[K9,L9],"sat");
-   $$LanguageziJavascriptziJSCziValue_rethrow1.J(M9,B9,C9);break;
-  }
- },[B9,C9]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Object'");
-var $$LanguageziJavascriptziJSCziObject_zh=$f(4,function(X9,Y9,Z9,aa){
- var ba=$t(function(){
-  X9.J(Z9);
- },[Z9,X9],"m");
- var ca=$f(2,function(da,ea){
-  ba.C([da,ea],function(fa){
-   var ga=fa[0],ha=fa[1];
-   $M(ha,function(ia){
-    switch(ia.g){
-    case 1:
-     var ja=ia.v[0],ka=ia.v[1];
-     var la=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),ga);
-     var ma=la[0],na=la[1];
-     var oa=$hs_unsafeFreezzeByteArrayzh(na,ma);
-     var pa=oa[0],qa=oa[1];
-     var lb=$hs_byteArrayContentszh(qa);
-     var mb=$hs_writeAddrOffAddrzh(lb,goog.math.Long.fromBits(0,0),null,pa);
-     $M(da,function(ra){
-      var sa=ra.v[0];
-      $M(ja,function(ta){
-       var ua=ta.v[0];
-       $M(ka,function(va){
-	var wa=va.v[0];
-	var $ff=JSObjectGetProperty(sa,ua,wa,lb);
-	var xa=[mb,$ff];
-	var ya=xa[0],za=xa[1];
-	var Aa=$hs_readAddrOffAddrzh(lb,goog.math.Long.fromBits(0,0),ya);
-	var Ba=Aa[0],Ca=Aa[1];
-	var Da=$hs_eqAddrzh(Ca,null);
-	switch(Da.g){
-	case 1:
-	 $$LanguageziJavascriptziJSCziValue_zdwa4.C([Ca,sa,Ba],function(Ea){
-	  var Fa=Ea[0],Ga=Ea[1];
-	  var Ha=$t(function(){
-	   var Ia=$d(1,[Ca],"sat");
-	   var Ja=$t(function(){
-	    $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Ga);
-	   },[Ga],"sat");
-	   var Ka=$d(1,[Ja,Ia],"sat");
-	   $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Ka);
-	  },[Ca,Ga],"sat");
-	  $r($hs_raiseIOzh(Ha,Fa));
-	 },[Ca]);break;
-	case 2:
-	 var kb=$hs_touchzh(qa,Ba);
-	 var La=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),kb);
-	 var Ma=La[0],Na=La[1];
-	 var Oa=$hs_unsafeFreezzeByteArrayzh(Na,Ma);
-	 var Pa=Oa[0],Qa=Oa[1];
-	 var Sa=$hs_byteArrayContentszh(Qa);
-	 var jb=$hs_writeAddrOffAddrzh(Sa,goog.math.Long.fromBits(0,0),null,Pa);
-	 var Ra=$d(1,[Sa],"sat");
-	 var Ta=$d(1,[za],"sat");
-	 $$LanguageziJavascriptziJSCziObject_objCallAsFunction.C([Y9,Ta,ta,aa,Ra,ra,jb],function(Ua){
-	  var Va=Ua[0],Wa=Ua[1];
-	  var Xa=$hs_readAddrOffAddrzh(Sa,goog.math.Long.fromBits(0,0),Va);
-	  var Ya=Xa[0],Za=Xa[1];
-	  var ab=$hs_eqAddrzh(Za,null);
-	  switch(ab.g){
-	  case 1:
-	   $$LanguageziJavascriptziJSCziValue_zdwa4.C([Za,sa,Ya],function(bb){
-	    var cb=bb[0],db=bb[1];
-	    var eb=$t(function(){
-	     var fb=$d(1,[Za],"sat");
-	     var gb=$t(function(){
-	      $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(db);
-	     },[db],"sat");
-	     var hb=$d(1,[gb,fb],"sat");
-	     $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(hb);
-	    },[Za,db],"sat");
-	    $r($hs_raiseIOzh(eb,cb));
-	   },[Za]);break;
-	  case 2:
-	   var ib=$hs_touchzh(Qa,Ya);
-	   $r([ib,Wa]);break;
-	  }
-	 },[sa,Qa,Sa]);break;
-	}
-       },[qa,lb,sa,ua,mb,Y9,ta,aa,ra]);
-      },[qa,lb,ka,sa,mb,Y9,aa,ra]);
-     },[qa,lb,ja,ka,mb,Y9,aa]);break;
-    case 2:
-     var nb=ia.v[0],ob=ia.v[1];
-     var pb=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),ga);
-     var qb=pb[0],rb=pb[1];
-     var sb=$hs_unsafeFreezzeByteArrayzh(rb,qb);
-     var tb=sb[0],ub=sb[1];
-     var pc=$hs_byteArrayContentszh(ub);
-     var qc=$hs_writeAddrOffAddrzh(pc,goog.math.Long.fromBits(0,0),null,tb);
-     $M(da,function(vb){
-      var wb=vb.v[0];
-      $M(nb,function(xb){
-       var yb=xb.v[0];
-       $M(ob,function(zb){
-	var Ab=zb.v[0];
-	var $ff=JSObjectGetPropertyAtIndex(wb,yb,Ab,pc);
-	var Bb=[qc,$ff];
-	var Cb=Bb[0],Db=Bb[1];
-	var Eb=$hs_readAddrOffAddrzh(pc,goog.math.Long.fromBits(0,0),Cb);
-	var Fb=Eb[0],Gb=Eb[1];
-	var Hb=$hs_eqAddrzh(Gb,null);
-	switch(Hb.g){
-	case 1:
-	 $$LanguageziJavascriptziJSCziValue_zdwa4.C([Gb,wb,Fb],function(Ib){
-	  var Jb=Ib[0],Kb=Ib[1];
-	  var Lb=$t(function(){
-	   var Mb=$d(1,[Gb],"sat");
-	   var Nb=$t(function(){
-	    $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Kb);
-	   },[Kb],"sat");
-	   var Ob=$d(1,[Nb,Mb],"sat");
-	   $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Ob);
-	  },[Gb,Kb],"sat");
-	  $r($hs_raiseIOzh(Lb,Jb));
-	 },[Gb]);break;
-	case 2:
-	 var oc=$hs_touchzh(ub,Fb);
-	 var Pb=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),oc);
-	 var Qb=Pb[0],Rb=Pb[1];
-	 var Sb=$hs_unsafeFreezzeByteArrayzh(Rb,Qb);
-	 var Tb=Sb[0],Ub=Sb[1];
-	 var Wb=$hs_byteArrayContentszh(Ub);
-	 var nc=$hs_writeAddrOffAddrzh(Wb,goog.math.Long.fromBits(0,0),null,Tb);
-	 var Vb=$d(1,[Wb],"sat");
-	 var Xb=$d(1,[Db],"sat");
-	 $$LanguageziJavascriptziJSCziObject_objCallAsFunction.C([Y9,Xb,xb,aa,Vb,vb,nc],function(Yb){
-	  var Zb=Yb[0],ac=Yb[1];
-	  var bc=$hs_readAddrOffAddrzh(Wb,goog.math.Long.fromBits(0,0),Zb);
-	  var cc=bc[0],dc=bc[1];
-	  var ec=$hs_eqAddrzh(dc,null);
-	  switch(ec.g){
-	  case 1:
-	   $$LanguageziJavascriptziJSCziValue_zdwa4.C([dc,wb,cc],function(fc){
-	    var gc=fc[0],hc=fc[1];
-	    var ic=$t(function(){
-	     var jc=$d(1,[dc],"sat");
-	     var kc=$t(function(){
-	      $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(hc);
-	     },[hc],"sat");
-	     var lc=$d(1,[kc,jc],"sat");
-	     $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(lc);
-	    },[dc,hc],"sat");
-	    $r($hs_raiseIOzh(ic,gc));
-	   },[dc]);break;
-	  case 2:
-	   var mc=$hs_touchzh(Ub,cc);
-	   $r([mc,ac]);break;
-	  }
-	 },[wb,Ub,Wb]);break;
-	}
-       },[Y9,aa,ub,pc,wb,yb,qc,xb,vb]);
-      },[Y9,aa,ub,pc,ob,wb,qc,vb]);
-     },[Y9,aa,ub,pc,nb,ob,qc]);break;
-    }
-   },[da,ga,Y9,aa]);
-  },[da,Y9,aa]);
- },[ba,Y9,aa],"sat");
- $A(ca);
-},[],"at src/Language/Javascript/JSC/Object.hs:210:6");
-var $$LanguageziJavascriptziJSCziObject$a=$F(2,function(Gd,Hd){
- var Id=[Hd,Gd];
- var Jd=Id[0],Kd=Id[1];
- var $ff=createAdjustor(goog.math.Long.fromBits(1,0),Kd,$hs_labelFunction("LanguageziJavascriptziJSCziObject_d6eA",null),"ppplpp");
- var Ld=[Jd,$ff];
- var Md=Ld[0],Nd=Ld[1];
- var Od=$d(1,[Nd],"sat");
- $r([Md,Od]);
+},"in `jsc-0.1.0.0:Language.Javascript.JSC.Object'");
+var $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2=$f(4,function(A3,B3,C3,D3){
+ var E3=$f(7,function(F3,G3,H3,I3,J3,K3,L3){
+  var M3=$f(2,function(N3,O3){
+   $M(F3,function(P3){
+    var Q3=P3.v[0];
+    var R3=$t(function(){
+     $M(N3,function(S3){
+      var T3=S3.v[0],U3=S3.v[1];
+      $$GHCziException_zdp2Exception.C([T3],function(V3){
+       $$GHCziShow_showsPrec.C([V3,$$GHCziShow_shows26,U3,$$GHCziTypes_ZMZN],function(W3){
+	$$GHCziBase_map.C([$$DataziTextziInternal_safe,W3],function(X3){
+	 var Y3=$f(1,function(Z3){
+	  var a4=$hs_newByteArrayzh(goog.math.Long.fromBits(8,0),Z3);
+	  var b4=a4[0],c4=a4[1];
+	  var d4=$d(1,[c4],"sat");
+	  $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR4.J(d4,$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR3,X3,goog.math.Long.fromBits(0,0),b4);
+	 },[X3],"sat");
+	 $$GHCziST_runSTRep.J(Y3);
+	},[]);
+       },[]);
+      },[U3]);
+     },[]);
+    },[N3],"sat");
+    $$LanguageziJavascriptziJSCziString_textToStr.C([R3],function(e4){
+     var f4=e4.v[0];
+     var $ff=JSValueMakeString(Q3,f4);
+     var g4=[O3,$ff];
+     var h4=g4[0],i4=g4[1];
+     $M(K3,function(j4){
+      var k4=j4.v[0];
+      var p4=$hs_writeAddrOffAddrzh(k4,goog.math.Long.fromBits(0,0),i4,h4);
+      var $ff=JSValueMakeUndefined(Q3);
+      var l4=[p4,$ff];
+      var m4=l4[0],n4=l4[1];
+      var o4=$d(1,[n4],"sat");
+      $r([m4,o4]);
+     },[Q3,i4,h4]);
+    },[Q3,O3,K3]);
+   },[N3,O3,K3]);
+  },[F3,K3],"sat");
+  var q4=$f(1,function(r4){
+   $M(I3,function(s4){
+    var t4=s4.v[0];
+    var z4=$hs_word2Intzh(t4);
+    $$ForeignziMarshalziArray_zdwa8.C([$$ForeignziStorable_zdfStorablePtr,z4,J3,r4],function(u4){
+     var v4=u4[0],w4=u4[1];
+     B3.C([G3,H3,w4,F3,v4],function(x4){
+      var y4=x4[0];
+      $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_jsvaluemakeundefined1.J(F3,y4);
+     },[F3]);
+    },[G3,H3,F3,B3]);
+   },[J3,r4,G3,H3,F3,B3]);
+  },[I3,J3,G3,H3,F3,B3],"sat");
+  $k($hs_catchzh,[q4,M3,L3]);
+ },[B3],"sat");
+ $$LanguageziJavascriptziJSCziObject_mkJSObjectCallAsFunctionCallback.C([E3,D3],function(A4){
+  var B4=A4[0],C4=A4[1];
+  $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectmakefunctionwithcallback1.J(C3,A3,C4,B4);
+ },[C3,A3]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Object'");
+var $$LanguageziJavascriptziJSCziObject_zh=$f(4,function(e9,f9,g9,h9){
+ var i9=$t(function(){
+  e9.J(g9);
+ },[g9,e9],"m");
+ var j9=$f(2,function(k9,l9){
+  i9.C([k9,l9],function(m9){
+   var n9=m9[0],o9=m9[1];
+   $$LanguageziJavascriptziJSCziProperties_objGetPropertyzq1.C([o9,k9,n9],function(p9){
+    var q9=p9[0],r9=p9[1];
+    $M(r9,function(s9){
+     var t9=s9.v[0],u9=s9.v[1];
+     var v9=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),q9);
+     var w9=v9[0],x9=v9[1];
+     var y9=$hs_unsafeFreezzeByteArrayzh(x9,w9);
+     var z9=y9[0],A9=y9[1];
+     var C9=$hs_byteArrayContentszh(A9);
+     var O9=$hs_writeAddrOffAddrzh(C9,goog.math.Long.fromBits(0,0),null,z9);
+     var B9=$d(1,[C9],"sat");
+     $$LanguageziJavascriptziJSCziObject_objCallAsFunction.C([f9,u9,t9,h9,B9,k9,O9],function(D9){
+      var E9=D9[0],F9=D9[1];
+      var G9=$hs_readAddrOffAddrzh(C9,goog.math.Long.fromBits(0,0),E9);
+      var H9=G9[0],I9=G9[1];
+      var J9=$hs_eqAddrzh(I9,null);
+      switch(J9.g){
+      case 1:
+       var K9=$t(function(){
+	var L9=$d(1,[I9],"sat");
+	var M9=$d(1,[L9],"sat");
+	$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(M9);
+       },[I9],"sat");
+       $r($hs_raiseIOzh(K9,H9));break;
+      case 2:
+       var N9=$hs_touchzh(A9,H9);
+       $r([N9,F9]);break;
+      }
+     },[A9,C9]);
+    },[k9,q9,f9,h9]);
+   },[k9,f9,h9]);
+  },[k9,f9,h9]);
+ },[i9,f9,h9],"sat");
+ $A(j9);
+},[],"at src/Language/Javascript/JSC/Object.hs:171:6");
+var $$LanguageziJavascriptziJSCziObject$a=$F(2,function(Fb,Gb){
+ var Hb=[Gb,Fb];
+ var Ib=Hb[0],Jb=Hb[1];
+ var $ff=createAdjustor(goog.math.Long.fromBits(1,0),Jb,$hs_labelFunction("LanguageziJavascriptziJSCziObject_d44v",null),"ppplpp");
+ var Kb=[Ib,$ff];
+ var Lb=Kb[0],Mb=Kb[1];
+ var Nb=$d(1,[Mb],"sat");
+ $r([Lb,Nb]);
 },"a");
 var $$LanguageziJavascriptziJSCziObject$b=$T(function(){
  $$GHCziCString_unpackCStringzh.J("Data.Text.Array.new: size overflow");
@@ -1857,129 +1812,493 @@ var $$LanguageziJavascriptziJSCziObject$b=$T(function(){
 var $$LanguageziJavascriptziJSCziObject$c=$T(function(){
  $$GHCziErr_error.J($$LanguageziJavascriptziJSCziObject$b);
 },"lvl1");
-var $$LanguageziJavascriptziJSCziObject$d=$F(1,function(Pd){
+var $$LanguageziJavascriptziJSCziObject$d=$F(1,function(Ob){
  $A($$LanguageziJavascriptziJSCziObject$c);
 },"poly_$w$j3");
-var $$LanguageziJavascriptziJSCziValue_zdwa5=$f(2,function(j1,k1){
- var $ff=JSStringGetLength(j1);
- var l1=[k1,$ff];
- var m1=l1[0],n1=l1[1];
- var $ff=JSStringGetCharactersPtr(j1);
- var o1=[m1,$ff];
- var p1=o1[0],q1=o1[1];
- var w1=$hs_word2Intzh(n1);
- var r1=w1.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
- switch(r1.g){
- case 1:
-  $$GHCziIntegerziType_wordToInteger.C([n1],function(s1){
-   $$GHCziIntegerziType_integerToInt.C([s1],function(u1){
-    var t1=$d(1,[q1],"sat");
-    $$DataziTextziForeign_zdwa3.J(t1,u1,p1);
-   },[q1,p1]);
-  },[q1,p1]);break;
- case 2:
-  var v1=$d(1,[q1],"sat");
-  $$DataziTextziForeign_zdwa3.J(v1,w1,p1);break;
- }
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN2=$f(5,function(a2,b2,c2,d2,e2){
- var f2=$f(3,function(g2,h2,i2){
-  $M(g2,function(j2){
-   switch(j2.g){
-   case 1:
+var $$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2=$f(3,function(H,I,J){
+ $M(H,function(K){
+  switch(K.g){
+  case 1:
+   var L=K.v[0],M=K.v[1];
+   var N=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),J);
+   var O=N[0],P=N[1];
+   var Q=$hs_unsafeFreezzeByteArrayzh(P,O);
+   var R=Q[0],S=Q[1];
+   var l1=$hs_byteArrayContentszh(S);
+   var m1=$hs_writeAddrOffAddrzh(l1,goog.math.Long.fromBits(0,0),null,R);
+   $M(I,function(T){
+    var U=T.v[0];
+    $M(L,function(V){
+     var W=V.v[0];
+     $M(M,function(X){
+      var Y=X.v[0];
+      var $ff=JSObjectGetProperty(U,W,Y,l1);
+      var Z=[m1,$ff];
+      var a1=Z[0],b1=Z[1];
+      var c1=$hs_readAddrOffAddrzh(l1,goog.math.Long.fromBits(0,0),a1);
+      var d1=c1[0],e1=c1[1];
+      var f1=$hs_eqAddrzh(e1,null);
+      switch(f1.g){
+      case 1:
+       var g1=$t(function(){
+	var h1=$d(1,[e1],"sat");
+	var i1=$d(1,[h1],"sat");
+	$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(i1);
+       },[e1],"sat");
+       $r($hs_raiseIOzh(g1,d1));break;
+      case 2:
+       var k1=$hs_touchzh(S,d1);
+       var j1=$d(1,[b1],"sat");
+       $r([k1,j1]);break;
+      }
+     },[S,l1,U,W,m1]);
+    },[S,l1,M,U,m1]);
+   },[S,l1,L,M,m1]);break;
+  case 2:
+   var n1=K.v[0],o1=K.v[1];
+   var p1=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),J);
+   var q1=p1[0],r1=p1[1];
+   var s1=$hs_unsafeFreezzeByteArrayzh(r1,q1);
+   var t1=s1[0],u1=s1[1];
+   var N1=$hs_byteArrayContentszh(u1);
+   var O1=$hs_writeAddrOffAddrzh(N1,goog.math.Long.fromBits(0,0),null,t1);
+   $M(I,function(v1){
+    var w1=v1.v[0];
+    $M(n1,function(x1){
+     var y1=x1.v[0];
+     $M(o1,function(z1){
+      var A1=z1.v[0];
+      var $ff=JSObjectGetPropertyAtIndex(w1,y1,A1,N1);
+      var B1=[O1,$ff];
+      var C1=B1[0],D1=B1[1];
+      var E1=$hs_readAddrOffAddrzh(N1,goog.math.Long.fromBits(0,0),C1);
+      var F1=E1[0],G1=E1[1];
+      var H1=$hs_eqAddrzh(G1,null);
+      switch(H1.g){
+      case 1:
+       var I1=$t(function(){
+	var J1=$d(1,[G1],"sat");
+	var K1=$d(1,[J1],"sat");
+	$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(K1);
+       },[G1],"sat");
+       $r($hs_raiseIOzh(I1,F1));break;
+      case 2:
+       var M1=$hs_touchzh(u1,F1);
+       var L1=$d(1,[D1],"sat");
+       $r([M1,L1]);break;
+      }
+     },[u1,N1,w1,y1,O1]);
+    },[u1,N1,o1,w1,O1]);
+   },[u1,N1,n1,o1,O1]);break;
+  }
+ },[J,I]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Properties'");
+var $$LanguageziJavascriptziJSCziProperties_objGetPropertyzq1=$f(3,function(W1,X1,Y1){
+ $M(W1,function(Z1){
+  switch(Z1.g){
+  case 1:
+   var a2=Z1.v[0],b2=Z1.v[1];
+   var c2=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Y1);
+   var d2=c2[0],e2=c2[1];
+   var f2=$hs_unsafeFreezzeByteArrayzh(e2,d2);
+   var g2=f2[0],h2=f2[1];
+   var B2=$hs_byteArrayContentszh(h2);
+   var C2=$hs_writeAddrOffAddrzh(B2,goog.math.Long.fromBits(0,0),null,g2);
+   $M(X1,function(i2){
+    var j2=i2.v[0];
     $M(a2,function(k2){
      var l2=k2.v[0];
-     $M(h2,function(m2){
-      switch(m2.toString()){
-      case "0":
-       $M($$DataziTextziInternal_empty,function(o2){
-	$r([i2,o2]);
-       },[i2]);break;
-      default:
-       var n2=$d(1,[l2,goog.math.Long.fromBits(0,0),m2],"sat");
-       $r([i2,n2]);
+     $M(b2,function(m2){
+      var n2=m2.v[0];
+      var $ff=JSObjectGetProperty(j2,l2,n2,B2);
+      var o2=[C2,$ff];
+      var p2=o2[0],q2=o2[1];
+      var r2=$hs_readAddrOffAddrzh(B2,goog.math.Long.fromBits(0,0),p2);
+      var s2=r2[0],t2=r2[1];
+      var u2=$hs_eqAddrzh(t2,null);
+      switch(u2.g){
+      case 1:
+       var v2=$t(function(){
+	var w2=$d(1,[t2],"sat");
+	var x2=$d(1,[w2],"sat");
+	$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(x2);
+       },[t2],"sat");
+       $r($hs_raiseIOzh(v2,s2));break;
+      case 2:
+       var A2=$hs_touchzh(h2,s2);
+       var y2=$d(1,[q2],"sat");
+       var z2=$d(1,[k2,y2],"sat");
+       $r([A2,z2]);break;
       }
-     },[i2,l2]);
-    },[h2,i2]);break;
+     },[h2,B2,j2,l2,C2,k2]);
+    },[h2,B2,b2,j2,C2]);
+   },[h2,B2,a2,b2,C2]);break;
+  case 2:
+   var D2=Z1.v[0],E2=Z1.v[1];
+   var F2=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Y1);
+   var G2=F2[0],H2=F2[1];
+   var I2=$hs_unsafeFreezzeByteArrayzh(H2,G2);
+   var J2=I2[0],K2=I2[1];
+   var e3=$hs_byteArrayContentszh(K2);
+   var f3=$hs_writeAddrOffAddrzh(e3,goog.math.Long.fromBits(0,0),null,J2);
+   $M(X1,function(L2){
+    var M2=L2.v[0];
+    $M(D2,function(N2){
+     var O2=N2.v[0];
+     $M(E2,function(P2){
+      var Q2=P2.v[0];
+      var $ff=JSObjectGetPropertyAtIndex(M2,O2,Q2,e3);
+      var R2=[f3,$ff];
+      var S2=R2[0],T2=R2[1];
+      var U2=$hs_readAddrOffAddrzh(e3,goog.math.Long.fromBits(0,0),S2);
+      var V2=U2[0],W2=U2[1];
+      var X2=$hs_eqAddrzh(W2,null);
+      switch(X2.g){
+      case 1:
+       var Y2=$t(function(){
+	var Z2=$d(1,[W2],"sat");
+	var a3=$d(1,[Z2],"sat");
+	$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(a3);
+       },[W2],"sat");
+       $r($hs_raiseIOzh(Y2,V2));break;
+      case 2:
+       var d3=$hs_touchzh(K2,V2);
+       var b3=$d(1,[T2],"sat");
+       var c3=$d(1,[N2,b3],"sat");
+       $r([d3,c3]);break;
+      }
+     },[K2,e3,M2,O2,f3,N2]);
+    },[K2,e3,E2,M2,f3]);
+   },[K2,e3,D2,E2,f3]);break;
+  }
+ },[Y1,X1]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Properties'");
+var $$LanguageziJavascriptziJSCziString_zdwstrToText=$f(2,function(a,b){
+ var c=$f(1,function(d){
+  $M(b,function(e){
+   var f=e.v[0];
+   var $ff=JSStringGetLength(f);
+   var g=[d,$ff];
+   var h=g[0],i=g[1];
+   var $ff=JSStringGetCharactersPtr(f);
+   var j=[h,$ff];
+   var k=j[0],l=j[1];
+   var r=$hs_word2Intzh(i);
+   var m=r.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+   switch(m.g){
+   case 1:
+    $$GHCziIntegerziType_wordToInteger.C([i],function(n){
+     $$GHCziIntegerziType_integerToInt.C([n],function(p){
+      var o=$d(1,[l],"sat");
+      $$DataziTextziForeign_zdwa3.J(o,p,k);
+     },[l,k]);
+    },[l,k]);break;
    case 2:
-    var p2=j2.v[0],q2=j2.v[1];
-    $M(p2,function(r2){
-     var s2=r2.v[0];
-     $M(q2,function(t2){
-      var v2=$hs_ordzh(s2);
-      var u2=$t(function(){
-       $r(v2.lessThan(goog.math.Long.fromBits(65536,0))?$$GHCziTypes_True:$$GHCziTypes_False);
-      },[v2],"lvl3");
-      var x2=v2.subtract(goog.math.Long.fromBits(65536,0));
-      var w2=$f(2,function(y2,z2){
-       $M(b2,function(A2){
-	var B2=A2.v[0];
-	var C2=y2.greaterThanOrEqual(B2)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(C2.g){
+    var q=$d(1,[l],"sat");
+    $$DataziTextziForeign_zdwa3.J(q,r,k);break;
+   }
+  },[d]);
+ },[b],"sat");
+ a.J(c);
+},[],"at src/Language/Javascript/JSC/String.hs:49:1");
+var $$LanguageziJavascriptziJSCziString_textToStr=$f(1,function(w){
+ var x=$f(1,function(y){
+  var T=$hs_noDuplicatezh(y);
+  $M(w,function(z){
+   var A=z.v[0],B=z.v[1],C=z.v[2];
+   var S=C.multiply(goog.math.Long.fromBits(2,0));
+   var D=$hs_newPinnedByteArrayzh(S,T);
+   var E=D[0],F=D[1];
+   var G=$hs_unsafeFreezzeByteArrayzh(F,E);
+   var H=G[0],I=G[1];
+   var Q=$hs_byteArrayContentszh(I);
+   $$DataziTextziForeign_zdwa2.C([A,B,C,Q,H],function(J){
+    var K=J[0];
+    var R=$hs_int2Wordzh(C);
+    var $ff=JSStringCreateWithCharacters(Q,R);
+    var L=[K,$ff];
+    var M=L[0],N=L[1];
+    var P=$hs_touchzh(I,M);
+    var O=$d(1,[N],"sat");
+    $r([P,O]);
+   },[C,I,Q]);
+  },[T]);
+ },[w],"sat");
+ $$GHCziIO_unsafeDupablePerformIO.J(x);
+},[],"at src/Language/Javascript/JSC/String.hs:56:1");
+var $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZN2=$f(5,function(U,V,W,X,Y){
+ var Z=$f(3,function(a1,b1,c1){
+  $M(a1,function(d1){
+   switch(d1.g){
+   case 1:
+    $M(U,function(e1){
+     var f1=e1.v[0];
+     $M(b1,function(g1){
+      switch(g1.toString()){
+      case "0":
+       $M($$DataziTextziInternal_empty,function(i1){
+	$r([c1,i1]);
+       },[c1]);break;
+      default:
+       var h1=$d(1,[f1,goog.math.Long.fromBits(0,0),g1],"sat");
+       $r([c1,h1]);
+      }
+     },[c1,f1]);
+    },[b1,c1]);break;
+   case 2:
+    var j1=d1.v[0],k1=d1.v[1];
+    $M(j1,function(l1){
+     var m1=l1.v[0];
+     $M(k1,function(n1){
+      var p1=$hs_ordzh(m1);
+      var o1=$t(function(){
+       $r(p1.lessThan(goog.math.Long.fromBits(65536,0))?$$GHCziTypes_True:$$GHCziTypes_False);
+      },[p1],"lvl2");
+      var r1=p1.subtract(goog.math.Long.fromBits(65536,0));
+      var q1=$f(2,function(s1,t1){
+       $M(V,function(u1){
+	var v1=u1.v[0];
+	var w1=s1.greaterThanOrEqual(v1)?$$GHCziTypes_True:$$GHCziTypes_False;
+	switch(w1.g){
 	case 1:
-	 $M(u2,function(D2){
-	  switch(D2.g){
+	 $M(o1,function(x1){
+	  switch(x1.g){
 	  case 1:
-	   $M(a2,function(E2){
-	    var F2=E2.v[0];
-	    var T2=$hs_uncheckedIShiftRAzh(x2,goog.math.Long.fromBits(10,0));
-	    var S2=T2.add(goog.math.Long.fromBits(55296,0));
-	    var R2=$hs_int2Wordzh(S2);
-	    var Q2=$hs_narrow16Wordzh(R2);
-	    var K2=$hs_writeWord16Arrayzh(F2,h2,Q2,z2);
-	    var P2=$hs_int2Wordzh(x2);
-	    var O2=P2.and(goog.math.Long.fromBits(1023,0));
-	    var N2=$hs_word2Intzh(O2);
-	    var M2=N2.add(goog.math.Long.fromBits(56320,0));
-	    var L2=$hs_int2Wordzh(M2);
-	    var J2=$hs_narrow16Wordzh(L2);
-	    var I2=h2.add(goog.math.Long.fromBits(1,0));
-	    var H2=$hs_writeWord16Arrayzh(F2,I2,J2,K2);
-	    var G2=h2.add(goog.math.Long.fromBits(2,0));
-	    f2.J(t2,G2,H2);
-	   },[a2,h2,x2,b2,z2,t2,f2]);break;
+	   $M(U,function(y1){
+	    var z1=y1.v[0];
+	    var N1=$hs_uncheckedIShiftRAzh(r1,goog.math.Long.fromBits(10,0));
+	    var M1=N1.add(goog.math.Long.fromBits(55296,0));
+	    var L1=$hs_int2Wordzh(M1);
+	    var K1=$hs_narrow16Wordzh(L1);
+	    var E1=$hs_writeWord16Arrayzh(z1,b1,K1,t1);
+	    var J1=$hs_int2Wordzh(r1);
+	    var I1=J1.and(goog.math.Long.fromBits(1023,0));
+	    var H1=$hs_word2Intzh(I1);
+	    var G1=H1.add(goog.math.Long.fromBits(56320,0));
+	    var F1=$hs_int2Wordzh(G1);
+	    var D1=$hs_narrow16Wordzh(F1);
+	    var C1=b1.add(goog.math.Long.fromBits(1,0));
+	    var B1=$hs_writeWord16Arrayzh(z1,C1,D1,E1);
+	    var A1=b1.add(goog.math.Long.fromBits(2,0));
+	    Z.J(n1,A1,B1);
+	   },[U,b1,r1,V,t1,n1,Z]);break;
 	  case 2:
-	   $M(a2,function(U2){
-	    var V2=U2.v[0];
-	    var Z2=$hs_int2Wordzh(v2);
-	    var Y2=$hs_narrow16Wordzh(Z2);
-	    var X2=$hs_writeWord16Arrayzh(V2,h2,Y2,z2);
-	    var W2=h2.add(goog.math.Long.fromBits(1,0));
-	    f2.J(t2,W2,X2);
-	   },[a2,h2,v2,b2,z2,t2,f2]);break;
+	   $M(U,function(O1){
+	    var P1=O1.v[0];
+	    var T1=$hs_int2Wordzh(p1);
+	    var S1=$hs_narrow16Wordzh(T1);
+	    var R1=$hs_writeWord16Arrayzh(P1,b1,S1,t1);
+	    var Q1=b1.add(goog.math.Long.fromBits(1,0));
+	    Z.J(n1,Q1,R1);
+	   },[U,b1,p1,V,t1,n1,Z]);break;
 	  }
-	 },[a2,h2,v2,x2,b2,z2,t2,f2]);break;
+	 },[U,b1,p1,r1,V,t1,n1,Z]);break;
 	case 2:
-	 var t3=B2.add(goog.math.Long.fromBits(1,0));
-	 var l3=$hs_uncheckedIShiftLzh(t3,goog.math.Long.fromBits(1,0));
-	 var a3=l3.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(a3.g){
+	 var n2=v1.add(goog.math.Long.fromBits(1,0));
+	 var f2=$hs_uncheckedIShiftLzh(n2,goog.math.Long.fromBits(1,0));
+	 var U1=f2.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+	 switch(U1.g){
 	 case 1:
-	  var s3=$hs_int2Wordzh(l3);
-	  var r3=s3.and(goog.math.Long.fromBits(0,1073741824));
-	  var b3=$hs_word2Intzh(r3);
-	  switch(b3.toString()){
+	  var m2=$hs_int2Wordzh(f2);
+	  var l2=m2.and(goog.math.Long.fromBits(0,1073741824));
+	  var V1=$hs_word2Intzh(l2);
+	  switch(V1.toString()){
 	  case "0":
-	   var q3=$hs_uncheckedIShiftLzh(l3,goog.math.Long.fromBits(1,0));
-	   var c3=$hs_newByteArrayzh(q3,z2);
-	   var d3=c3[0],e3=c3[1];
-	   var f3=B2.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(f3.g){
+	   var k2=$hs_uncheckedIShiftLzh(f2,goog.math.Long.fromBits(1,0));
+	   var W1=$hs_newByteArrayzh(k2,t1);
+	   var X1=W1[0],Y1=W1[1];
+	   var Z1=v1.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+	   switch(Z1.g){
 	   case 1:
-	    $M(a2,function(g3){
-	     var h3=g3.v[0];
-	     var n3=$hs_int2Wordzh(B2);
-	     var $ff=_hs_text_memcpy(e3,goog.math.Long.fromBits(0,0),h3,goog.math.Long.fromBits(0,0),n3);
-	     var i3=[d3,$ff];
-	     var j3=i3[0];
-	     var k3=$d(1,[l3],"sat");
-	     var m3=$d(1,[e3],"sat");
-	     $$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN2.J(m3,k3,j2,h2,j3);
-	    },[h2,B2,l3,e3,d3,j2]);break;
+	    $M(U,function(a2){
+	     var b2=a2.v[0];
+	     var h2=$hs_int2Wordzh(v1);
+	     var $ff=_hs_text_memcpy(Y1,goog.math.Long.fromBits(0,0),b2,goog.math.Long.fromBits(0,0),h2);
+	     var c2=[X1,$ff];
+	     var d2=c2[0];
+	     var e2=$d(1,[f2],"sat");
+	     var g2=$d(1,[Y1],"sat");
+	     $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZN2.J(g2,e2,d1,b1,d2);
+	    },[b1,v1,f2,Y1,X1,d1]);break;
 	   case 2:
-	    var o3=$d(1,[l3],"sat");
-	    var p3=$d(1,[e3],"sat");
-	    $$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN2.J(p3,o3,j2,h2,d3);break;
+	    var i2=$d(1,[f2],"sat");
+	    var j2=$d(1,[Y1],"sat");
+	    $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZN2.J(j2,i2,d1,b1,X1);break;
+	   }break;
+	  default:
+	   $$LanguageziJavascriptziJSCziString$c.J($$GHCziPrim_realWorldzh);
+	  }break;
+	 case 2:
+	  $$LanguageziJavascriptziJSCziString$c.J($$GHCziPrim_realWorldzh);break;
+	 }break;
+	}
+       },[U,b1,p1,o1,r1,V,s1,t1,n1,Z,d1]);
+      },[U,b1,p1,o1,r1,V,n1,Z,d1],"a");
+      $M(o1,function(o2){
+       switch(o2.g){
+       case 1:
+	var p2=b1.add(goog.math.Long.fromBits(1,0));
+	q1.J(p2,c1);break;
+       case 2:
+	q1.J(b1,c1);break;
+       }
+      },[U,b1,c1,p1,o1,r1,V,n1,Z,d1,q1]);
+     },[U,b1,c1,m1,V,Z,d1]);
+    },[U,b1,c1,k1,V,Z,d1]);break;
+   }
+  },[U,b1,c1,V,Z]);
+ },[U,V],"$wa");
+ Z.J(W,X,Y);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.String'");
+var $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZN1=$D(1,function(){
+ $r([goog.math.Long.fromBits(4,0)]);
+},"in `jsc-0.1.0.0:Language.Javascript.JSC.String'");
+var $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef=$f(1,function(q2){
+ var r2=$f(1,function(s2){
+  var U2=$hs_noDuplicatezh(s2);
+  $$GHCziBase_map.C([$$DataziTextziInternal_safe,q2],function(t2){
+   var u2=$f(1,function(v2){
+    var w2=$hs_newByteArrayzh(goog.math.Long.fromBits(8,0),v2);
+    var x2=w2[0],y2=w2[1];
+    var z2=$d(1,[y2],"sat");
+    $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZN2.J(z2,$$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZN1,t2,goog.math.Long.fromBits(0,0),x2);
+   },[t2],"sat");
+   $$GHCziST_runSTRep.C([u2],function(A2){
+    var B2=A2.v[0],C2=A2.v[1],D2=A2.v[2];
+    var T2=D2.multiply(goog.math.Long.fromBits(2,0));
+    var E2=$hs_newPinnedByteArrayzh(T2,U2);
+    var F2=E2[0],G2=E2[1];
+    var H2=$hs_unsafeFreezzeByteArrayzh(G2,F2);
+    var I2=H2[0],J2=H2[1];
+    var R2=$hs_byteArrayContentszh(J2);
+    $$DataziTextziForeign_zdwa2.C([B2,C2,D2,R2,I2],function(K2){
+     var L2=K2[0];
+     var S2=$hs_int2Wordzh(D2);
+     var $ff=JSStringCreateWithCharacters(R2,S2);
+     var M2=[L2,$ff];
+     var N2=M2[0],O2=M2[1];
+     var Q2=$hs_touchzh(J2,N2);
+     var P2=$d(1,[O2],"sat");
+     $r([Q2,P2]);
+    },[D2,J2,R2]);
+   },[U2]);
+  },[U2]);
+ },[q2],"sat");
+ $$GHCziIO_unsafeDupablePerformIO.J(r2);
+},[],"at src/Language/Javascript/JSC/Classes.hs:36:5");
+var $$LanguageziJavascriptziJSCziString$a=$T(function(){
+ $$GHCziCString_unpackCStringzh.J("Data.Text.Array.new: size overflow");
+},"lvl");
+var $$LanguageziJavascriptziJSCziString$b=$T(function(){
+ $$GHCziErr_error.J($$LanguageziJavascriptziJSCziString$a);
+},"lvl1");
+var $$LanguageziJavascriptziJSCziString$c=$F(1,function(V2){
+ $A($$LanguageziJavascriptziJSCziString$b);
+},"poly_$w$j3");
+var $$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1=$f(3,function(B2,C2,D2){
+ $r([D2,$$GHCziTypes_ZMZN]);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Value'");
+var $$LanguageziJavascriptziJSCziValue_valToText1=$f(2,function(F5,G5){
+ $A(F5);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Value'");
+var $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN2=$f(5,function(d7,e7,f7,g7,h7){
+ var i7=$f(3,function(j7,k7,l7){
+  $M(j7,function(m7){
+   switch(m7.g){
+   case 1:
+    $M(d7,function(n7){
+     var o7=n7.v[0];
+     $M(k7,function(p7){
+      switch(p7.toString()){
+      case "0":
+       $M($$DataziTextziInternal_empty,function(r7){
+	$r([l7,r7]);
+       },[l7]);break;
+      default:
+       var q7=$d(1,[o7,goog.math.Long.fromBits(0,0),p7],"sat");
+       $r([l7,q7]);
+      }
+     },[l7,o7]);
+    },[k7,l7]);break;
+   case 2:
+    var s7=m7.v[0],t7=m7.v[1];
+    $M(s7,function(u7){
+     var v7=u7.v[0];
+     $M(t7,function(w7){
+      var y7=$hs_ordzh(v7);
+      var x7=$t(function(){
+       $r(y7.lessThan(goog.math.Long.fromBits(65536,0))?$$GHCziTypes_True:$$GHCziTypes_False);
+      },[y7],"lvl2");
+      var A7=y7.subtract(goog.math.Long.fromBits(65536,0));
+      var z7=$f(2,function(B7,C7){
+       $M(e7,function(D7){
+	var E7=D7.v[0];
+	var F7=B7.greaterThanOrEqual(E7)?$$GHCziTypes_True:$$GHCziTypes_False;
+	switch(F7.g){
+	case 1:
+	 $M(x7,function(G7){
+	  switch(G7.g){
+	  case 1:
+	   $M(d7,function(H7){
+	    var I7=H7.v[0];
+	    var W7=$hs_uncheckedIShiftRAzh(A7,goog.math.Long.fromBits(10,0));
+	    var V7=W7.add(goog.math.Long.fromBits(55296,0));
+	    var U7=$hs_int2Wordzh(V7);
+	    var T7=$hs_narrow16Wordzh(U7);
+	    var N7=$hs_writeWord16Arrayzh(I7,k7,T7,C7);
+	    var S7=$hs_int2Wordzh(A7);
+	    var R7=S7.and(goog.math.Long.fromBits(1023,0));
+	    var Q7=$hs_word2Intzh(R7);
+	    var P7=Q7.add(goog.math.Long.fromBits(56320,0));
+	    var O7=$hs_int2Wordzh(P7);
+	    var M7=$hs_narrow16Wordzh(O7);
+	    var L7=k7.add(goog.math.Long.fromBits(1,0));
+	    var K7=$hs_writeWord16Arrayzh(I7,L7,M7,N7);
+	    var J7=k7.add(goog.math.Long.fromBits(2,0));
+	    i7.J(w7,J7,K7);
+	   },[d7,k7,A7,e7,C7,w7,i7]);break;
+	  case 2:
+	   $M(d7,function(X7){
+	    var Y7=X7.v[0];
+	    var c8=$hs_int2Wordzh(y7);
+	    var b8=$hs_narrow16Wordzh(c8);
+	    var a8=$hs_writeWord16Arrayzh(Y7,k7,b8,C7);
+	    var Z7=k7.add(goog.math.Long.fromBits(1,0));
+	    i7.J(w7,Z7,a8);
+	   },[d7,k7,y7,e7,C7,w7,i7]);break;
+	  }
+	 },[d7,k7,y7,A7,e7,C7,w7,i7]);break;
+	case 2:
+	 var w8=E7.add(goog.math.Long.fromBits(1,0));
+	 var o8=$hs_uncheckedIShiftLzh(w8,goog.math.Long.fromBits(1,0));
+	 var d8=o8.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+	 switch(d8.g){
+	 case 1:
+	  var v8=$hs_int2Wordzh(o8);
+	  var u8=v8.and(goog.math.Long.fromBits(0,1073741824));
+	  var e8=$hs_word2Intzh(u8);
+	  switch(e8.toString()){
+	  case "0":
+	   var t8=$hs_uncheckedIShiftLzh(o8,goog.math.Long.fromBits(1,0));
+	   var f8=$hs_newByteArrayzh(t8,C7);
+	   var g8=f8[0],h8=f8[1];
+	   var i8=E7.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+	   switch(i8.g){
+	   case 1:
+	    $M(d7,function(j8){
+	     var k8=j8.v[0];
+	     var q8=$hs_int2Wordzh(E7);
+	     var $ff=_hs_text_memcpy(h8,goog.math.Long.fromBits(0,0),k8,goog.math.Long.fromBits(0,0),q8);
+	     var l8=[g8,$ff];
+	     var m8=l8[0];
+	     var n8=$d(1,[o8],"sat");
+	     var p8=$d(1,[h8],"sat");
+	     $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN2.J(p8,n8,m7,k7,m8);
+	    },[k7,E7,o8,h8,g8,m7]);break;
+	   case 2:
+	    var r8=$d(1,[o8],"sat");
+	    var s8=$d(1,[h8],"sat");
+	    $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN2.J(s8,r8,m7,k7,g8);break;
 	   }break;
 	  default:
 	   $$LanguageziJavascriptziJSCziValue$c.J($$GHCziPrim_realWorldzh);
@@ -1988,868 +2307,196 @@ var $$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN2=$f(5,function(a2,b2
 	  $$LanguageziJavascriptziJSCziValue$c.J($$GHCziPrim_realWorldzh);break;
 	 }break;
 	}
-       },[a2,h2,v2,u2,x2,b2,y2,z2,t2,f2,j2]);
-      },[a2,h2,v2,u2,x2,b2,t2,f2,j2],"a");
-      $M(u2,function(u3){
-       switch(u3.g){
+       },[d7,k7,y7,x7,A7,e7,B7,C7,w7,i7,m7]);
+      },[d7,k7,y7,x7,A7,e7,w7,i7,m7],"a");
+      $M(x7,function(x8){
+       switch(x8.g){
        case 1:
-	var v3=h2.add(goog.math.Long.fromBits(1,0));
-	w2.J(v3,i2);break;
+	var y8=k7.add(goog.math.Long.fromBits(1,0));
+	z7.J(y8,l7);break;
        case 2:
-	w2.J(h2,i2);break;
+	z7.J(k7,l7);break;
        }
-      },[a2,h2,i2,v2,u2,x2,b2,t2,f2,j2,w2]);
-     },[a2,h2,i2,s2,b2,f2,j2]);
-    },[a2,h2,i2,q2,b2,f2,j2]);break;
+      },[d7,k7,l7,y7,x7,A7,e7,w7,i7,m7,z7]);
+     },[d7,k7,l7,v7,e7,i7,m7]);
+    },[d7,k7,l7,t7,e7,i7,m7]);break;
    }
-  },[a2,h2,i2,b2,f2]);
- },[a2,b2],"$wa6");
- f2.J(c2,d2,e2);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN1=$D(1,function(){
+  },[d7,k7,l7,e7,i7]);
+ },[d7,e7],"$wa1");
+ i7.J(f7,g7,h7);
+},[],"in `jsc-0.1.0.0:Language.Javascript.JSC.Value'");
+var $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN1=$D(1,function(){
  $r([goog.math.Long.fromBits(4,0)]);
-},"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef=$f(2,function(w3,x3){
- var y3=$f(1,function(z3){
-  $$GHCziBase_map.C([$$DataziTextziInternal_safe,x3],function(A3){
-   var B3=$f(1,function(C3){
-    var D3=$hs_newByteArrayzh(goog.math.Long.fromBits(8,0),C3);
-    var E3=D3[0],F3=D3[1];
-    var G3=$d(1,[F3],"sat");
-    $$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN2.J(G3,$$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN1,A3,goog.math.Long.fromBits(0,0),E3);
-   },[A3],"sat");
-   $$GHCziST_runSTRep.C([B3],function(H3){
-    var I3=H3.v[0],J3=H3.v[1],K3=H3.v[2];
-    var a4=K3.multiply(goog.math.Long.fromBits(2,0));
-    var L3=$hs_newPinnedByteArrayzh(a4,z3);
-    var M3=L3[0],N3=L3[1];
-    var O3=$hs_unsafeFreezzeByteArrayzh(N3,M3);
-    var P3=O3[0],Q3=O3[1];
-    var Y3=$hs_byteArrayContentszh(Q3);
-    $$DataziTextziForeign_zdwa2.C([I3,J3,K3,Y3,P3],function(R3){
-     var S3=R3[0];
-     var Z3=$hs_int2Wordzh(K3);
-     var $ff=JSStringCreateWithCharacters(Y3,Z3);
-     var T3=[S3,$ff];
-     var U3=T3[0],V3=T3[1];
-     var X3=$hs_touchzh(Q3,U3);
-     var W3=$d(1,[V3],"sat");
-     $r([X3,W3]);
-    },[K3,Q3,Y3]);
-   },[z3]);
-  },[z3]);
- },[x3],"sat");
- w3.J(y3);
-},[],"at src/Language/Javascript/JSC/Value.hs:138:5");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSException2=$t(function(){
- $$GHCziCString_unpackCStringzh.J("JSException ");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdwzdcshowsPrec=$f(4,function(F4,G4,H4,I4){
- var J4=$f(1,function(K4){
-  var L4=$t(function(){
-   var M4=$t(function(){
-    $M(H4,function(N4){
-     var O4=N4.v[0];
-     $$GHCziPtr_zdwzdcshowsPrec.J(O4,K4);
-    },[K4]);
-   },[H4,K4],"sat");
-   var P4=$d(2,[$$GHCziShow_showSpace1,M4],"sat");
-   var Q4=$d(2,[$$GHCziShow_zdfShowChar1,P4],"sat");
-   $$GHCziShow_showLitString.J(G4,Q4);
-  },[G4,H4,K4],"sat");
-  var R4=$d(2,[$$GHCziShow_zdfShowChar1,L4],"sat");
-  $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSException2,R4);
- },[G4,H4],"p");
- var S4=F4.greaterThanOrEqual(goog.math.Long.fromBits(11,0))?$$GHCziTypes_True:$$GHCziTypes_False;
- switch(S4.g){
- case 1:
-  J4.J(I4);break;
- case 2:
-  var T4=$t(function(){
-   var U4=$d(2,[$$GHCziShow_shows10,I4],"sat");
-   J4.J(U4);
-  },[J4,I4],"sat");
-  $R(2,[$$GHCziShow_shows11,T4],":");break;
- }
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSExceptionzuzdcshowsPrec=$f(3,function(V4,W4,X4){
- $M(V4,function(Y4){
-  var Z4=Y4.v[0];
-  $M(W4,function(a5){
-   var b5=a5.v[0],c5=a5.v[1];
-   $$LanguageziJavascriptziJSCziValue_zdwzdcshowsPrec.J(Z4,b5,c5,X4);
-  },[Z4,X4]);
- },[W4,X4]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSException1=$f(2,function(d5,e5){
- $M(d5,function(f5){
-  var g5=f5.v[0],h5=f5.v[1];
-  $$LanguageziJavascriptziJSCziValue_zdwzdcshowsPrec.J(goog.math.Long.fromBits(0,0),g5,h5,e5);
- },[e5]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSExceptionzuzdcshowList=$f(2,function(F,G){
- $$GHCziShow_showListzuzu.J($$LanguageziJavascriptziJSCziValue_zdfShowJSException1,F,G);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSExceptionzuzdcshow=$f(1,function(i5){
- $M(i5,function(j5){
-  var k5=j5.v[0],l5=j5.v[1];
-  $$LanguageziJavascriptziJSCziValue_zdwzdcshowsPrec.J(goog.math.Long.fromBits(0,0),k5,l5,$$GHCziTypes_ZMZN);
- },[]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSException=$D(1,function(){
- $r([$$LanguageziJavascriptziJSCziValue_zdfShowJSExceptionzuzdcshowsPrec,$$LanguageziJavascriptziJSCziValue_zdfShowJSExceptionzuzdcshow,$$LanguageziJavascriptziJSCziValue_zdfShowJSExceptionzuzdcshowList]);
-},"at src/Language/Javascript/JSC/Value.hs:125:60");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue11=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ValNull");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue10=$f(1,function(G){
- $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue11,G);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue9=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ValUndefined");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue8=$f(1,function(G){
- $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue9,G);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue7=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ValBool ");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue5=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ValNumber ");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue6=$D(1,function(){
- $r([goog.math.Long.fromBits(11,0)]);
-},"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue4=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ValString ");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValue3=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ValObject ");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshowsPrec=$f(2,function(m5,n5){
- $M(n5,function(o5){
-  switch(o5.g){
-  case 1:
-   $A($$LanguageziJavascriptziJSCziValue_zdfShowJSValue10);break;
-  case 2:
-   $A($$LanguageziJavascriptziJSCziValue_zdfShowJSValue8);break;
-  case 3:
-   var p5=o5.v[0];
-   $M(m5,function(q5){
-    var r5=q5.v[0];
-    var s5=$f(1,function(t5){
-     var u5=$t(function(){
-      $M(p5,function(v5){
-       switch(v5.g){
-       case 1:
-	$$GHCziBase_zpzp.J($$GHCziShow_shows25,t5);break;
-       case 2:
-	$$GHCziBase_zpzp.J($$GHCziShow_shows23,t5);break;
-       }
-      },[t5]);
-     },[p5,t5],"sat");
-     $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue7,u5);
-    },[p5],"p");
-    var w5=r5.greaterThanOrEqual(goog.math.Long.fromBits(11,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(w5.g){
-    case 1:
-     $A(s5);break;
-    case 2:
-     var x5=$f(1,function(y5){
-      var z5=$t(function(){
-       var A5=$d(2,[$$GHCziShow_shows10,y5],"sat");
-       s5.J(A5);
-      },[s5,y5],"sat");
-      $R(2,[$$GHCziShow_shows11,z5],":");
-     },[s5],"sat");
-     $A(x5);break;
-    }
-   },[p5]);break;
-  case 4:
-   var B5=o5.v[0];
-   $M(m5,function(C5){
-    var D5=C5.v[0];
-    var E5=$t(function(){
-     $M(B5,function(F5){
-      var G5=F5.v[0];
-      $$GHCziFloat_zdwzdsshowSignedFloat.J($$GHCziFloat_zdfShowDoublezuzdsshowFloat,$$LanguageziJavascriptziJSCziValue_zdfShowJSValue6,G5);
-     },[]);
-    },[B5],"g");
-    var H5=D5.greaterThanOrEqual(goog.math.Long.fromBits(11,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(H5.g){
-    case 1:
-     var I5=$f(1,function(J5){
-      var K5=$t(function(){
-       E5.J(J5);
-      },[E5,J5],"sat");
-      $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue5,K5);
-     },[E5],"sat");
-     $A(I5);break;
-    case 2:
-     var L5=$f(1,function(M5){
-      var N5=$t(function(){
-       var O5=$t(function(){
-	var P5=$d(2,[$$GHCziShow_shows10,M5],"sat");
-	E5.J(P5);
-       },[E5,M5],"sat");
-       $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue5,O5);
-      },[E5,M5],"sat");
-      $R(2,[$$GHCziShow_shows11,N5],":");
-     },[E5],"sat");
-     $A(L5);break;
-    }
-   },[B5]);break;
-  case 5:
-   var Q5=o5.v[0];
-   $M(m5,function(R5){
-    var S5=R5.v[0];
-    var T5=S5.greaterThanOrEqual(goog.math.Long.fromBits(11,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(T5.g){
-    case 1:
-     var U5=$f(1,function(V5){
-      var W5=$t(function(){
-       $$DataziText_zdwzdcshowsPrec.J(Q5,V5);
-      },[Q5,V5],"sat");
-      $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue4,W5);
-     },[Q5],"sat");
-     $A(U5);break;
-    case 2:
-     var X5=$f(1,function(Y5){
-      var Z5=$t(function(){
-       var a6=$t(function(){
-	var b6=$d(2,[$$GHCziShow_shows10,Y5],"sat");
-	$$DataziText_zdwzdcshowsPrec.J(Q5,b6);
-       },[Q5,Y5],"sat");
-       $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue4,a6);
-      },[Q5,Y5],"sat");
-      $R(2,[$$GHCziShow_shows11,Z5],":");
-     },[Q5],"sat");
-     $A(X5);break;
-    }
-   },[Q5]);break;
-  case 6:
-   var c6=o5.v[0];
-   $M(m5,function(d6){
-    var e6=d6.v[0];
-    var f6=e6.greaterThanOrEqual(goog.math.Long.fromBits(11,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(f6.g){
-    case 1:
-     var g6=$f(1,function(h6){
-      var i6=$t(function(){
-       $M(c6,function(j6){
-	var k6=j6.v[0];
-	$$GHCziPtr_zdwzdcshowsPrec.J(k6,h6);
-       },[h6]);
-      },[c6,h6],"sat");
-      $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue3,i6);
-     },[c6],"sat");
-     $A(g6);break;
-    case 2:
-     var l6=$f(1,function(m6){
-      var n6=$t(function(){
-       var o6=$t(function(){
-	$M(c6,function(p6){
-	 var q6=p6.v[0];
-	 var r6=$d(2,[$$GHCziShow_shows10,m6],"sat");
-	 $$GHCziPtr_zdwzdcshowsPrec.J(q6,r6);
-	},[m6]);
-       },[c6,m6],"sat");
-       $$GHCziBase_zpzp.J($$LanguageziJavascriptziJSCziValue_zdfShowJSValue3,o6);
-      },[c6,m6],"sat");
-      $R(2,[$$GHCziShow_shows11,n6],":");
-     },[c6],"sat");
-     $A(l6);break;
-    }
-   },[c6]);break;
-  }
- },[m5]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow=$f(1,function(s6){
- $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshowsPrec.J($$GHCziShow_shows26,s6,$$GHCziTypes_ZMZN);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuds=$t(function(){
- $$GHCziCString_unpackCStringzh.J("jsc-0.0.1");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuds1=$t(function(){
- $$GHCziCString_unpackCStringzh.J("Language.Javascript.JSC.Value");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuds2=$t(function(){
- $$GHCziCString_unpackCStringzh.J("JSException");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuwild=$D(1,function(){
- $r([goog.math.Long.fromBits(4194039275,4016325915),goog.math.Long.fromBits(4154372472,1304498045),$$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuds,$$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuds1,$$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuds2]);
-},"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfTypeableJSException1=$D(1,function(){
- $r([goog.math.Long.fromBits(4194039275,4016325915),goog.math.Long.fromBits(4154372472,1304498045),$$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuwild,$$GHCziTypes_ZMZN]);
-},"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuzdctypeOf=$f(1,function(t6){
- $A($$LanguageziJavascriptziJSCziValue_zdfTypeableJSException1);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdcfromException=$f(1,function(u6){
- $M(u6,function(v6){
-  var w6=v6.v[0],x6=v6.v[1];
-  $$GHCziException_zdp1Exception.C([w6,x6],function(y6){
-   var z6=y6.v[0],A6=y6.v[1];
-   var B6=$hs_eqWordzh(z6,goog.math.Long.fromBits(4194039275,4016325915));
-   switch(B6.g){
-   case 1:
-    $R(1,[],"Nothing");break;
-   case 2:
-    var C6=$hs_eqWordzh(A6,goog.math.Long.fromBits(4154372472,1304498045));
-    switch(C6.g){
-    case 1:
-     $R(1,[],"Nothing");break;
-    case 2:
-     $R(2,[x6],"Just");break;
-    }break;
-   }
-  },[x6]);
- },[]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfExceptionJSException=$D(1,function(){
- $r([$$LanguageziJavascriptziJSCziValue_zdfTypeableJSExceptionzuzdctypeOf,$$LanguageziJavascriptziJSCziValue_zdfShowJSException,$$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException,$$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdcfromException]);
-},"at src/Language/Javascript/JSC/Value.hs:127:10");
-var $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException=$f(1,function(G){
- $R(1,[$$LanguageziJavascriptziJSCziValue_zdfExceptionJSException,G],"SomeException");
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdwa1=$f(5,function(M6,N6,O6,P6,Q6){
- var l7=O6.multiply(goog.math.Long.fromBits(2,0));
- var R6=$hs_newPinnedByteArrayzh(l7,Q6);
- var S6=R6[0],T6=R6[1];
- var U6=$hs_unsafeFreezzeByteArrayzh(T6,S6);
- var V6=U6[0],W6=U6[1];
- var j7=$hs_byteArrayContentszh(W6);
- $$DataziTextziForeign_zdwa2.C([M6,N6,O6,j7,V6],function(X6){
-  var Y6=X6[0];
-  var k7=$hs_int2Wordzh(O6);
-  var $ff=JSStringCreateWithCharacters(j7,k7);
-  var Z6=[Y6,$ff];
-  var a7=Z6[0],b7=Z6[1];
-  var i7=$hs_touchzh(W6,a7);
-  $M(P6,function(c7){
-   var d7=c7.v[0];
-   var $ff=JSValueMakeString(d7,b7);
-   var e7=[i7,$ff];
-   var f7=e7[0],g7=e7[1];
-   var h7=$d(1,[g7],"sat");
-   $r([f7,h7]);
-  },[b7,i7]);
- },[O6,W6,j7,P6]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN1=$f(5,function(t7,u7,v7,w7,x7){
- var y7=$f(3,function(z7,A7,B7){
-  $M(z7,function(C7){
-   switch(C7.g){
-   case 1:
-    $M(t7,function(D7){
-     var E7=D7.v[0];
-     $M(A7,function(F7){
-      switch(F7.toString()){
-      case "0":
-       $M($$DataziTextziInternal_empty,function(H7){
-	$r([B7,H7]);
-       },[B7]);break;
-      default:
-       var G7=$d(1,[E7,goog.math.Long.fromBits(0,0),F7],"sat");
-       $r([B7,G7]);
-      }
-     },[B7,E7]);
-    },[A7,B7]);break;
-   case 2:
-    var I7=C7.v[0],J7=C7.v[1];
-    $M(I7,function(K7){
-     var L7=K7.v[0];
-     $M(J7,function(M7){
-      var O7=$hs_ordzh(L7);
-      var N7=$t(function(){
-       $r(O7.lessThan(goog.math.Long.fromBits(65536,0))?$$GHCziTypes_True:$$GHCziTypes_False);
-      },[O7],"lvl3");
-      var Q7=O7.subtract(goog.math.Long.fromBits(65536,0));
-      var P7=$f(2,function(R7,S7){
-       $M(u7,function(T7){
-	var U7=T7.v[0];
-	var V7=R7.greaterThanOrEqual(U7)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(V7.g){
-	case 1:
-	 $M(N7,function(W7){
-	  switch(W7.g){
-	  case 1:
-	   $M(t7,function(X7){
-	    var Y7=X7.v[0];
-	    var m8=$hs_uncheckedIShiftRAzh(Q7,goog.math.Long.fromBits(10,0));
-	    var l8=m8.add(goog.math.Long.fromBits(55296,0));
-	    var k8=$hs_int2Wordzh(l8);
-	    var j8=$hs_narrow16Wordzh(k8);
-	    var d8=$hs_writeWord16Arrayzh(Y7,A7,j8,S7);
-	    var i8=$hs_int2Wordzh(Q7);
-	    var h8=i8.and(goog.math.Long.fromBits(1023,0));
-	    var g8=$hs_word2Intzh(h8);
-	    var f8=g8.add(goog.math.Long.fromBits(56320,0));
-	    var e8=$hs_int2Wordzh(f8);
-	    var c8=$hs_narrow16Wordzh(e8);
-	    var b8=A7.add(goog.math.Long.fromBits(1,0));
-	    var a8=$hs_writeWord16Arrayzh(Y7,b8,c8,d8);
-	    var Z7=A7.add(goog.math.Long.fromBits(2,0));
-	    y7.J(M7,Z7,a8);
-	   },[t7,A7,Q7,u7,S7,M7,y7]);break;
-	  case 2:
-	   $M(t7,function(n8){
-	    var o8=n8.v[0];
-	    var s8=$hs_int2Wordzh(O7);
-	    var r8=$hs_narrow16Wordzh(s8);
-	    var q8=$hs_writeWord16Arrayzh(o8,A7,r8,S7);
-	    var p8=A7.add(goog.math.Long.fromBits(1,0));
-	    y7.J(M7,p8,q8);
-	   },[t7,A7,O7,u7,S7,M7,y7]);break;
-	  }
-	 },[t7,A7,O7,Q7,u7,S7,M7,y7]);break;
-	case 2:
-	 var M8=U7.add(goog.math.Long.fromBits(1,0));
-	 var E8=$hs_uncheckedIShiftLzh(M8,goog.math.Long.fromBits(1,0));
-	 var t8=E8.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(t8.g){
-	 case 1:
-	  var L8=$hs_int2Wordzh(E8);
-	  var K8=L8.and(goog.math.Long.fromBits(0,1073741824));
-	  var u8=$hs_word2Intzh(K8);
-	  switch(u8.toString()){
-	  case "0":
-	   var J8=$hs_uncheckedIShiftLzh(E8,goog.math.Long.fromBits(1,0));
-	   var v8=$hs_newByteArrayzh(J8,S7);
-	   var w8=v8[0],x8=v8[1];
-	   var y8=U7.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(y8.g){
-	   case 1:
-	    $M(t7,function(z8){
-	     var A8=z8.v[0];
-	     var G8=$hs_int2Wordzh(U7);
-	     var $ff=_hs_text_memcpy(x8,goog.math.Long.fromBits(0,0),A8,goog.math.Long.fromBits(0,0),G8);
-	     var B8=[w8,$ff];
-	     var C8=B8[0];
-	     var D8=$d(1,[E8],"sat");
-	     var F8=$d(1,[x8],"sat");
-	     $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN1.J(F8,D8,C7,A7,C8);
-	    },[A7,U7,E8,x8,w8,C7]);break;
-	   case 2:
-	    var H8=$d(1,[E8],"sat");
-	    var I8=$d(1,[x8],"sat");
-	    $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN1.J(I8,H8,C7,A7,w8);break;
-	   }break;
-	  default:
-	   $$LanguageziJavascriptziJSCziValue$e.J($$GHCziPrim_realWorldzh);
-	  }break;
-	 case 2:
-	  $$LanguageziJavascriptziJSCziValue$e.J($$GHCziPrim_realWorldzh);break;
-	 }break;
-	}
-       },[t7,A7,O7,N7,Q7,u7,R7,S7,M7,y7,C7]);
-      },[t7,A7,O7,N7,Q7,u7,M7,y7,C7],"a");
-      $M(N7,function(N8){
-       switch(N8.g){
-       case 1:
-	var O8=A7.add(goog.math.Long.fromBits(1,0));
-	P7.J(O8,B7);break;
-       case 2:
-	P7.J(A7,B7);break;
-       }
-      },[t7,A7,B7,O7,N7,Q7,u7,M7,y7,C7,P7]);
-     },[t7,A7,B7,L7,u7,y7,C7]);
-    },[t7,A7,B7,J7,u7,y7,C7]);break;
-   }
-  },[t7,A7,B7,u7,y7]);
- },[t7,u7],"$wa6");
- y7.J(v7,w7,x7);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZNzuzdcmakeValueRef=$f(1,function(P8){
- var Q8=$t(function(){
-  $$GHCziBase_map.C([$$DataziTextziInternal_safe,P8],function(R8){
-   var S8=$f(1,function(T8){
-    var U8=$hs_newByteArrayzh(goog.math.Long.fromBits(8,0),T8);
-    var V8=U8[0],W8=U8[1];
-    var X8=$d(1,[W8],"sat");
-    $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN1.J(X8,$$LanguageziJavascriptziJSCziValue_zdfMakeStringRefZMZN1,R8,goog.math.Long.fromBits(0,0),V8);
-   },[R8],"sat");
-   $$GHCziST_runSTRep.J(S8);
-  },[]);
- },[P8],"text");
- var Y8=$f(2,function(Z8,a9){
-  $M(Q8,function(b9){
-   var c9=b9.v[0],d9=b9.v[1],e9=b9.v[2];
-   var z9=e9.multiply(goog.math.Long.fromBits(2,0));
-   var f9=$hs_newPinnedByteArrayzh(z9,a9);
-   var g9=f9[0],h9=f9[1];
-   var i9=$hs_unsafeFreezzeByteArrayzh(h9,g9);
-   var j9=i9[0],k9=i9[1];
-   var x9=$hs_byteArrayContentszh(k9);
-   $$DataziTextziForeign_zdwa2.C([c9,d9,e9,x9,j9],function(l9){
-    var m9=l9[0];
-    var y9=$hs_int2Wordzh(e9);
-    var $ff=JSStringCreateWithCharacters(x9,y9);
-    var n9=[m9,$ff];
-    var o9=n9[0],p9=n9[1];
-    var w9=$hs_touchzh(k9,o9);
-    $M(Z8,function(q9){
-     var r9=q9.v[0];
-     var $ff=JSValueMakeString(r9,p9);
-     var s9=[w9,$ff];
-     var t9=s9[0],u9=s9[1];
-     var v9=$d(1,[u9],"sat");
-     $r([t9,v9]);
-    },[p9,w9]);
-   },[e9,k9,x9,Z8]);
-  },[a9,Z8]);
- },[Q8],"sat");
- $A(Y8);
-},[],"at src/Language/Javascript/JSC/Value.hs:135:5");
-var $$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1=$f(3,function(Qd,Rd,Sd){
- $r([Sd,$$GHCziTypes_ZMZN]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZMZN1=$f(2,function(Td,Ud){
- $r([Ud,$$GHCziTypes_ZMZN]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZMZNzuzdcmakeArgRefs=$f(2,function(Vd,Wd){
- var Xd=$f(1,function(Yd){
-  $M(Yd,function(Zd){
-   switch(Zd.g){
-   case 1:
-    $A($$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZMZN1);break;
-   case 2:
-    var ae=Zd.v[0],be=Zd.v[1];
-    var ce=$t(function(){
-     Vd.J(ae);
-    },[ae,Vd],"m");
-    var de=$t(function(){
-     Xd.J(be);
-    },[be,Xd],"ys1");
-    var ee=$f(2,function(fe,ge){
-     ce.C([fe,ge],function(he){
-      var ie=he[0],je=he[1];
-      de.C([fe,ie],function(ke){
-       var le=ke[0],me=ke[1];
-       var ne=$d(2,[je,me],"sat");
-       $r([le,ne]);
-      },[je]);
-     },[de,fe]);
-    },[ce,de],"sat");
-    $A(ee);break;
-   }
-  },[Vd,Xd]);
- },[Vd],"go");
- Xd.J(Wd);
-},[],"at src/Language/Javascript/JSC/Value.hs:142:5");
-var $$LanguageziJavascriptziJSCziValue_zdwa4=$f(3,function(Ze,af,bf){
- var $ff=JSValueGetType(af,Ze);
- var cf=[bf,$ff];
- var df=cf[0],ef=cf[1];
- var gf=$hs_narrow32Intzh(ef);
- var ff=gf.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
- switch(ff.g){
- case 1:
-  $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7.J(gf);break;
- case 2:
-  var hf=gf.lessThanOrEqual(goog.math.Long.fromBits(5,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-  switch(hf.g){
-  case 1:
-   $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7.J(gf);break;
-  case 2:
-   var jf=$hs_tagToEnumzh(gf);
-   switch(jf.g){
-   case 1:
-    $r([df,$$LanguageziJavascriptziJSCziValue_ValUndefined]);break;
-   case 2:
-    $r([df,$$LanguageziJavascriptziJSCziValue_ValNull]);break;
-   case 3:
-    var $ff=JSValueToBoolean(af,Ze);
-    var kf=[df,$ff];
-    var lf=kf[0],mf=kf[1];
-    var nf=$t(function(){
-     var of=$hs_narrow8Wordzh(mf);
-     $r($hs_eqWordzh(of,goog.math.Long.fromBits(1,0)));
-    },[mf],"sat");
-    var pf=$d(3,[nf],"sat");
-    $r([lf,pf]);break;
-   case 4:
-    var qf=$d(1,[af],"sat");
-    var rf=$d(1,[Ze],"sat");
-    $$LanguageziJavascriptziJSCziValue_deRefVal4.C([rf,qf,df],function(sf){
-     var tf=sf[0],uf=sf[1];
-     var vf=$d(4,[uf],"sat");
-     $r([tf,vf]);
-    },[]);break;
-   case 5:
-    var wf=$d(1,[af],"sat");
-    var xf=$d(1,[Ze],"sat");
-    $$LanguageziJavascriptziJSCziValue_deRefVal3.C([xf,wf,df],function(yf){
-     var zf=yf[0],Af=yf[1];
-     $M(Af,function(Bf){
-      var Cf=Bf.v[0];
-      $$LanguageziJavascriptziJSCziValue_zdwa5.C([Cf,zf],function(Df){
-       var Ef=Df[0],Ff=Df[1];
-       var Gf=$d(5,[Ff],"sat");
-       $r([Ef,Gf]);
-      },[]);
-     },[zf]);
-    },[]);break;
-   case 6:
-    var Hf=$d(1,[af],"sat");
-    var If=$d(1,[Ze],"sat");
-    $$LanguageziJavascriptziJSCziValue_deRefVal2.C([If,Hf,df],function(Jf){
-     var Kf=Jf[0],Lf=Jf[1];
-     var Mf=$d(6,[Lf],"sat");
-     $r([Kf,Mf]);
-    },[]);break;
-   }break;
-  }break;
- }
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_deRefVal3=$f(3,function(Nf,Of,Pf){
- var Qf=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Pf);
- var Rf=Qf[0],Sf=Qf[1];
- var Tf=$hs_unsafeFreezzeByteArrayzh(Sf,Rf);
- var Uf=Tf[0],Vf=Tf[1];
- var qg=$hs_byteArrayContentszh(Vf);
- var rg=$hs_writeAddrOffAddrzh(qg,goog.math.Long.fromBits(0,0),null,Uf);
- $M(Of,function(Wf){
-  var Xf=Wf.v[0];
-  $M(Nf,function(Yf){
-   var Zf=Yf.v[0];
-   var $ff=JSValueToStringCopy(Xf,Zf,qg);
-   var ag=[rg,$ff];
-   var bg=ag[0],cg=ag[1];
-   var dg=$hs_readAddrOffAddrzh(qg,goog.math.Long.fromBits(0,0),bg);
-   var eg=dg[0],fg=dg[1];
-   var gg=$hs_eqAddrzh(fg,null);
-   switch(gg.g){
-   case 1:
-    $$LanguageziJavascriptziJSCziValue_zdwa4.C([fg,Xf,eg],function(hg){
-     var ig=hg[0],jg=hg[1];
-     var kg=$t(function(){
-      var lg=$d(1,[fg],"sat");
-      var mg=$t(function(){
-       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(jg);
-      },[jg],"sat");
-      var ng=$d(1,[mg,lg],"sat");
-      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(ng);
-     },[fg,jg],"sat");
-     $r($hs_raiseIOzh(kg,ig));
-    },[fg]);break;
-   case 2:
-    var pg=$hs_touchzh(Vf,eg);
-    var og=$d(1,[cg],"sat");
-    $r([pg,og]);break;
-   }
-  },[Vf,qg,Xf,rg]);
- },[Vf,qg,Nf,rg]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_deRefVal2=$f(3,function(sg,tg,ug){
- var vg=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),ug);
- var wg=vg[0],xg=vg[1];
- var yg=$hs_unsafeFreezzeByteArrayzh(xg,wg);
- var zg=yg[0],Ag=yg[1];
- var Vg=$hs_byteArrayContentszh(Ag);
- var Wg=$hs_writeAddrOffAddrzh(Vg,goog.math.Long.fromBits(0,0),null,zg);
- $M(tg,function(Bg){
-  var Cg=Bg.v[0];
-  $M(sg,function(Dg){
-   var Eg=Dg.v[0];
-   var $ff=JSValueToObject(Cg,Eg,Vg);
-   var Fg=[Wg,$ff];
-   var Gg=Fg[0],Hg=Fg[1];
-   var Ig=$hs_readAddrOffAddrzh(Vg,goog.math.Long.fromBits(0,0),Gg);
-   var Jg=Ig[0],Kg=Ig[1];
-   var Lg=$hs_eqAddrzh(Kg,null);
-   switch(Lg.g){
-   case 1:
-    $$LanguageziJavascriptziJSCziValue_zdwa4.C([Kg,Cg,Jg],function(Mg){
-     var Ng=Mg[0],Og=Mg[1];
-     var Pg=$t(function(){
-      var Qg=$d(1,[Kg],"sat");
-      var Rg=$t(function(){
-       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Og);
-      },[Og],"sat");
-      var Sg=$d(1,[Rg,Qg],"sat");
-      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Sg);
-     },[Kg,Og],"sat");
-     $r($hs_raiseIOzh(Pg,Ng));
-    },[Kg]);break;
-   case 2:
-    var Ug=$hs_touchzh(Ag,Jg);
-    var Tg=$d(1,[Hg],"sat");
-    $r([Ug,Tg]);break;
-   }
-  },[Ag,Vg,Cg,Wg]);
- },[Ag,Vg,sg,Wg]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_deRefVal4=$f(3,function(Xg,Yg,Zg){
- var ah=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Zg);
- var bh=ah[0],ch=ah[1];
- var dh=$hs_unsafeFreezzeByteArrayzh(ch,bh);
- var eh=dh[0],fh=dh[1];
- var Ah=$hs_byteArrayContentszh(fh);
- var Bh=$hs_writeAddrOffAddrzh(Ah,goog.math.Long.fromBits(0,0),null,eh);
- $M(Yg,function(gh){
-  var hh=gh.v[0];
-  $M(Xg,function(ih){
-   var jh=ih.v[0];
-   var $ff=JSValueToNumber(hh,jh,Ah);
-   var kh=[Bh,$ff];
-   var lh=kh[0],mh=kh[1];
-   var nh=$hs_readAddrOffAddrzh(Ah,goog.math.Long.fromBits(0,0),lh);
-   var oh=nh[0],ph=nh[1];
-   var qh=$hs_eqAddrzh(ph,null);
-   switch(qh.g){
-   case 1:
-    $$LanguageziJavascriptziJSCziValue_zdwa4.C([ph,hh,oh],function(rh){
-     var sh=rh[0],th=rh[1];
-     var uh=$t(function(){
-      var vh=$d(1,[ph],"sat");
-      var wh=$t(function(){
-       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(th);
-      },[th],"sat");
-      var xh=$d(1,[wh,vh],"sat");
-      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(xh);
-     },[ph,th],"sat");
-     $r($hs_raiseIOzh(uh,sh));
-    },[ph]);break;
-   case 2:
-    var zh=$hs_touchzh(fh,oh);
-    var yh=$d(1,[mh],"sat");
-    $r([zh,yh]);break;
-   }
-  },[fh,Ah,hh,Bh]);
- },[fh,Ah,Xg,Bh]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_rethrow1=$f(3,function(Jh,Kh,Lh){
- var Mh=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Lh);
- var Nh=Mh[0],Oh=Mh[1];
- var Ph=$hs_unsafeFreezzeByteArrayzh(Oh,Nh);
- var Qh=Ph[0],Rh=Ph[1];
- var Th=$hs_byteArrayContentszh(Rh);
- var li=$hs_writeAddrOffAddrzh(Th,goog.math.Long.fromBits(0,0),null,Qh);
- var Sh=$d(1,[Th],"sat");
- Jh.C([Sh,Kh,li],function(Uh){
-  var Vh=Uh[0],Wh=Uh[1];
-  var Xh=$hs_readAddrOffAddrzh(Th,goog.math.Long.fromBits(0,0),Vh);
-  var Yh=Xh[0],Zh=Xh[1];
-  var ai=$hs_eqAddrzh(Zh,null);
-  switch(ai.g){
-  case 1:
-   $M(Kh,function(bi){
-    var ci=bi.v[0];
-    $$LanguageziJavascriptziJSCziValue_zdwa4.C([Zh,ci,Yh],function(di){
-     var ei=di[0],fi=di[1];
-     var gi=$t(function(){
-      var hi=$d(1,[Zh],"sat");
-      var ii=$t(function(){
-       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(fi);
-      },[fi],"sat");
-      var ji=$d(1,[ii,hi],"sat");
-      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(ji);
-     },[Zh,fi],"sat");
-     $r($hs_raiseIOzh(gi,ei));
-    },[Zh]);
-   },[Zh,Yh]);break;
-  case 2:
-   var ki=$hs_touchzh(Rh,Yh);
-   $r([ki,Wh]);break;
-  }
- },[Rh,Th,Kh]);
-},[],"in `jsc-0.0.1:Language.Javascript.JSC.Value'");
-var $$LanguageziJavascriptziJSCziValue_deRefVal=$f(2,function(mi,ni){
- var oi=$t(function(){
-  mi.J(ni);
- },[ni,mi],"lvl3");
- var pi=$f(2,function(qi,ri){
-  oi.C([qi,ri],function(si){
-   var ti=si[0],ui=si[1];
-   $M(qi,function(vi){
-    var wi=vi.v[0];
-    $M(ui,function(xi){
-     var yi=xi.v[0];
-     var $ff=JSValueGetType(wi,yi);
-     var zi=[ti,$ff];
-     var Ai=zi[0],Bi=zi[1];
-     var Di=$hs_narrow32Intzh(Bi);
-     var Ci=Di.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(Ci.g){
+},"in `jsc-0.1.0.0:Language.Javascript.JSC.Value'");
+var $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZNzuzdcmakeValueRef=$f(1,function(z8){
+ var A8=$t(function(){
+  var B8=$t(function(){
+   $$GHCziBase_map.C([$$DataziTextziInternal_safe,z8],function(C8){
+    var D8=$f(1,function(E8){
+     var F8=$hs_newByteArrayzh(goog.math.Long.fromBits(8,0),E8);
+     var G8=F8[0],H8=F8[1];
+     var I8=$d(1,[H8],"sat");
+     $$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN2.J(I8,$$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZN1,C8,goog.math.Long.fromBits(0,0),G8);
+    },[C8],"sat");
+    $$GHCziST_runSTRep.J(D8);
+   },[]);
+  },[z8],"sat");
+  $$LanguageziJavascriptziJSCziString_textToStr.J(B8);
+ },[z8],"lvl2");
+ var J8=$f(2,function(K8,L8){
+  $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_jsvaluemakestring1.J(K8,A8,L8);
+ },[A8],"sat");
+ $A(J8);
+},[],"at src/Language/Javascript/JSC/Classes.hs:32:5");
+var $$LanguageziJavascriptziJSCziValue_deRefVal=$f(2,function(z9,A9){
+ var B9=$t(function(){
+  z9.J(A9);
+ },[A9,z9],"lvl2");
+ var C9=$f(2,function(D9,E9){
+  B9.C([D9,E9],function(F9){
+   var G9=F9[0],H9=F9[1];
+   $M(D9,function(I9){
+    var J9=I9.v[0];
+    $M(H9,function(K9){
+     var L9=K9.v[0];
+     var $ff=JSValueGetType(J9,L9);
+     var M9=[G9,$ff];
+     var N9=M9[0],O9=M9[1];
+     var Q9=$hs_narrow32Intzh(O9);
+     var P9=Q9.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+     switch(P9.g){
      case 1:
-      $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7.J(Di);break;
+      $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7.J(Q9);break;
      case 2:
-      var Ei=Di.lessThanOrEqual(goog.math.Long.fromBits(5,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-      switch(Ei.g){
+      var R9=Q9.lessThanOrEqual(goog.math.Long.fromBits(5,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+      switch(R9.g){
       case 1:
-       $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7.J(Di);break;
+       $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7.J(Q9);break;
       case 2:
-       var Fi=$hs_tagToEnumzh(Di);
-       switch(Fi.g){
+       var S9=$hs_tagToEnumzh(Q9);
+       switch(S9.g){
        case 1:
-	$r([Ai,$$LanguageziJavascriptziJSCziValue_ValUndefined]);break;
+	$r([N9,$$LanguageziJavascriptziJSCziValue_ValUndefined]);break;
        case 2:
-	$r([Ai,$$LanguageziJavascriptziJSCziValue_ValNull]);break;
+	$r([N9,$$LanguageziJavascriptziJSCziValue_ValNull]);break;
        case 3:
-	var $ff=JSValueToBoolean(wi,yi);
-	var Gi=[Ai,$ff];
-	var Hi=Gi[0],Ii=Gi[1];
-	var Ji=$t(function(){
-	 var Ki=$hs_narrow8Wordzh(Ii);
-	 $r($hs_eqWordzh(Ki,goog.math.Long.fromBits(1,0)));
-	},[Ii],"sat");
-	var Li=$d(3,[Ji],"sat");
-	$r([Hi,Li]);break;
+	var $ff=JSValueToBoolean(J9,L9);
+	var T9=[N9,$ff];
+	var U9=T9[0],V9=T9[1];
+	var W9=$t(function(){
+	 var X9=$hs_narrow8Wordzh(V9);
+	 $r($hs_eqWordzh(X9,goog.math.Long.fromBits(1,0)));
+	},[V9],"sat");
+	var Y9=$d(3,[W9],"sat");
+	$r([U9,Y9]);break;
        case 4:
-	$$LanguageziJavascriptziJSCziValue_deRefVal4.C([xi,vi,Ai],function(Mi){
-	 var Ni=Mi[0],Oi=Mi[1];
-	 var Pi=$d(4,[Oi],"sat");
-	 $r([Ni,Pi]);
-	},[]);break;
+	var Z9=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),N9);
+	var aa=Z9[0],ba=Z9[1];
+	var ca=$hs_unsafeFreezzeByteArrayzh(ba,aa);
+	var da=ca[0],ea=ca[1];
+	var sa=$hs_byteArrayContentszh(ea);
+	var ta=$hs_writeAddrOffAddrzh(sa,goog.math.Long.fromBits(0,0),null,da);
+	var $ff=JSValueToNumber(J9,L9,sa);
+	var fa=[ta,$ff];
+	var ga=fa[0],ha=fa[1];
+	var ia=$hs_readAddrOffAddrzh(sa,goog.math.Long.fromBits(0,0),ga);
+	var ja=ia[0],ka=ia[1];
+	var la=$hs_eqAddrzh(ka,null);
+	switch(la.g){
+	case 1:
+	 var ma=$t(function(){
+	  var na=$d(1,[ka],"sat");
+	  var oa=$d(1,[na],"sat");
+	  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(oa);
+	 },[ka],"sat");
+	 $r($hs_raiseIOzh(ma,ja));break;
+	case 2:
+	 var ra=$hs_touchzh(ea,ja);
+	 var pa=$d(1,[ha],"sat");
+	 var qa=$d(4,[pa],"sat");
+	 $r([ra,qa]);break;
+	}break;
        case 5:
-	$$LanguageziJavascriptziJSCziValue_deRefVal3.C([xi,vi,Ai],function(Qi){
-	 var Ri=Qi[0],Si=Qi[1];
-	 $M(Si,function(Ti){
-	  var Ui=Ti.v[0];
-	  $$LanguageziJavascriptziJSCziValue_zdwa5.C([Ui,Ri],function(Vi){
-	   var Wi=Vi[0],Xi=Vi[1];
-	   var Yi=$d(5,[Xi],"sat");
-	   $r([Wi,Yi]);
-	  },[]);
-	 },[Ri]);
-	},[]);break;
+	var ua=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),N9);
+	var va=ua[0],wa=ua[1];
+	var xa=$hs_unsafeFreezzeByteArrayzh(wa,va);
+	var ya=xa[0],za=xa[1];
+	var Qa=$hs_byteArrayContentszh(za);
+	var Ra=$hs_writeAddrOffAddrzh(Qa,goog.math.Long.fromBits(0,0),null,ya);
+	var $ff=JSValueToStringCopy(J9,L9,Qa);
+	var Aa=[Ra,$ff];
+	var Ba=Aa[0],Ca=Aa[1];
+	var Da=$hs_readAddrOffAddrzh(Qa,goog.math.Long.fromBits(0,0),Ba);
+	var Ea=Da[0],Fa=Da[1];
+	var Ga=$hs_eqAddrzh(Fa,null);
+	switch(Ga.g){
+	case 1:
+	 var Ha=$t(function(){
+	  var Ia=$d(1,[Fa],"sat");
+	  var Ja=$d(1,[Ia],"sat");
+	  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Ja);
+	 },[Fa],"sat");
+	 $r($hs_raiseIOzh(Ha,Ea));break;
+	case 2:
+	 var Pa=$hs_touchzh(za,Ea);
+	 var Ka=$d(1,[Ca],"sat");
+	 $$LanguageziJavascriptziJSCziString_zdwstrToText.C([$$LanguageziJavascriptziJSCziValue_valToText1,Ka,I9,Pa],function(La){
+	  var Ma=La[0],Na=La[1];
+	  var Oa=$d(5,[Na],"sat");
+	  $r([Ma,Oa]);
+	 },[]);break;
+	}break;
        case 6:
-	$$LanguageziJavascriptziJSCziValue_deRefVal2.C([xi,vi,Ai],function(Zi){
-	 var aj=Zi[0],bj=Zi[1];
-	 var cj=$d(6,[bj],"sat");
-	 $r([aj,cj]);
-	},[]);break;
+	var Sa=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),N9);
+	var Ta=Sa[0],Ua=Sa[1];
+	var Va=$hs_unsafeFreezzeByteArrayzh(Ua,Ta);
+	var Wa=Va[0],Xa=Va[1];
+	var lb=$hs_byteArrayContentszh(Xa);
+	var mb=$hs_writeAddrOffAddrzh(lb,goog.math.Long.fromBits(0,0),null,Wa);
+	var $ff=JSValueToObject(J9,L9,lb);
+	var Ya=[mb,$ff];
+	var Za=Ya[0],ab=Ya[1];
+	var bb=$hs_readAddrOffAddrzh(lb,goog.math.Long.fromBits(0,0),Za);
+	var cb=bb[0],db=bb[1];
+	var eb=$hs_eqAddrzh(db,null);
+	switch(eb.g){
+	case 1:
+	 var fb=$t(function(){
+	  var gb=$d(1,[db],"sat");
+	  var hb=$d(1,[gb],"sat");
+	  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(hb);
+	 },[db],"sat");
+	 $r($hs_raiseIOzh(fb,cb));break;
+	case 2:
+	 var kb=$hs_touchzh(Xa,cb);
+	 var ib=$d(1,[ab],"sat");
+	 var jb=$d(6,[ib],"sat");
+	 $r([kb,jb]);break;
+	}break;
        }break;
       }break;
      }
-    },[wi,ti,vi]);
-   },[ui,ti]);
-  },[qi]);
- },[oi],"sat");
- $A(pi);
-},[],"at src/Language/Javascript/JSC/Value.hs:261:1");
+    },[J9,G9,I9]);
+   },[H9,G9]);
+  },[D9]);
+ },[B9],"sat");
+ $A(C9);
+},[],"at src/Language/Javascript/JSC/Value.hs:348:1");
 var $$LanguageziJavascriptziJSCziValue_ValNull=$D(1,function(){
  $r([]);
-},"at src/Language/Javascript/JSC/Value.hs:84:16");
+},"at src/Language/Javascript/JSC/Value.hs:98:16");
 var $$LanguageziJavascriptziJSCziValue_ValUndefined=$D(2,function(){
  $r([]);
-},"at src/Language/Javascript/JSC/Value.hs:85:16");
+},"at src/Language/Javascript/JSC/Value.hs:99:16");
 var $$LanguageziJavascriptziJSCziValue$a=$T(function(){
  $$GHCziCString_unpackCStringzh.J("Data.Text.Array.new: size overflow");
 },"lvl");
 var $$LanguageziJavascriptziJSCziValue$b=$T(function(){
  $$GHCziErr_error.J($$LanguageziJavascriptziJSCziValue$a);
 },"lvl1");
-var $$LanguageziJavascriptziJSCziValue$c=$F(1,function(jj){
+var $$LanguageziJavascriptziJSCziValue$c=$F(1,function(nb){
  $A($$LanguageziJavascriptziJSCziValue$b);
 },"poly_$w$j3");
-var $$LanguageziJavascriptziJSCziValue$d=$T(function(){
- $$GHCziErr_error.J($$LanguageziJavascriptziJSCziValue$a);
-},"lvl2");
-var $$LanguageziJavascriptziJSCziValue$e=$F(1,function(kj){
- $A($$LanguageziJavascriptziJSCziValue$d);
-},"poly_$w$j1");
 var $$SystemziRandom_zdfRandomGenStdGen2=$D(1,function(){
  $r([goog.math.Long.fromBits(1,0)]);
 },"in `random-1.0.1.1:System.Random'");
@@ -5562,225 +5209,6 @@ var $$FRPziSodiumziPlain$k=$F(1,function(EY){
  var OY=$d(1,[NY,MY],"sat");
  $r([KY,OY]);
 },"sat");
-var $$DataziText_zdwzdcshowsPrec=$f(2,function(O4p,P4p){
- var Q4p=$t(function(){
-  $M(O4p,function(R4p){
-   var S4p=R4p.v[0],T4p=R4p.v[1],U4p=R4p.v[2];
-   var W4p=T4p.add(U4p);
-   var V4p=$f(1,function(X4p){
-    var Y4p=X4p.greaterThanOrEqual(W4p)?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(Y4p.g){
-    case 1:
-     var f4q=$hs_indexWord16Arrayzh(S4p,X4p);
-     var Z4p=$hs_geWordzh(f4q,goog.math.Long.fromBits(55296,0));
-     switch(Z4p.g){
-     case 1:
-      var a4q=$t(function(){
-       var b4q=X4p.add(goog.math.Long.fromBits(1,0));
-       V4p.J(b4q);
-      },[X4p,V4p],"sat");
-      var e4q=$hs_word2Intzh(f4q);
-      var d4q=$hs_chrzh(e4q);
-      var c4q=$d(1,[d4q],"sat");
-      $R(2,[c4q,a4q],":");break;
-     case 2:
-      var g4q=$hs_leWordzh(f4q,goog.math.Long.fromBits(56319,0));
-      switch(g4q.g){
-      case 1:
-       var h4q=$t(function(){
-	var i4q=X4p.add(goog.math.Long.fromBits(1,0));
-	V4p.J(i4q);
-       },[X4p,V4p],"sat");
-       var l4q=$hs_word2Intzh(f4q);
-       var k4q=$hs_chrzh(l4q);
-       var j4q=$d(1,[k4q],"sat");
-       $R(2,[j4q,h4q],":");break;
-      case 2:
-       var y4q=X4p.add(goog.math.Long.fromBits(1,0));
-       var x4q=$hs_indexWord16Arrayzh(S4p,y4q);
-       var m4q=$t(function(){
-	var n4q=X4p.add(goog.math.Long.fromBits(2,0));
-	V4p.J(n4q);
-       },[X4p,V4p],"sat");
-       var w4q=$hs_word2Intzh(x4q);
-       var t4q=w4q.subtract(goog.math.Long.fromBits(56320,0));
-       var v4q=$hs_word2Intzh(f4q);
-       var u4q=v4q.subtract(goog.math.Long.fromBits(55296,0));
-       var s4q=$hs_uncheckedIShiftLzh(u4q,goog.math.Long.fromBits(10,0));
-       var r4q=s4q.add(t4q);
-       var q4q=r4q.add(goog.math.Long.fromBits(65536,0));
-       var p4q=$hs_chrzh(q4q);
-       var o4q=$d(1,[p4q],"sat");
-       $R(2,[o4q,m4q],":");break;
-      }break;
-     }break;
-    case 2:
-     $R(1,[],"[]");break;
-    }
-   },[W4p,S4p],"$wunfold");
-   var z4q=$d(2,[$$GHCziShow_zdfShowChar1,P4p],"sat");
-   V4p.C([T4p],function(A4q){
-    $$GHCziShow_showLitString.J(A4q,z4q);
-   },[z4q]);
-  },[P4p]);
- },[O4p,P4p],"sat");
- $R(2,[$$GHCziShow_zdfShowChar1,Q4p],":");
-},[],"in `text-0.11.2.3:Data.Text'");
-var $$DataziTextziArray_empty1=$f(1,function(j1){
- var k1=$hs_newByteArrayzh(goog.math.Long.fromBits(0,0),j1);
- var l1=k1[0],m1=k1[1];
- var n1=$d(1,[m1],"sat");
- $r([l1,n1]);
-},[],"in `text-0.11.2.3:Data.Text.Array'");
-var $$DataziTextziArray_empty=$t(function(){
- $$GHCziST_runSTRep.J($$DataziTextziArray_empty1);
-},[],"at Data/Text/Array.hs:170:1");
-var $$DataziTextziForeign_zdwa2=$f(5,function(a,b,c,d,e){
- var g=b.add(c);
- var f=$f(3,function(h,i,j){
-  var k=i.equals(g)?$$GHCziTypes_True:$$GHCziTypes_False;
-  switch(k.g){
-  case 1:
-   var o=$hs_indexWord16Arrayzh(a,i);
-   var n=$hs_writeWord16OffAddrzh(h,goog.math.Long.fromBits(0,0),o,j);
-   var m=i.add(goog.math.Long.fromBits(1,0));
-   var l=$hs_plusAddrzh(h,goog.math.Long.fromBits(2,0));
-   f.J(l,m,n);break;
-  case 2:
-   $r([j,$$GHCziTuple_Z0T]);break;
-  }
- },[g,a],"$wa5");
- f.J(d,b,e);
-},[],"in `text-0.11.2.3:Data.Text.Foreign'");
-var $$DataziTextziForeign_fromPtr2=$f(1,function(k2){
- $A($$DataziTextziForeign$b);
-},[],"in `text-0.11.2.3:Data.Text.Foreign'");
-var $$DataziTextziForeign_zdwa3=$f(3,function(l2,m2,n2){
- $M(m2,function(o2){
-  switch(o2.toString()){
-  case "0":
-   $r([n2,$$DataziTextziInternal_empty]);break;
-  default:
-   var p2=$f(1,function(q2){
-    var r2=o2.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(r2.g){
-    case 1:
-     var S2=$hs_int2Wordzh(o2);
-     var R2=S2.and(goog.math.Long.fromBits(0,1073741824));
-     var s2=$hs_word2Intzh(R2);
-     switch(s2.toString()){
-     case "0":
-      var Q2=$hs_uncheckedIShiftLzh(o2,goog.math.Long.fromBits(1,0));
-      var t2=$hs_newByteArrayzh(Q2,q2);
-      var u2=t2[0],v2=t2[1];
-      $M(l2,function(w2){
-       var x2=w2.v[0];
-       var y2=$d(1,[v2],"marr");
-       var z2=$f(3,function(A2,B2,C2){
-	var D2=B2.equals(o2)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(D2.g){
-	case 1:
-	 var E2=$hs_readWord16OffAddrzh(A2,goog.math.Long.fromBits(0,0),C2);
-	 var F2=E2[0],G2=E2[1];
-	 var J2=$hs_writeWord16Arrayzh(v2,B2,G2,F2);
-	 var I2=B2.add(goog.math.Long.fromBits(1,0));
-	 var H2=$hs_plusAddrzh(A2,goog.math.Long.fromBits(2,0));
-	 z2.J(H2,I2,J2);break;
-	case 2:
-	 $r([C2,y2]);break;
-	}
-       },[o2,v2,y2],"$wa5");
-       z2.C([x2,goog.math.Long.fromBits(0,0),u2],function(K2){
-	var L2=K2[0],M2=K2[1];
-	$M(M2,function(N2){
-	 var O2=N2.v[0];
-	 var P2=$d(1,[O2],"sat");
-	 $r([L2,P2]);
-	},[L2]);
-       },[]);
-      },[o2,v2,u2]);break;
-     default:
-      $$DataziTextziForeign_fromPtr2.J($$GHCziPrim_realWorldzh);
-     }break;
-    case 2:
-     $$DataziTextziForeign_fromPtr2.J($$GHCziPrim_realWorldzh);break;
-    }
-   },[o2,l2],"sat");
-   $$GHCziST_runSTRep.C([p2],function(T2){
-    var U2=T2.v[0];
-    var V2=$d(1,[U2,goog.math.Long.fromBits(0,0),o2],"sat");
-    $r([n2,V2]);
-   },[o2,n2]);
-  }
- },[l2,n2]);
-},[],"in `text-0.11.2.3:Data.Text.Foreign'");
-var $$DataziTextziForeign$a=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Data.Text.Array.new: size overflow");
-},"lvl");
-var $$DataziTextziForeign$b=$T(function(){
- $$GHCziErr_error.J($$DataziTextziForeign$a);
-},"lvl1");
-var $$DataziTextziInternal_empty=$t(function(){
- $M($$DataziTextziArray_empty,function(s){
-  var t=s.v[0];
-  $R(1,[t,goog.math.Long.fromBits(0,0),goog.math.Long.fromBits(0,0)],"Text");
- },[]);
-},[],"at Data/Text/Internal.hs:71:1");
-var $$DataziTextziInternal_safe=$f(1,function(x1){
- $M(x1,function(y1){
-  var z1=y1.v[0];
-  var D1=$hs_ordzh(z1);
-  var C1=$hs_int2Wordzh(D1);
-  var B1=C1.and(goog.math.Long.fromBits(2095104,0));
-  var A1=$hs_word2Intzh(B1);
-  switch(A1.toString()){
-  case "55296":
-   $A($$DataziTextziInternal$b);break;
-  default:
-   $A(y1);
-  }
- },[]);
-},[],"at Data/Text/Internal.hs:95:1");
-var $$DataziTextziInternal$b=$D(1,function(){
- $r(["\ufffd"]);
-},"lvl");
-var $$ControlziMonadziIOziClass_zdp1MonadIO=$f(1,function(a){
- $M(a,function(b){
-  var c=b.v[0];
-  $A(c);
- },[]);
-},[],"at Control/Monad/IO/Class.hs:32:20");
-var $$ControlziMonadziIOziClass_liftIO=$f(1,function(d){
- $M(d,function(e){
-  var f=e.v[1];
-  $A(f);
- },[]);
-},[],"at Control/Monad/IO/Class.hs:34:5");
-var $$ControlziMonadziIOziClass_zdfMonadIOIO=$D(1,function(){
- $r([$$GHCziBase_zdfMonadIO,$$GHCziBase_id]);
-},"at Control/Monad/IO/Class.hs:36:10");
-var $$ControlziMonadziTransziStateziStrict_zdwzdcliftIO=$f(2,function(V7,W7){
- var X7=$t(function(){
-  $$ControlziMonadziIOziClass_liftIO.J(V7,W7);
- },[V7,W7],"m");
- var Y7=$t(function(){
-  $$ControlziMonadziIOziClass_zdp1MonadIO.J(V7);
- },[V7],"$dMonad");
- var Z7=$t(function(){
-  $$GHCziBase_return.J(Y7);
- },[Y7],"lvl");
- var a8=$t(function(){
-  $$GHCziBase_zgzgze.J(Y7);
- },[Y7],"lvl1");
- var b8=$f(1,function(c8){
-  var d8=$f(1,function(e8){
-   var f8=$d(1,[e8,c8],"sat");
-   Z7.J(f8);
-  },[Z7,c8],"sat");
-  a8.J(X7,d8);
- },[X7,Z7,a8],"sat");
- $A(b8);
-},[],"at Control/Monad/IO/Class.hs:34:5");
 var $$GraphicsziUIziGtkziWebKitziDOMziCSSStyleDeclaration_cssStyleDeclarationSetCssText2=$f(3,function(P2,Q2,R2){
  var S2=$t(function(){
   $$SystemziGlibziUTFString_fromUTF.C([R2],function(T2){
@@ -5986,35 +5414,35 @@ var $$GraphicsziUIziGtkziWebKitziDOMziDocument_documentGetElementById1=$f(4,func
   },[zl]);
  },[]);
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.DOM.Document'");
-var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousedown2=$t(function(){
- $$GHCziCString_unpackCStringzh.J("mousedown");
+var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmouseup2=$t(function(){
+ $$GHCziCString_unpackCStringzh.J("mouseup");
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.DOM.Element'");
-var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousedown1=$f(4,function(e4,f4,g4,h4){
- var i4=$f(2,function(j4,k4){
-  var l4=$d(1,[j4,k4],"sat");
-  g4.J(l4);
- },[g4],"sat");
- $$GraphicsziUIziGtkziWebKitziDOMziEventTargetClosures_eventTargetAddEventListener1.J(e4,$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassMouseEvent,f4,$$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousedown2,$$GHCziTypes_False,i4,h4);
+var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmouseup1=$f(4,function(a3,b3,c3,d3){
+ var e3=$f(2,function(f3,g3){
+  var h3=$d(1,[f3,g3],"sat");
+  c3.J(h3);
+ },[c3],"sat");
+ $$GraphicsziUIziGtkziWebKitziDOMziEventTargetClosures_eventTargetAddEventListener1.J(a3,$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassMouseEvent,b3,$$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmouseup2,$$GHCziTypes_False,e3,d3);
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.DOM.Element'");
 var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousemove2=$t(function(){
  $$GHCziCString_unpackCStringzh.J("mousemove");
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.DOM.Element'");
-var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousemove1=$f(4,function(m4,n4,o4,p4){
- var q4=$f(2,function(r4,s4){
-  var t4=$d(1,[r4,s4],"sat");
-  o4.J(t4);
- },[o4],"sat");
- $$GraphicsziUIziGtkziWebKitziDOMziEventTargetClosures_eventTargetAddEventListener1.J(m4,$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassMouseEvent,n4,$$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousemove2,$$GHCziTypes_False,q4,p4);
+var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousemove1=$f(4,function(y3,z3,A3,B3){
+ var C3=$f(2,function(D3,E3){
+  var F3=$d(1,[D3,E3],"sat");
+  A3.J(F3);
+ },[A3],"sat");
+ $$GraphicsziUIziGtkziWebKitziDOMziEventTargetClosures_eventTargetAddEventListener1.J(y3,$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassMouseEvent,z3,$$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousemove2,$$GHCziTypes_False,C3,B3);
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.DOM.Element'");
-var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmouseup2=$t(function(){
- $$GHCziCString_unpackCStringzh.J("mouseup");
+var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousedown2=$t(function(){
+ $$GHCziCString_unpackCStringzh.J("mousedown");
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.DOM.Element'");
-var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmouseup1=$f(4,function(K4,L4,M4,N4){
- var O4=$f(2,function(P4,Q4){
-  var R4=$d(1,[P4,Q4],"sat");
-  M4.J(R4);
- },[M4],"sat");
- $$GraphicsziUIziGtkziWebKitziDOMziEventTargetClosures_eventTargetAddEventListener1.J(K4,$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassMouseEvent,L4,$$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmouseup2,$$GHCziTypes_False,O4,N4);
+var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousedown1=$f(4,function(G3,H3,I3,J3){
+ var K3=$f(2,function(L3,M3){
+  var N3=$d(1,[L3,M3],"sat");
+  I3.J(N3);
+ },[I3],"sat");
+ $$GraphicsziUIziGtkziWebKitziDOMziEventTargetClosures_eventTargetAddEventListener1.J(G3,$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassMouseEvent,H3,$$GraphicsziUIziGtkziWebKitziDOMziElement_elementOnmousedown2,$$GHCziTypes_False,K3,J3);
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.DOM.Element'");
 var $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute2=$f(3,function(w7,x7,y7){
  var z7=$t(function(){
@@ -6555,28 +5983,6 @@ var $$GraphicsziUIziGtkziWebKitziWebView_zdwa16=$f(2,function(Sy,Ty){
  },[Sy],"sat");
  $$SystemziGlibziGObject_zdwa1.J($$GraphicsziUIziGtkziWebKitziTypes_mkDocument1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,Uy,Ty);
 },[],"in `webkit-0.12.5:Graphics.UI.Gtk.WebKit.WebView'");
-var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectgetpropertyatindex1=$f(5,function(C9,D9,E9,F9,G9){
- $M(C9,function(H9){
-  var I9=H9.v[0];
-  $M(D9,function(J9){
-   var K9=J9.v[0];
-   $M(E9,function(L9){
-    var M9=L9.v[0];
-    $M(F9,function(N9){
-     var O9=N9.v[0];
-     var $ff=JSObjectGetPropertyAtIndex(I9,K9,M9,O9);
-     var P9=[G9,$ff];
-     var Q9=P9[0],R9=P9[1];
-     var S9=$d(1,[R9],"sat");
-     $r([Q9,S9]);
-    },[I9,K9,M9,G9]);
-   },[F9,I9,K9,G9]);
-  },[E9,F9,I9,G9]);
- },[D9,E9,F9,G9]);
-},[],"in `webkit-javascriptcore-0.0.0.999:Graphics.UI.Gtk.WebKit.JavaScriptCore.JSObjectRef'");
-var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectgetproperty1=$f(5,function(e,c,d,a,b){
- $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef$p.J(e,c,d,a,b);
-},[],"in `webkit-javascriptcore-0.0.0.999:Graphics.UI.Gtk.WebKit.JavaScriptCore.JSObjectRef'");
 var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectmakefunctionwithcallback1=$f(4,function(kd,ld,md,nd){
  $M(kd,function(od){
   var pd=od.v[0];
@@ -6593,25 +5999,6 @@ var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef_jsobjectmakefunctio
   },[md,pd,nd]);
  },[ld,md,nd]);
 },[],"in `webkit-javascriptcore-0.0.0.999:Graphics.UI.Gtk.WebKit.JavaScriptCore.JSObjectRef'");
-var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSObjectRef$p=$F(5,function(Zi,aj,bj,cj,dj){
- $M(Zi,function(ej){
-  var fj=ej.v[0];
-  $M(aj,function(gj){
-   var hj=gj.v[0];
-   $M(bj,function(ij){
-    var jj=ij.v[0];
-    $M(cj,function(kj){
-     var lj=kj.v[0];
-     var $ff=JSObjectGetProperty(fj,hj,jj,lj);
-     var mj=[dj,$ff];
-     var nj=mj[0],oj=mj[1];
-     var pj=$d(1,[oj],"sat");
-     $r([nj,pj]);
-    },[fj,hj,jj,dj]);
-   },[cj,fj,hj,dj]);
-  },[bj,cj,fj,dj]);
- },[aj,bj,cj,dj]);
-},"a14");
 var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7=$f(1,function(D1){
  var E1=$t(function(){
   $$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),D1,$$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef$J);
@@ -6619,6 +6006,9 @@ var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_zdfEnumJSType7=$f(1,
  $$GHCziCString_unpackAppendCStringzh.C(["toEnum{JSType}: tag (",E1],function(F1){
   $$GHCziErr_error.J(F1);
  },[]);
+},[],"in `webkit-javascriptcore-0.0.0.999:Graphics.UI.Gtk.WebKit.JavaScriptCore.JSValueRef'");
+var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_jsvaluemakestring1=$f(3,function(a,b,c){
+ $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef$r.J(a,b,c);
 },[],"in `webkit-javascriptcore-0.0.0.999:Graphics.UI.Gtk.WebKit.JavaScriptCore.JSValueRef'");
 var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef_jsvaluemakeundefined1=$f(2,function(b,c){
  $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef$n.J(b,c);
@@ -6633,6 +6023,19 @@ var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef$n=$F(2,function(oa,p
   $r([ta,va]);
  },[pa]);
 },"a11");
+var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef$r=$F(3,function(ab,bb,cb){
+ $M(ab,function(db){
+  var eb=db.v[0];
+  $M(bb,function(fb){
+   var gb=fb.v[0];
+   var $ff=JSValueMakeString(eb,gb);
+   var hb=[cb,$ff];
+   var ib=hb[0],jb=hb[1];
+   var kb=$d(1,[jb],"sat");
+   $r([ib,kb]);
+  },[eb,cb]);
+ },[bb,cb]);
+},"a15");
 var $$GraphicsziUIziGtkziWebKitziJavaScriptCoreziJSValueRef$G=$D(1,function(){
  $r([")"]);
 },"lvl6");
@@ -6751,19 +6154,9 @@ var $$ControlziExceptionziBase_patError=$f(1,function(c7){
  var e7=$d(1,[d7],"sat");
  $$GHCziException_throw2.J(e7,$$ControlziExceptionziBase_zdfExceptionPatternMatchFailzuzdctoException);
 },[],"in `base:Control.Exception.Base'");
-var $$ControlziExceptionziBase_irrefutPatError=$f(1,function(n7){
- var o7=$t(function(){
-  $$GHCziIOziException_untangle.J(n7,$$ControlziExceptionziBase$e);
- },[n7],"sat");
- var p7=$d(1,[o7],"sat");
- $$GHCziException_throw2.J(p7,$$ControlziExceptionziBase_zdfExceptionPatternMatchFailzuzdctoException);
-},[],"in `base:Control.Exception.Base'");
 var $$ControlziExceptionziBase$b=$T(function(){
  $$GHCziCString_unpackCStringzh.J("Non-exhaustive patterns in");
 },"lvl1");
-var $$ControlziExceptionziBase$e=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Irrefutable pattern failed for pattern");
-},"lvl4");
 var $$DataziFixed_zdfHasResolutionE7=$D(1,function(){
  $r([goog.math.Long.fromBits(3567587328,232)]);
 },"in `base:Data.Fixed'");
@@ -8029,9 +7422,6 @@ var $$GHCziArr_indexError=$f(4,function(L,M,N,O){
 var $$GHCziArr_negRange=$t(function(){
  $$GHCziErr_error.J($$GHCziArr$m);
 },[],"at libraries/base/GHC/Arr.lhs:533:1");
-var $$GHCziArr_arrEleBottom=$t(function(){
- $$GHCziErr_error.J($$GHCziArr$n);
-},[],"at libraries/base/GHC/Arr.lhs:427:1");
 var $$GHCziArr$a=$T(function(){
  $$GHCziCString_unpackCStringzh.J(" out of range ");
 },"lvl");
@@ -8076,9 +7466,6 @@ var $$GHCziArr$f=$F(4,function(cZ,dZ,eZ,fZ){
 var $$GHCziArr$m=$T(function(){
  $$GHCziCString_unpackCStringzh.J("Negative range size");
 },"lvl8");
-var $$GHCziArr$n=$T(function(){
- $$GHCziCString_unpackCStringzh.J("(Array.!): undefined array element");
-},"lvl9");
 var $$GHCziBase_zgzgze=$f(1,function(a){
  $M(a,function(b){
   var c=b.v[0];
@@ -12887,362 +12274,12 @@ var $$GHCziFingerprintziType_zdWFingerprint=$f(2,function(a,b){
 var $$GHCziFloat_zdfFractionalDouble5=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
 },"in `base:GHC.Float'");
-var $$GHCziFloat_zdfRealFloatDouble7=$D(1,function(){
- $r([goog.math.Long.fromBits(2,0)]);
-},"in `base:GHC.Float'");
 var $$GHCziFloat_zdfRealDouble1=$D(1,function(){
  $r([goog.math.Long.fromBits(1,0)]);
 },"in `base:GHC.Float'");
-var $$GHCziFloat_maxExpt10=$D(1,function(){
- $r([goog.math.Long.fromBits(324,0)]);
-},"at libraries/base/GHC/Float.lhs:884:1");
-var $$GHCziFloat_maxExpt=$D(1,function(){
- $r([goog.math.Long.fromBits(1100,0)]);
-},"at libraries/base/GHC/Float.lhs:868:1");
-var $$GHCziFloat_minExpt=$D(1,function(){
- $r([goog.math.Long.fromBits(0,0)]);
-},"at libraries/base/GHC/Float.lhs:867:1");
-var $$GHCziFloat_zdfRealFracFloat2=$D(1,function(){
- $r([goog.math.Long.fromBits(1,0)]);
-},"in `base:GHC.Float'");
-var $$GHCziFloat_zdwroundTo=$f(3,function(H8,I8,J8){
- var K8=$t(function(){
-  $M(H8,function(L8){
-   var M8=L8.v[0];
-   var N8=$hs_quotIntzh(M8,goog.math.Long.fromBits(2,0));
-   $R(1,[N8],"I#");
-  },[]);
- },[H8],"b2");
- var O8=$f(3,function(P8,Q8,R8){
-  $M(Q8,function(S8){
-   switch(S8.g){
-   case 1:
-    var T8=$t(function(){
-     var U8=R8.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(U8.g){
-     case 1:
-      $$GHCziFloat$f.J(R8);break;
-     case 2:
-      $R(1,[],"[]");break;
-     }
-    },[R8],"sat");
-    $r([$$GHCziFloat_minExpt,T8]);break;
-   case 2:
-    var V8=S8.v[0],W8=S8.v[1];
-    $M(R8,function(X8){
-     switch(X8.toString()){
-     case "0":
-      $M(V8,function(r9){
-       var s9=r9.v[0];
-       $M(K8,function(t9){
-	var u9=t9.v[0];
-	var v9=s9.equals(u9)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(v9.g){
-	case 1:
-	 var w9=$t(function(){
-	  var x9=s9.greaterThanOrEqual(u9)?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(x9.g){
-	  case 1:
-	   $A($$GHCziFloat_minExpt);break;
-	  case 2:
-	   $A($$GHCziFloat_zdfRealFracFloat2);break;
-	  }
-	 },[s9,u9],"sat");
-	 $r([w9,$$GHCziTypes_ZMZN]);break;
-	case 2:
-	 $M(P8,function(y9){
-	  switch(y9.g){
-	  case 1:
-	   var z9=$t(function(){
-	    var A9=s9.greaterThanOrEqual(u9)?$$GHCziTypes_True:$$GHCziTypes_False;
-	    switch(A9.g){
-	    case 1:
-	     $A($$GHCziFloat_minExpt);break;
-	    case 2:
-	     $A($$GHCziFloat_zdfRealFracFloat2);break;
-	    }
-	   },[s9,u9],"sat");
-	   $r([z9,$$GHCziTypes_ZMZN]);break;
-	  case 2:
-	   $$GHCziList_all.C([$$GHCziFloat$b,W8],function(B9){
-	    switch(B9.g){
-	    case 1:
-	     var C9=$t(function(){
-	      var D9=s9.greaterThanOrEqual(u9)?$$GHCziTypes_True:$$GHCziTypes_False;
-	      switch(D9.g){
-	      case 1:
-	       $A($$GHCziFloat_minExpt);break;
-	      case 2:
-	       $A($$GHCziFloat_zdfRealFracFloat2);break;
-	      }
-	     },[s9,u9],"sat");
-	     $r([C9,$$GHCziTypes_ZMZN]);break;
-	    case 2:
-	     $r([$$GHCziFloat_minExpt,$$GHCziTypes_ZMZN]);break;
-	    }
-	   },[s9,u9]);break;
-	  }
-	 },[W8,s9,u9]);break;
-	}
-       },[W8,s9,P8]);
-      },[K8,W8,P8]);break;
-     default:
-      var q9=X8.subtract(goog.math.Long.fromBits(1,0));
-      var Y8=$t(function(){
-       $M(V8,function(Z8){
-	var a9=Z8.v[0];
-	var b9=$hs_remIntzh(a9,goog.math.Long.fromBits(2,0));
-	switch(b9.toString()){
-	case "0":
-	 $R(2,[],"True");break;
-	default:
-	 $R(1,[],"False");
-	}
-       },[]);
-      },[V8],"sat");
-      O8.C([Y8,W8,q9],function(c9){
-       var d9=c9[0],e9=c9[1];
-       $M(d9,function(f9){
-	var g9=f9.v[0];
-	$M(V8,function(h9){
-	 var i9=h9.v[0];
-	 $M(H8,function(j9){
-	  var k9=j9.v[0];
-	  var n9=g9.add(i9);
-	  var l9=n9.equals(k9)?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(l9.g){
-	  case 1:
-	   var m9=$d(1,[n9],"sat");
-	   var o9=$d(2,[m9,e9],"sat");
-	   $r([$$GHCziFloat_minExpt,o9]);break;
-	  case 2:
-	   var p9=$d(2,[$$GHCziFloat_minExpt,e9],"sat");
-	   $r([$$GHCziFloat_zdfRealFracFloat2,p9]);break;
-	  }
-	 },[g9,i9,e9]);
-	},[H8,g9,e9]);
-       },[H8,V8,e9]);
-      },[H8,V8]);
-     }
-    },[H8,K8,V8,O8,W8,P8]);break;
-   }
-  },[H8,K8,R8,O8,P8]);
- },[H8,K8],"$s$wf3");
- $M(J8,function(E9){
-  switch(E9.g){
-  case 1:
-   var F9=$t(function(){
-    $M(I8,function(G9){
-     var H9=G9.v[0];
-     var I9=H9.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(I9.g){
-     case 1:
-      $$GHCziFloat$f.J(H9);break;
-     case 2:
-      $R(1,[],"[]");break;
-     }
-    },[]);
-   },[I8],"sat");
-   $r([$$GHCziFloat_minExpt,F9]);break;
-  case 2:
-   var J9=E9.v[0],K9=E9.v[1];
-   $M(I8,function(L9){
-    var M9=L9.v[0];
-    $M(M9,function(N9){
-     switch(N9.toString()){
-     case "0":
-      $M(J9,function(ia){
-       var ja=ia.v[0];
-       $M(K8,function(ka){
-	var la=ka.v[0];
-	var ma=ja.equals(la)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(ma.g){
-	case 1:
-	 var na=ja.greaterThanOrEqual(la)?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(na.g){
-	 case 1:
-	  $r([$$GHCziFloat_minExpt,$$GHCziTypes_ZMZN]);break;
-	 case 2:
-	  var oa=$d(2,[$$GHCziFloat_zdfRealFracFloat2,$$GHCziTypes_ZMZN],"sat");
-	  $r([$$GHCziFloat_zdfRealFracFloat2,oa]);break;
-	 }break;
-	case 2:
-	 $$GHCziList_all.C([$$GHCziFloat$b,K9],function(pa){
-	  switch(pa.g){
-	  case 1:
-	   var qa=ja.greaterThanOrEqual(la)?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(qa.g){
-	   case 1:
-	    $r([$$GHCziFloat_minExpt,$$GHCziTypes_ZMZN]);break;
-	   case 2:
-	    var ra=$d(2,[$$GHCziFloat_zdfRealFracFloat2,$$GHCziTypes_ZMZN],"sat");
-	    $r([$$GHCziFloat_zdfRealFracFloat2,ra]);break;
-	   }break;
-	  case 2:
-	   $r([$$GHCziFloat_minExpt,$$GHCziTypes_ZMZN]);break;
-	  }
-	 },[ja,la]);break;
-	}
-       },[K9,ja]);
-      },[K8,K9]);break;
-     default:
-      var ha=N9.subtract(goog.math.Long.fromBits(1,0));
-      var O9=$t(function(){
-       $M(J9,function(P9){
-	var Q9=P9.v[0];
-	var R9=$hs_remIntzh(Q9,goog.math.Long.fromBits(2,0));
-	switch(R9.toString()){
-	case "0":
-	 $R(2,[],"True");break;
-	default:
-	 $R(1,[],"False");
-	}
-       },[]);
-      },[J9],"sat");
-      O8.C([O9,K9,ha],function(S9){
-       var T9=S9[0],U9=S9[1];
-       $M(T9,function(V9){
-	var W9=V9.v[0];
-	$M(J9,function(X9){
-	 var Y9=X9.v[0];
-	 $M(H8,function(Z9){
-	  var aa=Z9.v[0];
-	  var da=W9.add(Y9);
-	  var ba=da.equals(aa)?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(ba.g){
-	  case 1:
-	   var ca=$d(1,[da],"sat");
-	   var ea=$d(2,[ca,U9],"sat");
-	   $r([$$GHCziFloat_minExpt,ea]);break;
-	  case 2:
-	   var fa=$d(2,[$$GHCziFloat_minExpt,U9],"sat");
-	   var ga=$d(2,[$$GHCziFloat_zdfRealFracFloat2,fa],"sat");
-	   $r([$$GHCziFloat_zdfRealFracFloat2,ga]);break;
-	  }
-	 },[W9,Y9,U9]);
-	},[H8,W9,U9]);
-       },[H8,J9,U9]);
-      },[H8,J9]);
-     }
-    },[H8,K8,O8,J9,K9]);
-   },[H8,K8,O8,J9,K9]);break;
-  }
- },[H8,K8,O8,I8]);
-},[],"at libraries/base/GHC/Float.lhs:638:1");
 var $$GHCziFloat_zdfFractionalDouble4=$D(1,function(){
  $r([0.0]);
 },"in `base:GHC.Float'");
-var $$GHCziFloat_expts2=$f(1,function(Le){
- $$GHCziFloat$i.J(Le);
-},[],"in `base:GHC.Float'");
-var $$GHCziFloat_expts1=$f(1,function(Me){
- var Ne=$hs_newArrayzh(goog.math.Long.fromBits(1101,0),$$GHCziArr_arrEleBottom,Me);
- var Oe=Ne[0],Pe=Ne[1];
- var Qe=$f(2,function(Re,Se){
-  var Te=goog.math.Long.fromBits(0,0).lessThanOrEqual(Re)?$$GHCziTypes_True:$$GHCziTypes_False;
-  switch(Te.g){
-  case 1:
-   $$GHCziFloat_expts2.J(Re);break;
-  case 2:
-   var Ue=Re.lessThanOrEqual(goog.math.Long.fromBits(1100,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-   switch(Ue.g){
-   case 1:
-    $$GHCziFloat_expts2.J(Re);break;
-   case 2:
-    var Ve=$t(function(){
-     var We=Re.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(We.g){
-     case 1:
-      $M(Re,function(Xe){
-       switch(Xe.toString()){
-       case "0":
-	$A($$GHCziReal_zdfNumRatio3);break;
-       default:
-	$$GHCziReal_zdwf1.J($$GHCziFloat_zdfRealFloatDouble7,Xe);
-       }
-      },[]);break;
-     case 2:
-      $A($$GHCziReal_zc3);break;
-     }
-    },[Re],"sat");
-    var af=$hs_writeArrayzh(Pe,Re,Ve,Se);
-    $M(Re,function(Ye){
-     switch(Ye.toString()){
-     case "1100":
-      var bf=$hs_unsafeFreezzeArrayzh(Pe,af);
-      var cf=bf[0],df=bf[1];
-      var ef=$d(1,[$$GHCziFloat_minExpt,$$GHCziFloat_maxExpt,goog.math.Long.fromBits(1101,0),df],"sat");
-      $r([cf,ef]);break;
-     default:
-      var Ze=Ye.add(goog.math.Long.fromBits(1,0));
-      Qe.J(Ze,af);
-     }
-    },[Pe,Qe,af]);break;
-   }break;
-  }
- },[Pe],"go3");
- Qe.J(goog.math.Long.fromBits(0,0),Oe);
-},[],"in `base:GHC.Float'");
-var $$GHCziFloat_expts=$t(function(){
- $$GHCziST_runSTRep.J($$GHCziFloat_expts1);
-},[],"at libraries/base/GHC/Float.lhs:881:1");
-var $$GHCziFloat_expts4=$D(1,function(){
- $r([goog.math.Long.fromBits(10,0)]);
-},"in `base:GHC.Float'");
-var $$GHCziFloat_expts5=$f(1,function(ff){
- $$GHCziFloat$k.J(ff);
-},[],"in `base:GHC.Float'");
-var $$GHCziFloat_expts3=$f(1,function(gf){
- var hf=$hs_newArrayzh(goog.math.Long.fromBits(325,0),$$GHCziArr_arrEleBottom,gf);
- var jf=hf[0],kf=hf[1];
- var lf=$f(2,function(mf,nf){
-  var of=goog.math.Long.fromBits(0,0).lessThanOrEqual(mf)?$$GHCziTypes_True:$$GHCziTypes_False;
-  switch(of.g){
-  case 1:
-   $$GHCziFloat_expts5.J(mf);break;
-  case 2:
-   var pf=mf.lessThanOrEqual(goog.math.Long.fromBits(324,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-   switch(pf.g){
-   case 1:
-    $$GHCziFloat_expts5.J(mf);break;
-   case 2:
-    var qf=$t(function(){
-     var rf=mf.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(rf.g){
-     case 1:
-      $M(mf,function(sf){
-       switch(sf.toString()){
-       case "0":
-	$A($$GHCziReal_zdfNumRatio3);break;
-       default:
-	$$GHCziReal_zdwf1.J($$GHCziFloat_expts4,sf);
-       }
-      },[]);break;
-     case 2:
-      $A($$GHCziReal_zc3);break;
-     }
-    },[mf],"sat");
-    var vf=$hs_writeArrayzh(kf,mf,qf,nf);
-    $M(mf,function(tf){
-     switch(tf.toString()){
-     case "324":
-      var wf=$hs_unsafeFreezzeArrayzh(kf,vf);
-      var xf=wf[0],yf=wf[1];
-      var zf=$d(1,[$$GHCziFloat_minExpt,$$GHCziFloat_maxExpt10,goog.math.Long.fromBits(325,0),yf],"sat");
-      $r([xf,zf]);break;
-     default:
-      var uf=tf.add(goog.math.Long.fromBits(1,0));
-      lf.J(uf,vf);
-     }
-    },[kf,lf,vf]);break;
-   }break;
-  }
- },[kf],"go3");
- lf.J(goog.math.Long.fromBits(0,0),jf);
-},[],"in `base:GHC.Float'");
-var $$GHCziFloat_expts10=$t(function(){
- $$GHCziST_runSTRep.J($$GHCziFloat_expts3);
-},[],"at libraries/base/GHC/Float.lhs:887:1");
 var $$GHCziFloat_zdfFractionalDouble1=$t(function(){
  var If=0.0/0.0;
  $R(1,[If],"D#");
@@ -13538,1506 +12575,6 @@ var $$GHCziFloat_zdwzdcfromRational=$f(2,function(Mq,Nq){
   }
  },[Nq,Mq]);
 },[],"in `base:GHC.Float'");
-var $$GHCziFloat_expt2=$f(3,function(qx,rx,sx){
- $$GHCziFloat$n.J(qx,rx,sx);
-},[],"in `base:GHC.Float'");
-var $$GHCziFloat_expt1=$f(3,function(tx,ux,vx){
- $$GHCziFloat$o.J(tx,ux,vx);
-},[],"in `base:GHC.Float'");
-var $$GHCziFloat_zdwexpt=$f(2,function(wx,xx){
- var yx=$d(1,[xx],"n");
- var zx=$t(function(){
-  $$GHCziIntegerziType_eqInteger.C([wx,$$GHCziFloat_expts4],function(Ax){
-   switch(Ax.g){
-   case 1:
-    var Bx=xx.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(Bx.g){
-    case 1:
-     $M(xx,function(Cx){
-      switch(Cx.toString()){
-      case "0":
-       $A($$GHCziReal_zdfNumRatio3);break;
-      default:
-       $$GHCziReal_zdwf1.J(wx,Cx);
-      }
-     },[wx]);break;
-    case 2:
-     $A($$GHCziReal_zc3);break;
-    }break;
-   case 2:
-    var Dx=xx.lessThanOrEqual(goog.math.Long.fromBits(324,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(Dx.g){
-    case 1:
-     var Ex=xx.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(Ex.g){
-     case 1:
-      $M(xx,function(Fx){
-       switch(Fx.toString()){
-       case "0":
-	$A($$GHCziReal_zdfNumRatio3);break;
-       default:
-	$$GHCziReal_zdwf1.J(wx,Fx);
-       }
-      },[wx]);break;
-     case 2:
-      $A($$GHCziReal_zc3);break;
-     }break;
-    case 2:
-     $M($$GHCziFloat_expts10,function(Gx){
-      var Hx=Gx.v[0],Ix=Gx.v[1],Jx=Gx.v[3];
-      $M(Hx,function(Kx){
-       var Lx=Kx.v[0];
-       $M(Ix,function(Mx){
-	var Nx=Mx.v[0];
-	var Ox=Lx.lessThanOrEqual(xx)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(Ox.g){
-	case 1:
-	 $$GHCziFloat_expt2.J(yx,Kx,Mx);break;
-	case 2:
-	 var Px=xx.lessThanOrEqual(Nx)?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(Px.g){
-	 case 1:
-	  $$GHCziFloat_expt2.J(yx,Kx,Mx);break;
-	 case 2:
-	  var Sx=xx.subtract(Lx);
-	  var Qx=$hs_indexArrayzh(Jx,Sx);
-	  var Rx=Qx[0];
-	  $A(Rx);break;
-	 }break;
-	}
-       },[xx,yx,Lx,Kx,Jx]);
-      },[xx,yx,Ix,Jx]);
-     },[xx,yx]);break;
-    }break;
-   }
-  },[xx,yx,wx]);
- },[xx,yx,wx],"$w$j2");
- $$GHCziIntegerziType_eqInteger.C([wx,$$GHCziFloat_zdfRealFloatDouble7],function(Tx){
-  switch(Tx.g){
-  case 1:
-   $A(zx);break;
-  case 2:
-   var Ux=xx.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-   switch(Ux.g){
-   case 1:
-    $A(zx);break;
-   case 2:
-    var Vx=xx.lessThanOrEqual(goog.math.Long.fromBits(1100,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(Vx.g){
-    case 1:
-     $A(zx);break;
-    case 2:
-     $M($$GHCziFloat_expts,function(Wx){
-      var Xx=Wx.v[0],Yx=Wx.v[1],Zx=Wx.v[3];
-      $M(Xx,function(ay){
-       var by=ay.v[0];
-       $M(Yx,function(cy){
-	var dy=cy.v[0];
-	var ey=by.lessThanOrEqual(xx)?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(ey.g){
-	case 1:
-	 $$GHCziFloat_expt1.J(yx,ay,cy);break;
-	case 2:
-	 var fy=xx.lessThanOrEqual(dy)?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(fy.g){
-	 case 1:
-	  $$GHCziFloat_expt1.J(yx,ay,cy);break;
-	 case 2:
-	  var iy=xx.subtract(by);
-	  var gy=$hs_indexArrayzh(Zx,iy);
-	  var hy=gy[0];
-	  $A(hy);break;
-	 }break;
-	}
-       },[xx,yx,by,ay,Zx]);
-      },[xx,yx,Yx,Zx]);
-     },[xx,yx]);break;
-    }break;
-   }break;
-  }
- },[xx,yx,wx,zx]);
-},[],"at libraries/base/GHC/Float.lhs:871:1");
-var $$GHCziFloat_zdfShowDouble4=$D(1,function(){
- $r(["-"]);
-},"in `base:GHC.Float'");
-var $$GHCziFloat_zdwzdsshowSignedFloat=$f(3,function(Mz,Nz,Oz){
- var Pz=$t(function(){
-  var Rz= -Oz;
-  var Qz=$d(1,[Rz],"sat");
-  Mz.J(Qz);
- },[Oz,Mz],"g");
- var Sz=$t(function(){
-  $M(Nz,function(Tz){
-   var Uz=Tz.v[0];
-   var Vz=Uz.greaterThan(goog.math.Long.fromBits(6,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-   switch(Vz.g){
-   case 1:
-    var Wz=$f(1,function(Xz){
-     var Yz=$t(function(){
-      Pz.J(Xz);
-     },[Pz,Xz],"sat");
-     $R(2,[$$GHCziFloat_zdfShowDouble4,Yz],":");
-    },[Pz],"sat");
-    $A(Wz);break;
-   case 2:
-    var Zz=$f(1,function(aA){
-     var bA=$t(function(){
-      var cA=$d(2,[$$GHCziShow_shows10,aA],"sat");
-      Pz.J(cA);
-     },[Pz,aA],"sat");
-     var dA=$d(2,[$$GHCziFloat_zdfShowDouble4,bA],"sat");
-     $R(2,[$$GHCziShow_shows11,dA],":");
-    },[Pz],"sat");
-    $A(Zz);break;
-   }
-  },[Pz]);
- },[Pz,Nz],"$w$j2");
- var eA=Oz<0.0?$$GHCziTypes_True:$$GHCziTypes_False;
- switch(eA.g){
- case 1:
-  var $ff=isDoubleNegativeZero(Oz);
-  var fA=[$$GHCziPrim_realWorldzh,$ff];
-  var gA=fA[1];
-  $M(gA,function(hA){
-   switch(hA.toString()){
-   case "0":
-    var iA=$d(1,[Oz],"sat");
-    Mz.J(iA);break;
-   default:
-    $A(Sz);
-   }
-  },[Oz,Mz,Pz,Nz,Sz]);break;
- case 2:
-  $A(Sz);break;
- }
-},[],"at libraries/base/GHC/Float.lhs:1162:1");
-var $$GHCziFloat_zdwzdsfloatToDigits1=$f(2,function(JE,KE){
- var LE=KE==0.0?$$GHCziTypes_True:$$GHCziTypes_False;
- switch(LE.g){
- case 1:
-  var ME=$t(function(){
-   $$GHCziIntegerziType_decodeDoubleInteger.C([KE],function(NE){
-    var OE=NE[0],PE=NE[1];
-    var QE=$d(1,[PE],"sat");
-    $R(1,[OE,QE],"(,)");
-   },[]);
-  },[KE],"ds");
-  var RE=$t(function(){
-   $M(ME,function(SE){
-    var TE=SE.v[1];
-    $A(TE);
-   },[]);
-  },[ME],"e0");
-  var UE=$t(function(){
-   $M(RE,function(VE){
-    var WE=VE.v[0];
-    var eF=goog.math.Long.fromBits(4294966222,4294967295).subtract(WE);
-    var XE=eF.greaterThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(XE.g){
-    case 1:
-     var YE=$t(function(){
-      $M(ME,function(ZE){
-       var aF=ZE.v[0];
-       $A(aF);
-      },[]);
-     },[ME],"sat");
-     $R(1,[YE,VE],"(,)");break;
-    case 2:
-     var cF=WE.add(eF);
-     var bF=$d(1,[cF],"sat");
-     var dF=$t(function(){
-      $$GHCziFloat_zdwexpt.C([$$GHCziFloat_zdfRealFloatDouble7,eF],function(fF){
-       $$GHCziIntegerziType_eqInteger.C([fF,$$GHCziReal_even1],function(gF){
-	switch(gF.g){
-	case 1:
-	 $M(ME,function(hF){
-	  var iF=hF.v[0];
-	  $$GHCziIntegerziType_quotInteger.J(iF,fF);
-	 },[fF]);break;
-	case 2:
-	 $A($$GHCziErr_divZZeroError);break;
-	}
-       },[ME,fF]);
-      },[ME]);
-     },[ME,eF],"sat");
-     $R(1,[dF,bF],"(,)");break;
-    }
-   },[ME]);
-  },[ME,RE],"ds1");
-  var jF=$t(function(){
-   $M(UE,function(kF){
-    var lF=kF.v[1];
-    $A(lF);
-   },[]);
-  },[UE],"e");
-  var mF=$t(function(){
-   $M(UE,function(nF){
-    var oF=nF.v[0];
-    $A(oF);
-   },[]);
-  },[UE],"f");
-  var pF=$t(function(){
-   $M(jF,function(qF){
-    var rF=qF.v[0];
-    var sF=rF.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(sF.g){
-    case 1:
-     var tF=rF.greaterThan(goog.math.Long.fromBits(4294966222,4294967295))?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(tF.g){
-     case 1:
-      var uF=$t(function(){
-       var wF=rF.negate();
-       $$GHCziFloat_zdwexpt.C([$$GHCziFloat_zdfRealFloatDouble7,wF],function(vF){
-	$$GHCziIntegerziType_timesInteger.J(vF,$$GHCziFloat_zdfRealFloatDouble7);
-       },[]);
-      },[rF],"sat");
-      var xF=$t(function(){
-       $$GHCziIntegerziType_timesInteger.J(mF,$$GHCziFloat_zdfRealFloatDouble7);
-      },[mF],"sat");
-      $R(1,[xF,uF,$$GHCziFloat_zdfRealDouble1,$$GHCziFloat_zdfRealDouble1],"(,,,)");break;
-     case 2:
-      $$GHCziIntegerziType_eqInteger.C([mF,$$GHCziFloat$q],function(yF){
-       switch(yF.g){
-       case 1:
-	var zF=$t(function(){
-	 var BF=rF.negate();
-	 $$GHCziFloat_zdwexpt.C([$$GHCziFloat_zdfRealFloatDouble7,BF],function(AF){
-	  $$GHCziIntegerziType_timesInteger.J(AF,$$GHCziFloat_zdfRealFloatDouble7);
-	 },[]);
-	},[rF],"sat");
-	var CF=$t(function(){
-	 $$GHCziIntegerziType_timesInteger.J(mF,$$GHCziFloat_zdfRealFloatDouble7);
-	},[mF],"sat");
-	$R(1,[CF,zF,$$GHCziFloat_zdfRealDouble1,$$GHCziFloat_zdfRealDouble1],"(,,,)");break;
-       case 2:
-	var DF=$t(function(){
-	 var GF=rF.negate();
-	 var FF=GF.add(goog.math.Long.fromBits(1,0));
-	 $$GHCziFloat_zdwexpt.C([$$GHCziFloat_zdfRealFloatDouble7,FF],function(EF){
-	  $$GHCziIntegerziType_timesInteger.J(EF,$$GHCziFloat_zdfRealFloatDouble7);
-	 },[]);
-	},[rF],"sat");
-	var HF=$t(function(){
-	 $$GHCziIntegerziType_timesInteger.C([mF,$$GHCziFloat_zdfRealFloatDouble7],function(IF){
-	  $$GHCziIntegerziType_timesInteger.J(IF,$$GHCziFloat_zdfRealFloatDouble7);
-	 },[]);
-	},[mF],"sat");
-	$R(1,[HF,DF,$$GHCziFloat_zdfRealFloatDouble7,$$GHCziFloat_zdfRealDouble1],"(,,,)");break;
-       }
-      },[mF,rF]);break;
-     }break;
-    case 2:
-     var JF=$t(function(){
-      $$GHCziFloat_zdwexpt.J($$GHCziFloat_zdfRealFloatDouble7,rF);
-     },[rF],"be");
-     $$GHCziIntegerziType_eqInteger.C([mF,$$GHCziFloat$q],function(KF){
-      switch(KF.g){
-      case 1:
-       var LF=$t(function(){
-	$$GHCziIntegerziType_timesInteger.C([mF,JF],function(MF){
-	 $$GHCziIntegerziType_timesInteger.J(MF,$$GHCziFloat_zdfRealFloatDouble7);
-	},[]);
-       },[mF,JF],"sat");
-       $R(1,[LF,$$GHCziFloat_zdfRealFloatDouble7,JF,JF],"(,,,)");break;
-      case 2:
-       var NF=$t(function(){
-	$$GHCziIntegerziType_timesInteger.J(JF,$$GHCziFloat_zdfRealFloatDouble7);
-       },[JF],"sat");
-       var OF=$t(function(){
-	$$GHCziIntegerziType_timesInteger.C([mF,JF],function(PF){
-	 $$GHCziIntegerziType_timesInteger.C([PF,$$GHCziFloat_zdfRealFloatDouble7],function(QF){
-	  $$GHCziIntegerziType_timesInteger.J(QF,$$GHCziFloat_zdfRealFloatDouble7);
-	 },[]);
-	},[]);
-       },[mF,JF],"sat");
-       $R(1,[OF,$$GHCziFloat$r,NF,JF],"(,,,)");break;
-      }
-     },[mF,JF]);break;
-    }
-   },[mF]);
-  },[jF,mF],"ds2");
-  var RF=$t(function(){
-   $M(pF,function(SF){
-    var TF=SF.v[1];
-    $A(TF);
-   },[]);
-  },[pF],"s");
-  var UF=$t(function(){
-   $M(pF,function(VF){
-    var WF=VF.v[2];
-    $A(WF);
-   },[]);
-  },[pF],"mUp");
-  var XF=$t(function(){
-   $M(pF,function(YF){
-    var ZF=YF.v[0];
-    $A(ZF);
-   },[]);
-  },[pF],"r");
-  var aG=$t(function(){
-   var bG=$t(function(){
-    $$GHCziIntegerziType_plusInteger.J(XF,UF);
-   },[UF,XF],"lvl34");
-   var cG=$f(1,function(dG){
-    var eG=dG.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(eG.g){
-    case 1:
-     var jG=dG.negate();
-     $$GHCziFloat_zdwexpt.C([JE,jG],function(fG){
-      $$GHCziIntegerziType_timesInteger.C([fG,bG],function(gG){
-       $$GHCziIntegerziType_leInteger.C([gG,RF],function(hG){
-	switch(hG.g){
-	case 1:
-	 var iG=dG.add(goog.math.Long.fromBits(1,0));
-	 cG.J(iG);break;
-	case 2:
-	 $A(dG);break;
-	}
-       },[dG,cG]);
-      },[RF,dG,cG]);
-     },[RF,bG,dG,cG]);break;
-    case 2:
-     $$GHCziFloat_zdwexpt.C([JE,dG],function(kG){
-      $$GHCziIntegerziType_timesInteger.C([kG,RF],function(lG){
-       $$GHCziIntegerziType_leInteger.C([bG,lG],function(mG){
-	switch(mG.g){
-	case 1:
-	 var nG=dG.add(goog.math.Long.fromBits(1,0));
-	 cG.J(nG);break;
-	case 2:
-	 $A(dG);break;
-	}
-       },[dG,cG]);
-      },[bG,dG,cG]);
-     },[RF,bG,dG,cG]);break;
-    }
-   },[RF,bG,JE],"$wfixup");
-   $$GHCziIntegerziType_eqInteger.C([JE,$$GHCziFloat_expts4],function(oG){
-    switch(oG.g){
-    case 1:
-     $$GHCziIntegerziType_plusInteger.C([mF,$$GHCziFloat_zdfRealDouble1],function(pG){
-      $$GHCziIntegerziType_floatFromInteger.C([pG],function(FG){
-       $M(jF,function(qG){
-	var rG=qG.v[0];
-	$$GHCziIntegerziType_floatFromInteger.C([JE],function(GG){
-	 var AG=$hs_logFloatzh(GG);
-	 var BG=$hs_logFloatzh(FG);
-	 var EG=$hs_logFloatzh(2.0);
-	 var DG=$hs_int2Floatzh(rG);
-	 var CG=DG*EG;
-	 var zG=BG+CG;
-	 var yG=zG/AG;
-	 var uG=$hs_float2Intzh(yG);
-	 var xG=$hs_int2Floatzh(uG);
-	 var sG=xG<yG?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(sG.g){
-	 case 1:
-	  cG.C([uG],function(tG){
-	   $R(1,[tG],"I#");
-	  },[]);break;
-	 case 2:
-	  var wG=uG.add(goog.math.Long.fromBits(1,0));
-	  cG.C([wG],function(vG){
-	   $R(1,[vG],"I#");
-	  },[]);break;
-	 }
-	},[cG,FG,rG]);
-       },[JE,cG,FG]);
-      },[jF,JE,cG]);
-     },[jF,JE,cG]);break;
-    case 2:
-     $M(RE,function(HG){
-      var IG=HG.v[0];
-      var NG=goog.math.Long.fromBits(52,0).add(IG);
-      var JG=NG.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-      switch(JG.g){
-      case 1:
-       var MG=NG.multiply(goog.math.Long.fromBits(8651,0));
-       var LG=$hs_quotIntzh(MG,goog.math.Long.fromBits(28738,0));
-       cG.C([LG],function(KG){
-	$R(1,[KG],"I#");
-       },[]);break;
-      case 2:
-       var RG=NG.multiply(goog.math.Long.fromBits(8651,0));
-       var QG=$hs_quotIntzh(RG,goog.math.Long.fromBits(28738,0));
-       var PG=QG.add(goog.math.Long.fromBits(1,0));
-       cG.C([PG],function(OG){
-	$R(1,[OG],"I#");
-       },[]);break;
-      }
-     },[cG]);break;
-    }
-   },[RE,jF,mF,JE,cG]);
-  },[RE,jF,mF,RF,UF,XF,JE],"k");
-  var SG=$t(function(){
-   $M(aG,function(TG){
-    var UG=TG.v[0];
-    var VG=$f(5,function(WG,XG,YG,ZG,aH){
-     $$GHCziIntegerziType_eqInteger.C([YG,$$GHCziReal_even1],function(bH){
-      switch(bH.g){
-      case 1:
-       $$GHCziIntegerziType_timesInteger.C([XG,JE],function(cH){
-	$$GHCziIntegerziType_quotRemInteger.C([cH,YG],function(dH){
-	 var eH=dH[0],fH=dH[1];
-	 $$GHCziIntegerziType_timesInteger.C([aH,JE],function(gH){
-	  $$GHCziIntegerziType_timesInteger.C([ZG,JE],function(hH){
-	   $$GHCziIntegerziType_ltInteger.C([fH,gH],function(iH){
-	    switch(iH.g){
-	    case 1:
-	     $$GHCziIntegerziType_plusInteger.C([fH,hH],function(jH){
-	      $$GHCziIntegerziType_gtInteger.C([jH,YG],function(kH){
-	       switch(kH.g){
-	       case 1:
-		var lH=$d(2,[eH,WG],"sat");
-		VG.J(lH,fH,YG,hH,gH);break;
-	       case 2:
-		var mH=$t(function(){
-		 $$GHCziIntegerziType_plusInteger.J(eH,$$GHCziFloat_zdfRealDouble1);
-		},[eH],"sat");
-		$R(2,[mH,WG],":");break;
-	       }
-	      },[YG,gH,hH,fH,eH,WG,VG]);
-	     },[YG,gH,hH,fH,eH,WG,VG]);break;
-	    case 2:
-	     $$GHCziIntegerziType_plusInteger.C([fH,hH],function(nH){
-	      $$GHCziIntegerziType_gtInteger.C([nH,YG],function(oH){
-	       switch(oH.g){
-	       case 1:
-		$R(2,[eH,WG],":");break;
-	       case 2:
-		$$GHCziIntegerziType_timesInteger.C([fH,$$GHCziFloat_zdfRealFloatDouble7],function(pH){
-		 $$GHCziIntegerziType_ltInteger.C([pH,YG],function(qH){
-		  switch(qH.g){
-		  case 1:
-		   var rH=$t(function(){
-		    $$GHCziIntegerziType_plusInteger.J(eH,$$GHCziFloat_zdfRealDouble1);
-		   },[eH],"sat");
-		   $R(2,[rH,WG],":");break;
-		  case 2:
-		   $R(2,[eH,WG],":");break;
-		  }
-		 },[eH,WG]);
-		},[YG,eH,WG]);break;
-	       }
-	      },[YG,fH,eH,WG]);
-	     },[YG,fH,eH,WG]);break;
-	    }
-	   },[YG,gH,hH,fH,eH,WG,VG]);
-	  },[YG,gH,fH,eH,WG,VG]);
-	 },[JE,YG,ZG,fH,eH,WG,VG]);
-	},[JE,YG,aH,ZG,WG,VG]);
-       },[JE,YG,aH,ZG,WG,VG]);break;
-      case 2:
-       $A($$GHCziErr_divZZeroError);break;
-      }
-     },[JE,YG,XG,aH,ZG,WG,VG]);
-    },[JE],"gen");
-    var sH=UG.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(sH.g){
-    case 1:
-     $M(pF,function(tH){
-      var uH=tH.v[3];
-      var BH=UG.negate();
-      $$GHCziFloat_zdwexpt.C([JE,BH],function(vH){
-       $$GHCziIntegerziType_timesInteger.C([uH,vH],function(wH){
-	$$GHCziIntegerziType_timesInteger.C([UF,vH],function(xH){
-	 $$GHCziIntegerziType_timesInteger.C([XF,vH],function(yH){
-	  VG.C([$$GHCziTypes_ZMZN,yH,RF,xH,wH],function(zH){
-	   $$GHCziList_reverse1.C([zH,$$GHCziTypes_ZMZN],function(AH){
-	    $$GHCziBase_map.J($$GHCziReal_fromIntegralzuzdsfromIntegral,AH);
-	   },[]);
-	  },[]);
-	 },[RF,VG,wH,xH]);
-	},[RF,XF,VG,vH,wH]);
-       },[RF,UF,XF,VG,vH]);
-      },[RF,UF,XF,VG,uH]);
-     },[RF,UF,XF,JE,VG,UG]);break;
-    case 2:
-     $M(pF,function(CH){
-      var DH=CH.v[3];
-      $$GHCziFloat_zdwexpt.C([JE,UG],function(EH){
-       $$GHCziIntegerziType_timesInteger.C([RF,EH],function(FH){
-	VG.C([$$GHCziTypes_ZMZN,XF,FH,UF,DH],function(GH){
-	 $$GHCziList_reverse1.C([GH,$$GHCziTypes_ZMZN],function(HH){
-	  $$GHCziBase_map.J($$GHCziReal_fromIntegralzuzdsfromIntegral,HH);
-	 },[]);
-	},[]);
-       },[UF,XF,VG,DH]);
-      },[RF,UF,XF,VG,DH]);
-     },[RF,UF,XF,JE,VG,UG]);break;
-    }
-   },[pF,RF,UF,XF,JE]);
-  },[pF,RF,UF,XF,JE,aG],"sat");
-  $r([SG,aG]);break;
- case 2:
-  $r([$$GHCziFloat$p,$$GHCziFloat_minExpt]);break;
- }
-},[],"at libraries/base/GHC/Float.lhs:675:1");
-var $$GHCziFloat_zdwzdsformatRealFloat=$f(3,function(VO,WO,XO){
- var $ff=isDoubleNaN(XO);
- var YO=[$$GHCziPrim_realWorldzh,$ff];
- var ZO=YO[1];
- $M(ZO,function(aP){
-  switch(aP.toString()){
-  case "0":
-   var $ff=isDoubleInfinite(XO);
-   var bP=[$$GHCziPrim_realWorldzh,$ff];
-   var cP=bP[1];
-   $M(cP,function(dP){
-    switch(dP.toString()){
-    case "0":
-     var fP=$f(2,function(gP,hP){
-      $M(WO,function(iP){
-       switch(iP.g){
-       case 1:
-	$$GHCziBase_map.C([$$GHCziShow_intToDigit,gP],function(jP){
-	 switch(jP.g){
-	 case 1:
-	  $A($$GHCziFloat$x);break;
-	 case 2:
-	  var kP=jP.v[0],lP=jP.v[1];
-	  $M(kP,function(mP){
-	   var nP=mP.v[0];
-	   var oP=$t(function(){
-	    $M(lP,function(pP){
-	     switch(pP.g){
-	     case 1:
-	      var qP=$t(function(){
-	       var rP=$t(function(){
-		var sP=hP.subtract(goog.math.Long.fromBits(1,0));
-		$$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),sP,$$GHCziTypes_ZMZN);
-	       },[hP],"sat");
-	       $$GHCziCString_unpackAppendCStringzh.J(".0e",rP);
-	      },[hP],"sat");
-	      $R(2,[mP,qP],":");break;
-	     case 2:
-	      var tP=$t(function(){
-	       var uP=$t(function(){
-		var vP=hP.subtract(goog.math.Long.fromBits(1,0));
-		$$GHCziShow_itos.J(vP,$$GHCziTypes_ZMZN);
-	       },[hP],"sat");
-	       var wP=$d(2,[$$GHCziFloat$B,uP],"sat");
-	       $$GHCziBase_zpzp.J(pP,wP);
-	      },[hP,pP],"sat");
-	      var xP=$d(2,[$$GHCziFloat$y,tP],"sat");
-	      $R(2,[mP,xP],":");break;
-	     }
-	    },[mP,hP]);
-	   },[lP,mP,hP],"$wfail");
-	   $M(nP,function(yP){
-	    switch(yP.toString()){
-	    case "0":
-	     $M(lP,function(zP){
-	      switch(zP.g){
-	      case 1:
-	       $A($$GHCziFloat$z);break;
-	      case 2:
-	       $A(oP);break;
-	      }
-	     },[lP,mP,hP,oP]);break;
-	    default:
-	     $A(oP);
-	    }
-	   },[lP,mP,hP,oP]);
-	  },[lP,hP]);break;
-	 }
-	},[hP]);break;
-       case 2:
-	var AP=iP.v[0];
-	var BP=$t(function(){
-	 $M(AP,function(CP){
-	  var DP=CP.v[0];
-	  var EP=DP.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(EP.g){
-	  case 1:
-	   $A(CP);break;
-	  case 2:
-	   $A($$GHCziFloat_zdfRealFracFloat2);break;
-	  }
-	 },[]);
-	},[AP],"dec'");
-	var FP=$t(function(){
-	 var GP=$t(function(){
-	  $M(BP,function(HP){
-	   var IP=HP.v[0];
-	   var JP=IP.add(goog.math.Long.fromBits(1,0));
-	   $R(1,[JP],"I#");
-	  },[]);
-	 },[BP],"sat");
-	 $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,GP,gP],function(KP){
-	  var LP=KP[0],MP=KP[1];
-	  $R(1,[LP,MP],"(,)");
-	 },[]);
-	},[gP,BP],"ds4");
-	var NP=$t(function(){
-	 $M(FP,function(OP){
-	  var PP=OP.v[0];
-	  $A(PP);
-	 },[]);
-	},[FP],"ei");
-	var QP=$t(function(){
-	 $M(NP,function(RP){
-	  var SP=RP.v[0];
-	  var TP=SP.greaterThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(TP.g){
-	  case 1:
-	   $M(FP,function(UP){
-	    var VP=UP.v[1];
-	    $$GHCziBase_map.C([$$GHCziShow_intToDigit,VP],function(WP){
-	     switch(WP.g){
-	     case 1:
-	      $A($$GHCziFloat$A);break;
-	     case 2:
-	      var XP=WP.v[0],YP=WP.v[1];
-	      $R(1,[XP,YP],"(,)");break;
-	     }
-	    },[]);
-	   },[]);break;
-	  case 2:
-	   $M(FP,function(ZP){
-	    var aQ=ZP.v[1];
-	    $M(aQ,function(bQ){
-	     switch(bQ.g){
-	     case 1:
-	      $A($$GHCziList_init2);break;
-	     case 2:
-	      var cQ=bQ.v[0],dQ=bQ.v[1];
-	      $$GHCziList_init1.C([cQ,dQ],function(eQ){
-	       $$GHCziBase_map.C([$$GHCziShow_intToDigit,eQ],function(fQ){
-		switch(fQ.g){
-		case 1:
-		 $A($$GHCziFloat$A);break;
-		case 2:
-		 var gQ=fQ.v[0],hQ=fQ.v[1];
-		 $R(1,[gQ,hQ],"(,)");break;
-		}
-	       },[]);
-	      },[]);break;
-	     }
-	    },[]);
-	   },[]);break;
-	  }
-	 },[FP]);
-	},[FP,NP],"ds5");
-	var iQ=$t(function(){
-	 $M(QP,function(jQ){
-	  var kQ=jQ.v[1];
-	  var lQ=$t(function(){
-	   $M(NP,function(mQ){
-	    var nQ=mQ.v[0];
-	    var pQ=hP.subtract(goog.math.Long.fromBits(1,0));
-	    var oQ=pQ.add(nQ);
-	    $$GHCziShow_itos.J(oQ,$$GHCziTypes_ZMZN);
-	   },[hP]);
-	  },[hP,NP],"sat");
-	  var qQ=$d(2,[$$GHCziFloat$B,lQ],"sat");
-	  $$GHCziBase_zpzp.J(kQ,qQ);
-	 },[hP,NP]);
-	},[hP,NP,QP],"a");
-	$M(gP,function(rQ){
-	 switch(rQ.g){
-	 case 1:
-	  var sQ=$d(2,[$$GHCziFloat$y,iQ],"sat");
-	  var tQ=$t(function(){
-	   $M(QP,function(uQ){
-	    var vQ=uQ.v[0];
-	    $A(vQ);
-	   },[]);
-	  },[QP],"sat");
-	  $R(2,[tQ,sQ],":");break;
-	 case 2:
-	  var wQ=rQ.v[0],xQ=rQ.v[1];
-	  $M(wQ,function(yQ){
-	   var zQ=yQ.v[0];
-	   $M(zQ,function(AQ){
-	    switch(AQ.toString()){
-	    case "0":
-	     $M(xQ,function(FQ){
-	      switch(FQ.g){
-	      case 1:
-	       var GQ=$t(function(){
-		$M(BP,function(HQ){
-		 var IQ=HQ.v[0];
-		 var JQ=IQ.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-		 switch(JQ.g){
-		 case 1:
-		  $$GHCziFloat$M.J($$GHCziFloat$D,IQ);break;
-		 case 2:
-		  $A($$GHCziFloat$L);break;
-		 }
-		},[]);
-	       },[BP],"sat");
-	       var KQ=$d(2,[$$GHCziFloat$y,GQ],"sat");
-	       $R(2,[$$GHCziFloat$C,KQ],":");break;
-	      case 2:
-	       var LQ=$d(2,[$$GHCziFloat$y,iQ],"sat");
-	       var MQ=$t(function(){
-		$M(QP,function(NQ){
-		 var OQ=NQ.v[0];
-		 $A(OQ);
-		},[]);
-	       },[QP],"sat");
-	       $R(2,[MQ,LQ],":");break;
-	      }
-	     },[BP,QP,iQ]);break;
-	    default:
-	     var BQ=$d(2,[$$GHCziFloat$y,iQ],"sat");
-	     var CQ=$t(function(){
-	      $M(QP,function(DQ){
-	       var EQ=DQ.v[0];
-	       $A(EQ);
-	      },[]);
-	     },[QP],"sat");
-	     $R(2,[CQ,BQ],":");
-	    }
-	   },[BP,QP,iQ,xQ]);
-	  },[BP,QP,iQ,xQ]);break;
-	 }
-	},[BP,QP,iQ]);break;
-       }
-      },[gP,hP]);
-     },[WO],"$s$wdoFmt");
-     var PQ=$f(2,function(QQ,RQ){
-      $M(WO,function(SQ){
-       switch(SQ.g){
-       case 1:
-	var TQ=RQ.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(TQ.g){
-	case 1:
-	 var UQ=$t(function(){
-	  $$GHCziBase_map.J($$GHCziShow_intToDigit,QQ);
-	 },[QQ],"sat");
-	 $$GHCziFloat$G.J(RQ,$$GHCziTypes_ZMZN,UQ);break;
-	case 2:
-	 var VQ=$t(function(){
-	  var eR=RQ.negate();
-	  var WQ=eR.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(WQ.g){
-	  case 1:
-	   var XQ=$t(function(){
-	    $$GHCziBase_map.J($$GHCziShow_intToDigit,QQ);
-	   },[QQ],"n");
-	   var YQ=$d(2,[$$GHCziFloat$C,XQ],"lvl34");
-	   var ZQ=$f(1,function(aR){
-	    var bR=aR.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	    switch(bR.g){
-	    case 1:
-	     var cR=$t(function(){
-	      var dR=aR.subtract(goog.math.Long.fromBits(1,0));
-	      ZQ.J(dR);
-	     },[aR,ZQ],"sat");
-	     $R(2,[$$GHCziFloat$C,cR],":");break;
-	    case 2:
-	     $A(YQ);break;
-	    }
-	   },[YQ],"xs4");
-	   ZQ.J(eR);break;
-	  case 2:
-	   $$GHCziBase_map.J($$GHCziShow_intToDigit,QQ);break;
-	  }
-	 },[RQ,QQ],"sat");
-	 $$GHCziCString_unpackAppendCStringzh.J("0.",VQ);break;
-	}break;
-       case 2:
-	var fR=SQ.v[0];
-	var gR=RQ.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(gR.g){
-	case 1:
-	 var hR=$t(function(){
-	  var xR=RQ.negate();
-	  var iR=xR.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(iR.g){
-	  case 1:
-	   var jR=$d(2,[$$GHCziFloat_minExpt,QQ],"lvl34");
-	   var kR=$f(1,function(lR){
-	    var mR=lR.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	    switch(mR.g){
-	    case 1:
-	     var nR=$t(function(){
-	      var oR=lR.subtract(goog.math.Long.fromBits(1,0));
-	      kR.J(oR);
-	     },[lR,kR],"sat");
-	     $R(2,[$$GHCziFloat_minExpt,nR],":");break;
-	    case 2:
-	     $A(jR);break;
-	    }
-	   },[jR],"xs4");
-	   kR.C([xR],function(pR){
-	    var qR=$t(function(){
-	     $M(fR,function(rR){
-	      var sR=rR.v[0];
-	      var tR=sR.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	      switch(tR.g){
-	      case 1:
-	       $A(rR);break;
-	      case 2:
-	       $A($$GHCziFloat_minExpt);break;
-	      }
-	     },[]);
-	    },[fR],"sat");
-	    $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,qR,pR],function(uR){
-	     var vR=uR[0],wR=uR[1];
-	     $$GHCziFloat$N.J(vR,wR);
-	    },[]);
-	   },[fR]);break;
-	  case 2:
-	   var yR=$t(function(){
-	    $M(fR,function(zR){
-	     var AR=zR.v[0];
-	     var BR=AR.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	     switch(BR.g){
-	     case 1:
-	      $A(zR);break;
-	     case 2:
-	      $A($$GHCziFloat_minExpt);break;
-	     }
-	    },[]);
-	   },[fR],"sat");
-	   $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,yR,QQ],function(CR){
-	    var DR=CR[0],ER=CR[1];
-	    $$GHCziFloat$N.J(DR,ER);
-	   },[]);break;
-	  }
-	 },[RQ,QQ,fR],"ds4");
-	 var FR=$t(function(){
-	  $M(hR,function(GR){
-	   var HR=GR.v[1];
-	   $M(HR,function(IR){
-	    switch(IR.g){
-	    case 1:
-	     $R(1,[],"[]");break;
-	    case 2:
-	     $R(2,[$$GHCziFloat$y,IR],":");break;
-	    }
-	   },[]);
-	  },[]);
-	 },[hR],"sat");
-	 var JR=$t(function(){
-	  $M(hR,function(KR){
-	   var LR=KR.v[0];
-	   $A(LR);
-	  },[]);
-	 },[hR],"sat");
-	 $R(2,[JR,FR],":");break;
-	case 2:
-	 var MR=$t(function(){
-	  $M(fR,function(NR){
-	   var OR=NR.v[0];
-	   var PR=OR.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(PR.g){
-	   case 1:
-	    var QR=OR.add(RQ);
-	    $R(1,[QR],"I#");break;
-	   case 2:
-	    $R(1,[RQ],"I#");break;
-	   }
-	  },[RQ]);
-	 },[RQ,fR],"sat");
-	 $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,MR,QQ],function(RR){
-	  var SR=RR[0],TR=RR[1];
-	  $M(SR,function(UR){
-	   var VR=UR.v[0];
-	   var gS=RQ.add(VR);
-	   var WR=gS.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(WR.g){
-	   case 1:
-	    var XR=$t(function(){
-	     $$GHCziBase_map.J($$GHCziShow_intToDigit,TR);
-	    },[TR],"sat");
-	    $$GHCziList_zdwsplitAtzh.C([gS,XR],function(YR){
-	     var ZR=YR[0],aS=YR[1];
-	     $M(ZR,function(bS){
-	      switch(bS.g){
-	      case 1:
-	       var cS=$t(function(){
-		$M(aS,function(dS){
-		 switch(dS.g){
-		 case 1:
-		  $R(1,[],"[]");break;
-		 case 2:
-		  $R(2,[$$GHCziFloat$y,dS],":");break;
-		 }
-		},[]);
-	       },[aS],"sat");
-	       $R(2,[$$GHCziFloat$C,cS],":");break;
-	      case 2:
-	       var eS=$t(function(){
-		$M(aS,function(fS){
-		 switch(fS.g){
-		 case 1:
-		  $R(1,[],"[]");break;
-		 case 2:
-		  $R(2,[$$GHCziFloat$y,fS],":");break;
-		 }
-		},[]);
-	       },[aS],"sat");
-	       $$GHCziBase_zpzp.J(bS,eS);break;
-	      }
-	     },[aS]);
-	    },[]);break;
-	   case 2:
-	    var hS=$t(function(){
-	     $$GHCziBase_map.C([$$GHCziShow_intToDigit,TR],function(iS){
-	      switch(iS.g){
-	      case 1:
-	       $R(1,[],"[]");break;
-	      case 2:
-	       $R(2,[$$GHCziFloat$y,iS],":");break;
-	      }
-	     },[]);
-	    },[TR],"sat");
-	    $R(2,[$$GHCziFloat$C,hS],":");break;
-	   }
-	  },[RQ,TR]);
-	 },[RQ]);break;
-	}break;
-       }
-      },[RQ,QQ]);
-     },[WO],"$s$wdoFmt1");
-     var jS=$f(3,function(kS,lS,mS){
-      $M(kS,function(nS){
-       switch(nS.g){
-       case 1:
-	$M(WO,function(oS){
-	 switch(oS.g){
-	 case 1:
-	  $$GHCziBase_map.C([$$GHCziShow_intToDigit,lS],function(pS){
-	   switch(pS.g){
-	   case 1:
-	    $A($$GHCziFloat$x);break;
-	   case 2:
-	    var qS=pS.v[0],rS=pS.v[1];
-	    $M(qS,function(sS){
-	     var tS=sS.v[0];
-	     var uS=$t(function(){
-	      $M(rS,function(vS){
-	       switch(vS.g){
-	       case 1:
-		var wS=$t(function(){
-		 var xS=$t(function(){
-		  $M(mS,function(yS){
-		   var zS=yS.v[0];
-		   var AS=zS.subtract(goog.math.Long.fromBits(1,0));
-		   $$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),AS,$$GHCziTypes_ZMZN);
-		  },[]);
-		 },[mS],"sat");
-		 $$GHCziCString_unpackAppendCStringzh.J(".0e",xS);
-		},[mS],"sat");
-		$R(2,[sS,wS],":");break;
-	       case 2:
-		var BS=$t(function(){
-		 var CS=$t(function(){
-		  $M(mS,function(DS){
-		   var ES=DS.v[0];
-		   var FS=ES.subtract(goog.math.Long.fromBits(1,0));
-		   $$GHCziShow_itos.J(FS,$$GHCziTypes_ZMZN);
-		  },[]);
-		 },[mS],"sat");
-		 var GS=$d(2,[$$GHCziFloat$B,CS],"sat");
-		 $$GHCziBase_zpzp.J(vS,GS);
-		},[mS,vS],"sat");
-		var HS=$d(2,[$$GHCziFloat$y,BS],"sat");
-		$R(2,[sS,HS],":");break;
-	       }
-	      },[sS,mS]);
-	     },[rS,sS,mS],"$wfail");
-	     $M(tS,function(IS){
-	      switch(IS.toString()){
-	      case "0":
-	       $M(rS,function(JS){
-		switch(JS.g){
-		case 1:
-		 $A($$GHCziFloat$z);break;
-		case 2:
-		 $A(uS);break;
-		}
-	       },[rS,sS,mS,uS]);break;
-	      default:
-	       $A(uS);
-	      }
-	     },[rS,sS,mS,uS]);
-	    },[rS,mS]);break;
-	   }
-	  },[mS]);break;
-	 case 2:
-	  var KS=oS.v[0];
-	  var LS=$t(function(){
-	   $M(KS,function(MS){
-	    var NS=MS.v[0];
-	    var OS=NS.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	    switch(OS.g){
-	    case 1:
-	     $A(MS);break;
-	    case 2:
-	     $A($$GHCziFloat_zdfRealFracFloat2);break;
-	    }
-	   },[]);
-	  },[KS],"dec'");
-	  var PS=$t(function(){
-	   var QS=$t(function(){
-	    $M(LS,function(RS){
-	     var SS=RS.v[0];
-	     var TS=SS.add(goog.math.Long.fromBits(1,0));
-	     $R(1,[TS],"I#");
-	    },[]);
-	   },[LS],"sat");
-	   $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,QS,lS],function(US){
-	    var VS=US[0],WS=US[1];
-	    $R(1,[VS,WS],"(,)");
-	   },[]);
-	  },[lS,LS],"ds4");
-	  var XS=$t(function(){
-	   $M(PS,function(YS){
-	    var ZS=YS.v[0];
-	    $A(ZS);
-	   },[]);
-	  },[PS],"ei");
-	  var aT=$t(function(){
-	   $M(XS,function(bT){
-	    var cT=bT.v[0];
-	    var dT=cT.greaterThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	    switch(dT.g){
-	    case 1:
-	     $M(PS,function(eT){
-	      var fT=eT.v[1];
-	      $$GHCziBase_map.C([$$GHCziShow_intToDigit,fT],function(gT){
-	       switch(gT.g){
-	       case 1:
-		$A($$GHCziFloat$A);break;
-	       case 2:
-		var hT=gT.v[0],iT=gT.v[1];
-		$R(1,[hT,iT],"(,)");break;
-	       }
-	      },[]);
-	     },[]);break;
-	    case 2:
-	     $M(PS,function(jT){
-	      var kT=jT.v[1];
-	      $M(kT,function(lT){
-	       switch(lT.g){
-	       case 1:
-		$A($$GHCziList_init2);break;
-	       case 2:
-		var mT=lT.v[0],nT=lT.v[1];
-		$$GHCziList_init1.C([mT,nT],function(oT){
-		 $$GHCziBase_map.C([$$GHCziShow_intToDigit,oT],function(pT){
-		  switch(pT.g){
-		  case 1:
-		   $A($$GHCziFloat$A);break;
-		  case 2:
-		   var qT=pT.v[0],rT=pT.v[1];
-		   $R(1,[qT,rT],"(,)");break;
-		  }
-		 },[]);
-		},[]);break;
-	       }
-	      },[]);
-	     },[]);break;
-	    }
-	   },[PS]);
-	  },[PS,XS],"ds5");
-	  var sT=$t(function(){
-	   $M(aT,function(tT){
-	    var uT=tT.v[1];
-	    var vT=$t(function(){
-	     $M(mS,function(wT){
-	      var xT=wT.v[0];
-	      $M(XS,function(yT){
-	       var zT=yT.v[0];
-	       var BT=xT.subtract(goog.math.Long.fromBits(1,0));
-	       var AT=BT.add(zT);
-	       $$GHCziShow_itos.J(AT,$$GHCziTypes_ZMZN);
-	      },[xT]);
-	     },[XS]);
-	    },[mS,XS],"sat");
-	    var CT=$d(2,[$$GHCziFloat$B,vT],"sat");
-	    $$GHCziBase_zpzp.J(uT,CT);
-	   },[mS,XS]);
-	  },[mS,XS,aT],"a");
-	  $M(lS,function(DT){
-	   switch(DT.g){
-	   case 1:
-	    var ET=$d(2,[$$GHCziFloat$y,sT],"sat");
-	    var FT=$t(function(){
-	     $M(aT,function(GT){
-	      var HT=GT.v[0];
-	      $A(HT);
-	     },[]);
-	    },[aT],"sat");
-	    $R(2,[FT,ET],":");break;
-	   case 2:
-	    var IT=DT.v[0],JT=DT.v[1];
-	    $M(IT,function(KT){
-	     var LT=KT.v[0];
-	     $M(LT,function(MT){
-	      switch(MT.toString()){
-	      case "0":
-	       $M(JT,function(RT){
-		switch(RT.g){
-		case 1:
-		 var ST=$t(function(){
-		  $M(LS,function(TT){
-		   var UT=TT.v[0];
-		   var VT=UT.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-		   switch(VT.g){
-		   case 1:
-		    $$GHCziFloat$M.J($$GHCziFloat$D,UT);break;
-		   case 2:
-		    $A($$GHCziFloat$L);break;
-		   }
-		  },[]);
-		 },[LS],"sat");
-		 var WT=$d(2,[$$GHCziFloat$y,ST],"sat");
-		 $R(2,[$$GHCziFloat$C,WT],":");break;
-		case 2:
-		 var XT=$d(2,[$$GHCziFloat$y,sT],"sat");
-		 var YT=$t(function(){
-		  $M(aT,function(ZT){
-		   var aU=ZT.v[0];
-		   $A(aU);
-		  },[]);
-		 },[aT],"sat");
-		 $R(2,[YT,XT],":");break;
-		}
-	       },[LS,aT,sT]);break;
-	      default:
-	       var NT=$d(2,[$$GHCziFloat$y,sT],"sat");
-	       var OT=$t(function(){
-		$M(aT,function(PT){
-		 var QT=PT.v[0];
-		 $A(QT);
-		},[]);
-	       },[aT],"sat");
-	       $R(2,[OT,NT],":");
-	      }
-	     },[LS,aT,sT,JT]);
-	    },[LS,aT,sT,JT]);break;
-	   }
-	  },[LS,aT,sT]);break;
-	 }
-	},[lS,mS]);break;
-       case 2:
-	$M(WO,function(bU){
-	 switch(bU.g){
-	 case 1:
-	  $M(mS,function(cU){
-	   var dU=cU.v[0];
-	   var eU=dU.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(eU.g){
-	   case 1:
-	    var fU=$t(function(){
-	     $$GHCziBase_map.J($$GHCziShow_intToDigit,lS);
-	    },[lS],"sat");
-	    $$GHCziFloat$G.J(dU,$$GHCziTypes_ZMZN,fU);break;
-	   case 2:
-	    var gU=$t(function(){
-	     var pU=dU.negate();
-	     var hU=pU.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	     switch(hU.g){
-	     case 1:
-	      var iU=$t(function(){
-	       $$GHCziBase_map.J($$GHCziShow_intToDigit,lS);
-	      },[lS],"n");
-	      var jU=$d(2,[$$GHCziFloat$C,iU],"lvl34");
-	      var kU=$f(1,function(lU){
-	       var mU=lU.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	       switch(mU.g){
-	       case 1:
-		var nU=$t(function(){
-		 var oU=lU.subtract(goog.math.Long.fromBits(1,0));
-		 kU.J(oU);
-		},[lU,kU],"sat");
-		$R(2,[$$GHCziFloat$C,nU],":");break;
-	       case 2:
-		$A(jU);break;
-	       }
-	      },[jU],"xs4");
-	      kU.J(pU);break;
-	     case 2:
-	      $$GHCziBase_map.J($$GHCziShow_intToDigit,lS);break;
-	     }
-	    },[lS,dU],"sat");
-	    $$GHCziCString_unpackAppendCStringzh.J("0.",gU);break;
-	   }
-	  },[lS]);break;
-	 case 2:
-	  var qU=bU.v[0];
-	  $M(mS,function(rU){
-	   var sU=rU.v[0];
-	   var tU=sU.greaterThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(tU.g){
-	   case 1:
-	    var uU=$t(function(){
-	     var KU=sU.negate();
-	     var vU=KU.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	     switch(vU.g){
-	     case 1:
-	      var wU=$d(2,[$$GHCziFloat_minExpt,lS],"lvl34");
-	      var xU=$f(1,function(yU){
-	       var zU=yU.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	       switch(zU.g){
-	       case 1:
-		var AU=$t(function(){
-		 var BU=yU.subtract(goog.math.Long.fromBits(1,0));
-		 xU.J(BU);
-		},[yU,xU],"sat");
-		$R(2,[$$GHCziFloat_minExpt,AU],":");break;
-	       case 2:
-		$A(wU);break;
-	       }
-	      },[wU],"xs4");
-	      xU.C([KU],function(CU){
-	       var DU=$t(function(){
-		$M(qU,function(EU){
-		 var FU=EU.v[0];
-		 var GU=FU.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-		 switch(GU.g){
-		 case 1:
-		  $A(EU);break;
-		 case 2:
-		  $A($$GHCziFloat_minExpt);break;
-		 }
-		},[]);
-	       },[qU],"sat");
-	       $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,DU,CU],function(HU){
-		var IU=HU[0],JU=HU[1];
-		$$GHCziFloat$N.J(IU,JU);
-	       },[]);
-	      },[qU]);break;
-	     case 2:
-	      var LU=$t(function(){
-	       $M(qU,function(MU){
-		var NU=MU.v[0];
-		var OU=NU.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-		switch(OU.g){
-		case 1:
-		 $A(MU);break;
-		case 2:
-		 $A($$GHCziFloat_minExpt);break;
-		}
-	       },[]);
-	      },[qU],"sat");
-	      $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,LU,lS],function(PU){
-	       var QU=PU[0],RU=PU[1];
-	       $$GHCziFloat$N.J(QU,RU);
-	      },[]);break;
-	     }
-	    },[lS,sU,qU],"ds4");
-	    var SU=$t(function(){
-	     $M(uU,function(TU){
-	      var UU=TU.v[1];
-	      $M(UU,function(VU){
-	       switch(VU.g){
-	       case 1:
-		$R(1,[],"[]");break;
-	       case 2:
-		$R(2,[$$GHCziFloat$y,VU],":");break;
-	       }
-	      },[]);
-	     },[]);
-	    },[uU],"sat");
-	    var WU=$t(function(){
-	     $M(uU,function(XU){
-	      var YU=XU.v[0];
-	      $A(YU);
-	     },[]);
-	    },[uU],"sat");
-	    $R(2,[WU,SU],":");break;
-	   case 2:
-	    var ZU=$t(function(){
-	     $M(qU,function(aV){
-	      var bV=aV.v[0];
-	      var cV=bV.lessThanOrEqual(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	      switch(cV.g){
-	      case 1:
-	       var dV=bV.add(sU);
-	       $R(1,[dV],"I#");break;
-	      case 2:
-	       $A(rU);break;
-	      }
-	     },[sU,rU]);
-	    },[sU,qU,rU],"sat");
-	    $$GHCziFloat_zdwroundTo.C([$$GHCziFloat$v,ZU,lS],function(eV){
-	     var fV=eV[0],gV=eV[1];
-	     $M(fV,function(hV){
-	      var iV=hV.v[0];
-	      var tV=sU.add(iV);
-	      var jV=tV.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	      switch(jV.g){
-	      case 1:
-	       var kV=$t(function(){
-		$$GHCziBase_map.J($$GHCziShow_intToDigit,gV);
-	       },[gV],"sat");
-	       $$GHCziList_zdwsplitAtzh.C([tV,kV],function(lV){
-		var mV=lV[0],nV=lV[1];
-		$M(mV,function(oV){
-		 switch(oV.g){
-		 case 1:
-		  var pV=$t(function(){
-		   $M(nV,function(qV){
-		    switch(qV.g){
-		    case 1:
-		     $R(1,[],"[]");break;
-		    case 2:
-		     $R(2,[$$GHCziFloat$y,qV],":");break;
-		    }
-		   },[]);
-		  },[nV],"sat");
-		  $R(2,[$$GHCziFloat$C,pV],":");break;
-		 case 2:
-		  var rV=$t(function(){
-		   $M(nV,function(sV){
-		    switch(sV.g){
-		    case 1:
-		     $R(1,[],"[]");break;
-		    case 2:
-		     $R(2,[$$GHCziFloat$y,sV],":");break;
-		    }
-		   },[]);
-		  },[nV],"sat");
-		  $$GHCziBase_zpzp.J(oV,rV);break;
-		 }
-		},[nV]);
-	       },[]);break;
-	      case 2:
-	       var uV=$t(function(){
-		$$GHCziBase_map.C([$$GHCziShow_intToDigit,gV],function(vV){
-		 switch(vV.g){
-		 case 1:
-		  $R(1,[],"[]");break;
-		 case 2:
-		  $R(2,[$$GHCziFloat$y,vV],":");break;
-		 }
-		},[]);
-	       },[gV],"sat");
-	       $R(2,[$$GHCziFloat$C,uV],":");break;
-	      }
-	     },[sU,gV]);
-	    },[sU]);break;
-	   }
-	  },[lS,qU]);break;
-	 }
-	},[lS,mS]);break;
-       case 3:
-	$M(mS,function(wV){
-	 var xV=wV.v[0];
-	 var yV=xV.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	 switch(yV.g){
-	 case 1:
-	  var zV=xV.greaterThan(goog.math.Long.fromBits(7,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	  switch(zV.g){
-	  case 1:
-	   PQ.J(lS,xV);break;
-	  case 2:
-	   fP.J(lS,xV);break;
-	  }break;
-	 case 2:
-	  fP.J(lS,xV);break;
-	 }
-	},[fP,PQ,lS]);break;
-       }
-      },[WO,fP,PQ,lS,mS]);
-     },[WO,fP,PQ],"$wdoFmt");
-     var AV=$t(function(){
-      var EV= -XO;
-      $$GHCziFloat_zdwzdsfloatToDigits1.C([$$GHCziFloat_expts4,EV],function(BV){
-       var CV=BV[0],DV=BV[1];
-       jS.J(VO,CV,DV);
-      },[jS,VO]);
-     },[XO,jS,VO],"a");
-     var FV=XO<0.0?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(FV.g){
-     case 1:
-      var $ff=isDoubleNegativeZero(XO);
-      var GV=[$$GHCziPrim_realWorldzh,$ff];
-      var HV=GV[1];
-      $M(HV,function(IV){
-       switch(IV.toString()){
-       case "0":
-	$$GHCziFloat_zdwzdsfloatToDigits1.C([$$GHCziFloat_expts4,XO],function(JV){
-	 var KV=JV[0],LV=JV[1];
-	 jS.J(VO,KV,LV);
-	},[jS,VO]);break;
-       default:
-	$R(2,[$$GHCziFloat_zdfShowDouble4,AV],":");
-       }
-      },[XO,jS,VO,AV]);break;
-     case 2:
-      $R(2,[$$GHCziFloat_zdfShowDouble4,AV],":");break;
-     }break;
-    default:
-     var eP=XO<0.0?$$GHCziTypes_True:$$GHCziTypes_False;
-     switch(eP.g){
-     case 1:
-      $A($$GHCziFloat$I);break;
-     case 2:
-      $A($$GHCziFloat$J);break;
-     }
-    }
-   },[XO,WO,VO]);break;
-  default:
-   $A($$GHCziFloat$K);
-  }
- },[XO,WO,VO]);
-},[],"at libraries/base/GHC/Float.lhs:574:1");
-var $$GHCziFloat_zdfShowDoublezuzdsshowFloat=$f(1,function(Y19){
- var Z19=$t(function(){
-  $M(Y19,function(a1a){
-   var b1a=a1a.v[0];
-   $$GHCziFloat_zdwzdsformatRealFloat.J($$GHCziFloat_FFGeneric,$$DataziMaybe_Nothing,b1a);
-  },[]);
- },[Y19],"sat");
- $$GHCziBase_zpzp.J(Z19);
-},[],"at libraries/base/GHC/Float.lhs:567:1");
-var $$GHCziFloat_FFGeneric=$D(3,function(){
- $r([]);
-},"at libraries/base/GHC/Float.lhs:571:40");
-var $$GHCziFloat$b=$F(1,function(x1c){
- $M(x1c,function(y1c){
-  var z1c=y1c.v[0];
-  $M(z1c,function(A1c){
-   switch(A1c.toString()){
-   case "0":
-    $R(2,[],"True");break;
-   default:
-    $R(1,[],"False");
-   }
-  },[]);
- },[]);
-},"lvl1");
-var $$GHCziFloat$e=$D(2,function(){
- $r([$$GHCziFloat_minExpt,$$GHCziTypes_ZMZN]);
-},"lvl4");
-var $$GHCziFloat$f=$F(1,function(B1c){
- var C1c=B1c.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
- switch(C1c.g){
- case 1:
-  var D1c=$t(function(){
-   var E1c=B1c.subtract(goog.math.Long.fromBits(1,0));
-   $$GHCziFloat$f.J(E1c);
-  },[B1c],"sat");
-  $R(2,[$$GHCziFloat_minExpt,D1c],":");break;
- case 2:
-  $A($$GHCziFloat$e);break;
- }
-},"xs");
-var $$GHCziFloat$g=$D(1,function(){
- $r([$$GHCziFloat_minExpt,$$GHCziFloat_maxExpt]);
-},"lvl5");
-var $$GHCziFloat$h=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Int");
-},"lvl6");
-var $$GHCziFloat$i=$F(1,function(F1c){
- var G1c=$d(1,[F1c],"sat");
- $$GHCziArr_indexError.J($$GHCziShow_zdfShowInt,$$GHCziFloat$g,G1c,$$GHCziFloat$h);
-},"lvl7");
-var $$GHCziFloat$j=$D(1,function(){
- $r([$$GHCziFloat_minExpt,$$GHCziFloat_maxExpt10]);
-},"lvl8");
-var $$GHCziFloat$k=$F(1,function(H1c){
- var I1c=$d(1,[H1c],"sat");
- $$GHCziArr_indexError.J($$GHCziShow_zdfShowInt,$$GHCziFloat$j,I1c,$$GHCziFloat$h);
-},"lvl9");
 var $$GHCziFloat$l=$F(3,function(J1c,K1c,L1c){
  $$GHCziIntegerziType_eqInteger.C([L1c,$$GHCziReal_even1],function(M1c){
   switch(M1c.g){
@@ -15076,190 +12613,6 @@ var $$GHCziFloat$l=$F(3,function(J1c,K1c,L1c){
   }
  },[L1c,K1c,J1c]);
 },"$w$j");
-var $$GHCziFloat$n=$F(3,function(n1d,o1d,p1d){
- var q1d=$d(1,[o1d,p1d],"sat");
- $$GHCziArr_indexError.J($$GHCziShow_zdfShowInt,q1d,n1d,$$GHCziFloat$h);
-},"lvl10");
-var $$GHCziFloat$o=$F(3,function(r1d,s1d,t1d){
- var u1d=$d(1,[s1d,t1d],"sat");
- $$GHCziArr_indexError.J($$GHCziShow_zdfShowInt,u1d,r1d,$$GHCziFloat$h);
-},"lvl11");
-var $$GHCziFloat$p=$D(2,function(){
- $r([$$GHCziFloat_minExpt,$$GHCziTypes_ZMZN]);
-},"lvl12");
-var $$GHCziFloat$q=$T(function(){
- $$GHCziFloat_zdwexpt.J($$GHCziFloat_zdfRealFloatDouble7,goog.math.Long.fromBits(52,0));
-},"lvl13");
-var $$GHCziFloat$r=$D(1,function(){
- $r([goog.math.Long.fromBits(4,0)]);
-},"lvl14");
-var $$GHCziFloat$v=$D(1,function(){
- $r([goog.math.Long.fromBits(10,0)]);
-},"at libraries/base/GHC/Float.lhs:580:3");
-var $$GHCziFloat$w=$T(function(){
- $$GHCziCString_unpackCStringzh.J("formatRealFloat/doFmt/FFExponent: []");
-},"lvl18");
-var $$GHCziFloat$x=$T(function(){
- $$GHCziErr_error.J($$GHCziFloat$w);
-},"lvl19");
-var $$GHCziFloat$y=$D(1,function(){
- $r(["."]);
-},"lvl20");
-var $$GHCziFloat$z=$T(function(){
- $$GHCziCString_unpackCStringzh.J("0.0e0");
-},"lvl21");
-var $$GHCziFloat$A=$T(function(){
- $$ControlziExceptionziBase_irrefutPatError.J("libraries/base/GHC/Float.lhs:604:12-70|(d : ds')");
-},"lvl22");
-var $$GHCziFloat$B=$D(1,function(){
- $r(["e"]);
-},"lvl23");
-var $$GHCziFloat$C=$D(1,function(){
- $r(["0"]);
-},"lvl24");
-var $$GHCziFloat$D=$D(2,function(){
- $r([$$GHCziFloat$C,$$GHCziFloat$D]);
-},"xs1");
-var $$GHCziFloat$E=$D(2,function(){
- $r([$$GHCziFloat$C,$$GHCziTypes_ZMZN]);
-},"lvl25");
-var $$GHCziFloat$F=$F(2,function(v1d,w1d){
- $M(v1d,function(x1d){
-  switch(x1d.toString()){
-  case "0":
-   $$GHCziList_reverse1.C([w1d,$$GHCziTypes_ZMZN],function(A1d){
-    switch(A1d.g){
-    case 1:
-     var B1d=$d(2,[$$GHCziFloat$y,$$GHCziFloat$E],"sat");
-     $R(2,[$$GHCziFloat$C,B1d],":");break;
-    case 2:
-     var C1d=$d(2,[$$GHCziFloat$y,$$GHCziFloat$E],"sat");
-     $$GHCziBase_zpzp.J(A1d,C1d);break;
-    }
-   },[]);break;
-  default:
-   var y1d=$d(2,[$$GHCziFloat$C,w1d],"sat");
-   var z1d=x1d.subtract(goog.math.Long.fromBits(1,0));
-   $$GHCziFloat$F.J(z1d,y1d);
-  }
- },[w1d]);
-},"at libraries/base/GHC/Float.lhs:616:17");
-var $$GHCziFloat$G=$F(3,function(D1d,E1d,F1d){
- $M(D1d,function(G1d){
-  switch(G1d.toString()){
-  case "0":
-   $$GHCziList_reverse1.C([E1d,$$GHCziTypes_ZMZN],function(O1d){
-    switch(O1d.g){
-    case 1:
-     var P1d=$t(function(){
-      $M(F1d,function(Q1d){
-       switch(Q1d.g){
-       case 1:
-	$A($$GHCziFloat$E);break;
-       case 2:
-	$A(Q1d);break;
-       }
-      },[]);
-     },[F1d],"sat");
-     var R1d=$d(2,[$$GHCziFloat$y,P1d],"sat");
-     $R(2,[$$GHCziFloat$C,R1d],":");break;
-    case 2:
-     var S1d=$t(function(){
-      $M(F1d,function(T1d){
-       switch(T1d.g){
-       case 1:
-	$A($$GHCziFloat$E);break;
-       case 2:
-	$A(T1d);break;
-       }
-      },[]);
-     },[F1d],"sat");
-     var U1d=$d(2,[$$GHCziFloat$y,S1d],"sat");
-     $$GHCziBase_zpzp.J(O1d,U1d);break;
-    }
-   },[F1d]);break;
-  default:
-   $M(F1d,function(H1d){
-    switch(H1d.g){
-    case 1:
-     var I1d=$d(2,[$$GHCziFloat$C,E1d],"sat");
-     var J1d=G1d.subtract(goog.math.Long.fromBits(1,0));
-     $$GHCziFloat$F.J(J1d,I1d);break;
-    case 2:
-     var K1d=H1d.v[0],L1d=H1d.v[1];
-     var M1d=$d(2,[K1d,E1d],"sat");
-     var N1d=G1d.subtract(goog.math.Long.fromBits(1,0));
-     $$GHCziFloat$G.J(N1d,M1d,L1d);break;
-    }
-   },[G1d,E1d]);
-  }
- },[F1d,E1d]);
-},"at libraries/base/GHC/Float.lhs:616:17");
-var $$GHCziFloat$H=$T(function(){
- $$ControlziExceptionziBase_irrefutPatError.J("libraries/base/GHC/Float.lhs:632:11-64|d : ds'");
-},"lvl26");
-var $$GHCziFloat$I=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Infinity");
-},"lvl27");
-var $$GHCziFloat$J=$T(function(){
- $$GHCziCString_unpackCStringzh.J("-Infinity");
-},"lvl28");
-var $$GHCziFloat$K=$T(function(){
- $$GHCziCString_unpackCStringzh.J("NaN");
-},"lvl29");
-var $$GHCziFloat$L=$T(function(){
- $$GHCziCString_unpackCStringzh.J("e0");
-},"nil");
-var $$GHCziFloat$M=$F(2,function(V1d,W1d){
- $M(V1d,function(X1d){
-  switch(X1d.g){
-  case 1:
-   $A($$GHCziFloat$L);break;
-  case 2:
-   var Y1d=X1d.v[0],Z1d=X1d.v[1];
-   var a1e=W1d.lessThanOrEqual(goog.math.Long.fromBits(1,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-   switch(a1e.g){
-   case 1:
-    var b1e=$t(function(){
-     var c1e=W1d.subtract(goog.math.Long.fromBits(1,0));
-     $$GHCziFloat$M.J(Z1d,c1e);
-    },[W1d,Z1d],"sat");
-    $R(2,[Y1d,b1e],":");break;
-   case 2:
-    $R(2,[Y1d,$$GHCziFloat$L],":");break;
-   }break;
-  }
- },[W1d]);
-},"go");
-var $$GHCziFloat$N=$F(2,function(d1e,e1e){
- $M(d1e,function(f1e){
-  var g1e=f1e.v[0];
-  var h1e=g1e.greaterThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-  switch(h1e.g){
-  case 1:
-   var i1e=$d(2,[$$GHCziFloat_minExpt,e1e],"sat");
-   $$GHCziBase_map.C([$$GHCziShow_intToDigit,i1e],function(j1e){
-    switch(j1e.g){
-    case 1:
-     $A($$GHCziFloat$H);break;
-    case 2:
-     var k1e=j1e.v[0],l1e=j1e.v[1];
-     $R(1,[k1e,l1e],"(,)");break;
-    }
-   },[]);break;
-  case 2:
-   $$GHCziBase_map.C([$$GHCziShow_intToDigit,e1e],function(m1e){
-    switch(m1e.g){
-    case 1:
-     $A($$GHCziFloat$H);break;
-    case 2:
-     var n1e=m1e.v[0],o1e=m1e.v[1];
-     $R(1,[n1e,o1e],"(,)");break;
-    }
-   },[]);break;
-  }
- },[e1e]);
-},"$j");
 var $$GHCziForeign_zdwa1=$f(7,function(f,g,h,i,j,k,l){
  var m=$hs_newMutVarzh($$GHCziForeignPtr_mallocForeignPtr3,l);
  var n=m[0],o=m[1];
@@ -25129,24 +22482,6 @@ var $$GHCziList_znznzusub=$f(2,function(k1,l1){
 var $$GHCziList_znzn1=$t(function(){
  $$GHCziErr_error.J($$GHCziList$i);
 },[],"in `base:GHC.List'");
-var $$GHCziList_all=$f(2,function(d2,e2){
- $M(e2,function(f2){
-  switch(f2.g){
-  case 1:
-   $R(2,[],"True");break;
-  case 2:
-   var g2=f2.v[0],h2=f2.v[1];
-   d2.C([g2],function(i2){
-    switch(i2.g){
-    case 1:
-     $R(1,[],"False");break;
-    case 2:
-     $$GHCziList_all.J(d2,h2);break;
-    }
-   },[d2,h2]);break;
-  }
- },[d2]);
-},[],"at libraries/base/GHC/List.lhs:526:1");
 var $$GHCziList_reverse1=$f(2,function(z2,A2){
  $M(z2,function(B2){
   switch(B2.g){
@@ -25300,23 +22635,6 @@ var $$GHCziList_zdwlen=$f(2,function(C7,D7){
   }
  },[D7]);
 },[],"at libraries/base/GHC/List.lhs:120:5");
-var $$GHCziList_init2=$t(function(){
- $$GHCziList_errorEmptyList.J($$GHCziList$m);
-},[],"in `base:GHC.List'");
-var $$GHCziList_init1=$f(2,function(O7,P7){
- $M(P7,function(Q7){
-  switch(Q7.g){
-  case 1:
-   $R(1,[],"[]");break;
-  case 2:
-   var R7=Q7.v[0],S7=Q7.v[1];
-   var T7=$t(function(){
-    $$GHCziList_init1.J(R7,S7);
-   },[R7,S7],"sat");
-   $R(2,[O7,T7],":");break;
-  }
- },[O7]);
-},[],"in `base:GHC.List'");
 var $$GHCziList_last2=$t(function(){
  $$GHCziList_errorEmptyList.J($$GHCziList$n);
 },[],"in `base:GHC.List'");
@@ -25443,9 +22761,6 @@ var $$GHCziList$i=$T(function(){
 var $$GHCziList$l=$T(function(){
  $$GHCziCString_unpackCStringzh.J("foldr1");
 },"lvl6");
-var $$GHCziList$m=$T(function(){
- $$GHCziCString_unpackCStringzh.J("init");
-},"lvl7");
 var $$GHCziList$n=$T(function(){
  $$GHCziCString_unpackCStringzh.J("last");
 },"lvl8");
@@ -25669,37 +22984,6 @@ var $$GHCziReal_zdwzdczs=$f(4,function(ob,pb,qb,rb){
 var $$GHCziReal_zdfIntegralInteger=$D(1,function(){
  $r([$$GHCziReal_zdfRealInteger,$$GHCziEnum_zdfEnumInteger,$$GHCziReal_zdfIntegralIntegerzuzdcquot,$$GHCziReal_zdfIntegralIntegerzuzdcrem,$$GHCziReal_zdfIntegralIntegerzuzdcdiv,$$GHCziReal_zdfIntegralIntegerzuzdcmod,$$GHCziReal_zdfIntegralIntegerzuzdcquotRem,$$GHCziReal_zdfIntegralIntegerzuzdcdivMod,$$GHCziReal_zdfIntegralIntegerzuzdctoInteger]);
 },"at libraries/base/GHC/Real.lhs:362:11");
-var $$GHCziReal_fromIntegralzuzdsfromIntegral=$f(1,function(Oc){
- $$GHCziIntegerziType_integerToInt.C([Oc],function(Pc){
-  $R(1,[Pc],"I#");
- },[]);
-},[],"at libraries/base/GHC/Real.lhs:465:1");
-var $$GHCziReal_zdwf1=$f(2,function(Cw,Dw){
- var Ew=$hs_remIntzh(Dw,goog.math.Long.fromBits(2,0));
- switch(Ew.toString()){
- case "0":
-  var Kw=$hs_quotIntzh(Dw,goog.math.Long.fromBits(2,0));
-  $$GHCziIntegerziType_timesInteger.C([Cw,Cw],function(Jw){
-   $$GHCziReal_zdwf1.J(Jw,Kw);
-  },[Kw]);break;
- default:
-  $M(Dw,function(Fw){
-   switch(Fw.toString()){
-   case "1":
-    $A(Cw);break;
-   default:
-    var Iw=Fw.subtract(goog.math.Long.fromBits(1,0));
-    var Hw=$hs_quotIntzh(Iw,goog.math.Long.fromBits(2,0));
-    $$GHCziIntegerziType_timesInteger.C([Cw,Cw],function(Gw){
-     $$GHCziReal$q.J(Gw,Hw,Cw);
-    },[Cw,Hw]);
-   }
-  },[Cw]);
- }
-},[],"at libraries/base/GHC/Real.lhs:515:11");
-var $$GHCziReal_zc3=$t(function(){
- $$GHCziErr_error.J($$GHCziReal$p);
-},[],"in `base:GHC.Real'");
 var $$GHCziReal_zdwzdcproperFraction=$f(3,function(IC,JC,KC){
  var LC=$t(function(){
   $$GHCziIntegerziType_eqInteger.C([KC,$$GHCziReal_even1],function(MC){
@@ -25766,34 +23050,6 @@ var $$GHCziReal_zdwzdcfloor=$f(3,function(JD,KD,LD){
   },[JD,ND]);
  },[JD]);
 },[],"at libraries/base/GHC/Real.lhs:196:5");
-var $$GHCziReal$p=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Negative exponent");
-},"lvl8");
-var $$GHCziReal$q=$F(3,function(nK,oK,pK){
- var qK=$hs_remIntzh(oK,goog.math.Long.fromBits(2,0));
- switch(qK.toString()){
- case "0":
-  var xK=$hs_quotIntzh(oK,goog.math.Long.fromBits(2,0));
-  $$GHCziIntegerziType_timesInteger.C([nK,nK],function(wK){
-   $$GHCziReal$q.J(wK,xK,pK);
-  },[pK,xK]);break;
- default:
-  $M(oK,function(rK){
-   switch(rK.toString()){
-   case "1":
-    $$GHCziIntegerziType_timesInteger.J(nK,pK);break;
-   default:
-    $$GHCziIntegerziType_timesInteger.C([nK,pK],function(sK){
-     var vK=rK.subtract(goog.math.Long.fromBits(1,0));
-     var uK=$hs_quotIntzh(vK,goog.math.Long.fromBits(2,0));
-     $$GHCziIntegerziType_timesInteger.C([nK,nK],function(tK){
-      $$GHCziReal$q.J(tK,uK,sK);
-     },[sK,uK]);
-    },[nK,rK]);
-   }
-  },[nK,pK]);
- }
-},"at libraries/base/GHC/Real.lhs:519:11");
 var $$GHCziST_runSTRep=$f(1,function(L){
  L.C([$$GHCziPrim_realWorldzh],function(M){
   var N=M[1];
@@ -25891,207 +23147,6 @@ var $$GHCziShow_showSignedInt=$f(3,function(V,W,X){
   },[Z,X]);
  },[W,X]);
 },[],"at libraries/base/GHC/Show.lhs:432:1");
-var $$GHCziShow_asciiTab65=$t(function(){
- $$GHCziCString_unpackCStringzh.J("NUL");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab64=$t(function(){
- $$GHCziCString_unpackCStringzh.J("SOH");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab63=$t(function(){
- $$GHCziCString_unpackCStringzh.J("STX");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab62=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ETX");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab61=$t(function(){
- $$GHCziCString_unpackCStringzh.J("EOT");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab60=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ENQ");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab59=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ACK");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab58=$t(function(){
- $$GHCziCString_unpackCStringzh.J("BEL");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab57=$t(function(){
- $$GHCziCString_unpackCStringzh.J("BS");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab56=$t(function(){
- $$GHCziCString_unpackCStringzh.J("HT");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab55=$t(function(){
- $$GHCziCString_unpackCStringzh.J("LF");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab54=$t(function(){
- $$GHCziCString_unpackCStringzh.J("VT");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab53=$t(function(){
- $$GHCziCString_unpackCStringzh.J("FF");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab52=$t(function(){
- $$GHCziCString_unpackCStringzh.J("CR");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab51=$t(function(){
- $$GHCziCString_unpackCStringzh.J("SO");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab50=$t(function(){
- $$GHCziCString_unpackCStringzh.J("SI");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab49=$t(function(){
- $$GHCziCString_unpackCStringzh.J("DLE");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab48=$t(function(){
- $$GHCziCString_unpackCStringzh.J("DC1");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab47=$t(function(){
- $$GHCziCString_unpackCStringzh.J("DC2");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab46=$t(function(){
- $$GHCziCString_unpackCStringzh.J("DC3");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab45=$t(function(){
- $$GHCziCString_unpackCStringzh.J("DC4");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab44=$t(function(){
- $$GHCziCString_unpackCStringzh.J("NAK");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab43=$t(function(){
- $$GHCziCString_unpackCStringzh.J("SYN");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab42=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ETB");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab41=$t(function(){
- $$GHCziCString_unpackCStringzh.J("CAN");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab40=$t(function(){
- $$GHCziCString_unpackCStringzh.J("EM");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab39=$t(function(){
- $$GHCziCString_unpackCStringzh.J("SUB");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab38=$t(function(){
- $$GHCziCString_unpackCStringzh.J("ESC");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab37=$t(function(){
- $$GHCziCString_unpackCStringzh.J("FS");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab36=$t(function(){
- $$GHCziCString_unpackCStringzh.J("GS");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab35=$t(function(){
- $$GHCziCString_unpackCStringzh.J("RS");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab34=$t(function(){
- $$GHCziCString_unpackCStringzh.J("US");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab33=$t(function(){
- $$GHCziCString_unpackCStringzh.J("SP");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab32=$D(2,function(){
- $r([$$GHCziShow_asciiTab33,$$GHCziTypes_ZMZN]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab31=$D(2,function(){
- $r([$$GHCziShow_asciiTab34,$$GHCziShow_asciiTab32]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab30=$D(2,function(){
- $r([$$GHCziShow_asciiTab35,$$GHCziShow_asciiTab31]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab29=$D(2,function(){
- $r([$$GHCziShow_asciiTab36,$$GHCziShow_asciiTab30]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab28=$D(2,function(){
- $r([$$GHCziShow_asciiTab37,$$GHCziShow_asciiTab29]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab27=$D(2,function(){
- $r([$$GHCziShow_asciiTab38,$$GHCziShow_asciiTab28]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab26=$D(2,function(){
- $r([$$GHCziShow_asciiTab39,$$GHCziShow_asciiTab27]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab25=$D(2,function(){
- $r([$$GHCziShow_asciiTab40,$$GHCziShow_asciiTab26]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab24=$D(2,function(){
- $r([$$GHCziShow_asciiTab41,$$GHCziShow_asciiTab25]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab23=$D(2,function(){
- $r([$$GHCziShow_asciiTab42,$$GHCziShow_asciiTab24]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab22=$D(2,function(){
- $r([$$GHCziShow_asciiTab43,$$GHCziShow_asciiTab23]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab21=$D(2,function(){
- $r([$$GHCziShow_asciiTab44,$$GHCziShow_asciiTab22]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab20=$D(2,function(){
- $r([$$GHCziShow_asciiTab45,$$GHCziShow_asciiTab21]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab19=$D(2,function(){
- $r([$$GHCziShow_asciiTab46,$$GHCziShow_asciiTab20]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab18=$D(2,function(){
- $r([$$GHCziShow_asciiTab47,$$GHCziShow_asciiTab19]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab17=$D(2,function(){
- $r([$$GHCziShow_asciiTab48,$$GHCziShow_asciiTab18]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab16=$D(2,function(){
- $r([$$GHCziShow_asciiTab49,$$GHCziShow_asciiTab17]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab15=$D(2,function(){
- $r([$$GHCziShow_asciiTab50,$$GHCziShow_asciiTab16]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab14=$D(2,function(){
- $r([$$GHCziShow_asciiTab51,$$GHCziShow_asciiTab15]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab13=$D(2,function(){
- $r([$$GHCziShow_asciiTab52,$$GHCziShow_asciiTab14]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab12=$D(2,function(){
- $r([$$GHCziShow_asciiTab53,$$GHCziShow_asciiTab13]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab11=$D(2,function(){
- $r([$$GHCziShow_asciiTab54,$$GHCziShow_asciiTab12]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab10=$D(2,function(){
- $r([$$GHCziShow_asciiTab55,$$GHCziShow_asciiTab11]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab9=$D(2,function(){
- $r([$$GHCziShow_asciiTab56,$$GHCziShow_asciiTab10]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab8=$D(2,function(){
- $r([$$GHCziShow_asciiTab57,$$GHCziShow_asciiTab9]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab7=$D(2,function(){
- $r([$$GHCziShow_asciiTab58,$$GHCziShow_asciiTab8]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab6=$D(2,function(){
- $r([$$GHCziShow_asciiTab59,$$GHCziShow_asciiTab7]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab5=$D(2,function(){
- $r([$$GHCziShow_asciiTab60,$$GHCziShow_asciiTab6]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab4=$D(2,function(){
- $r([$$GHCziShow_asciiTab61,$$GHCziShow_asciiTab5]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab3=$D(2,function(){
- $r([$$GHCziShow_asciiTab62,$$GHCziShow_asciiTab4]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab2=$D(2,function(){
- $r([$$GHCziShow_asciiTab63,$$GHCziShow_asciiTab3]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab1=$D(2,function(){
- $r([$$GHCziShow_asciiTab64,$$GHCziShow_asciiTab2]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_asciiTab=$D(2,function(){
- $r([$$GHCziShow_asciiTab65,$$GHCziShow_asciiTab1]);
-},"at libraries/base/GHC/Show.lhs:411:1");
-var $$GHCziShow_showSpace1=$D(1,function(){
- $r([" "]);
-},"in `base:GHC.Show'");
 var $$GHCziShow_shows26=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
 },"in `base:GHC.Show'");
@@ -26103,15 +23158,6 @@ var $$GHCziShow_showListzuzu2=$D(1,function(){
 },"in `base:GHC.Show'");
 var $$GHCziShow_showListzuzu3=$D(1,function(){
  $r(["["]);
-},"in `base:GHC.Show'");
-var $$GHCziShow_shows23=$t(function(){
- $$GHCziCString_unpackCStringzh.J("True");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_shows25=$t(function(){
- $$GHCziCString_unpackCStringzh.J("False");
-},[],"in `base:GHC.Show'");
-var $$GHCziShow_zdfShowChar1=$D(1,function(){
- $r(["\""]);
 },"in `base:GHC.Show'");
 var $$GHCziShow_shows12=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
@@ -26385,141 +23431,6 @@ var $$GHCziShow_shows17=$f(2,function(q4,r4){
   $$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),t4,r4);
  },[r4]);
 },[],"in `base:GHC.Show'");
-var $$GHCziShow_zdwshowLitChar=$f(2,function(A4,B4){
- var C4=A4>"\x7f"?$$GHCziTypes_True:$$GHCziTypes_False;
- switch(C4.g){
- case 1:
-  $M(A4,function(D4){
-   switch(D4.toString()){
-   case "\\":
-    $$GHCziBase_zpzp.J($$GHCziShow$c,B4);break;
-   case "\x7f":
-    $$GHCziBase_zpzp.J($$GHCziShow$b,B4);break;
-   default:
-    var E4=D4>=" "?$$GHCziTypes_True:$$GHCziTypes_False;
-    switch(E4.g){
-    case 1:
-     $M(D4,function(F4){
-      switch(F4.toString()){
-      case "\x07":
-       $$GHCziBase_zpzp.J($$GHCziShow$k,B4);break;
-      case "\b":
-       $$GHCziBase_zpzp.J($$GHCziShow$j,B4);break;
-      case "\t":
-       $$GHCziBase_zpzp.J($$GHCziShow$i,B4);break;
-      case "\n":
-       $$GHCziBase_zpzp.J($$GHCziShow$h,B4);break;
-      case "\v":
-       $$GHCziBase_zpzp.J($$GHCziShow$g,B4);break;
-      case "\f":
-       $$GHCziBase_zpzp.J($$GHCziShow$f,B4);break;
-      case "\r":
-       $$GHCziBase_zpzp.J($$GHCziShow$e,B4);break;
-      case "\x0e":
-       var K4=$t(function(){
-	$M(B4,function(L4){
-	 switch(L4.g){
-	 case 1:
-	  $R(1,[],"[]");break;
-	 case 2:
-	  var M4=L4.v[0];
-	  $M(M4,function(N4){
-	   var O4=N4.v[0];
-	   $M(O4,function(P4){
-	    switch(P4.toString()){
-	    case "H":
-	     $$GHCziCString_unpackAppendCStringzh.J("\\&",L4);break;
-	    default:
-	     $A(L4);
-	    }
-	   },[L4]);
-	  },[L4]);break;
-	 }
-	},[]);
-       },[B4],"sat");
-       $$GHCziBase_zpzp.J($$GHCziShow$d,K4);break;
-      default:
-       var G4=$t(function(){
-	var I4=$hs_ordzh(F4);
-	var H4=I4.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(H4.g){
-	case 1:
-	 $$GHCziList_znznzusub.J($$GHCziShow_asciiTab,I4);break;
-	case 2:
-	 $A($$GHCziList_znzn1);break;
-	}
-       },[F4],"sat");
-       var J4=$d(2,[$$GHCziShow$a,G4],"sat");
-       $$GHCziBase_zpzp.J(J4,B4);
-      }
-     },[B4]);break;
-    case 2:
-     var Q4=$d(1,[D4],"sat");
-     $R(2,[Q4,B4],":");break;
-    }
-   }
-  },[B4]);break;
- case 2:
-  var R4=$t(function(){
-   var S4=$t(function(){
-    $M(B4,function(T4){
-     switch(T4.g){
-     case 1:
-      $R(1,[],"[]");break;
-     case 2:
-      var U4=T4.v[0];
-      $M(U4,function(V4){
-       var W4=V4.v[0];
-       var X4=W4>="0"?$$GHCziTypes_True:$$GHCziTypes_False;
-       switch(X4.g){
-       case 1:
-	$A(T4);break;
-       case 2:
-	var Y4=W4<="9"?$$GHCziTypes_True:$$GHCziTypes_False;
-	switch(Y4.g){
-	case 1:
-	 $A(T4);break;
-	case 2:
-	 $$GHCziCString_unpackAppendCStringzh.J("\\&",T4);break;
-	}break;
-       }
-      },[T4]);break;
-     }
-    },[]);
-   },[B4],"sat");
-   var Z4=$hs_ordzh(A4);
-   $$GHCziShow_itos.J(Z4,S4);
-  },[A4,B4],"sat");
-  $R(2,[$$GHCziShow$a,R4],":");break;
- }
-},[],"at libraries/base/GHC/Show.lhs:356:1");
-var $$GHCziShow_showLitString=$f(2,function(e5,f5){
- $M(e5,function(g5){
-  switch(g5.g){
-  case 1:
-   $A(f5);break;
-  case 2:
-   var h5=g5.v[0],i5=g5.v[1];
-   $M(h5,function(j5){
-    var k5=j5.v[0];
-    $M(k5,function(l5){
-     switch(l5.toString()){
-     case "\"":
-      var n5=$t(function(){
-       $$GHCziShow_showLitString.J(i5,f5);
-      },[f5,i5],"sat");
-      $$GHCziBase_zpzp.J($$GHCziShow$l,n5);break;
-     default:
-      var m5=$t(function(){
-       $$GHCziShow_showLitString.J(i5,f5);
-      },[f5,i5],"sat");
-      $$GHCziShow_zdwshowLitChar.J(l5,m5);
-     }
-    },[f5,i5]);
-   },[f5,i5]);break;
-  }
- },[f5]);
-},[],"at libraries/base/GHC/Show.lhs:379:1");
 var $$GHCziShow_zdfShowIntzuzdcshowList=$f(2,function(c6,d6){
  $$GHCziShow_showListzuzu.J($$GHCziShow_shows17,c6,d6);
 },[],"at libraries/base/GHC/Show.lhs:155:5");
@@ -26644,42 +23555,6 @@ var $$GHCziShow_intToDigit=$f(1,function(Kv){
   },[]);
  },[]);
 },[],"at libraries/base/GHC/Show.lhs:426:1");
-var $$GHCziShow$a=$D(1,function(){
- $r(["\\"]);
-},"lvl");
-var $$GHCziShow$b=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\DEL");
-},"lvl1");
-var $$GHCziShow$c=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\\\");
-},"lvl2");
-var $$GHCziShow$d=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\SO");
-},"lvl3");
-var $$GHCziShow$e=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\r");
-},"lvl4");
-var $$GHCziShow$f=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\f");
-},"lvl5");
-var $$GHCziShow$g=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\v");
-},"lvl6");
-var $$GHCziShow$h=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\n");
-},"lvl7");
-var $$GHCziShow$i=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\t");
-},"lvl8");
-var $$GHCziShow$j=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\b");
-},"lvl9");
-var $$GHCziShow$k=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\a");
-},"lvl10");
-var $$GHCziShow$l=$T(function(){
- $$GHCziCString_unpackCStringzh.J("\\\"");
-},"lvl11");
 var $$GHCziShow$m=$D(1,function(){
  $r([goog.math.Long.fromBits(100974195,0)]);
 },"sat");
@@ -47490,21 +44365,6 @@ var $$GHCziIntegerziType_doubleFromInteger=$f(1,function(J5){
   }
  },[]);
 },[],"at libraries/integer-gmp/GHC/Integer/Type.lhs:501:1");
-var $$GHCziIntegerziType_floatFromInteger=$f(1,function(Q5){
- $M(Q5,function(R5){
-  switch(R5.g){
-  case 1:
-   var S5=R5.v[0];
-   $r($hs_int2Floatzh(S5));break;
-  case 2:
-   var T5=R5.v[0],U5=R5.v[1];
-   var $ff=integer_cbits_encodeFloat(T5,U5,goog.math.Long.fromBits(0,0));
-   var V5=[$$GHCziPrim_realWorldzh,$ff];
-   var W5=V5[1];
-   $A(W5);break;
-  }
- },[]);
-},[],"at libraries/integer-gmp/GHC/Integer/Type.lhs:506:1");
 var $$GHCziIntegerziType_remInteger=$f(2,function(X5,Y5){
  $M(X5,function(Z5){
   switch(Z5.g){
@@ -48587,6 +45447,161 @@ var $$DataziTimeziClockziPOSIX_getPOSIXTime1=$f(1,function(D){
   $r([F,H]);
  },[]);
 },[],"in `time-1.4.0.1:Data.Time.Clock.POSIX'");
+var $$DataziTextziArray_empty1=$f(1,function(j1){
+ var k1=$hs_newByteArrayzh(goog.math.Long.fromBits(0,0),j1);
+ var l1=k1[0],m1=k1[1];
+ var n1=$d(1,[m1],"sat");
+ $r([l1,n1]);
+},[],"in `text-0.11.2.3:Data.Text.Array'");
+var $$DataziTextziArray_empty=$t(function(){
+ $$GHCziST_runSTRep.J($$DataziTextziArray_empty1);
+},[],"at Data/Text/Array.hs:170:1");
+var $$DataziTextziForeign_zdwa2=$f(5,function(a,b,c,d,e){
+ var g=b.add(c);
+ var f=$f(3,function(h,i,j){
+  var k=i.equals(g)?$$GHCziTypes_True:$$GHCziTypes_False;
+  switch(k.g){
+  case 1:
+   var o=$hs_indexWord16Arrayzh(a,i);
+   var n=$hs_writeWord16OffAddrzh(h,goog.math.Long.fromBits(0,0),o,j);
+   var m=i.add(goog.math.Long.fromBits(1,0));
+   var l=$hs_plusAddrzh(h,goog.math.Long.fromBits(2,0));
+   f.J(l,m,n);break;
+  case 2:
+   $r([j,$$GHCziTuple_Z0T]);break;
+  }
+ },[g,a],"$wa5");
+ f.J(d,b,e);
+},[],"in `text-0.11.2.3:Data.Text.Foreign'");
+var $$DataziTextziForeign_fromPtr2=$f(1,function(k2){
+ $A($$DataziTextziForeign$b);
+},[],"in `text-0.11.2.3:Data.Text.Foreign'");
+var $$DataziTextziForeign_zdwa3=$f(3,function(l2,m2,n2){
+ $M(m2,function(o2){
+  switch(o2.toString()){
+  case "0":
+   $r([n2,$$DataziTextziInternal_empty]);break;
+  default:
+   var p2=$f(1,function(q2){
+    var r2=o2.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
+    switch(r2.g){
+    case 1:
+     var S2=$hs_int2Wordzh(o2);
+     var R2=S2.and(goog.math.Long.fromBits(0,1073741824));
+     var s2=$hs_word2Intzh(R2);
+     switch(s2.toString()){
+     case "0":
+      var Q2=$hs_uncheckedIShiftLzh(o2,goog.math.Long.fromBits(1,0));
+      var t2=$hs_newByteArrayzh(Q2,q2);
+      var u2=t2[0],v2=t2[1];
+      $M(l2,function(w2){
+       var x2=w2.v[0];
+       var y2=$d(1,[v2],"marr");
+       var z2=$f(3,function(A2,B2,C2){
+	var D2=B2.equals(o2)?$$GHCziTypes_True:$$GHCziTypes_False;
+	switch(D2.g){
+	case 1:
+	 var E2=$hs_readWord16OffAddrzh(A2,goog.math.Long.fromBits(0,0),C2);
+	 var F2=E2[0],G2=E2[1];
+	 var J2=$hs_writeWord16Arrayzh(v2,B2,G2,F2);
+	 var I2=B2.add(goog.math.Long.fromBits(1,0));
+	 var H2=$hs_plusAddrzh(A2,goog.math.Long.fromBits(2,0));
+	 z2.J(H2,I2,J2);break;
+	case 2:
+	 $r([C2,y2]);break;
+	}
+       },[o2,v2,y2],"$wa5");
+       z2.C([x2,goog.math.Long.fromBits(0,0),u2],function(K2){
+	var L2=K2[0],M2=K2[1];
+	$M(M2,function(N2){
+	 var O2=N2.v[0];
+	 var P2=$d(1,[O2],"sat");
+	 $r([L2,P2]);
+	},[L2]);
+       },[]);
+      },[o2,v2,u2]);break;
+     default:
+      $$DataziTextziForeign_fromPtr2.J($$GHCziPrim_realWorldzh);
+     }break;
+    case 2:
+     $$DataziTextziForeign_fromPtr2.J($$GHCziPrim_realWorldzh);break;
+    }
+   },[o2,l2],"sat");
+   $$GHCziST_runSTRep.C([p2],function(T2){
+    var U2=T2.v[0];
+    var V2=$d(1,[U2,goog.math.Long.fromBits(0,0),o2],"sat");
+    $r([n2,V2]);
+   },[o2,n2]);
+  }
+ },[l2,n2]);
+},[],"in `text-0.11.2.3:Data.Text.Foreign'");
+var $$DataziTextziForeign$a=$T(function(){
+ $$GHCziCString_unpackCStringzh.J("Data.Text.Array.new: size overflow");
+},"lvl");
+var $$DataziTextziForeign$b=$T(function(){
+ $$GHCziErr_error.J($$DataziTextziForeign$a);
+},"lvl1");
+var $$DataziTextziInternal_empty=$t(function(){
+ $M($$DataziTextziArray_empty,function(s){
+  var t=s.v[0];
+  $R(1,[t,goog.math.Long.fromBits(0,0),goog.math.Long.fromBits(0,0)],"Text");
+ },[]);
+},[],"at Data/Text/Internal.hs:71:1");
+var $$DataziTextziInternal_safe=$f(1,function(x1){
+ $M(x1,function(y1){
+  var z1=y1.v[0];
+  var D1=$hs_ordzh(z1);
+  var C1=$hs_int2Wordzh(D1);
+  var B1=C1.and(goog.math.Long.fromBits(2095104,0));
+  var A1=$hs_word2Intzh(B1);
+  switch(A1.toString()){
+  case "55296":
+   $A($$DataziTextziInternal$b);break;
+  default:
+   $A(y1);
+  }
+ },[]);
+},[],"at Data/Text/Internal.hs:95:1");
+var $$DataziTextziInternal$b=$D(1,function(){
+ $r(["\ufffd"]);
+},"lvl");
+var $$ControlziMonadziIOziClass_zdp1MonadIO=$f(1,function(a){
+ $M(a,function(b){
+  var c=b.v[0];
+  $A(c);
+ },[]);
+},[],"at Control/Monad/IO/Class.hs:32:20");
+var $$ControlziMonadziIOziClass_liftIO=$f(1,function(d){
+ $M(d,function(e){
+  var f=e.v[1];
+  $A(f);
+ },[]);
+},[],"at Control/Monad/IO/Class.hs:34:5");
+var $$ControlziMonadziIOziClass_zdfMonadIOIO=$D(1,function(){
+ $r([$$GHCziBase_zdfMonadIO,$$GHCziBase_id]);
+},"at Control/Monad/IO/Class.hs:36:10");
+var $$ControlziMonadziTransziStateziStrict_zdwzdcliftIO=$f(2,function(V7,W7){
+ var X7=$t(function(){
+  $$ControlziMonadziIOziClass_liftIO.J(V7,W7);
+ },[V7,W7],"m");
+ var Y7=$t(function(){
+  $$ControlziMonadziIOziClass_zdp1MonadIO.J(V7);
+ },[V7],"$dMonad");
+ var Z7=$t(function(){
+  $$GHCziBase_return.J(Y7);
+ },[Y7],"lvl");
+ var a8=$t(function(){
+  $$GHCziBase_zgzgze.J(Y7);
+ },[Y7],"lvl1");
+ var b8=$f(1,function(c8){
+  var d8=$f(1,function(e8){
+   var f8=$d(1,[e8,c8],"sat");
+   Z7.J(f8);
+  },[Z7,c8],"sat");
+  a8.J(X7,d8);
+ },[X7,Z7,a8],"sat");
+ $A(b8);
+},[],"at Control/Monad/IO/Class.hs:34:5");
 var $$Engine_zdwa3=$f(3,function(k,l,m){
  $M(l,function(n){
   var o=n.v[0],p=n.v[1];
@@ -48680,178 +45695,178 @@ var $$Engine_zdwa3=$f(3,function(k,l,m){
  },[m,k]);
 },[],"in `main:Engine'");
 var $$Engine_elementPageXY2=$t(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:85:5-13");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:86:5-13");
 },[],"in `main:Engine'");
-var $$Engine_zdwa1=$f(5,function(E3,F3,G3,H3,I3){
- $M(F3,function(J3){
-  var K3=J3.v[0],L3=J3.v[1];
-  $M(E3,function(M3){
-   var N3=M3.v[0],O3=M3.v[1];
-   var $ff=webkit_dom_node_is_equal_node(K3,N3);
-   var P3=[I3,$ff];
-   var Q3=P3[0],R3=P3[1];
-   var w4=$hs_touchzh(O3,Q3);
-   var U3=$hs_touchzh(L3,w4);
-   var S3=$hs_narrow32Intzh(R3);
-   switch(S3.toString()){
+var $$Engine_zdwa1=$f(5,function(U3,V3,W3,X3,Y3){
+ $M(V3,function(Z3){
+  var a4=Z3.v[0],b4=Z3.v[1];
+  $M(U3,function(c4){
+   var d4=c4.v[0],e4=c4.v[1];
+   var $ff=webkit_dom_node_is_equal_node(a4,d4);
+   var f4=[Y3,$ff];
+   var g4=f4[0],h4=f4[1];
+   var M4=$hs_touchzh(e4,g4);
+   var k4=$hs_touchzh(b4,M4);
+   var i4=$hs_narrow32Intzh(h4);
+   switch(i4.toString()){
    case "0":
-    var $ff=webkit_dom_element_get_offset_left(K3);
-    var V3=[U3,$ff];
-    var W3=V3[0],X3=V3[1];
-    var v4=$hs_touchzh(L3,W3);
-    var $ff=webkit_dom_element_get_offset_top(K3);
-    var Y3=[v4,$ff];
-    var Z3=Y3[0],a4=Y3[1];
-    var u4=$hs_touchzh(L3,Z3);
-    var $ff=webkit_dom_element_get_offset_parent(K3);
-    var b4=[u4,$ff];
-    var c4=b4[0],d4=b4[1];
-    var t4=$hs_touchzh(L3,c4);
-    var e4=$hs_eqAddrzh(d4,null);
-    switch(e4.g){
+    var $ff=webkit_dom_element_get_offset_left(a4);
+    var l4=[k4,$ff];
+    var m4=l4[0],n4=l4[1];
+    var L4=$hs_touchzh(b4,m4);
+    var $ff=webkit_dom_element_get_offset_top(a4);
+    var o4=[L4,$ff];
+    var p4=o4[0],q4=o4[1];
+    var K4=$hs_touchzh(b4,p4);
+    var $ff=webkit_dom_element_get_offset_parent(a4);
+    var r4=[K4,$ff];
+    var s4=r4[0],t4=r4[1];
+    var J4=$hs_touchzh(b4,s4);
+    var u4=$hs_eqAddrzh(t4,null);
+    switch(u4.g){
     case 1:
-     var f4=$f(1,function(g4){
-      var h4=$d(1,[d4],"sat");
-      $r([g4,h4]);
-     },[d4],"sat");
-     $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkElement1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,f4,t4],function(i4){
-      var j4=i4[0],k4=i4[1];
-      var l4=$t(function(){
-       $M(H3,function(m4){
-	var n4=m4.v[0];
-	var o4=n4.add(a4);
-	$R(1,[o4],"I#");
-       },[a4]);
-      },[H3,a4],"sat");
-      var p4=$t(function(){
-       $M(G3,function(q4){
-	var r4=q4.v[0];
-	var s4=r4.add(X3);
-	$R(1,[s4],"I#");
-       },[X3]);
-      },[G3,X3],"sat");
-      $$Engine_zdwa1.J(M3,k4,p4,l4,j4);
-     },[G3,H3,M3,X3,a4]);break;
+     var v4=$f(1,function(w4){
+      var x4=$d(1,[t4],"sat");
+      $r([w4,x4]);
+     },[t4],"sat");
+     $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkElement1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,v4,J4],function(y4){
+      var z4=y4[0],A4=y4[1];
+      var B4=$t(function(){
+       $M(X3,function(C4){
+	var D4=C4.v[0];
+	var E4=D4.add(q4);
+	$R(1,[E4],"I#");
+       },[q4]);
+      },[X3,q4],"sat");
+      var F4=$t(function(){
+       $M(W3,function(G4){
+	var H4=G4.v[0];
+	var I4=H4.add(n4);
+	$R(1,[I4],"I#");
+       },[n4]);
+      },[W3,n4],"sat");
+      $$Engine_zdwa1.J(c4,A4,F4,B4,z4);
+     },[W3,X3,c4,n4,q4]);break;
     case 2:
-     $$GHCziIO_failIO.J($$Engine$e,t4);break;
+     $$GHCziIO_failIO.J($$Engine$e,J4);break;
     }break;
    default:
-    var T3=$d(1,[G3,H3],"sat");
-    $r([U3,T3]);
+    var j4=$d(1,[W3,X3],"sat");
+    $r([k4,j4]);
    }
-  },[K3,I3,L3,G3,H3]);
- },[E3,I3,G3,H3]);
+  },[a4,Y3,b4,W3,X3]);
+ },[U3,Y3,W3,X3]);
 },[],"in `main:Engine'");
 var $$Engine_elementPageXY3=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
 },"in `main:Engine'");
-var $$Engine_zdwa2=$f(4,function(Q4,R4,S4,T4){
- $$Engine_zdwa3.C([Q4,S4,T4],function(U4){
-  var V4=U4[0],W4=U4[1];
-  $M(W4,function(X4){
-   var Y4=X4.v[0],Z4=X4.v[1];
-   $M(Q4,function(a5){
-    var b5=a5.v[0],c5=a5.v[1];
-    var $ff=webkit_dom_document_get_body(b5);
-    var d5=[V4,$ff];
-    var e5=d5[0],f5=d5[1];
-    var j6=$hs_touchzh(c5,e5);
-    var g5=$f(2,function(h5,i5){
-     $M(i5,function(j5){
-      switch(j5.g){
+var $$Engine_zdwa2=$f(4,function(g5,h5,i5,j5){
+ $$Engine_zdwa3.C([g5,i5,j5],function(k5){
+  var l5=k5[0],m5=k5[1];
+  $M(m5,function(n5){
+   var o5=n5.v[0],p5=n5.v[1];
+   $M(g5,function(q5){
+    var r5=q5.v[0],s5=q5.v[1];
+    var $ff=webkit_dom_document_get_body(r5);
+    var t5=[l5,$ff];
+    var u5=t5[0],v5=t5[1];
+    var z6=$hs_touchzh(s5,u5);
+    var w5=$f(2,function(x5,y5){
+     $M(y5,function(z5){
+      switch(z5.g){
       case 1:
-       $$GHCziIO_failIO.C([$$Engine_elementPageXY2,h5],function(k5){
-	var l5=k5[0],m5=k5[1];
-	$M(m5,function(n5){
-	 var o5=n5.v[0],p5=n5.v[1];
-	 var q5=$t(function(){
-	  $M(Z4,function(r5){
-	   var s5=r5.v[0];
-	   $M(p5,function(t5){
-	    var u5=t5.v[0];
-	    var v5=s5.subtract(u5);
-	    $R(1,[v5],"I#");
-	   },[s5]);
-	  },[p5]);
-	 },[Z4,p5],"sat");
-	 var w5=$t(function(){
-	  $M(Y4,function(x5){
-	   var y5=x5.v[0];
-	   $M(o5,function(z5){
-	    var A5=z5.v[0];
-	    var B5=y5.subtract(A5);
-	    $R(1,[B5],"I#");
-	   },[y5]);
-	  },[o5]);
-	 },[Y4,o5],"sat");
-	 var C5=$d(1,[w5,q5],"sat");
-	 $r([l5,C5]);
-	},[l5,Y4,Z4]);
-       },[Y4,Z4]);break;
+       $$GHCziIO_failIO.C([$$Engine_elementPageXY2,x5],function(A5){
+	var B5=A5[0],C5=A5[1];
+	$M(C5,function(D5){
+	 var E5=D5.v[0],F5=D5.v[1];
+	 var G5=$t(function(){
+	  $M(p5,function(H5){
+	   var I5=H5.v[0];
+	   $M(F5,function(J5){
+	    var K5=J5.v[0];
+	    var L5=I5.subtract(K5);
+	    $R(1,[L5],"I#");
+	   },[I5]);
+	  },[F5]);
+	 },[p5,F5],"sat");
+	 var M5=$t(function(){
+	  $M(o5,function(N5){
+	   var O5=N5.v[0];
+	   $M(E5,function(P5){
+	    var Q5=P5.v[0];
+	    var R5=O5.subtract(Q5);
+	    $R(1,[R5],"I#");
+	   },[O5]);
+	  },[E5]);
+	 },[o5,E5],"sat");
+	 var S5=$d(1,[M5,G5],"sat");
+	 $r([B5,S5]);
+	},[B5,o5,p5]);
+       },[o5,p5]);break;
       case 2:
-       var D5=j5.v[0];
-       var E5=$t(function(){
-	$M(R4,function(F5){
-	 var G5=F5.v[0];
-	 $R(1,[G5],"Ptr");
+       var T5=z5.v[0];
+       var U5=$t(function(){
+	$M(h5,function(V5){
+	 var W5=V5.v[0];
+	 $R(1,[W5],"Ptr");
 	},[]);
-       },[R4],"sat");
-       $$SystemziGlibziGType_typeInstanceIsA.C([E5,$$GraphicsziUIziGtkziWebKitziTypes_gTypeElement],function(H5){
-	switch(H5.g){
+       },[h5],"sat");
+       $$SystemziGlibziGType_typeInstanceIsA.C([U5,$$GraphicsziUIziGtkziWebKitziTypes_gTypeElement],function(X5){
+	switch(X5.g){
 	case 1:
 	 $A($$GraphicsziUIziGtkziWebKitziTypes_castToElement1);break;
 	case 2:
-	 $$Engine_zdwa1.C([D5,R4,$$Engine_elementPageXY3,$$Engine_elementPageXY3,h5],function(I5){
-	  var J5=I5[0],K5=I5[1];
-	  $M(K5,function(L5){
-	   var M5=L5.v[0],N5=L5.v[1];
-	   var O5=$t(function(){
-	    $M(Z4,function(P5){
-	     var Q5=P5.v[0];
-	     $M(N5,function(R5){
-	      var S5=R5.v[0];
-	      var T5=Q5.subtract(S5);
-	      $R(1,[T5],"I#");
-	     },[Q5]);
-	    },[N5]);
-	   },[Z4,N5],"sat");
-	   var U5=$t(function(){
-	    $M(Y4,function(V5){
-	     var W5=V5.v[0];
-	     $M(M5,function(X5){
-	      var Y5=X5.v[0];
-	      var Z5=W5.subtract(Y5);
-	      $R(1,[Z5],"I#");
-	     },[W5]);
-	    },[M5]);
-	   },[Y4,M5],"sat");
-	   var a6=$d(1,[U5,O5],"sat");
-	   $r([J5,a6]);
-	  },[Y4,Z4,J5]);
-	 },[Y4,Z4]);break;
+	 $$Engine_zdwa1.C([T5,h5,$$Engine_elementPageXY3,$$Engine_elementPageXY3,x5],function(Y5){
+	  var Z5=Y5[0],a6=Y5[1];
+	  $M(a6,function(b6){
+	   var c6=b6.v[0],d6=b6.v[1];
+	   var e6=$t(function(){
+	    $M(p5,function(f6){
+	     var g6=f6.v[0];
+	     $M(d6,function(h6){
+	      var i6=h6.v[0];
+	      var j6=g6.subtract(i6);
+	      $R(1,[j6],"I#");
+	     },[g6]);
+	    },[d6]);
+	   },[p5,d6],"sat");
+	   var k6=$t(function(){
+	    $M(o5,function(l6){
+	     var m6=l6.v[0];
+	     $M(c6,function(n6){
+	      var o6=n6.v[0];
+	      var p6=m6.subtract(o6);
+	      $R(1,[p6],"I#");
+	     },[m6]);
+	    },[c6]);
+	   },[o5,c6],"sat");
+	   var q6=$d(1,[k6,e6],"sat");
+	   $r([Z5,q6]);
+	  },[o5,p5,Z5]);
+	 },[o5,p5]);break;
 	}
-       },[h5,Y4,Z4,R4,D5]);break;
+       },[x5,o5,p5,h5,T5]);break;
       }
-     },[h5,Y4,Z4,R4]);
-    },[Y4,Z4,R4],"$j");
-    var b6=$hs_eqAddrzh(f5,null);
-    switch(b6.g){
+     },[x5,o5,p5,h5]);
+    },[o5,p5,h5],"$j");
+    var r6=$hs_eqAddrzh(v5,null);
+    switch(r6.g){
     case 1:
-     var c6=$f(1,function(d6){
-      var e6=$d(1,[f5],"sat");
-      $r([d6,e6]);
-     },[f5],"sat");
-     $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkHTMLElement1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,c6,j6],function(f6){
-      var g6=f6[0],h6=f6[1];
-      var i6=$d(2,[h6],"sat");
-      g5.J(g6,i6);
-     },[Y4,Z4,R4,g5]);break;
+     var s6=$f(1,function(t6){
+      var u6=$d(1,[v5],"sat");
+      $r([t6,u6]);
+     },[v5],"sat");
+     $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkHTMLElement1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,s6,z6],function(v6){
+      var w6=v6[0],x6=v6[1];
+      var y6=$d(2,[x6],"sat");
+      w5.J(w6,y6);
+     },[o5,p5,h5,w5]);break;
     case 2:
-     g5.J(j6,$$DataziMaybe_Nothing);break;
+     w5.J(z6,$$DataziMaybe_Nothing);break;
     }
-   },[V4,Y4,Z4,R4]);
-  },[Q4,V4,R4]);
- },[Q4,R4]);
+   },[l5,o5,p5,h5]);
+  },[g5,l5,h5]);
+ },[g5,h5]);
 },[],"in `main:Engine'");
 var $$Engine_toWorld=$f(1,function(i8){
  $M(i8,function(j8){
@@ -48876,7 +45891,7 @@ var $$Engine_toWorld=$f(1,function(i8){
   },[k8],"sat");
   $R(1,[s8,m8],"(,)");
  },[]);
-},[],"at src/Engine.hs:44:1");
+},[],"at src/Engine.hs:45:1");
 var $$Engine_zdwfromWorldRect=$f(4,function(y8,z8,A8,B8){
  var C8=$t(function(){
   $M(B8,function(D8){
@@ -48937,7 +45952,7 @@ var $$Engine_zdwfromWorldRect=$f(4,function(y8,z8,A8,B8){
  },[y8,A8],"sat");
  var p9=$d(1,[e9,T8],"sat");
  $r([p9,S8]);
-},[],"at src/Engine.hs:46:1");
+},[],"at src/Engine.hs:47:1");
 var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
  var H9=$f(2,function(I9,J9){
   $M(I9,function(K9){
@@ -48953,7 +45968,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
     },[M9,H9]);break;
    }
   },[J9,E9,H9]);
- },[E9],"a11");
+ },[E9],"a9");
  var Q9=$f(2,function(R9,S9){
   $M(R9,function(T9){
    switch(T9.g){
@@ -48968,7 +45983,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
     },[V9,Q9]);break;
    }
   },[E9,S9,Q9]);
- },[E9],"a12");
+ },[E9],"a10");
  var Z9=$f(3,function(aa,ba,ca){
   $M(ba,function(da){
    switch(da.g){
@@ -49055,7 +46070,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
     },[E9,ca,D9,aa,Z9,fa]);break;
    }
   },[E9,ca,D9,aa,Z9]);
- },[E9,D9],"a13");
+ },[E9,D9],"a11");
  var Va=$f(3,function(Wa,Xa,Ya){
   $M(Wa,function(Za){
    switch(Za.g){
@@ -49090,7 +46105,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
       var zb=yb.v[0];
       $$GHCziEnum_eftInt.J(zb,goog.math.Long.fromBits(4294967295,2147483647));
      },[]);
-    },[Xa],"lvl55");
+    },[Xa],"lvl25");
     var Ab=$f(1,function(Bb){
      var Cb=$f(1,function(Db){
       var Eb=$hs_readMutVarzh(wb,Db);
@@ -49142,7 +46157,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
 	  },[Z9,wb,Bb,Gb,Ob,Nb,Lb]);
 	 },[Z9,wb,Bb,Gb,Jb,Lb]);
 	},[Z9,Xa,wb,Bb,Gb,Jb]);
-       },[Z9,Xa,xb,wb,Bb,Gb],"a15");
+       },[Z9,Xa,xb,wb,Bb,Gb],"a13");
        var hc=mc.lessThan(goog.math.Long.fromBits(0,0))?$$GHCziTypes_True:$$GHCziTypes_False;
        switch(hc.g){
        case 1:
@@ -49165,7 +46180,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
       },[H9,Q9,Z9,Xa,xb,wb,Bb,Gb,Fb]);
      },[H9,Q9,Z9,Xa,xb,wb,Bb],"sat");
      $$ControlziMonadziTransziStateziStrict_zdwzdcliftIO.J($$ControlziMonadziIOziClass_zdfMonadIOIO,Cb);
-    },[H9,Q9,Z9,Xa,xb,wb],"lvl56");
+    },[H9,Q9,Z9,Xa,xb,wb],"lvl26");
     var qc=$t(function(){
      var rc=$f(3,function(N1,O1,P1){
       $$FRPziSodiumziPlain_switch3.J(tb,N1,O1,P1);
@@ -49174,7 +46189,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
       var tc=sc[0],uc=sc[1];
       $R(1,[tc,uc],"Event");
      },[]);
-    },[tb],"a15");
+    },[tb],"a13");
     var vc=$f(2,function(wc,xc){
      $$FRPziSodiumziPlain_switch2.J(qc,$$DataziMaybe_Nothing,$$GHCziTypes_False,Ab,wc,xc);
     },[Ab,qc],"sat");
@@ -49192,7 +46207,7 @@ var $$Engine_showAll1=$f(4,function(D9,E9,F9,G9){
     },[Xa]);break;
    }
   },[H9,Q9,Z9,Xa,Ya,Va]);
- },[H9,Q9,Z9],"a14");
+ },[H9,Q9,Z9],"a12");
  Va.C([F9,$$Engine$r,G9],function(Gc){
   var Hc=Gc[0],Ic=Gc[1];
   $M(Ic,function(Jc){
@@ -49315,7 +46330,7 @@ var $$Engine_engine1=$f(4,function(Vf,Wf,Xf,Yf){
 	    var $ff=webkit_dom_document_get_body(vh);
 	    var xh=[th,$ff];
 	    var yh=xh[0],zh=xh[1];
-	    var xK=$hs_touchzh(wh,yh);
+	    var JG=$hs_touchzh(wh,yh);
 	    var Ah=$f(2,function(Bh,Ch){
 	     var Dh=$f(1,function(Eh){
 	      var Fh=$t(function(){
@@ -49325,7 +46340,7 @@ var $$Engine_engine1=$f(4,function(Vf,Wf,Xf,Yf){
 	       var Hh=Gh[0],Ih=Gh[1];
 	       $$Engine_showAll1.J(uh,sg,Ih,Hh);
 	      },[sg,uh]);
-	     },[sg,ng,Xf,uh],"a12");
+	     },[sg,ng,Xf,uh],"a10");
 	     $M(Ch,function(Jh){
 	      switch(Jh.g){
 	      case 1:
@@ -49351,2136 +46366,1886 @@ var $$Engine_engine1=$f(4,function(Vf,Wf,Xf,Yf){
 		   var $ff=webkit_web_frame_get_global_context(ei);
 		   var fi=[bi,$ff];
 		   var gi=fi[0],hi=fi[1];
-		   var ii=$d(1,[hi],"r");
-		   var ji=$d(2,[Wf,$$GHCziTypes_ZMZN],"sat");
-		   $$LanguageziJavascriptziJSCziObject_zh.C([$$Engine$b,$$Engine$a,$$Engine$D,ji,ii,gi],function(ki){
-		    var li=ki[0],mi=ki[1];
-		    $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$E,ii,li],function(ni){
-		     var oi=ni[0],pi=ni[1];
-		     var qi=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),oi);
-		     var ri=qi[0],si=qi[1];
-		     var ti=$hs_unsafeFreezzeByteArrayzh(si,ri);
-		     var ui=ti[0],vi=ti[1];
-		     var Wv=$hs_byteArrayContentszh(vi);
-		     var Xv=$hs_writeAddrOffAddrzh(Wv,goog.math.Long.fromBits(0,0),null,ui);
-		     var wi=$f(3,function(xi,yi,zi){
-		      $M(zi,function(Ai){
-		       switch(Ai.g){
-		       case 1:
-			$A($$Engine$F);break;
-		       case 2:
-			var Bi=Ai.v[0],Ci=Ai.v[1];
-			$M(Ci,function(Di){
-			 switch(Di.g){
-			 case 1:
-			  var Ei=$t(function(){
-			   var Fi=$f(2,function(Gi,Hi){
-			    $$Engine$b1.C([Gi,Hi],function(Ii){
-			     var Ji=Ii[0],Ki=Ii[1];
-			     var Li=$d(1,[Bi,Ki],"sat");
-			     $r([Ji,Li]);
-			    },[Bi]);
-			   },[Bi],"sat");
-			   $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$b,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,Fi,$$GHCziTuple_Z0T);
-			  },[Bi],"m");
-			  var Mi=$f(2,function(Ni,Oi){
-			   Ei.C([Ni,Oi],function(Pi){
-			    var Qi=Pi[0];
-			    $$Engine$Z.C([Ni,Qi],function(Ri){
-			     var Si=Ri[0],Ti=Ri[1];
-			     var Ui=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Si);
-			     var Vi=Ui[0],Wi=Ui[1];
-			     var Xi=$hs_unsafeFreezzeByteArrayzh(Wi,Vi);
-			     var Yi=Xi[0],Zi=Xi[1];
-			     var sm=$hs_byteArrayContentszh(Zi);
-			     var tm=$hs_writeAddrOffAddrzh(sm,goog.math.Long.fromBits(0,0),null,Yi);
-			     $M(Ni,function(aj){
-			      var bj=aj.v[0];
-			      $M(Bi,function(cj){
-			       var dj=cj.v[0];
-			       $M(Ti,function(ej){
-				var fj=ej.v[0];
-				var $ff=JSObjectGetProperty(bj,dj,fj,sm);
-				var gj=[tm,$ff];
-				var hj=gj[0],ij=gj[1];
-				var jj=$hs_readAddrOffAddrzh(sm,goog.math.Long.fromBits(0,0),hj);
-				var kj=jj[0],lj=jj[1];
-				var mj=$hs_eqAddrzh(lj,null);
-				switch(mj.g){
-				case 1:
-				 $$LanguageziJavascriptziJSCziValue_zdwa4.C([lj,bj,kj],function(nj){
-				  var oj=nj[0],pj=nj[1];
-				  var qj=$t(function(){
-				   var rj=$d(1,[lj],"sat");
-				   var sj=$t(function(){
-				    $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(pj);
-				   },[pj],"sat");
-				   var tj=$d(1,[sj,rj],"sat");
-				   $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(tj);
-				  },[lj,pj],"sat");
-				  $r($hs_raiseIOzh(qj,oj));
-				 },[lj]);break;
-				case 2:
-				 var rm=$hs_touchzh(Zi,kj);
-				 $$Engine$a1.C([aj,rm],function(uj){
-				  var vj=uj[0],wj=uj[1];
-				  var xj=$d(1,[ij],"sat");
-				  var yj=$d(1,[xj,wj],"sat");
-				  $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,yj,aj,vj],function(zj){
-				   var Aj=zj[0],Bj=zj[1];
-				   $M(Bj,function(Cj){
-				    switch(Cj.g){
-				    case 3:
-				     $r([Aj,$$GHCziTuple_Z0T]);break;
-				    case 4:
-				     var Dj=Cj.v[0];
-				     $M(Dj,function(Ej){
-				      var Fj=Ej.v[0];
-				      var Gj=Fj==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
-				      switch(Gj.g){
-				      case 1:
-				       $r([Aj,$$GHCziTuple_Z0T]);break;
-				      case 2:
-				       $$Engine$Y.C([aj,Aj],function(Hj){
-					var Ij=Hj[0],Jj=Hj[1];
-					var Kj=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Ij);
-					var Lj=Kj[0],Mj=Kj[1];
-					var Nj=$hs_unsafeFreezzeByteArrayzh(Mj,Lj);
-					var Oj=Nj[0],Pj=Nj[1];
-					var pm=$hs_byteArrayContentszh(Pj);
-					var qm=$hs_writeAddrOffAddrzh(pm,goog.math.Long.fromBits(0,0),null,Oj);
-					$M(Jj,function(Qj){
-					 var Rj=Qj.v[0];
-					 var $ff=JSObjectGetProperty(bj,dj,Rj,pm);
-					 var Sj=[qm,$ff];
-					 var Tj=Sj[0],Uj=Sj[1];
-					 var Vj=$hs_readAddrOffAddrzh(pm,goog.math.Long.fromBits(0,0),Tj);
-					 var Wj=Vj[0],Xj=Vj[1];
-					 var Yj=$hs_eqAddrzh(Xj,null);
-					 switch(Yj.g){
-					 case 1:
-					  $$LanguageziJavascriptziJSCziValue_zdwa4.C([Xj,bj,Wj],function(Zj){
-					   var ak=Zj[0],bk=Zj[1];
-					   var ck=$t(function(){
-					    var dk=$d(1,[Xj],"sat");
-					    var ek=$t(function(){
-					     $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(bk);
-					    },[bk],"sat");
-					    var fk=$d(1,[ek,dk],"sat");
-					    $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(fk);
-					   },[Xj,bk],"sat");
-					   $r($hs_raiseIOzh(ck,ak));
-					  },[Xj]);break;
-					 case 2:
-					  var om=$hs_touchzh(Pj,Wj);
-					  var gk=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),om);
-					  var hk=gk[0],ik=gk[1];
-					  var jk=$hs_unsafeFreezzeByteArrayzh(ik,hk);
-					  var kk=jk[0],lk=jk[1];
-					  var mm=$hs_byteArrayContentszh(lk);
-					  var nm=$hs_writeAddrOffAddrzh(mm,goog.math.Long.fromBits(0,0),null,kk);
-					  var $ff=JSObjectGetPropertyAtIndex(bj,Uj,goog.math.Long.fromBits(0,0),mm);
-					  var mk=[nm,$ff];
-					  var nk=mk[0],ok=mk[1];
-					  var pk=$hs_readAddrOffAddrzh(mm,goog.math.Long.fromBits(0,0),nk);
-					  var qk=pk[0],rk=pk[1];
-					  var sk=$hs_eqAddrzh(rk,null);
-					  switch(sk.g){
-					  case 1:
-					   $$LanguageziJavascriptziJSCziValue_zdwa4.C([rk,bj,qk],function(tk){
-					    var uk=tk[0],vk=tk[1];
-					    var wk=$t(function(){
-					     var xk=$d(1,[rk],"sat");
-					     var yk=$t(function(){
-					      $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(vk);
-					     },[vk],"sat");
-					     var zk=$d(1,[yk,xk],"sat");
-					     $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(zk);
-					    },[rk,vk],"sat");
-					    $r($hs_raiseIOzh(wk,uk));
-					   },[rk]);break;
-					  case 2:
-					   var lm=$hs_touchzh(lk,qk);
-					   $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$J,aj,lm],function(Ak){
-					    var Bk=Ak[0],Ck=Ak[1];
-					    var Dk=$d(1,[ok],"sat");
-					    var Ek=$d(1,[Dk,Ck],"sat");
-					    $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,Ek,aj,Bk],function(Fk){
-					     var Gk=Fk[0],Hk=Fk[1];
-					     var Ik=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Gk);
-					     var Jk=Ik[0],Kk=Ik[1];
-					     var Lk=$hs_unsafeFreezzeByteArrayzh(Kk,Jk);
-					     var Mk=Lk[0],Nk=Lk[1];
-					     var jm=$hs_byteArrayContentszh(Nk);
-					     var km=$hs_writeAddrOffAddrzh(jm,goog.math.Long.fromBits(0,0),null,Mk);
-					     var $ff=JSObjectGetPropertyAtIndex(bj,Uj,goog.math.Long.fromBits(0,0),jm);
-					     var Ok=[km,$ff];
-					     var Pk=Ok[0],Qk=Ok[1];
-					     var Rk=$hs_readAddrOffAddrzh(jm,goog.math.Long.fromBits(0,0),Pk);
-					     var Sk=Rk[0],Tk=Rk[1];
-					     var Uk=$hs_eqAddrzh(Tk,null);
-					     switch(Uk.g){
-					     case 1:
-					      $$LanguageziJavascriptziJSCziValue_zdwa4.C([Tk,bj,Sk],function(Vk){
-					       var Wk=Vk[0],Xk=Vk[1];
-					       var Yk=$t(function(){
-						var Zk=$d(1,[Tk],"sat");
-						var al=$t(function(){
-						 $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Xk);
-						},[Xk],"sat");
-						var bl=$d(1,[al,Zk],"sat");
-						$$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(bl);
-					       },[Tk,Xk],"sat");
-					       $r($hs_raiseIOzh(Yk,Wk));
-					      },[Tk]);break;
-					     case 2:
-					      var im=$hs_touchzh(Nk,Sk);
-					      $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$K,aj,im],function(cl){
-					       var dl=cl[0],el=cl[1];
-					       var fl=$d(1,[Qk],"sat");
-					       var gl=$d(1,[fl,el],"sat");
-					       $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,gl,aj,dl],function(hl){
-						var il=hl[0],jl=hl[1];
-						$M(Hk,function(kl){
-						 switch(kl.g){
-						 case 4:
-						  var ll=kl.v[0];
-						  $M(jl,function(ml){
-						   switch(ml.g){
-						   case 4:
-						    var nl=ml.v[0];
-						    var ol=$hs_readMutVarzh(rg,il);
-						    var pl=ol[0],ql=ol[1];
-						    $M(ql,function(rl){
-						     switch(rl.g){
-						     case 1:
-						      var hm=$hs_writeMutVarzh(rg,$$Engine_Down,pl);
-						      var sl=$t(function(){
-						       var tl=$t(function(){
-							$M(nl,function(ul){
-							 var vl=ul.v[0];
-							 var Dl=$hs_double2Intzh(vl);
-							 var Ll=$hs_int2Doublezh(Dl);
-							 var wl=vl<Ll?$$GHCziTypes_True:$$GHCziTypes_False;
-							 switch(wl.g){
-							 case 1:
-							  $M(Ph,function(xl){
-							   var yl=xl.v[0];
-							   var Cl=Dl.subtract(yl);
-							   var Bl=$hs_int2Doublezh(Cl);
-							   var Al=Bl/0.25;
-							   var zl=1000.0-Al;
-							   $R(1,[zl],"D#");
-							  },[Dl]);break;
-							 case 2:
-							  $M(Ph,function(El){
-							   var Fl=El.v[0];
-							   var Kl=Dl.subtract(goog.math.Long.fromBits(1,0));
-							   var Jl=Kl.subtract(Fl);
-							   var Il=$hs_int2Doublezh(Jl);
-							   var Hl=Il/0.25;
-							   var Gl=1000.0-Hl;
-							   $R(1,[Gl],"D#");
-							  },[Dl]);break;
-							 }
-							},[Ph]);
-						       },[nl,Ph],"sat");
-						       var Ml=$t(function(){
-							$M(ll,function(Nl){
-							 var Ol=Nl.v[0];
-							 var Wl=$hs_double2Intzh(Ol);
-							 var em=$hs_int2Doublezh(Wl);
-							 var Pl=Ol<em?$$GHCziTypes_True:$$GHCziTypes_False;
-							 switch(Pl.g){
-							 case 1:
-							  $M(Oh,function(Ql){
-							   var Rl=Ql.v[0];
-							   var Vl=Wl.subtract(Rl);
-							   var Ul=$hs_int2Doublezh(Vl);
-							   var Tl=Ul/0.25;
-							   var Sl=Tl+ -1400.0;
-							   $R(1,[Sl],"D#");
-							  },[Wl]);break;
-							 case 2:
-							  $M(Oh,function(Xl){
-							   var Yl=Xl.v[0];
-							   var dm=Wl.subtract(goog.math.Long.fromBits(1,0));
-							   var cm=dm.subtract(Yl);
-							   var bm=$hs_int2Doublezh(cm);
-							   var am=bm/0.25;
-							   var Zl=am+ -1400.0;
-							   $R(1,[Zl],"D#");
-							  },[Wl]);break;
-							 }
-							},[Oh]);
-						       },[ll,Oh],"sat");
-						       var fm=$d(1,[Ml,tl],"sat");
-						       var gm=$d(1,[fm],"sat");
-						       og.J(gm);
-						      },[og,ll,Oh,nl,Ph],"sat");
-						      $$FRPziSodiumziPlain_sync1.J(sl,hm);break;
-						     case 2:
-						      $r([pl,$$GHCziTuple_Z0T]);break;
-						     }
-						    },[rg,og,pl,ll,Oh,nl,Ph]);break;
-						   default:
-						    $r([il,$$GHCziTuple_Z0T]);
-						   }
-						  },[rg,og,il,ll,Oh,Ph]);break;
-						 default:
-						  $r([il,$$GHCziTuple_Z0T]);
-						 }
-						},[rg,og,il,jl,Oh,Ph]);
-					       },[rg,og,Hk,Oh,Ph]);
-					      },[rg,og,aj,Qk,Hk,Oh,Ph]);break;
-					     }
-					    },[rg,og,bj,aj,Uj,Oh,Ph]);
-					   },[rg,og,bj,aj,Uj,ok,Oh,Ph]);break;
-					  }break;
-					 }
-					},[rg,og,bj,dj,aj,Pj,pm,qm,Oh,Ph]);
-				       },[rg,og,bj,dj,aj,Oh,Ph]);break;
-				      }
-				     },[rg,og,bj,dj,aj,Aj,Oh,Ph]);break;
-				    case 5:
-				     $r([Aj,$$GHCziTuple_Z0T]);break;
-				    case 6:
-				     $r([Aj,$$GHCziTuple_Z0T]);break;
-				    default:
-				     $r([Aj,$$GHCziTuple_Z0T]);
-				    }
-				   },[rg,og,bj,dj,aj,Aj,Oh,Ph]);
-				  },[rg,og,bj,dj,aj,Oh,Ph]);
-				 },[rg,og,bj,dj,aj,ij,Oh,Ph]);break;
-				}
-			       },[rg,og,Zi,sm,bj,dj,tm,aj,Oh,Ph]);
-			      },[rg,og,Zi,sm,Ti,bj,tm,aj,Oh,Ph]);
-			     },[rg,og,Bi,Zi,sm,Ti,tm,Oh,Ph]);
-			    },[rg,og,Bi,Ni,Oh,Ph]);
-			   },[rg,og,Bi,Ni,Oh,Ph]);
-			  },[rg,og,Bi,Ei,Oh,Ph],"sat");
-			  $A(Mi);break;
-			 case 2:
-			  $A($$Engine$F);break;
-			 }
-			},[rg,og,Bi,Oh,Ph]);break;
-		       }
-		      },[rg,og,Oh,Ph]);
-		     },[rg,og,Oh,Ph],"sat");
-		     $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,wi,ii,Xv],function(um){
-		      var vm=um[0],wm=um[1];
-		      $M(mi,function(xm){
-		       var ym=xm.v[0];
-		       $M(pi,function(zm){
-			var Am=zm.v[0];
-			$M(wm,function(Bm){
-			 var Cm=Bm.v[0];
-			 var $ff=JSObjectSetProperty(hi,ym,Am,Cm,goog.math.Long.fromBits(0,0),Wv);
-			 var Dm=[vm,$ff];
-			 var Em=Dm[0];
-			 var Fm=$hs_readAddrOffAddrzh(Wv,goog.math.Long.fromBits(0,0),Em);
-			 var Gm=Fm[0],Hm=Fm[1];
-			 var Im=$hs_eqAddrzh(Hm,null);
-			 switch(Im.g){
-			 case 1:
-			  $$LanguageziJavascriptziJSCziValue_zdwa4.C([Hm,hi,Gm],function(Jm){
-			   var Km=Jm[0],Lm=Jm[1];
-			   var Mm=$t(function(){
-			    var Nm=$d(1,[Hm],"sat");
-			    var Om=$t(function(){
-			     $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Lm);
-			    },[Lm],"sat");
-			    var Pm=$d(1,[Om,Nm],"sat");
-			    $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Pm);
-			   },[Hm,Lm],"sat");
-			   $r($hs_raiseIOzh(Mm,Km));
-			  },[Hm]);break;
-			 case 2:
-			  var Vv=$hs_touchzh(vi,Gm);
-			  $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$L,ii,Vv],function(Qm){
-			   var Rm=Qm[0],Sm=Qm[1];
-			   var Tm=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Rm);
-			   var Um=Tm[0],Vm=Tm[1];
-			   var Wm=$hs_unsafeFreezzeByteArrayzh(Vm,Um);
-			   var Xm=Wm[0],Ym=Wm[1];
-			   var Tv=$hs_byteArrayContentszh(Ym);
-			   var Uv=$hs_writeAddrOffAddrzh(Tv,goog.math.Long.fromBits(0,0),null,Xm);
-			   var Zm=$f(3,function(an,bn,cn){
-			    $M(cn,function(dn){
-			     switch(dn.g){
-			     case 1:
-			      $A($$Engine$M);break;
-			     case 2:
-			      var en=dn.v[0],fn=dn.v[1];
-			      $M(fn,function(gn){
-			       switch(gn.g){
-			       case 1:
-				var hn=$t(function(){
-				 var jn=$f(2,function(kn,ln){
-				  $$Engine$X.C([kn,ln],function(mn){
-				   var nn=mn[0],on=mn[1];
-				   var pn=$d(1,[en,on],"sat");
-				   $r([nn,pn]);
-				  },[en]);
-				 },[en],"sat");
-				 $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$b,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,jn,$$GHCziTuple_Z0T);
-				},[en],"m");
-				var qn=$f(2,function(rn,sn){
-				 hn.C([rn,sn],function(tn){
-				  var un=tn[0];
-				  $$Engine$V.C([rn,un],function(vn){
-				   var wn=vn[0],xn=vn[1];
-				   var yn=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),wn);
-				   var zn=yn[0],An=yn[1];
-				   var Bn=$hs_unsafeFreezzeByteArrayzh(An,zn);
-				   var Cn=Bn[0],Dn=Bn[1];
-				   var Sq=$hs_byteArrayContentszh(Dn);
-				   var Tq=$hs_writeAddrOffAddrzh(Sq,goog.math.Long.fromBits(0,0),null,Cn);
-				   $M(rn,function(En){
-				    var Fn=En.v[0];
-				    $M(en,function(Gn){
-				     var Hn=Gn.v[0];
-				     $M(xn,function(In){
-				      var Jn=In.v[0];
-				      var $ff=JSObjectGetProperty(Fn,Hn,Jn,Sq);
-				      var Kn=[Tq,$ff];
-				      var Ln=Kn[0],Mn=Kn[1];
-				      var Nn=$hs_readAddrOffAddrzh(Sq,goog.math.Long.fromBits(0,0),Ln);
-				      var On=Nn[0],Pn=Nn[1];
-				      var Qn=$hs_eqAddrzh(Pn,null);
-				      switch(Qn.g){
-				      case 1:
-				       $$LanguageziJavascriptziJSCziValue_zdwa4.C([Pn,Fn,On],function(Rn){
-					var Sn=Rn[0],Tn=Rn[1];
-					var Un=$t(function(){
-					 var Vn=$d(1,[Pn],"sat");
-					 var Wn=$t(function(){
-					  $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Tn);
-					 },[Tn],"sat");
-					 var Xn=$d(1,[Wn,Vn],"sat");
-					 $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Xn);
-					},[Pn,Tn],"sat");
-					$r($hs_raiseIOzh(Un,Sn));
-				       },[Pn]);break;
-				      case 2:
-				       var Rq=$hs_touchzh(Dn,On);
-				       $$Engine$W.C([En,Rq],function(Yn){
-					var Zn=Yn[0],ao=Yn[1];
-					var bo=$d(1,[Mn],"sat");
-					var co=$d(1,[bo,ao],"sat");
-					$$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,co,En,Zn],function(eo){
-					 var fo=eo[0],go=eo[1];
-					 $M(go,function(ho){
-					  switch(ho.g){
-					  case 3:
-					   $r([fo,$$GHCziTuple_Z0T]);break;
-					  case 4:
-					   var io=ho.v[0];
-					   $M(io,function(jo){
-					    var ko=jo.v[0];
-					    var lo=ko==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
-					    switch(lo.g){
-					    case 1:
-					     $r([fo,$$GHCziTuple_Z0T]);break;
-					    case 2:
-					     $$Engine$U.C([En,fo],function(mo){
-					      var no=mo[0],oo=mo[1];
-					      var po=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),no);
-					      var qo=po[0],ro=po[1];
-					      var so=$hs_unsafeFreezzeByteArrayzh(ro,qo);
-					      var to=so[0],uo=so[1];
-					      var Pq=$hs_byteArrayContentszh(uo);
-					      var Qq=$hs_writeAddrOffAddrzh(Pq,goog.math.Long.fromBits(0,0),null,to);
-					      $M(oo,function(vo){
-					       var wo=vo.v[0];
-					       var $ff=JSObjectGetProperty(Fn,Hn,wo,Pq);
-					       var xo=[Qq,$ff];
-					       var yo=xo[0],zo=xo[1];
-					       var Ao=$hs_readAddrOffAddrzh(Pq,goog.math.Long.fromBits(0,0),yo);
-					       var Bo=Ao[0],Co=Ao[1];
-					       var Do=$hs_eqAddrzh(Co,null);
-					       switch(Do.g){
-					       case 1:
-						$$LanguageziJavascriptziJSCziValue_zdwa4.C([Co,Fn,Bo],function(Eo){
-						 var Fo=Eo[0],Go=Eo[1];
-						 var Ho=$t(function(){
-						  var Io=$d(1,[Co],"sat");
-						  var Jo=$t(function(){
-						   $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Go);
-						  },[Go],"sat");
-						  var Ko=$d(1,[Jo,Io],"sat");
-						  $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Ko);
-						 },[Co,Go],"sat");
-						 $r($hs_raiseIOzh(Ho,Fo));
-						},[Co]);break;
-					       case 2:
-						var Oq=$hs_touchzh(uo,Bo);
-						var Lo=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Oq);
-						var Mo=Lo[0],No=Lo[1];
-						var Oo=$hs_unsafeFreezzeByteArrayzh(No,Mo);
-						var Po=Oo[0],Qo=Oo[1];
-						var Mq=$hs_byteArrayContentszh(Qo);
-						var Nq=$hs_writeAddrOffAddrzh(Mq,goog.math.Long.fromBits(0,0),null,Po);
-						var $ff=JSObjectGetPropertyAtIndex(Fn,zo,goog.math.Long.fromBits(0,0),Mq);
-						var Ro=[Nq,$ff];
-						var So=Ro[0],To=Ro[1];
-						var Uo=$hs_readAddrOffAddrzh(Mq,goog.math.Long.fromBits(0,0),So);
-						var Vo=Uo[0],Wo=Uo[1];
-						var Xo=$hs_eqAddrzh(Wo,null);
-						switch(Xo.g){
-						case 1:
-						 $$LanguageziJavascriptziJSCziValue_zdwa4.C([Wo,Fn,Vo],function(Yo){
-						  var Zo=Yo[0],ap=Yo[1];
-						  var bp=$t(function(){
-						   var cp=$d(1,[Wo],"sat");
-						   var dp=$t(function(){
-						    $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(ap);
-						   },[ap],"sat");
-						   var ep=$d(1,[dp,cp],"sat");
-						   $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(ep);
-						  },[Wo,ap],"sat");
-						  $r($hs_raiseIOzh(bp,Zo));
-						 },[Wo]);break;
-						case 2:
-						 var Lq=$hs_touchzh(Qo,Vo);
-						 $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$J,En,Lq],function(fp){
-						  var gp=fp[0],hp=fp[1];
-						  var ip=$d(1,[To],"sat");
-						  var jp=$d(1,[ip,hp],"sat");
-						  $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,jp,En,gp],function(kp){
-						   var lp=kp[0],mp=kp[1];
-						   var np=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),lp);
-						   var op=np[0],pp=np[1];
-						   var qp=$hs_unsafeFreezzeByteArrayzh(pp,op);
-						   var rp=qp[0],sp=qp[1];
-						   var Jq=$hs_byteArrayContentszh(sp);
-						   var Kq=$hs_writeAddrOffAddrzh(Jq,goog.math.Long.fromBits(0,0),null,rp);
-						   var $ff=JSObjectGetPropertyAtIndex(Fn,zo,goog.math.Long.fromBits(0,0),Jq);
-						   var tp=[Kq,$ff];
-						   var up=tp[0],vp=tp[1];
-						   var wp=$hs_readAddrOffAddrzh(Jq,goog.math.Long.fromBits(0,0),up);
-						   var xp=wp[0],yp=wp[1];
-						   var zp=$hs_eqAddrzh(yp,null);
-						   switch(zp.g){
-						   case 1:
-						    $$LanguageziJavascriptziJSCziValue_zdwa4.C([yp,Fn,xp],function(Ap){
-						     var Bp=Ap[0],Cp=Ap[1];
-						     var Dp=$t(function(){
-						      var Ep=$d(1,[yp],"sat");
-						      var Fp=$t(function(){
-						       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Cp);
-						      },[Cp],"sat");
-						      var Gp=$d(1,[Fp,Ep],"sat");
-						      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Gp);
-						     },[yp,Cp],"sat");
-						     $r($hs_raiseIOzh(Dp,Bp));
-						    },[yp]);break;
-						   case 2:
-						    var Iq=$hs_touchzh(sp,xp);
-						    $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$K,En,Iq],function(Hp){
-						     var Ip=Hp[0],Jp=Hp[1];
-						     var Kp=$d(1,[vp],"sat");
-						     var Lp=$d(1,[Kp,Jp],"sat");
-						     $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,Lp,En,Ip],function(Mp){
-						      var Np=Mp[0],Op=Mp[1];
-						      $M(mp,function(Pp){
-						       switch(Pp.g){
-						       case 4:
-							var Qp=Pp.v[0];
-							$M(Op,function(Rp){
-							 switch(Rp.g){
-							 case 4:
-							  var Sp=Rp.v[0];
-							  var Tp=$t(function(){
-							   var Up=$t(function(){
-							    $M(Sp,function(Vp){
-							     var Wp=Vp.v[0];
-							     var eq=$hs_double2Intzh(Wp);
-							     var mq=$hs_int2Doublezh(eq);
-							     var Xp=Wp<mq?$$GHCziTypes_True:$$GHCziTypes_False;
-							     switch(Xp.g){
-							     case 1:
-							      $M(Ph,function(Yp){
-							       var Zp=Yp.v[0];
-							       var dq=eq.subtract(Zp);
-							       var cq=$hs_int2Doublezh(dq);
-							       var bq=cq/0.25;
-							       var aq=1000.0-bq;
-							       $R(1,[aq],"D#");
-							      },[eq]);break;
-							     case 2:
-							      $M(Ph,function(fq){
-							       var gq=fq.v[0];
-							       var lq=eq.subtract(goog.math.Long.fromBits(1,0));
-							       var kq=lq.subtract(gq);
-							       var jq=$hs_int2Doublezh(kq);
-							       var iq=jq/0.25;
-							       var hq=1000.0-iq;
-							       $R(1,[hq],"D#");
-							      },[eq]);break;
-							     }
-							    },[Ph]);
-							   },[Ph,Sp],"sat");
-							   var nq=$t(function(){
-							    $M(Qp,function(oq){
-							     var pq=oq.v[0];
-							     var xq=$hs_double2Intzh(pq);
-							     var Fq=$hs_int2Doublezh(xq);
-							     var qq=pq<Fq?$$GHCziTypes_True:$$GHCziTypes_False;
-							     switch(qq.g){
-							     case 1:
-							      $M(Oh,function(rq){
-							       var sq=rq.v[0];
-							       var wq=xq.subtract(sq);
-							       var vq=$hs_int2Doublezh(wq);
-							       var uq=vq/0.25;
-							       var tq=uq+ -1400.0;
-							       $R(1,[tq],"D#");
-							      },[xq]);break;
-							     case 2:
-							      $M(Oh,function(yq){
-							       var zq=yq.v[0];
-							       var Eq=xq.subtract(goog.math.Long.fromBits(1,0));
-							       var Dq=Eq.subtract(zq);
-							       var Cq=$hs_int2Doublezh(Dq);
-							       var Bq=Cq/0.25;
-							       var Aq=Bq+ -1400.0;
-							       $R(1,[Aq],"D#");
-							      },[xq]);break;
-							     }
-							    },[Oh]);
-							   },[Oh,Qp],"sat");
-							   var Gq=$d(1,[nq,Up],"sat");
-							   var Hq=$d(2,[Gq],"sat");
-							   og.J(Hq);
-							  },[og,Oh,Ph,Qp,Sp],"sat");
-							  $$FRPziSodiumziPlain_sync1.J(Tp,Np);break;
-							 default:
-							  $r([Np,$$GHCziTuple_Z0T]);
-							 }
-							},[og,Oh,Ph,Np,Qp]);break;
-						       default:
-							$r([Np,$$GHCziTuple_Z0T]);
-						       }
-						      },[og,Oh,Ph,Np,Op]);
-						     },[og,Oh,Ph,mp]);
-						    },[og,Oh,Ph,En,vp,mp]);break;
-						   }
-						  },[og,Oh,Ph,Fn,En,zo]);
-						 },[og,Oh,Ph,Fn,En,zo,To]);break;
-						}break;
-					       }
-					      },[og,Oh,Ph,Fn,Hn,En,uo,Pq,Qq]);
-					     },[og,Oh,Ph,Fn,Hn,En]);break;
-					    }
-					   },[og,Oh,Ph,Fn,Hn,En,fo]);break;
-					  case 5:
-					   $r([fo,$$GHCziTuple_Z0T]);break;
-					  case 6:
-					   $r([fo,$$GHCziTuple_Z0T]);break;
-					  default:
-					   $r([fo,$$GHCziTuple_Z0T]);
-					  }
-					 },[og,Oh,Ph,Fn,Hn,En,fo]);
-					},[og,Oh,Ph,Fn,Hn,En]);
-				       },[og,Oh,Ph,Fn,Hn,En,Mn]);break;
-				      }
-				     },[og,Oh,Ph,Dn,Sq,Fn,Hn,Tq,En]);
-				    },[og,Oh,Ph,Dn,Sq,xn,Fn,Tq,En]);
-				   },[og,Oh,Ph,en,Dn,Sq,xn,Tq]);
-				  },[og,Oh,Ph,en,rn]);
-				 },[og,Oh,Ph,en,rn]);
-				},[og,Oh,Ph,en,hn],"sat");
-				$A(qn);break;
-			       case 2:
-				$A($$Engine$M);break;
-			       }
-			      },[og,Oh,Ph,en]);break;
-			     }
-			    },[og,Oh,Ph]);
-			   },[og,Oh,Ph],"sat");
-			   $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,Zm,ii,Uv],function(Uq){
-			    var Vq=Uq[0],Wq=Uq[1];
-			    $M(Sm,function(Xq){
-			     var Yq=Xq.v[0];
-			     $M(Wq,function(Zq){
-			      var ar=Zq.v[0];
-			      var $ff=JSObjectSetProperty(hi,ym,Yq,ar,goog.math.Long.fromBits(0,0),Tv);
-			      var br=[Vq,$ff];
-			      var cr=br[0];
-			      var dr=$hs_readAddrOffAddrzh(Tv,goog.math.Long.fromBits(0,0),cr);
-			      var er=dr[0],fr=dr[1];
-			      var gr=$hs_eqAddrzh(fr,null);
-			      switch(gr.g){
+		   var $ff=JSContextGetGlobalObject(hi);
+		   var ii=[gi,$ff];
+		   var ji=ii[0],ki=ii[1];
+		   var li=$d(1,[hi],"r");
+		   var mi=$d(2,[Wf,$$GHCziTypes_ZMZN],"sat");
+		   var ni=$f(2,function(oi,pi){
+		    var qi=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),pi);
+		    var ri=qi[0],si=qi[1];
+		    var ti=$hs_unsafeFreezzeByteArrayzh(si,ri);
+		    var ui=ti[0],vi=ti[1];
+		    var Ni=$hs_byteArrayContentszh(vi);
+		    var Oi=$hs_writeAddrOffAddrzh(Ni,goog.math.Long.fromBits(0,0),null,ui);
+		    $M(oi,function(wi){
+		     var xi=wi.v[0];
+		     $M($$Engine$A,function(yi){
+		      var zi=yi.v[0];
+		      var $ff=JSObjectGetProperty(xi,ki,zi,Ni);
+		      var Ai=[Oi,$ff];
+		      var Bi=Ai[0],Ci=Ai[1];
+		      var Di=$hs_readAddrOffAddrzh(Ni,goog.math.Long.fromBits(0,0),Bi);
+		      var Ei=Di[0],Fi=Di[1];
+		      var Gi=$hs_eqAddrzh(Fi,null);
+		      switch(Gi.g){
+		      case 1:
+		       var Hi=$t(function(){
+			var Ii=$d(1,[Fi],"sat");
+			var Ji=$d(1,[Ii],"sat");
+			$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Ji);
+		       },[Fi],"sat");
+		       $r($hs_raiseIOzh(Hi,Ei));break;
+		      case 2:
+		       var Mi=$hs_touchzh(vi,Ei);
+		       var Ki=$d(1,[Ci],"sat");
+		       var Li=$d(1,[Ki,$$Engine$M],"sat");
+		       $r([Mi,Li]);break;
+		      }
+		     },[vi,Ni,xi,ki,Oi]);
+		    },[vi,Ni,ki,Oi]);
+		   },[ki],"sat");
+		   $$LanguageziJavascriptziJSCziObject_zh.C([$$Engine$a,$$Engine$b,ni,mi,li,ji],function(Pi){
+		    var Qi=Pi[0],Ri=Pi[1];
+		    var Si=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Qi);
+		    var Ti=Si[0],Ui=Si[1];
+		    var Vi=$hs_unsafeFreezzeByteArrayzh(Ui,Ti);
+		    var Wi=Vi[0],Xi=Vi[1];
+		    var cu=$hs_byteArrayContentszh(Xi);
+		    var du=$hs_writeAddrOffAddrzh(cu,goog.math.Long.fromBits(0,0),null,Wi);
+		    var Yi=$f(3,function(Zi,aj,bj){
+		     $M(bj,function(cj){
+		      switch(cj.g){
+		      case 1:
+		       $A($$Engine$N);break;
+		      case 2:
+		       var dj=cj.v[0],ej=cj.v[1];
+		       $M(ej,function(fj){
+			switch(fj.g){
+			case 1:
+			 var gj=$t(function(){
+			  var hj=$f(2,function(ij,jj){
+			   var kj=$d(1,[dj,$$Engine$H],"sat");
+			   $r([jj,kj]);
+			  },[dj],"sat");
+			  $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$a,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,hj,$$GHCziTuple_Z0T);
+			 },[dj],"m");
+			 var lj=$f(2,function(mj,nj){
+			  gj.C([mj,nj],function(oj){
+			   var pj=oj[0];
+			   var qj=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),pj);
+			   var rj=qj[0],sj=qj[1];
+			   var tj=$hs_unsafeFreezzeByteArrayzh(sj,rj);
+			   var uj=tj[0],vj=tj[1];
+			   var km=$hs_byteArrayContentszh(vj);
+			   var lm=$hs_writeAddrOffAddrzh(km,goog.math.Long.fromBits(0,0),null,uj);
+			   $M(mj,function(wj){
+			    var xj=wj.v[0];
+			    $M(dj,function(yj){
+			     var zj=yj.v[0];
+			     $M($$Engine$W,function(Aj){
+			      var Bj=Aj.v[0];
+			      var $ff=JSObjectGetProperty(xj,zj,Bj,km);
+			      var Cj=[lm,$ff];
+			      var Dj=Cj[0],Ej=Cj[1];
+			      var Fj=$hs_readAddrOffAddrzh(km,goog.math.Long.fromBits(0,0),Dj);
+			      var Gj=Fj[0],Hj=Fj[1];
+			      var Ij=$hs_eqAddrzh(Hj,null);
+			      switch(Ij.g){
 			      case 1:
-			       $$LanguageziJavascriptziJSCziValue_zdwa4.C([fr,hi,er],function(hr){
-				var ir=hr[0],jr=hr[1];
-				var kr=$t(function(){
-				 var lr=$d(1,[fr],"sat");
-				 var mr=$t(function(){
-				  $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(jr);
-				 },[jr],"sat");
-				 var nr=$d(1,[mr,lr],"sat");
-				 $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(nr);
-				},[fr,jr],"sat");
-				$r($hs_raiseIOzh(kr,ir));
-			       },[fr]);break;
+			       var Jj=$t(function(){
+				var Kj=$d(1,[Hj],"sat");
+				var Lj=$d(1,[Kj],"sat");
+				$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Lj);
+			       },[Hj],"sat");
+			       $r($hs_raiseIOzh(Jj,Gj));break;
 			      case 2:
-			       var Sv=$hs_touchzh(Ym,er);
-			       $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$N,ii,Sv],function(or){
-				var pr=or[0],qr=or[1];
-				var rr=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),pr);
-				var sr=rr[0],tr=rr[1];
-				var ur=$hs_unsafeFreezzeByteArrayzh(tr,sr);
-				var vr=ur[0],wr=ur[1];
-				var Qv=$hs_byteArrayContentszh(wr);
-				var Rv=$hs_writeAddrOffAddrzh(Qv,goog.math.Long.fromBits(0,0),null,vr);
-				var xr=$f(3,function(yr,zr,Ar){
-				 $M(Ar,function(Br){
-				  switch(Br.g){
-				  case 1:
-				   $A($$Engine$O);break;
-				  case 2:
-				   var Cr=Br.v[0],Dr=Br.v[1];
-				   $M(Dr,function(Er){
-				    switch(Er.g){
-				    case 1:
-				     var Fr=$t(function(){
-				      var Gr=$f(2,function(Hr,Ir){
-				       $$Engine$T.C([Hr,Ir],function(Jr){
-					var Kr=Jr[0],Lr=Jr[1];
-					var Mr=$d(1,[Cr,Lr],"sat");
-					$r([Kr,Mr]);
-				       },[Cr]);
-				      },[Cr],"sat");
-				      $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$b,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,Gr,$$GHCziTuple_Z0T);
-				     },[Cr],"m");
-				     var Nr=$f(2,function(Or,Pr){
-				      Fr.C([Or,Pr],function(Qr){
-				       var Rr=Qr[0];
-				       $$Engine$R.C([Or,Rr],function(Sr){
-					var Tr=Sr[0],Ur=Sr[1];
-					var Vr=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Tr);
-					var Wr=Vr[0],Xr=Vr[1];
-					var Yr=$hs_unsafeFreezzeByteArrayzh(Xr,Wr);
-					var Zr=Yr[0],as=Yr[1];
-					var tv=$hs_byteArrayContentszh(as);
-					var uv=$hs_writeAddrOffAddrzh(tv,goog.math.Long.fromBits(0,0),null,Zr);
-					$M(Or,function(bs){
-					 var cs=bs.v[0];
-					 $M(Cr,function(ds){
-					  var es=ds.v[0];
-					  $M(Ur,function(fs){
-					   var gs=fs.v[0];
-					   var $ff=JSObjectGetProperty(cs,es,gs,tv);
-					   var hs=[uv,$ff];
-					   var is=hs[0],js=hs[1];
-					   var ks=$hs_readAddrOffAddrzh(tv,goog.math.Long.fromBits(0,0),is);
-					   var ls=ks[0],ms=ks[1];
-					   var ns=$hs_eqAddrzh(ms,null);
-					   switch(ns.g){
-					   case 1:
-					    $$LanguageziJavascriptziJSCziValue_zdwa4.C([ms,cs,ls],function(os){
-					     var ps=os[0],qs=os[1];
-					     var rs=$t(function(){
-					      var ss=$d(1,[ms],"sat");
-					      var ts=$t(function(){
-					       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(qs);
-					      },[qs],"sat");
-					      var us=$d(1,[ts,ss],"sat");
-					      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(us);
-					     },[ms,qs],"sat");
-					     $r($hs_raiseIOzh(rs,ps));
-					    },[ms]);break;
-					   case 2:
-					    var sv=$hs_touchzh(as,ls);
-					    $$Engine$S.C([bs,sv],function(vs){
-					     var ws=vs[0],xs=vs[1];
-					     var ys=$d(1,[js],"sat");
-					     var zs=$d(1,[ys,xs],"sat");
-					     $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,zs,bs,ws],function(As){
-					      var Bs=As[0],Cs=As[1];
-					      $M(Cs,function(Ds){
-					       switch(Ds.g){
-					       case 3:
-						$r([Bs,$$GHCziTuple_Z0T]);break;
-					       case 4:
-						var Es=Ds.v[0];
-						$M(Es,function(Fs){
-						 var Gs=Fs.v[0];
-						 var Hs=Gs==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
-						 switch(Hs.g){
-						 case 1:
-						  $r([Bs,$$GHCziTuple_Z0T]);break;
-						 case 2:
-						  $$Engine$Q.C([bs,Bs],function(Is){
-						   var Js=Is[0],Ks=Is[1];
-						   var Ls=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Js);
-						   var Ms=Ls[0],Ns=Ls[1];
-						   var Os=$hs_unsafeFreezzeByteArrayzh(Ns,Ms);
-						   var Ps=Os[0],Qs=Os[1];
-						   var qv=$hs_byteArrayContentszh(Qs);
-						   var rv=$hs_writeAddrOffAddrzh(qv,goog.math.Long.fromBits(0,0),null,Ps);
-						   $M(Ks,function(Rs){
-						    var Ss=Rs.v[0];
-						    var $ff=JSObjectGetProperty(cs,es,Ss,qv);
-						    var Ts=[rv,$ff];
-						    var Us=Ts[0],Vs=Ts[1];
-						    var Ws=$hs_readAddrOffAddrzh(qv,goog.math.Long.fromBits(0,0),Us);
-						    var Xs=Ws[0],Ys=Ws[1];
-						    var Zs=$hs_eqAddrzh(Ys,null);
-						    switch(Zs.g){
-						    case 1:
-						     $$LanguageziJavascriptziJSCziValue_zdwa4.C([Ys,cs,Xs],function(at){
-						      var bt=at[0],ct=at[1];
-						      var dt=$t(function(){
-						       var et=$d(1,[Ys],"sat");
-						       var ft=$t(function(){
-							$$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(ct);
-						       },[ct],"sat");
-						       var gt=$d(1,[ft,et],"sat");
-						       $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(gt);
-						      },[Ys,ct],"sat");
-						      $r($hs_raiseIOzh(dt,bt));
-						     },[Ys]);break;
-						    case 2:
-						     var pv=$hs_touchzh(Qs,Xs);
-						     var ht=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),pv);
-						     var it=ht[0],jt=ht[1];
-						     var kt=$hs_unsafeFreezzeByteArrayzh(jt,it);
-						     var lt=kt[0],mt=kt[1];
-						     var nv=$hs_byteArrayContentszh(mt);
-						     var ov=$hs_writeAddrOffAddrzh(nv,goog.math.Long.fromBits(0,0),null,lt);
-						     var $ff=JSObjectGetPropertyAtIndex(cs,Vs,goog.math.Long.fromBits(0,0),nv);
-						     var nt=[ov,$ff];
-						     var ot=nt[0],pt=nt[1];
-						     var qt=$hs_readAddrOffAddrzh(nv,goog.math.Long.fromBits(0,0),ot);
-						     var rt=qt[0],st=qt[1];
-						     var tt=$hs_eqAddrzh(st,null);
-						     switch(tt.g){
-						     case 1:
-						      $$LanguageziJavascriptziJSCziValue_zdwa4.C([st,cs,rt],function(ut){
-						       var vt=ut[0],wt=ut[1];
-						       var xt=$t(function(){
-							var yt=$d(1,[st],"sat");
-							var zt=$t(function(){
-							 $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(wt);
-							},[wt],"sat");
-							var At=$d(1,[zt,yt],"sat");
-							$$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(At);
-						       },[st,wt],"sat");
-						       $r($hs_raiseIOzh(xt,vt));
-						      },[st]);break;
-						     case 2:
-						      var mv=$hs_touchzh(mt,rt);
-						      $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$J,bs,mv],function(Bt){
-						       var Ct=Bt[0],Dt=Bt[1];
-						       var Et=$d(1,[pt],"sat");
-						       var Ft=$d(1,[Et,Dt],"sat");
-						       $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,Ft,bs,Ct],function(Gt){
-							var Ht=Gt[0],It=Gt[1];
-							var Jt=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Ht);
-							var Kt=Jt[0],Lt=Jt[1];
-							var Mt=$hs_unsafeFreezzeByteArrayzh(Lt,Kt);
-							var Nt=Mt[0],Ot=Mt[1];
-							var kv=$hs_byteArrayContentszh(Ot);
-							var lv=$hs_writeAddrOffAddrzh(kv,goog.math.Long.fromBits(0,0),null,Nt);
-							var $ff=JSObjectGetPropertyAtIndex(cs,Vs,goog.math.Long.fromBits(0,0),kv);
-							var Pt=[lv,$ff];
-							var Qt=Pt[0],Rt=Pt[1];
-							var St=$hs_readAddrOffAddrzh(kv,goog.math.Long.fromBits(0,0),Qt);
-							var Tt=St[0],Ut=St[1];
-							var Vt=$hs_eqAddrzh(Ut,null);
-							switch(Vt.g){
-							case 1:
-							 $$LanguageziJavascriptziJSCziValue_zdwa4.C([Ut,cs,Tt],function(Wt){
-							  var Xt=Wt[0],Yt=Wt[1];
-							  var Zt=$t(function(){
-							   var au=$d(1,[Ut],"sat");
-							   var bu=$t(function(){
-							    $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Yt);
-							   },[Yt],"sat");
-							   var cu=$d(1,[bu,au],"sat");
-							   $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(cu);
-							  },[Ut,Yt],"sat");
-							  $r($hs_raiseIOzh(Zt,Xt));
-							 },[Ut]);break;
-							case 2:
-							 var jv=$hs_touchzh(Ot,Tt);
-							 $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$K,bs,jv],function(du){
-							  var eu=du[0],fu=du[1];
-							  var gu=$d(1,[Rt],"sat");
-							  var hu=$d(1,[gu,fu],"sat");
-							  $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,hu,bs,eu],function(iu){
-							   var ju=iu[0],ku=iu[1];
-							   $M(It,function(lu){
-							    switch(lu.g){
-							    case 4:
-							     var mu=lu.v[0];
-							     $M(ku,function(nu){
-							      switch(nu.g){
-							      case 4:
-							       var ou=nu.v[0];
-							       var pu=$hs_readMutVarzh(rg,ju);
-							       var qu=pu[0],ru=pu[1];
-							       $M(ru,function(su){
-								switch(su.g){
-								case 1:
-								 $r([qu,$$GHCziTuple_Z0T]);break;
-								case 2:
-								 var iv=$hs_writeMutVarzh(rg,$$Engine_Up,qu);
-								 var tu=$t(function(){
-								  var uu=$t(function(){
-								   $M(ou,function(vu){
-								    var wu=vu.v[0];
-								    var Eu=$hs_double2Intzh(wu);
-								    var Mu=$hs_int2Doublezh(Eu);
-								    var xu=wu<Mu?$$GHCziTypes_True:$$GHCziTypes_False;
-								    switch(xu.g){
-								    case 1:
-								     $M(Ph,function(yu){
-								      var zu=yu.v[0];
-								      var Du=Eu.subtract(zu);
-								      var Cu=$hs_int2Doublezh(Du);
-								      var Bu=Cu/0.25;
-								      var Au=1000.0-Bu;
-								      $R(1,[Au],"D#");
-								     },[Eu]);break;
-								    case 2:
-								     $M(Ph,function(Fu){
-								      var Gu=Fu.v[0];
-								      var Lu=Eu.subtract(goog.math.Long.fromBits(1,0));
-								      var Ku=Lu.subtract(Gu);
-								      var Ju=$hs_int2Doublezh(Ku);
-								      var Iu=Ju/0.25;
-								      var Hu=1000.0-Iu;
-								      $R(1,[Hu],"D#");
-								     },[Eu]);break;
-								    }
-								   },[Ph]);
-								  },[Ph,ou],"sat");
-								  var Nu=$t(function(){
-								   $M(mu,function(Ou){
-								    var Pu=Ou.v[0];
-								    var Xu=$hs_double2Intzh(Pu);
-								    var fv=$hs_int2Doublezh(Xu);
-								    var Qu=Pu<fv?$$GHCziTypes_True:$$GHCziTypes_False;
-								    switch(Qu.g){
-								    case 1:
-								     $M(Oh,function(Ru){
-								      var Su=Ru.v[0];
-								      var Wu=Xu.subtract(Su);
-								      var Vu=$hs_int2Doublezh(Wu);
-								      var Uu=Vu/0.25;
-								      var Tu=Uu+ -1400.0;
-								      $R(1,[Tu],"D#");
-								     },[Xu]);break;
-								    case 2:
-								     $M(Oh,function(Yu){
-								      var Zu=Yu.v[0];
-								      var ev=Xu.subtract(goog.math.Long.fromBits(1,0));
-								      var dv=ev.subtract(Zu);
-								      var cv=$hs_int2Doublezh(dv);
-								      var bv=cv/0.25;
-								      var av=bv+ -1400.0;
-								      $R(1,[av],"D#");
-								     },[Xu]);break;
-								    }
-								   },[Oh]);
-								  },[Oh,mu],"sat");
-								  var gv=$d(1,[Nu,uu],"sat");
-								  var hv=$d(3,[gv],"sat");
-								  og.J(hv);
-								 },[og,Oh,Ph,mu,ou],"sat");
-								 $$FRPziSodiumziPlain_sync1.J(tu,iv);break;
-								}
-							       },[rg,og,Oh,Ph,qu,mu,ou]);break;
-							      default:
-							       $r([ju,$$GHCziTuple_Z0T]);
-							      }
-							     },[rg,og,Oh,Ph,ju,mu]);break;
-							    default:
-							     $r([ju,$$GHCziTuple_Z0T]);
-							    }
-							   },[rg,og,Oh,Ph,ju,ku]);
-							  },[rg,og,Oh,Ph,It]);
-							 },[rg,og,Oh,Ph,bs,Rt,It]);break;
-							}
-						       },[rg,og,Oh,Ph,cs,bs,Vs]);
-						      },[rg,og,Oh,Ph,cs,bs,Vs,pt]);break;
-						     }break;
-						    }
-						   },[rg,og,Oh,Ph,cs,es,bs,Qs,qv,rv]);
-						  },[rg,og,Oh,Ph,cs,es,bs]);break;
-						 }
-						},[rg,og,Oh,Ph,cs,es,bs,Bs]);break;
-					       case 5:
-						$r([Bs,$$GHCziTuple_Z0T]);break;
-					       case 6:
-						$r([Bs,$$GHCziTuple_Z0T]);break;
-					       default:
-						$r([Bs,$$GHCziTuple_Z0T]);
-					       }
-					      },[rg,og,Oh,Ph,cs,es,bs,Bs]);
-					     },[rg,og,Oh,Ph,cs,es,bs]);
-					    },[rg,og,Oh,Ph,cs,es,bs,js]);break;
-					   }
-					  },[rg,og,Oh,Ph,as,tv,cs,es,uv,bs]);
-					 },[rg,og,Oh,Ph,as,tv,Ur,cs,uv,bs]);
-					},[rg,og,Oh,Ph,Cr,as,tv,Ur,uv]);
-				       },[rg,og,Oh,Ph,Cr,Or]);
-				      },[rg,og,Oh,Ph,Cr,Or]);
-				     },[rg,og,Oh,Ph,Cr,Fr],"sat");
-				     $A(Nr);break;
-				    case 2:
-				     $A($$Engine$O);break;
-				    }
-				   },[rg,og,Oh,Ph,Cr]);break;
-				  }
-				 },[rg,og,Oh,Ph]);
-				},[rg,og,Oh,Ph],"sat");
-				$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,xr,ii,Rv],function(vv){
-				 var wv=vv[0],xv=vv[1];
-				 $M(qr,function(yv){
-				  var zv=yv.v[0];
-				  $M(xv,function(Av){
-				   var Bv=Av.v[0];
-				   var $ff=JSObjectSetProperty(hi,ym,zv,Bv,goog.math.Long.fromBits(0,0),Qv);
-				   var Cv=[wv,$ff];
-				   var Dv=Cv[0];
-				   var Ev=$hs_readAddrOffAddrzh(Qv,goog.math.Long.fromBits(0,0),Dv);
-				   var Fv=Ev[0],Gv=Ev[1];
-				   var Hv=$hs_eqAddrzh(Gv,null);
-				   switch(Hv.g){
+			       var jm=$hs_touchzh(vj,Gj);
+			       var Mj=$d(1,[Ej],"sat");
+			       var Nj=$d(1,[Mj,$$Engine$S],"sat");
+			       $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,Nj,wj,jm],function(Oj){
+				var Pj=Oj[0],Qj=Oj[1];
+				$M(Qj,function(Rj){
+				 switch(Rj.g){
+				 case 3:
+				  $r([Pj,$$GHCziTuple_Z0T]);break;
+				 case 4:
+				  var Sj=Rj.v[0];
+				  $M(Sj,function(Tj){
+				   var Uj=Tj.v[0];
+				   var Vj=Uj==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
+				   switch(Vj.g){
 				   case 1:
-				    $$LanguageziJavascriptziJSCziValue_zdwa4.C([Gv,hi,Fv],function(Iv){
-				     var Jv=Iv[0],Kv=Iv[1];
-				     var Lv=$t(function(){
-				      var Mv=$d(1,[Gv],"sat");
-				      var Nv=$t(function(){
-				       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Kv);
-				      },[Kv],"sat");
-				      var Ov=$d(1,[Nv,Mv],"sat");
-				      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Ov);
-				     },[Gv,Kv],"sat");
-				     $r($hs_raiseIOzh(Lv,Jv));
-				    },[Gv]);break;
+				    $r([Pj,$$GHCziTuple_Z0T]);break;
 				   case 2:
-				    var Pv=$hs_touchzh(wr,Fv);
-				    Dh.J(Pv);break;
+				    var Wj=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Pj);
+				    var Xj=Wj[0],Yj=Wj[1];
+				    var Zj=$hs_unsafeFreezzeByteArrayzh(Yj,Xj);
+				    var ak=Zj[0],bk=Zj[1];
+				    var hm=$hs_byteArrayContentszh(bk);
+				    var im=$hs_writeAddrOffAddrzh(hm,goog.math.Long.fromBits(0,0),null,ak);
+				    var $ff=JSObjectGetProperty(xj,zj,Bj,hm);
+				    var ck=[im,$ff];
+				    var dk=ck[0],ek=ck[1];
+				    var fk=$hs_readAddrOffAddrzh(hm,goog.math.Long.fromBits(0,0),dk);
+				    var gk=fk[0],hk=fk[1];
+				    var ik=$hs_eqAddrzh(hk,null);
+				    switch(ik.g){
+				    case 1:
+				     var jk=$t(function(){
+				      var kk=$d(1,[hk],"sat");
+				      var lk=$d(1,[kk],"sat");
+				      $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(lk);
+				     },[hk],"sat");
+				     $r($hs_raiseIOzh(jk,gk));break;
+				    case 2:
+				     var gm=$hs_touchzh(bk,gk);
+				     var mk=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),gm);
+				     var nk=mk[0],ok=mk[1];
+				     var pk=$hs_unsafeFreezzeByteArrayzh(ok,nk);
+				     var qk=pk[0],rk=pk[1];
+				     var em=$hs_byteArrayContentszh(rk);
+				     var fm=$hs_writeAddrOffAddrzh(em,goog.math.Long.fromBits(0,0),null,qk);
+				     var $ff=JSObjectGetPropertyAtIndex(xj,ek,goog.math.Long.fromBits(0,0),em);
+				     var sk=[fm,$ff];
+				     var tk=sk[0],uk=sk[1];
+				     var vk=$hs_readAddrOffAddrzh(em,goog.math.Long.fromBits(0,0),tk);
+				     var wk=vk[0],xk=vk[1];
+				     var yk=$hs_eqAddrzh(xk,null);
+				     switch(yk.g){
+				     case 1:
+				      var zk=$t(function(){
+				       var Ak=$d(1,[xk],"sat");
+				       var Bk=$d(1,[Ak],"sat");
+				       $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Bk);
+				      },[xk],"sat");
+				      $r($hs_raiseIOzh(zk,wk));break;
+				     case 2:
+				      var dm=$hs_touchzh(rk,wk);
+				      var Ck=$d(1,[uk],"sat");
+				      var Dk=$d(1,[Ck,$$Engine$U],"sat");
+				      $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,Dk,wj,dm],function(Ek){
+				       var Fk=Ek[0],Gk=Ek[1];
+				       var Hk=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Fk);
+				       var Ik=Hk[0],Jk=Hk[1];
+				       var Kk=$hs_unsafeFreezzeByteArrayzh(Jk,Ik);
+				       var Lk=Kk[0],Mk=Kk[1];
+				       var bm=$hs_byteArrayContentszh(Mk);
+				       var cm=$hs_writeAddrOffAddrzh(bm,goog.math.Long.fromBits(0,0),null,Lk);
+				       var $ff=JSObjectGetPropertyAtIndex(xj,ek,goog.math.Long.fromBits(0,0),bm);
+				       var Nk=[cm,$ff];
+				       var Ok=Nk[0],Pk=Nk[1];
+				       var Qk=$hs_readAddrOffAddrzh(bm,goog.math.Long.fromBits(0,0),Ok);
+				       var Rk=Qk[0],Sk=Qk[1];
+				       var Tk=$hs_eqAddrzh(Sk,null);
+				       switch(Tk.g){
+				       case 1:
+					var Uk=$t(function(){
+					 var Vk=$d(1,[Sk],"sat");
+					 var Wk=$d(1,[Vk],"sat");
+					 $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Wk);
+					},[Sk],"sat");
+					$r($hs_raiseIOzh(Uk,Rk));break;
+				       case 2:
+					var am=$hs_touchzh(Mk,Rk);
+					var Xk=$d(1,[Pk],"sat");
+					var Yk=$d(1,[Xk,$$Engine$T],"sat");
+					$$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,Yk,wj,am],function(Zk){
+					 var al=Zk[0],bl=Zk[1];
+					 $M(Gk,function(cl){
+					  switch(cl.g){
+					  case 4:
+					   var dl=cl.v[0];
+					   $M(bl,function(el){
+					    switch(el.g){
+					    case 4:
+					     var fl=el.v[0];
+					     var gl=$hs_readMutVarzh(rg,al);
+					     var hl=gl[0],il=gl[1];
+					     $M(il,function(jl){
+					      switch(jl.g){
+					      case 1:
+					       var Zl=$hs_writeMutVarzh(rg,$$Engine_Down,hl);
+					       var kl=$t(function(){
+						var ll=$t(function(){
+						 $M(fl,function(ml){
+						  var nl=ml.v[0];
+						  var vl=$hs_double2Intzh(nl);
+						  var Dl=$hs_int2Doublezh(vl);
+						  var ol=nl<Dl?$$GHCziTypes_True:$$GHCziTypes_False;
+						  switch(ol.g){
+						  case 1:
+						   $M(Ph,function(pl){
+						    var ql=pl.v[0];
+						    var ul=vl.subtract(ql);
+						    var tl=$hs_int2Doublezh(ul);
+						    var sl=tl/0.25;
+						    var rl=1000.0-sl;
+						    $R(1,[rl],"D#");
+						   },[vl]);break;
+						  case 2:
+						   $M(Ph,function(wl){
+						    var xl=wl.v[0];
+						    var Cl=vl.subtract(goog.math.Long.fromBits(1,0));
+						    var Bl=Cl.subtract(xl);
+						    var Al=$hs_int2Doublezh(Bl);
+						    var zl=Al/0.25;
+						    var yl=1000.0-zl;
+						    $R(1,[yl],"D#");
+						   },[vl]);break;
+						  }
+						 },[Ph]);
+						},[fl,Ph],"sat");
+						var El=$t(function(){
+						 $M(dl,function(Fl){
+						  var Gl=Fl.v[0];
+						  var Ol=$hs_double2Intzh(Gl);
+						  var Wl=$hs_int2Doublezh(Ol);
+						  var Hl=Gl<Wl?$$GHCziTypes_True:$$GHCziTypes_False;
+						  switch(Hl.g){
+						  case 1:
+						   $M(Oh,function(Il){
+						    var Jl=Il.v[0];
+						    var Nl=Ol.subtract(Jl);
+						    var Ml=$hs_int2Doublezh(Nl);
+						    var Ll=Ml/0.25;
+						    var Kl=Ll+ -1400.0;
+						    $R(1,[Kl],"D#");
+						   },[Ol]);break;
+						  case 2:
+						   $M(Oh,function(Pl){
+						    var Ql=Pl.v[0];
+						    var Vl=Ol.subtract(goog.math.Long.fromBits(1,0));
+						    var Ul=Vl.subtract(Ql);
+						    var Tl=$hs_int2Doublezh(Ul);
+						    var Sl=Tl/0.25;
+						    var Rl=Sl+ -1400.0;
+						    $R(1,[Rl],"D#");
+						   },[Ol]);break;
+						  }
+						 },[Oh]);
+						},[dl,Oh],"sat");
+						var Xl=$d(1,[El,ll],"sat");
+						var Yl=$d(1,[Xl],"sat");
+						og.J(Yl);
+					       },[og,dl,Oh,fl,Ph],"sat");
+					       $$FRPziSodiumziPlain_sync1.J(kl,Zl);break;
+					      case 2:
+					       $r([hl,$$GHCziTuple_Z0T]);break;
+					      }
+					     },[rg,og,hl,dl,Oh,fl,Ph]);break;
+					    default:
+					     $r([al,$$GHCziTuple_Z0T]);
+					    }
+					   },[rg,og,al,dl,Oh,Ph]);break;
+					  default:
+					   $r([al,$$GHCziTuple_Z0T]);
+					  }
+					 },[rg,og,al,bl,Oh,Ph]);
+					},[rg,og,Gk,Oh,Ph]);break;
+				       }
+				      },[rg,og,xj,wj,ek,Oh,Ph]);break;
+				     }break;
+				    }break;
 				   }
-				  },[sg,ng,Xf,uh,Dh,hi,ym,wr,Qv,zv,wv]);
-				 },[sg,ng,Xf,uh,Dh,hi,ym,wr,Qv,xv,wv]);
-				},[sg,ng,Xf,uh,Dh,hi,ym,wr,Qv,qr]);
-			       },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,Oh,Ph,ym]);break;
+				  },[rg,og,xj,zj,Bj,wj,Pj,Oh,Ph]);break;
+				 case 5:
+				  $r([Pj,$$GHCziTuple_Z0T]);break;
+				 case 6:
+				  $r([Pj,$$GHCziTuple_Z0T]);break;
+				 default:
+				  $r([Pj,$$GHCziTuple_Z0T]);
+				 }
+				},[rg,og,xj,zj,Bj,wj,Pj,Oh,Ph]);
+			       },[rg,og,xj,zj,Bj,wj,Oh,Ph]);break;
 			      }
-			     },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,Oh,Ph,ym,Ym,Tv,Yq,Vq]);
-			    },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,Oh,Ph,ym,Ym,Tv,Wq,Vq]);
-			   },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,Oh,Ph,ym,Ym,Tv,Sm]);
-			  },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,Oh,Ph,ym]);break;
-			 }
-			},[sg,rg,og,ng,Xf,uh,Dh,hi,ii,vi,Wv,Oh,Ph,ym,Am,vm]);
-		       },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,vi,Wv,Oh,Ph,wm,ym,vm]);
-		      },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,vi,Wv,Oh,Ph,pi,wm,vm]);
-		     },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,vi,Wv,Oh,Ph,mi,pi]);
-		    },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,Oh,Ph,mi]);
-		   },[sg,rg,og,ng,Xf,uh,Dh,hi,ii,Oh,Ph]);
+			     },[rg,og,vj,km,xj,zj,lm,wj,Oh,Ph]);
+			    },[rg,og,vj,km,xj,lm,wj,Oh,Ph]);
+			   },[rg,og,dj,vj,km,lm,Oh,Ph]);
+			  },[rg,og,dj,mj,Oh,Ph]);
+			 },[rg,og,dj,gj,Oh,Ph],"sat");
+			 $A(lj);break;
+			case 2:
+			 $A($$Engine$N);break;
+			}
+		       },[rg,og,dj,Oh,Ph]);break;
+		      }
+		     },[rg,og,Oh,Ph]);
+		    },[rg,og,Oh,Ph],"sat");
+		    $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,Yi,li,du],function(mm){
+		     var nm=mm[0],om=mm[1];
+		     $M(Ri,function(pm){
+		      var qm=pm.v[0];
+		      $M($$Engine$X,function(rm){
+		       var sm=rm.v[0];
+		       $M(om,function(tm){
+			var um=tm.v[0];
+			var $ff=JSObjectSetProperty(hi,qm,sm,um,goog.math.Long.fromBits(0,0),cu);
+			var vm=[nm,$ff];
+			var wm=vm[0];
+			var xm=$hs_readAddrOffAddrzh(cu,goog.math.Long.fromBits(0,0),wm);
+			var ym=xm[0],zm=xm[1];
+			var Am=$hs_eqAddrzh(zm,null);
+			switch(Am.g){
+			case 1:
+			 var Bm=$t(function(){
+			  var Cm=$d(1,[zm],"sat");
+			  var Dm=$d(1,[Cm],"sat");
+			  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Dm);
+			 },[zm],"sat");
+			 $r($hs_raiseIOzh(Bm,ym));break;
+			case 2:
+			 var bu=$hs_touchzh(Xi,ym);
+			 var Em=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),bu);
+			 var Fm=Em[0],Gm=Em[1];
+			 var Hm=$hs_unsafeFreezzeByteArrayzh(Gm,Fm);
+			 var Im=Hm[0],Jm=Hm[1];
+			 var Zt=$hs_byteArrayContentszh(Jm);
+			 var au=$hs_writeAddrOffAddrzh(Zt,goog.math.Long.fromBits(0,0),null,Im);
+			 var Km=$f(3,function(Lm,Mm,Nm){
+			  $M(Nm,function(Om){
+			   switch(Om.g){
+			   case 1:
+			    $A($$Engine$O);break;
+			   case 2:
+			    var Pm=Om.v[0],Qm=Om.v[1];
+			    $M(Qm,function(Rm){
+			     switch(Rm.g){
+			     case 1:
+			      var Sm=$t(function(){
+			       var Tm=$f(2,function(Um,Vm){
+				var Wm=$d(1,[Pm,$$Engine$H],"sat");
+				$r([Vm,Wm]);
+			       },[Pm],"sat");
+			       $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$a,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,Tm,$$GHCziTuple_Z0T);
+			      },[Pm],"m");
+			      var Xm=$f(2,function(Ym,Zm){
+			       Sm.C([Ym,Zm],function(an){
+				var bn=an[0];
+				var cn=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),bn);
+				var dn=cn[0],en=cn[1];
+				var fn=$hs_unsafeFreezzeByteArrayzh(en,dn);
+				var gn=fn[0],hn=fn[1];
+				var Tp=$hs_byteArrayContentszh(hn);
+				var Up=$hs_writeAddrOffAddrzh(Tp,goog.math.Long.fromBits(0,0),null,gn);
+				$M(Ym,function(jn){
+				 var kn=jn.v[0];
+				 $M(Pm,function(ln){
+				  var mn=ln.v[0];
+				  $M($$Engine$W,function(nn){
+				   var on=nn.v[0];
+				   var $ff=JSObjectGetProperty(kn,mn,on,Tp);
+				   var pn=[Up,$ff];
+				   var qn=pn[0],rn=pn[1];
+				   var sn=$hs_readAddrOffAddrzh(Tp,goog.math.Long.fromBits(0,0),qn);
+				   var tn=sn[0],un=sn[1];
+				   var vn=$hs_eqAddrzh(un,null);
+				   switch(vn.g){
+				   case 1:
+				    var wn=$t(function(){
+				     var xn=$d(1,[un],"sat");
+				     var yn=$d(1,[xn],"sat");
+				     $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(yn);
+				    },[un],"sat");
+				    $r($hs_raiseIOzh(wn,tn));break;
+				   case 2:
+				    var Sp=$hs_touchzh(hn,tn);
+				    var zn=$d(1,[rn],"sat");
+				    var An=$d(1,[zn,$$Engine$S],"sat");
+				    $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,An,jn,Sp],function(Bn){
+				     var Cn=Bn[0],Dn=Bn[1];
+				     $M(Dn,function(En){
+				      switch(En.g){
+				      case 3:
+				       $r([Cn,$$GHCziTuple_Z0T]);break;
+				      case 4:
+				       var Fn=En.v[0];
+				       $M(Fn,function(Gn){
+					var Hn=Gn.v[0];
+					var In=Hn==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
+					switch(In.g){
+					case 1:
+					 $r([Cn,$$GHCziTuple_Z0T]);break;
+					case 2:
+					 var Jn=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Cn);
+					 var Kn=Jn[0],Ln=Jn[1];
+					 var Mn=$hs_unsafeFreezzeByteArrayzh(Ln,Kn);
+					 var Nn=Mn[0],On=Mn[1];
+					 var Qp=$hs_byteArrayContentszh(On);
+					 var Rp=$hs_writeAddrOffAddrzh(Qp,goog.math.Long.fromBits(0,0),null,Nn);
+					 var $ff=JSObjectGetProperty(kn,mn,on,Qp);
+					 var Pn=[Rp,$ff];
+					 var Qn=Pn[0],Rn=Pn[1];
+					 var Sn=$hs_readAddrOffAddrzh(Qp,goog.math.Long.fromBits(0,0),Qn);
+					 var Tn=Sn[0],Un=Sn[1];
+					 var Vn=$hs_eqAddrzh(Un,null);
+					 switch(Vn.g){
+					 case 1:
+					  var Wn=$t(function(){
+					   var Xn=$d(1,[Un],"sat");
+					   var Yn=$d(1,[Xn],"sat");
+					   $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Yn);
+					  },[Un],"sat");
+					  $r($hs_raiseIOzh(Wn,Tn));break;
+					 case 2:
+					  var Pp=$hs_touchzh(On,Tn);
+					  var Zn=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Pp);
+					  var ao=Zn[0],bo=Zn[1];
+					  var co=$hs_unsafeFreezzeByteArrayzh(bo,ao);
+					  var eo=co[0],fo=co[1];
+					  var Np=$hs_byteArrayContentszh(fo);
+					  var Op=$hs_writeAddrOffAddrzh(Np,goog.math.Long.fromBits(0,0),null,eo);
+					  var $ff=JSObjectGetPropertyAtIndex(kn,Rn,goog.math.Long.fromBits(0,0),Np);
+					  var go=[Op,$ff];
+					  var ho=go[0],io=go[1];
+					  var jo=$hs_readAddrOffAddrzh(Np,goog.math.Long.fromBits(0,0),ho);
+					  var ko=jo[0],lo=jo[1];
+					  var mo=$hs_eqAddrzh(lo,null);
+					  switch(mo.g){
+					  case 1:
+					   var no=$t(function(){
+					    var oo=$d(1,[lo],"sat");
+					    var po=$d(1,[oo],"sat");
+					    $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(po);
+					   },[lo],"sat");
+					   $r($hs_raiseIOzh(no,ko));break;
+					  case 2:
+					   var Mp=$hs_touchzh(fo,ko);
+					   var qo=$d(1,[io],"sat");
+					   var ro=$d(1,[qo,$$Engine$U],"sat");
+					   $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,ro,jn,Mp],function(so){
+					    var to=so[0],uo=so[1];
+					    var vo=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),to);
+					    var wo=vo[0],xo=vo[1];
+					    var yo=$hs_unsafeFreezzeByteArrayzh(xo,wo);
+					    var zo=yo[0],Ao=yo[1];
+					    var Kp=$hs_byteArrayContentszh(Ao);
+					    var Lp=$hs_writeAddrOffAddrzh(Kp,goog.math.Long.fromBits(0,0),null,zo);
+					    var $ff=JSObjectGetPropertyAtIndex(kn,Rn,goog.math.Long.fromBits(0,0),Kp);
+					    var Bo=[Lp,$ff];
+					    var Co=Bo[0],Do=Bo[1];
+					    var Eo=$hs_readAddrOffAddrzh(Kp,goog.math.Long.fromBits(0,0),Co);
+					    var Fo=Eo[0],Go=Eo[1];
+					    var Ho=$hs_eqAddrzh(Go,null);
+					    switch(Ho.g){
+					    case 1:
+					     var Io=$t(function(){
+					      var Jo=$d(1,[Go],"sat");
+					      var Ko=$d(1,[Jo],"sat");
+					      $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Ko);
+					     },[Go],"sat");
+					     $r($hs_raiseIOzh(Io,Fo));break;
+					    case 2:
+					     var Jp=$hs_touchzh(Ao,Fo);
+					     var Lo=$d(1,[Do],"sat");
+					     var Mo=$d(1,[Lo,$$Engine$T],"sat");
+					     $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,Mo,jn,Jp],function(No){
+					      var Oo=No[0],Po=No[1];
+					      $M(uo,function(Qo){
+					       switch(Qo.g){
+					       case 4:
+						var Ro=Qo.v[0];
+						$M(Po,function(So){
+						 switch(So.g){
+						 case 4:
+						  var To=So.v[0];
+						  var Uo=$t(function(){
+						   var Vo=$t(function(){
+						    $M(To,function(Wo){
+						     var Xo=Wo.v[0];
+						     var fp=$hs_double2Intzh(Xo);
+						     var np=$hs_int2Doublezh(fp);
+						     var Yo=Xo<np?$$GHCziTypes_True:$$GHCziTypes_False;
+						     switch(Yo.g){
+						     case 1:
+						      $M(Ph,function(Zo){
+						       var ap=Zo.v[0];
+						       var ep=fp.subtract(ap);
+						       var dp=$hs_int2Doublezh(ep);
+						       var cp=dp/0.25;
+						       var bp=1000.0-cp;
+						       $R(1,[bp],"D#");
+						      },[fp]);break;
+						     case 2:
+						      $M(Ph,function(gp){
+						       var hp=gp.v[0];
+						       var mp=fp.subtract(goog.math.Long.fromBits(1,0));
+						       var lp=mp.subtract(hp);
+						       var kp=$hs_int2Doublezh(lp);
+						       var jp=kp/0.25;
+						       var ip=1000.0-jp;
+						       $R(1,[ip],"D#");
+						      },[fp]);break;
+						     }
+						    },[Ph]);
+						   },[Ph,To],"sat");
+						   var op=$t(function(){
+						    $M(Ro,function(pp){
+						     var qp=pp.v[0];
+						     var yp=$hs_double2Intzh(qp);
+						     var Gp=$hs_int2Doublezh(yp);
+						     var rp=qp<Gp?$$GHCziTypes_True:$$GHCziTypes_False;
+						     switch(rp.g){
+						     case 1:
+						      $M(Oh,function(sp){
+						       var tp=sp.v[0];
+						       var xp=yp.subtract(tp);
+						       var wp=$hs_int2Doublezh(xp);
+						       var vp=wp/0.25;
+						       var up=vp+ -1400.0;
+						       $R(1,[up],"D#");
+						      },[yp]);break;
+						     case 2:
+						      $M(Oh,function(zp){
+						       var Ap=zp.v[0];
+						       var Fp=yp.subtract(goog.math.Long.fromBits(1,0));
+						       var Ep=Fp.subtract(Ap);
+						       var Dp=$hs_int2Doublezh(Ep);
+						       var Cp=Dp/0.25;
+						       var Bp=Cp+ -1400.0;
+						       $R(1,[Bp],"D#");
+						      },[yp]);break;
+						     }
+						    },[Oh]);
+						   },[Oh,Ro],"sat");
+						   var Hp=$d(1,[op,Vo],"sat");
+						   var Ip=$d(2,[Hp],"sat");
+						   og.J(Ip);
+						  },[og,Oh,Ph,Ro,To],"sat");
+						  $$FRPziSodiumziPlain_sync1.J(Uo,Oo);break;
+						 default:
+						  $r([Oo,$$GHCziTuple_Z0T]);
+						 }
+						},[og,Oh,Ph,Oo,Ro]);break;
+					       default:
+						$r([Oo,$$GHCziTuple_Z0T]);
+					       }
+					      },[og,Oh,Ph,Oo,Po]);
+					     },[og,Oh,Ph,uo]);break;
+					    }
+					   },[og,Oh,Ph,kn,jn,Rn]);break;
+					  }break;
+					 }break;
+					}
+				       },[og,Oh,Ph,kn,mn,on,jn,Cn]);break;
+				      case 5:
+				       $r([Cn,$$GHCziTuple_Z0T]);break;
+				      case 6:
+				       $r([Cn,$$GHCziTuple_Z0T]);break;
+				      default:
+				       $r([Cn,$$GHCziTuple_Z0T]);
+				      }
+				     },[og,Oh,Ph,kn,mn,on,jn,Cn]);
+				    },[og,Oh,Ph,kn,mn,on,jn]);break;
+				   }
+				  },[og,Oh,Ph,hn,Tp,kn,mn,Up,jn]);
+				 },[og,Oh,Ph,hn,Tp,kn,Up,jn]);
+				},[og,Oh,Ph,Pm,hn,Tp,Up]);
+			       },[og,Oh,Ph,Pm,Ym]);
+			      },[og,Oh,Ph,Pm,Sm],"sat");
+			      $A(Xm);break;
+			     case 2:
+			      $A($$Engine$O);break;
+			     }
+			    },[og,Oh,Ph,Pm]);break;
+			   }
+			  },[og,Oh,Ph]);
+			 },[og,Oh,Ph],"sat");
+			 $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,Km,li,au],function(Vp){
+			  var Wp=Vp[0],Xp=Vp[1];
+			  $M($$Engine$V,function(Yp){
+			   var Zp=Yp.v[0];
+			   $M(Xp,function(aq){
+			    var bq=aq.v[0];
+			    var $ff=JSObjectSetProperty(hi,qm,Zp,bq,goog.math.Long.fromBits(0,0),Zt);
+			    var cq=[Wp,$ff];
+			    var dq=cq[0];
+			    var eq=$hs_readAddrOffAddrzh(Zt,goog.math.Long.fromBits(0,0),dq);
+			    var fq=eq[0],gq=eq[1];
+			    var hq=$hs_eqAddrzh(gq,null);
+			    switch(hq.g){
+			    case 1:
+			     var iq=$t(function(){
+			      var jq=$d(1,[gq],"sat");
+			      var kq=$d(1,[jq],"sat");
+			      $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(kq);
+			     },[gq],"sat");
+			     $r($hs_raiseIOzh(iq,fq));break;
+			    case 2:
+			     var Yt=$hs_touchzh(Jm,fq);
+			     var lq=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Yt);
+			     var mq=lq[0],nq=lq[1];
+			     var oq=$hs_unsafeFreezzeByteArrayzh(nq,mq);
+			     var pq=oq[0],qq=oq[1];
+			     var Wt=$hs_byteArrayContentszh(qq);
+			     var Xt=$hs_writeAddrOffAddrzh(Wt,goog.math.Long.fromBits(0,0),null,pq);
+			     var rq=$f(3,function(sq,tq,uq){
+			      $M(uq,function(vq){
+			       switch(vq.g){
+			       case 1:
+				$A($$Engine$P);break;
+			       case 2:
+				var wq=vq.v[0],xq=vq.v[1];
+				$M(xq,function(yq){
+				 switch(yq.g){
+				 case 1:
+				  var zq=$t(function(){
+				   var Aq=$f(2,function(Bq,Cq){
+				    var Dq=$d(1,[wq,$$Engine$H],"sat");
+				    $r([Cq,Dq]);
+				   },[wq],"sat");
+				   $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$a,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,Aq,$$GHCziTuple_Z0T);
+				  },[wq],"m");
+				  var Eq=$f(2,function(Fq,Gq){
+				   zq.C([Fq,Gq],function(Hq){
+				    var Iq=Hq[0];
+				    var Jq=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Iq);
+				    var Kq=Jq[0],Lq=Jq[1];
+				    var Mq=$hs_unsafeFreezzeByteArrayzh(Lq,Kq);
+				    var Nq=Mq[0],Oq=Mq[1];
+				    var Dt=$hs_byteArrayContentszh(Oq);
+				    var Et=$hs_writeAddrOffAddrzh(Dt,goog.math.Long.fromBits(0,0),null,Nq);
+				    $M(Fq,function(Pq){
+				     var Qq=Pq.v[0];
+				     $M(wq,function(Rq){
+				      var Sq=Rq.v[0];
+				      $M($$Engine$R,function(Tq){
+				       var Uq=Tq.v[0];
+				       var $ff=JSObjectGetProperty(Qq,Sq,Uq,Dt);
+				       var Vq=[Et,$ff];
+				       var Wq=Vq[0],Xq=Vq[1];
+				       var Yq=$hs_readAddrOffAddrzh(Dt,goog.math.Long.fromBits(0,0),Wq);
+				       var Zq=Yq[0],ar=Yq[1];
+				       var br=$hs_eqAddrzh(ar,null);
+				       switch(br.g){
+				       case 1:
+					var cr=$t(function(){
+					 var dr=$d(1,[ar],"sat");
+					 var er=$d(1,[dr],"sat");
+					 $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(er);
+					},[ar],"sat");
+					$r($hs_raiseIOzh(cr,Zq));break;
+				       case 2:
+					var Ct=$hs_touchzh(Oq,Zq);
+					var fr=$d(1,[Xq],"sat");
+					var gr=$d(1,[fr,$$Engine$S],"sat");
+					$$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,gr,Pq,Ct],function(hr){
+					 var ir=hr[0],jr=hr[1];
+					 $M(jr,function(kr){
+					  switch(kr.g){
+					  case 3:
+					   $r([ir,$$GHCziTuple_Z0T]);break;
+					  case 4:
+					   var lr=kr.v[0];
+					   $M(lr,function(mr){
+					    var nr=mr.v[0];
+					    var or=nr==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
+					    switch(or.g){
+					    case 1:
+					     $r([ir,$$GHCziTuple_Z0T]);break;
+					    case 2:
+					     var pr=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),ir);
+					     var qr=pr[0],rr=pr[1];
+					     var sr=$hs_unsafeFreezzeByteArrayzh(rr,qr);
+					     var tr=sr[0],ur=sr[1];
+					     var At=$hs_byteArrayContentszh(ur);
+					     var Bt=$hs_writeAddrOffAddrzh(At,goog.math.Long.fromBits(0,0),null,tr);
+					     var $ff=JSObjectGetProperty(Qq,Sq,Uq,At);
+					     var vr=[Bt,$ff];
+					     var wr=vr[0],xr=vr[1];
+					     var yr=$hs_readAddrOffAddrzh(At,goog.math.Long.fromBits(0,0),wr);
+					     var zr=yr[0],Ar=yr[1];
+					     var Br=$hs_eqAddrzh(Ar,null);
+					     switch(Br.g){
+					     case 1:
+					      var Cr=$t(function(){
+					       var Dr=$d(1,[Ar],"sat");
+					       var Er=$d(1,[Dr],"sat");
+					       $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Er);
+					      },[Ar],"sat");
+					      $r($hs_raiseIOzh(Cr,zr));break;
+					     case 2:
+					      var zt=$hs_touchzh(ur,zr);
+					      var Fr=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),zt);
+					      var Gr=Fr[0],Hr=Fr[1];
+					      var Ir=$hs_unsafeFreezzeByteArrayzh(Hr,Gr);
+					      var Jr=Ir[0],Kr=Ir[1];
+					      var xt=$hs_byteArrayContentszh(Kr);
+					      var yt=$hs_writeAddrOffAddrzh(xt,goog.math.Long.fromBits(0,0),null,Jr);
+					      var $ff=JSObjectGetPropertyAtIndex(Qq,xr,goog.math.Long.fromBits(0,0),xt);
+					      var Lr=[yt,$ff];
+					      var Mr=Lr[0],Nr=Lr[1];
+					      var Or=$hs_readAddrOffAddrzh(xt,goog.math.Long.fromBits(0,0),Mr);
+					      var Pr=Or[0],Qr=Or[1];
+					      var Rr=$hs_eqAddrzh(Qr,null);
+					      switch(Rr.g){
+					      case 1:
+					       var Sr=$t(function(){
+						var Tr=$d(1,[Qr],"sat");
+						var Ur=$d(1,[Tr],"sat");
+						$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Ur);
+					       },[Qr],"sat");
+					       $r($hs_raiseIOzh(Sr,Pr));break;
+					      case 2:
+					       var wt=$hs_touchzh(Kr,Pr);
+					       var Vr=$d(1,[Nr],"sat");
+					       var Wr=$d(1,[Vr,$$Engine$U],"sat");
+					       $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,Wr,Pq,wt],function(Xr){
+						var Yr=Xr[0],Zr=Xr[1];
+						var as=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Yr);
+						var bs=as[0],cs=as[1];
+						var ds=$hs_unsafeFreezzeByteArrayzh(cs,bs);
+						var es=ds[0],fs=ds[1];
+						var ut=$hs_byteArrayContentszh(fs);
+						var vt=$hs_writeAddrOffAddrzh(ut,goog.math.Long.fromBits(0,0),null,es);
+						var $ff=JSObjectGetPropertyAtIndex(Qq,xr,goog.math.Long.fromBits(0,0),ut);
+						var gs=[vt,$ff];
+						var hs=gs[0],is=gs[1];
+						var js=$hs_readAddrOffAddrzh(ut,goog.math.Long.fromBits(0,0),hs);
+						var ks=js[0],ls=js[1];
+						var ms=$hs_eqAddrzh(ls,null);
+						switch(ms.g){
+						case 1:
+						 var ns=$t(function(){
+						  var os=$d(1,[ls],"sat");
+						  var ps=$d(1,[os],"sat");
+						  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(ps);
+						 },[ls],"sat");
+						 $r($hs_raiseIOzh(ns,ks));break;
+						case 2:
+						 var tt=$hs_touchzh(fs,ks);
+						 var qs=$d(1,[is],"sat");
+						 var rs=$d(1,[qs,$$Engine$T],"sat");
+						 $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,rs,Pq,tt],function(ss){
+						  var ts=ss[0],us=ss[1];
+						  $M(Zr,function(vs){
+						   switch(vs.g){
+						   case 4:
+						    var ws=vs.v[0];
+						    $M(us,function(xs){
+						     switch(xs.g){
+						     case 4:
+						      var ys=xs.v[0];
+						      var zs=$hs_readMutVarzh(rg,ts);
+						      var As=zs[0],Bs=zs[1];
+						      $M(Bs,function(Cs){
+						       switch(Cs.g){
+						       case 1:
+							$r([As,$$GHCziTuple_Z0T]);break;
+						       case 2:
+							var st=$hs_writeMutVarzh(rg,$$Engine_Up,As);
+							var Ds=$t(function(){
+							 var Es=$t(function(){
+							  $M(ys,function(Fs){
+							   var Gs=Fs.v[0];
+							   var Os=$hs_double2Intzh(Gs);
+							   var Ws=$hs_int2Doublezh(Os);
+							   var Hs=Gs<Ws?$$GHCziTypes_True:$$GHCziTypes_False;
+							   switch(Hs.g){
+							   case 1:
+							    $M(Ph,function(Is){
+							     var Js=Is.v[0];
+							     var Ns=Os.subtract(Js);
+							     var Ms=$hs_int2Doublezh(Ns);
+							     var Ls=Ms/0.25;
+							     var Ks=1000.0-Ls;
+							     $R(1,[Ks],"D#");
+							    },[Os]);break;
+							   case 2:
+							    $M(Ph,function(Ps){
+							     var Qs=Ps.v[0];
+							     var Vs=Os.subtract(goog.math.Long.fromBits(1,0));
+							     var Us=Vs.subtract(Qs);
+							     var Ts=$hs_int2Doublezh(Us);
+							     var Ss=Ts/0.25;
+							     var Rs=1000.0-Ss;
+							     $R(1,[Rs],"D#");
+							    },[Os]);break;
+							   }
+							  },[Ph]);
+							 },[Ph,ys],"sat");
+							 var Xs=$t(function(){
+							  $M(ws,function(Ys){
+							   var Zs=Ys.v[0];
+							   var ht=$hs_double2Intzh(Zs);
+							   var pt=$hs_int2Doublezh(ht);
+							   var at=Zs<pt?$$GHCziTypes_True:$$GHCziTypes_False;
+							   switch(at.g){
+							   case 1:
+							    $M(Oh,function(bt){
+							     var ct=bt.v[0];
+							     var gt=ht.subtract(ct);
+							     var ft=$hs_int2Doublezh(gt);
+							     var et=ft/0.25;
+							     var dt=et+ -1400.0;
+							     $R(1,[dt],"D#");
+							    },[ht]);break;
+							   case 2:
+							    $M(Oh,function(it){
+							     var jt=it.v[0];
+							     var ot=ht.subtract(goog.math.Long.fromBits(1,0));
+							     var nt=ot.subtract(jt);
+							     var mt=$hs_int2Doublezh(nt);
+							     var lt=mt/0.25;
+							     var kt=lt+ -1400.0;
+							     $R(1,[kt],"D#");
+							    },[ht]);break;
+							   }
+							  },[Oh]);
+							 },[Oh,ws],"sat");
+							 var qt=$d(1,[Xs,Es],"sat");
+							 var rt=$d(3,[qt],"sat");
+							 og.J(rt);
+							},[og,Oh,Ph,ws,ys],"sat");
+							$$FRPziSodiumziPlain_sync1.J(Ds,st);break;
+						       }
+						      },[rg,og,Oh,Ph,As,ws,ys]);break;
+						     default:
+						      $r([ts,$$GHCziTuple_Z0T]);
+						     }
+						    },[rg,og,Oh,Ph,ts,ws]);break;
+						   default:
+						    $r([ts,$$GHCziTuple_Z0T]);
+						   }
+						  },[rg,og,Oh,Ph,ts,us]);
+						 },[rg,og,Oh,Ph,Zr]);break;
+						}
+					       },[rg,og,Oh,Ph,Qq,Pq,xr]);break;
+					      }break;
+					     }break;
+					    }
+					   },[rg,og,Oh,Ph,Qq,Sq,Uq,Pq,ir]);break;
+					  case 5:
+					   $r([ir,$$GHCziTuple_Z0T]);break;
+					  case 6:
+					   $r([ir,$$GHCziTuple_Z0T]);break;
+					  default:
+					   $r([ir,$$GHCziTuple_Z0T]);
+					  }
+					 },[rg,og,Oh,Ph,Qq,Sq,Uq,Pq,ir]);
+					},[rg,og,Oh,Ph,Qq,Sq,Uq,Pq]);break;
+				       }
+				      },[rg,og,Oh,Ph,Oq,Dt,Qq,Sq,Et,Pq]);
+				     },[rg,og,Oh,Ph,Oq,Dt,Qq,Et,Pq]);
+				    },[rg,og,Oh,Ph,wq,Oq,Dt,Et]);
+				   },[rg,og,Oh,Ph,wq,Fq]);
+				  },[rg,og,Oh,Ph,wq,zq],"sat");
+				  $A(Eq);break;
+				 case 2:
+				  $A($$Engine$P);break;
+				 }
+				},[rg,og,Oh,Ph,wq]);break;
+			       }
+			      },[rg,og,Oh,Ph]);
+			     },[rg,og,Oh,Ph],"sat");
+			     $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,rq,li,Xt],function(Ft){
+			      var Gt=Ft[0],Ht=Ft[1];
+			      $M($$Engine$Q,function(It){
+			       var Jt=It.v[0];
+			       $M(Ht,function(Kt){
+				var Lt=Kt.v[0];
+				var $ff=JSObjectSetProperty(hi,qm,Jt,Lt,goog.math.Long.fromBits(0,0),Wt);
+				var Mt=[Gt,$ff];
+				var Nt=Mt[0];
+				var Ot=$hs_readAddrOffAddrzh(Wt,goog.math.Long.fromBits(0,0),Nt);
+				var Pt=Ot[0],Qt=Ot[1];
+				var Rt=$hs_eqAddrzh(Qt,null);
+				switch(Rt.g){
+				case 1:
+				 var St=$t(function(){
+				  var Tt=$d(1,[Qt],"sat");
+				  var Ut=$d(1,[Tt],"sat");
+				  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Ut);
+				 },[Qt],"sat");
+				 $r($hs_raiseIOzh(St,Pt));break;
+				case 2:
+				 var Vt=$hs_touchzh(qq,Pt);
+				 Dh.J(Vt);break;
+				}
+			       },[sg,ng,Xf,uh,Dh,hi,qm,qq,Wt,Jt,Gt]);
+			      },[sg,ng,Xf,uh,Dh,hi,qm,qq,Wt,Ht,Gt]);
+			     },[sg,ng,Xf,uh,Dh,hi,qm,qq,Wt]);break;
+			    }
+			   },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Oh,Ph,qm,Jm,Zt,Zp,Wp]);
+			  },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Oh,Ph,qm,Jm,Zt,Xp,Wp]);
+			 },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Oh,Ph,qm,Jm,Zt]);break;
+			}
+		       },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Xi,cu,Oh,Ph,qm,sm,nm]);
+		      },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Xi,cu,Oh,Ph,om,qm,nm]);
+		     },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Xi,cu,Oh,Ph,om,nm]);
+		    },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Xi,cu,Oh,Ph,Ri]);
+		   },[sg,rg,og,ng,Xf,uh,Dh,hi,li,Oh,Ph]);
 		  },[Wf,sg,rg,og,ng,Xf,uh,Dh,bi,Oh,Ph]);
 		 },[Wf,sg,rg,og,ng,Xf,uh,Dh,Oh,Ph]);
 		},[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh,Lh]);
 	       },[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh]);break;
 	      case 2:
-	       var Yv=Jh.v[0];
-	       var Zv=$t(function(){
-		$M(sg,function(aw){
-		 var bw=aw.v[0];
-		 $R(1,[bw],"Ptr");
+	       var eu=Jh.v[0];
+	       var fu=$t(function(){
+		$M(sg,function(gu){
+		 var hu=gu.v[0];
+		 $R(1,[hu],"Ptr");
 		},[]);
 	       },[sg],"sat");
-	       $$SystemziGlibziGType_typeInstanceIsA.C([Zv,$$GraphicsziUIziGtkziWebKitziTypes_gTypeElement],function(cw){
-		switch(cw.g){
+	       $$SystemziGlibziGType_typeInstanceIsA.C([fu,$$GraphicsziUIziGtkziWebKitziTypes_gTypeElement],function(iu){
+		switch(iu.g){
 		case 1:
 		 $A($$GraphicsziUIziGtkziWebKitziTypes_castToElement1);break;
 		case 2:
-		 $$Engine_zdwa1.C([Yv,sg,$$Engine_elementPageXY3,$$Engine_elementPageXY3,Bh],function(dw){
-		  var ew=dw[0],fw=dw[1];
-		  $M(fw,function(gw){
-		   var hw=gw.v[0],iw=gw.v[1];
-		   var jw=$f(1,function(kw){
-		    $M(Vf,function(lw){
-		     var mw=lw.v[0],nw=lw.v[1];
-		     var $ff=webkit_web_view_get_main_frame(mw);
-		     var ow=[kw,$ff];
-		     var pw=ow[0],qw=ow[1];
-		     var sw=$hs_touchzh(nw,pw);
-		     var rw=$d(1,[qw],"sat");
-		     $r([sw,rw]);
-		    },[kw]);
+		 $$Engine_zdwa1.C([eu,sg,$$Engine_elementPageXY3,$$Engine_elementPageXY3,Bh],function(ju){
+		  var ku=ju[0],lu=ju[1];
+		  $M(lu,function(mu){
+		   var nu=mu.v[0],ou=mu.v[1];
+		   var pu=$f(1,function(qu){
+		    $M(Vf,function(ru){
+		     var su=ru.v[0],tu=ru.v[1];
+		     var $ff=webkit_web_view_get_main_frame(su);
+		     var uu=[qu,$ff];
+		     var vu=uu[0],wu=uu[1];
+		     var yu=$hs_touchzh(tu,vu);
+		     var xu=$d(1,[wu],"sat");
+		     $r([yu,xu]);
+		    },[qu]);
 		   },[Vf],"sat");
-		   $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkWebFrame1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,jw,ew],function(tw){
-		    var uw=tw[0],vw=tw[1];
-		    $M(vw,function(ww){
-		     var xw=ww.v[0];
-		     var $ff=webkit_web_frame_get_global_context(xw);
-		     var yw=[uw,$ff];
-		     var zw=yw[0],Aw=yw[1];
-		     var Bw=$d(1,[Aw],"r");
-		     var Cw=$d(2,[Wf,$$GHCziTypes_ZMZN],"sat");
-		     $$LanguageziJavascriptziJSCziObject_zh.C([$$Engine$b,$$Engine$a,$$Engine$D,Cw,Bw,zw],function(Dw){
-		      var Ew=Dw[0],Fw=Dw[1];
-		      $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$E,Bw,Ew],function(Gw){
-		       var Hw=Gw[0],Iw=Gw[1];
-		       var Jw=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Hw);
-		       var Kw=Jw[0],Lw=Jw[1];
-		       var Mw=$hs_unsafeFreezzeByteArrayzh(Lw,Kw);
-		       var Nw=Mw[0],Ow=Mw[1];
-		       var nK=$hs_byteArrayContentszh(Ow);
-		       var oK=$hs_writeAddrOffAddrzh(nK,goog.math.Long.fromBits(0,0),null,Nw);
-		       var Pw=$f(3,function(Qw,Rw,Sw){
-			$M(Sw,function(Tw){
-			 switch(Tw.g){
-			 case 1:
-			  $A($$Engine$F);break;
-			 case 2:
-			  var Uw=Tw.v[0],Vw=Tw.v[1];
-			  $M(Vw,function(Ww){
-			   switch(Ww.g){
-			   case 1:
-			    var Xw=$t(function(){
-			     var Yw=$f(2,function(Zw,ax){
-			      $$Engine$n1.C([Zw,ax],function(bx){
-			       var cx=bx[0],dx=bx[1];
-			       var ex=$d(1,[Uw,dx],"sat");
-			       $r([cx,ex]);
-			      },[Uw]);
-			     },[Uw],"sat");
-			     $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$b,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,Yw,$$GHCziTuple_Z0T);
-			    },[Uw],"m");
-			    var fx=$f(2,function(gx,hx){
-			     Xw.C([gx,hx],function(ix){
-			      var jx=ix[0];
-			      $$Engine$l1.C([gx,jx],function(kx){
-			       var lx=kx[0],mx=kx[1];
-			       var nx=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),lx);
-			       var ox=nx[0],px=nx[1];
-			       var qx=$hs_unsafeFreezzeByteArrayzh(px,ox);
-			       var rx=qx[0],sx=qx[1];
-			       var LA=$hs_byteArrayContentszh(sx);
-			       var MA=$hs_writeAddrOffAddrzh(LA,goog.math.Long.fromBits(0,0),null,rx);
-			       $M(gx,function(tx){
-				var ux=tx.v[0];
-				$M(Uw,function(vx){
-				 var wx=vx.v[0];
-				 $M(mx,function(xx){
-				  var yx=xx.v[0];
-				  var $ff=JSObjectGetProperty(ux,wx,yx,LA);
-				  var zx=[MA,$ff];
-				  var Ax=zx[0],Bx=zx[1];
-				  var Cx=$hs_readAddrOffAddrzh(LA,goog.math.Long.fromBits(0,0),Ax);
-				  var Dx=Cx[0],Ex=Cx[1];
-				  var Fx=$hs_eqAddrzh(Ex,null);
-				  switch(Fx.g){
-				  case 1:
-				   $$LanguageziJavascriptziJSCziValue_zdwa4.C([Ex,ux,Dx],function(Gx){
-				    var Hx=Gx[0],Ix=Gx[1];
-				    var Jx=$t(function(){
-				     var Kx=$d(1,[Ex],"sat");
-				     var Lx=$t(function(){
-				      $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Ix);
-				     },[Ix],"sat");
-				     var Mx=$d(1,[Lx,Kx],"sat");
-				     $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Mx);
-				    },[Ex,Ix],"sat");
-				    $r($hs_raiseIOzh(Jx,Hx));
-				   },[Ex]);break;
-				  case 2:
-				   var KA=$hs_touchzh(sx,Dx);
-				   $$Engine$m1.C([tx,KA],function(Nx){
-				    var Ox=Nx[0],Px=Nx[1];
-				    var Qx=$d(1,[Bx],"sat");
-				    var Rx=$d(1,[Qx,Px],"sat");
-				    $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,Rx,tx,Ox],function(Sx){
-				     var Tx=Sx[0],Ux=Sx[1];
-				     $M(Ux,function(Vx){
-				      switch(Vx.g){
-				      case 3:
-				       $r([Tx,$$GHCziTuple_Z0T]);break;
-				      case 4:
-				       var Wx=Vx.v[0];
-				       $M(Wx,function(Xx){
-					var Yx=Xx.v[0];
-					var Zx=Yx==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
-					switch(Zx.g){
-					case 1:
-					 $r([Tx,$$GHCziTuple_Z0T]);break;
-					case 2:
-					 $$Engine$k1.C([tx,Tx],function(ay){
-					  var by=ay[0],cy=ay[1];
-					  var dy=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),by);
-					  var ey=dy[0],fy=dy[1];
-					  var gy=$hs_unsafeFreezzeByteArrayzh(fy,ey);
-					  var hy=gy[0],iy=gy[1];
-					  var IA=$hs_byteArrayContentszh(iy);
-					  var JA=$hs_writeAddrOffAddrzh(IA,goog.math.Long.fromBits(0,0),null,hy);
-					  $M(cy,function(jy){
-					   var ky=jy.v[0];
-					   var $ff=JSObjectGetProperty(ux,wx,ky,IA);
-					   var ly=[JA,$ff];
-					   var my=ly[0],ny=ly[1];
-					   var oy=$hs_readAddrOffAddrzh(IA,goog.math.Long.fromBits(0,0),my);
-					   var py=oy[0],qy=oy[1];
-					   var ry=$hs_eqAddrzh(qy,null);
-					   switch(ry.g){
-					   case 1:
-					    $$LanguageziJavascriptziJSCziValue_zdwa4.C([qy,ux,py],function(sy){
-					     var ty=sy[0],uy=sy[1];
-					     var vy=$t(function(){
-					      var wy=$d(1,[qy],"sat");
-					      var xy=$t(function(){
-					       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(uy);
-					      },[uy],"sat");
-					      var yy=$d(1,[xy,wy],"sat");
-					      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(yy);
-					     },[qy,uy],"sat");
-					     $r($hs_raiseIOzh(vy,ty));
-					    },[qy]);break;
-					   case 2:
-					    var HA=$hs_touchzh(iy,py);
-					    var zy=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),HA);
-					    var Ay=zy[0],By=zy[1];
-					    var Cy=$hs_unsafeFreezzeByteArrayzh(By,Ay);
-					    var Dy=Cy[0],Ey=Cy[1];
-					    var FA=$hs_byteArrayContentszh(Ey);
-					    var GA=$hs_writeAddrOffAddrzh(FA,goog.math.Long.fromBits(0,0),null,Dy);
-					    var $ff=JSObjectGetPropertyAtIndex(ux,ny,goog.math.Long.fromBits(0,0),FA);
-					    var Fy=[GA,$ff];
-					    var Gy=Fy[0],Hy=Fy[1];
-					    var Iy=$hs_readAddrOffAddrzh(FA,goog.math.Long.fromBits(0,0),Gy);
-					    var Jy=Iy[0],Ky=Iy[1];
-					    var Ly=$hs_eqAddrzh(Ky,null);
-					    switch(Ly.g){
-					    case 1:
-					     $$LanguageziJavascriptziJSCziValue_zdwa4.C([Ky,ux,Jy],function(My){
-					      var Ny=My[0],Oy=My[1];
-					      var Py=$t(function(){
-					       var Qy=$d(1,[Ky],"sat");
-					       var Ry=$t(function(){
-						$$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(Oy);
-					       },[Oy],"sat");
-					       var Sy=$d(1,[Ry,Qy],"sat");
-					       $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(Sy);
-					      },[Ky,Oy],"sat");
-					      $r($hs_raiseIOzh(Py,Ny));
-					     },[Ky]);break;
-					    case 2:
-					     var EA=$hs_touchzh(Ey,Jy);
-					     $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$J,tx,EA],function(Ty){
-					      var Uy=Ty[0],Vy=Ty[1];
-					      var Wy=$d(1,[Hy],"sat");
-					      var Xy=$d(1,[Wy,Vy],"sat");
-					      $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,Xy,tx,Uy],function(Yy){
-					       var Zy=Yy[0],az=Yy[1];
-					       var bz=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Zy);
-					       var cz=bz[0],dz=bz[1];
-					       var ez=$hs_unsafeFreezzeByteArrayzh(dz,cz);
-					       var fz=ez[0],gz=ez[1];
-					       var CA=$hs_byteArrayContentszh(gz);
-					       var DA=$hs_writeAddrOffAddrzh(CA,goog.math.Long.fromBits(0,0),null,fz);
-					       var $ff=JSObjectGetPropertyAtIndex(ux,ny,goog.math.Long.fromBits(0,0),CA);
-					       var hz=[DA,$ff];
-					       var iz=hz[0],jz=hz[1];
-					       var kz=$hs_readAddrOffAddrzh(CA,goog.math.Long.fromBits(0,0),iz);
-					       var lz=kz[0],mz=kz[1];
-					       var nz=$hs_eqAddrzh(mz,null);
-					       switch(nz.g){
-					       case 1:
-						$$LanguageziJavascriptziJSCziValue_zdwa4.C([mz,ux,lz],function(oz){
-						 var pz=oz[0],qz=oz[1];
-						 var rz=$t(function(){
-						  var sz=$d(1,[mz],"sat");
-						  var tz=$t(function(){
-						   $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(qz);
-						  },[qz],"sat");
-						  var uz=$d(1,[tz,sz],"sat");
-						  $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(uz);
-						 },[mz,qz],"sat");
-						 $r($hs_raiseIOzh(rz,pz));
-						},[mz]);break;
-					       case 2:
-						var BA=$hs_touchzh(gz,lz);
-						$$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$K,tx,BA],function(vz){
-						 var wz=vz[0],xz=vz[1];
-						 var yz=$d(1,[jz],"sat");
-						 var zz=$d(1,[yz,xz],"sat");
-						 $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,zz,tx,wz],function(Az){
-						  var Bz=Az[0],Cz=Az[1];
-						  $M(az,function(Dz){
-						   switch(Dz.g){
-						   case 4:
-						    var Ez=Dz.v[0];
-						    $M(Cz,function(Fz){
-						     switch(Fz.g){
-						     case 4:
-						      var Gz=Fz.v[0];
-						      var Hz=$hs_readMutVarzh(rg,Bz);
-						      var Iz=Hz[0],Jz=Hz[1];
-						      $M(Jz,function(Kz){
-						       switch(Kz.g){
-						       case 1:
-							var AA=$hs_writeMutVarzh(rg,$$Engine_Down,Iz);
-							var Lz=$t(function(){
-							 var Mz=$t(function(){
-							  $M(Gz,function(Nz){
-							   var Oz=Nz.v[0];
-							   var Wz=$hs_double2Intzh(Oz);
-							   var eA=$hs_int2Doublezh(Wz);
-							   var Pz=Oz<eA?$$GHCziTypes_True:$$GHCziTypes_False;
-							   switch(Pz.g){
-							   case 1:
-							    $M(iw,function(Qz){
-							     var Rz=Qz.v[0];
-							     var Vz=Wz.subtract(Rz);
-							     var Uz=$hs_int2Doublezh(Vz);
-							     var Tz=Uz/0.25;
-							     var Sz=1000.0-Tz;
-							     $R(1,[Sz],"D#");
-							    },[Wz]);break;
-							   case 2:
-							    $M(iw,function(Xz){
-							     var Yz=Xz.v[0];
-							     var dA=Wz.subtract(goog.math.Long.fromBits(1,0));
-							     var cA=dA.subtract(Yz);
-							     var bA=$hs_int2Doublezh(cA);
-							     var aA=bA/0.25;
-							     var Zz=1000.0-aA;
-							     $R(1,[Zz],"D#");
-							    },[Wz]);break;
-							   }
-							  },[iw]);
-							 },[Gz,iw],"sat");
-							 var fA=$t(function(){
-							  $M(Ez,function(gA){
-							   var hA=gA.v[0];
-							   var pA=$hs_double2Intzh(hA);
-							   var xA=$hs_int2Doublezh(pA);
-							   var iA=hA<xA?$$GHCziTypes_True:$$GHCziTypes_False;
-							   switch(iA.g){
-							   case 1:
-							    $M(hw,function(jA){
-							     var kA=jA.v[0];
-							     var oA=pA.subtract(kA);
-							     var nA=$hs_int2Doublezh(oA);
-							     var mA=nA/0.25;
-							     var lA=mA+ -1400.0;
-							     $R(1,[lA],"D#");
-							    },[pA]);break;
-							   case 2:
-							    $M(hw,function(qA){
-							     var rA=qA.v[0];
-							     var wA=pA.subtract(goog.math.Long.fromBits(1,0));
-							     var vA=wA.subtract(rA);
-							     var uA=$hs_int2Doublezh(vA);
-							     var tA=uA/0.25;
-							     var sA=tA+ -1400.0;
-							     $R(1,[sA],"D#");
-							    },[pA]);break;
-							   }
-							  },[hw]);
-							 },[Ez,hw],"sat");
-							 var yA=$d(1,[fA,Mz],"sat");
-							 var zA=$d(1,[yA],"sat");
-							 og.J(zA);
-							},[og,Ez,hw,Gz,iw],"sat");
-							$$FRPziSodiumziPlain_sync1.J(Lz,AA);break;
-						       case 2:
-							$r([Iz,$$GHCziTuple_Z0T]);break;
-						       }
-						      },[rg,og,Iz,Ez,hw,Gz,iw]);break;
-						     default:
-						      $r([Bz,$$GHCziTuple_Z0T]);
-						     }
-						    },[rg,og,Bz,Ez,hw,iw]);break;
-						   default:
-						    $r([Bz,$$GHCziTuple_Z0T]);
-						   }
-						  },[rg,og,Bz,Cz,hw,iw]);
-						 },[rg,og,az,hw,iw]);
-						},[rg,og,tx,jz,az,hw,iw]);break;
-					       }
-					      },[rg,og,ux,tx,ny,hw,iw]);
-					     },[rg,og,ux,tx,ny,Hy,hw,iw]);break;
-					    }break;
-					   }
-					  },[rg,og,ux,wx,tx,iy,IA,JA,hw,iw]);
-					 },[rg,og,ux,wx,tx,hw,iw]);break;
-					}
-				       },[rg,og,ux,wx,tx,Tx,hw,iw]);break;
-				      case 5:
-				       $r([Tx,$$GHCziTuple_Z0T]);break;
-				      case 6:
-				       $r([Tx,$$GHCziTuple_Z0T]);break;
-				      default:
-				       $r([Tx,$$GHCziTuple_Z0T]);
-				      }
-				     },[rg,og,ux,wx,tx,Tx,hw,iw]);
-				    },[rg,og,ux,wx,tx,hw,iw]);
-				   },[rg,og,ux,wx,tx,Bx,hw,iw]);break;
-				  }
-				 },[rg,og,sx,LA,ux,wx,MA,tx,hw,iw]);
-				},[rg,og,sx,LA,mx,ux,MA,tx,hw,iw]);
-			       },[rg,og,Uw,sx,LA,mx,MA,hw,iw]);
-			      },[rg,og,Uw,gx,hw,iw]);
-			     },[rg,og,Uw,gx,hw,iw]);
-			    },[rg,og,Uw,Xw,hw,iw],"sat");
-			    $A(fx);break;
-			   case 2:
-			    $A($$Engine$F);break;
-			   }
-			  },[rg,og,Uw,hw,iw]);break;
-			 }
-			},[rg,og,hw,iw]);
-		       },[rg,og,hw,iw],"sat");
-		       $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,Pw,Bw,oK],function(NA){
-			var OA=NA[0],PA=NA[1];
-			$M(Fw,function(QA){
-			 var RA=QA.v[0];
-			 $M(Iw,function(SA){
-			  var TA=SA.v[0];
-			  $M(PA,function(UA){
-			   var VA=UA.v[0];
-			   var $ff=JSObjectSetProperty(Aw,RA,TA,VA,goog.math.Long.fromBits(0,0),nK);
-			   var WA=[OA,$ff];
-			   var XA=WA[0];
-			   var YA=$hs_readAddrOffAddrzh(nK,goog.math.Long.fromBits(0,0),XA);
-			   var ZA=YA[0],aB=YA[1];
-			   var bB=$hs_eqAddrzh(aB,null);
-			   switch(bB.g){
-			   case 1:
-			    $$LanguageziJavascriptziJSCziValue_zdwa4.C([aB,Aw,ZA],function(cB){
-			     var dB=cB[0],eB=cB[1];
-			     var fB=$t(function(){
-			      var gB=$d(1,[aB],"sat");
-			      var hB=$t(function(){
-			       $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(eB);
-			      },[eB],"sat");
-			      var iB=$d(1,[hB,gB],"sat");
-			      $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(iB);
-			     },[aB,eB],"sat");
-			     $r($hs_raiseIOzh(fB,dB));
-			    },[aB]);break;
-			   case 2:
-			    var mK=$hs_touchzh(Ow,ZA);
-			    $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$L,Bw,mK],function(jB){
-			     var kB=jB[0],lB=jB[1];
-			     var mB=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),kB);
-			     var nB=mB[0],oB=mB[1];
-			     var pB=$hs_unsafeFreezzeByteArrayzh(oB,nB);
-			     var qB=pB[0],rB=pB[1];
-			     var kK=$hs_byteArrayContentszh(rB);
-			     var lK=$hs_writeAddrOffAddrzh(kK,goog.math.Long.fromBits(0,0),null,qB);
-			     var sB=$f(3,function(tB,uB,vB){
-			      $M(vB,function(wB){
-			       switch(wB.g){
-			       case 1:
-				$A($$Engine$M);break;
-			       case 2:
-				var xB=wB.v[0],yB=wB.v[1];
-				$M(yB,function(zB){
-				 switch(zB.g){
-				 case 1:
-				  var AB=$t(function(){
-				   var BB=$f(2,function(CB,DB){
-				    $$Engine$j1.C([CB,DB],function(EB){
-				     var FB=EB[0],GB=EB[1];
-				     var HB=$d(1,[xB,GB],"sat");
-				     $r([FB,HB]);
-				    },[xB]);
-				   },[xB],"sat");
-				   $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$b,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,BB,$$GHCziTuple_Z0T);
-				  },[xB],"m");
-				  var IB=$f(2,function(JB,KB){
-				   AB.C([JB,KB],function(LB){
-				    var MB=LB[0];
-				    $$Engine$h1.C([JB,MB],function(NB){
-				     var OB=NB[0],PB=NB[1];
-				     var QB=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),OB);
-				     var RB=QB[0],SB=QB[1];
-				     var TB=$hs_unsafeFreezzeByteArrayzh(SB,RB);
-				     var UB=TB[0],VB=TB[1];
-				     var jF=$hs_byteArrayContentszh(VB);
-				     var kF=$hs_writeAddrOffAddrzh(jF,goog.math.Long.fromBits(0,0),null,UB);
-				     $M(JB,function(WB){
-				      var XB=WB.v[0];
-				      $M(xB,function(YB){
-				       var ZB=YB.v[0];
-				       $M(PB,function(aC){
-					var bC=aC.v[0];
-					var $ff=JSObjectGetProperty(XB,ZB,bC,jF);
-					var cC=[kF,$ff];
-					var dC=cC[0],eC=cC[1];
-					var fC=$hs_readAddrOffAddrzh(jF,goog.math.Long.fromBits(0,0),dC);
-					var gC=fC[0],hC=fC[1];
-					var iC=$hs_eqAddrzh(hC,null);
-					switch(iC.g){
-					case 1:
-					 $$LanguageziJavascriptziJSCziValue_zdwa4.C([hC,XB,gC],function(jC){
-					  var kC=jC[0],lC=jC[1];
-					  var mC=$t(function(){
-					   var nC=$d(1,[hC],"sat");
-					   var oC=$t(function(){
-					    $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(lC);
-					   },[lC],"sat");
-					   var pC=$d(1,[oC,nC],"sat");
-					   $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(pC);
-					  },[hC,lC],"sat");
-					  $r($hs_raiseIOzh(mC,kC));
-					 },[hC]);break;
-					case 2:
-					 var iF=$hs_touchzh(VB,gC);
-					 $$Engine$i1.C([WB,iF],function(qC){
-					  var rC=qC[0],sC=qC[1];
-					  var tC=$d(1,[eC],"sat");
-					  var uC=$d(1,[tC,sC],"sat");
-					  $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,uC,WB,rC],function(vC){
-					   var wC=vC[0],xC=vC[1];
-					   $M(xC,function(yC){
-					    switch(yC.g){
-					    case 3:
-					     $r([wC,$$GHCziTuple_Z0T]);break;
-					    case 4:
-					     var zC=yC.v[0];
-					     $M(zC,function(AC){
-					      var BC=AC.v[0];
-					      var CC=BC==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
-					      switch(CC.g){
-					      case 1:
-					       $r([wC,$$GHCziTuple_Z0T]);break;
-					      case 2:
-					       $$Engine$g1.C([WB,wC],function(DC){
-						var EC=DC[0],FC=DC[1];
-						var GC=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),EC);
-						var HC=GC[0],IC=GC[1];
-						var JC=$hs_unsafeFreezzeByteArrayzh(IC,HC);
-						var KC=JC[0],LC=JC[1];
-						var gF=$hs_byteArrayContentszh(LC);
-						var hF=$hs_writeAddrOffAddrzh(gF,goog.math.Long.fromBits(0,0),null,KC);
-						$M(FC,function(MC){
-						 var NC=MC.v[0];
-						 var $ff=JSObjectGetProperty(XB,ZB,NC,gF);
-						 var OC=[hF,$ff];
-						 var PC=OC[0],QC=OC[1];
-						 var RC=$hs_readAddrOffAddrzh(gF,goog.math.Long.fromBits(0,0),PC);
-						 var SC=RC[0],TC=RC[1];
-						 var UC=$hs_eqAddrzh(TC,null);
-						 switch(UC.g){
-						 case 1:
-						  $$LanguageziJavascriptziJSCziValue_zdwa4.C([TC,XB,SC],function(VC){
-						   var WC=VC[0],XC=VC[1];
-						   var YC=$t(function(){
-						    var ZC=$d(1,[TC],"sat");
-						    var aD=$t(function(){
-						     $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(XC);
-						    },[XC],"sat");
-						    var bD=$d(1,[aD,ZC],"sat");
-						    $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(bD);
-						   },[TC,XC],"sat");
-						   $r($hs_raiseIOzh(YC,WC));
-						  },[TC]);break;
-						 case 2:
-						  var fF=$hs_touchzh(LC,SC);
-						  var cD=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),fF);
-						  var dD=cD[0],eD=cD[1];
-						  var fD=$hs_unsafeFreezzeByteArrayzh(eD,dD);
-						  var gD=fD[0],hD=fD[1];
-						  var dF=$hs_byteArrayContentszh(hD);
-						  var eF=$hs_writeAddrOffAddrzh(dF,goog.math.Long.fromBits(0,0),null,gD);
-						  var $ff=JSObjectGetPropertyAtIndex(XB,QC,goog.math.Long.fromBits(0,0),dF);
-						  var iD=[eF,$ff];
-						  var jD=iD[0],kD=iD[1];
-						  var lD=$hs_readAddrOffAddrzh(dF,goog.math.Long.fromBits(0,0),jD);
-						  var mD=lD[0],nD=lD[1];
-						  var oD=$hs_eqAddrzh(nD,null);
-						  switch(oD.g){
-						  case 1:
-						   $$LanguageziJavascriptziJSCziValue_zdwa4.C([nD,XB,mD],function(pD){
-						    var qD=pD[0],rD=pD[1];
-						    var sD=$t(function(){
-						     var tD=$d(1,[nD],"sat");
-						     var uD=$t(function(){
-						      $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(rD);
-						     },[rD],"sat");
-						     var vD=$d(1,[uD,tD],"sat");
-						     $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(vD);
-						    },[nD,rD],"sat");
-						    $r($hs_raiseIOzh(sD,qD));
-						   },[nD]);break;
-						  case 2:
-						   var cF=$hs_touchzh(hD,mD);
-						   $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$J,WB,cF],function(wD){
-						    var xD=wD[0],yD=wD[1];
-						    var zD=$d(1,[kD],"sat");
-						    var AD=$d(1,[zD,yD],"sat");
-						    $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,AD,WB,xD],function(BD){
-						     var CD=BD[0],DD=BD[1];
-						     var ED=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),CD);
-						     var FD=ED[0],GD=ED[1];
-						     var HD=$hs_unsafeFreezzeByteArrayzh(GD,FD);
-						     var ID=HD[0],JD=HD[1];
-						     var aF=$hs_byteArrayContentszh(JD);
-						     var bF=$hs_writeAddrOffAddrzh(aF,goog.math.Long.fromBits(0,0),null,ID);
-						     var $ff=JSObjectGetPropertyAtIndex(XB,QC,goog.math.Long.fromBits(0,0),aF);
-						     var KD=[bF,$ff];
-						     var LD=KD[0],MD=KD[1];
-						     var ND=$hs_readAddrOffAddrzh(aF,goog.math.Long.fromBits(0,0),LD);
-						     var OD=ND[0],PD=ND[1];
-						     var QD=$hs_eqAddrzh(PD,null);
-						     switch(QD.g){
-						     case 1:
-						      $$LanguageziJavascriptziJSCziValue_zdwa4.C([PD,XB,OD],function(RD){
-						       var SD=RD[0],TD=RD[1];
-						       var UD=$t(function(){
-							var VD=$d(1,[PD],"sat");
-							var WD=$t(function(){
-							 $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(TD);
-							},[TD],"sat");
-							var XD=$d(1,[WD,VD],"sat");
-							$$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(XD);
-						       },[PD,TD],"sat");
-						       $r($hs_raiseIOzh(UD,SD));
-						      },[PD]);break;
-						     case 2:
-						      var ZE=$hs_touchzh(JD,OD);
-						      $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$K,WB,ZE],function(YD){
-						       var ZD=YD[0],aE=YD[1];
-						       var bE=$d(1,[MD],"sat");
-						       var cE=$d(1,[bE,aE],"sat");
-						       $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,cE,WB,ZD],function(dE){
-							var eE=dE[0],fE=dE[1];
-							$M(DD,function(gE){
-							 switch(gE.g){
-							 case 4:
-							  var hE=gE.v[0];
-							  $M(fE,function(iE){
-							   switch(iE.g){
-							   case 4:
-							    var jE=iE.v[0];
-							    var kE=$t(function(){
-							     var lE=$t(function(){
-							      $M(jE,function(mE){
-							       var nE=mE.v[0];
-							       var vE=$hs_double2Intzh(nE);
-							       var DE=$hs_int2Doublezh(vE);
-							       var oE=nE<DE?$$GHCziTypes_True:$$GHCziTypes_False;
-							       switch(oE.g){
-							       case 1:
-								$M(iw,function(pE){
-								 var qE=pE.v[0];
-								 var uE=vE.subtract(qE);
-								 var tE=$hs_int2Doublezh(uE);
-								 var sE=tE/0.25;
-								 var rE=1000.0-sE;
-								 $R(1,[rE],"D#");
-								},[vE]);break;
-							       case 2:
-								$M(iw,function(wE){
-								 var xE=wE.v[0];
-								 var CE=vE.subtract(goog.math.Long.fromBits(1,0));
-								 var BE=CE.subtract(xE);
-								 var AE=$hs_int2Doublezh(BE);
-								 var zE=AE/0.25;
-								 var yE=1000.0-zE;
-								 $R(1,[yE],"D#");
-								},[vE]);break;
-							       }
-							      },[iw]);
-							     },[iw,jE],"sat");
-							     var EE=$t(function(){
-							      $M(hE,function(FE){
-							       var GE=FE.v[0];
-							       var OE=$hs_double2Intzh(GE);
-							       var WE=$hs_int2Doublezh(OE);
-							       var HE=GE<WE?$$GHCziTypes_True:$$GHCziTypes_False;
-							       switch(HE.g){
-							       case 1:
-								$M(hw,function(IE){
-								 var JE=IE.v[0];
-								 var NE=OE.subtract(JE);
-								 var ME=$hs_int2Doublezh(NE);
-								 var LE=ME/0.25;
-								 var KE=LE+ -1400.0;
-								 $R(1,[KE],"D#");
-								},[OE]);break;
-							       case 2:
-								$M(hw,function(PE){
-								 var QE=PE.v[0];
-								 var VE=OE.subtract(goog.math.Long.fromBits(1,0));
-								 var UE=VE.subtract(QE);
-								 var TE=$hs_int2Doublezh(UE);
-								 var SE=TE/0.25;
-								 var RE=SE+ -1400.0;
-								 $R(1,[RE],"D#");
-								},[OE]);break;
-							       }
-							      },[hw]);
-							     },[hw,hE],"sat");
-							     var XE=$d(1,[EE,lE],"sat");
-							     var YE=$d(2,[XE],"sat");
-							     og.J(YE);
-							    },[og,hw,iw,hE,jE],"sat");
-							    $$FRPziSodiumziPlain_sync1.J(kE,eE);break;
-							   default:
-							    $r([eE,$$GHCziTuple_Z0T]);
-							   }
-							  },[og,hw,iw,eE,hE]);break;
-							 default:
-							  $r([eE,$$GHCziTuple_Z0T]);
-							 }
-							},[og,hw,iw,eE,fE]);
-						       },[og,hw,iw,DD]);
-						      },[og,hw,iw,WB,MD,DD]);break;
-						     }
-						    },[og,hw,iw,XB,WB,QC]);
-						   },[og,hw,iw,XB,WB,QC,kD]);break;
-						  }break;
-						 }
-						},[og,hw,iw,XB,ZB,WB,LC,gF,hF]);
-					       },[og,hw,iw,XB,ZB,WB]);break;
-					      }
-					     },[og,hw,iw,XB,ZB,WB,wC]);break;
-					    case 5:
-					     $r([wC,$$GHCziTuple_Z0T]);break;
-					    case 6:
-					     $r([wC,$$GHCziTuple_Z0T]);break;
-					    default:
-					     $r([wC,$$GHCziTuple_Z0T]);
-					    }
-					   },[og,hw,iw,XB,ZB,WB,wC]);
-					  },[og,hw,iw,XB,ZB,WB]);
-					 },[og,hw,iw,XB,ZB,WB,eC]);break;
-					}
-				       },[og,hw,iw,VB,jF,XB,ZB,kF,WB]);
-				      },[og,hw,iw,VB,jF,PB,XB,kF,WB]);
-				     },[og,hw,iw,xB,VB,jF,PB,kF]);
-				    },[og,hw,iw,xB,JB]);
-				   },[og,hw,iw,xB,JB]);
-				  },[og,hw,iw,xB,AB],"sat");
-				  $A(IB);break;
-				 case 2:
-				  $A($$Engine$M);break;
-				 }
-				},[og,hw,iw,xB]);break;
-			       }
-			      },[og,hw,iw]);
-			     },[og,hw,iw],"sat");
-			     $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,sB,Bw,lK],function(lF){
-			      var mF=lF[0],nF=lF[1];
-			      $M(lB,function(oF){
-			       var pF=oF.v[0];
-			       $M(nF,function(qF){
-				var rF=qF.v[0];
-				var $ff=JSObjectSetProperty(Aw,RA,pF,rF,goog.math.Long.fromBits(0,0),kK);
-				var sF=[mF,$ff];
-				var tF=sF[0];
-				var uF=$hs_readAddrOffAddrzh(kK,goog.math.Long.fromBits(0,0),tF);
-				var vF=uF[0],wF=uF[1];
-				var xF=$hs_eqAddrzh(wF,null);
-				switch(xF.g){
+		   $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkWebFrame1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,pu,ku],function(zu){
+		    var Au=zu[0],Bu=zu[1];
+		    $M(Bu,function(Cu){
+		     var Du=Cu.v[0];
+		     var $ff=webkit_web_frame_get_global_context(Du);
+		     var Eu=[Au,$ff];
+		     var Fu=Eu[0],Gu=Eu[1];
+		     var $ff=JSContextGetGlobalObject(Gu);
+		     var Hu=[Fu,$ff];
+		     var Iu=Hu[0],Ju=Hu[1];
+		     var Ku=$d(1,[Gu],"r");
+		     var Lu=$d(2,[Wf,$$GHCziTypes_ZMZN],"sat");
+		     var Mu=$f(2,function(Nu,Ou){
+		      var Pu=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Ou);
+		      var Qu=Pu[0],Ru=Pu[1];
+		      var Su=$hs_unsafeFreezzeByteArrayzh(Ru,Qu);
+		      var Tu=Su[0],Uu=Su[1];
+		      var mv=$hs_byteArrayContentszh(Uu);
+		      var nv=$hs_writeAddrOffAddrzh(mv,goog.math.Long.fromBits(0,0),null,Tu);
+		      $M(Nu,function(Vu){
+		       var Wu=Vu.v[0];
+		       $M($$Engine$A,function(Xu){
+			var Yu=Xu.v[0];
+			var $ff=JSObjectGetProperty(Wu,Ju,Yu,mv);
+			var Zu=[nv,$ff];
+			var av=Zu[0],bv=Zu[1];
+			var cv=$hs_readAddrOffAddrzh(mv,goog.math.Long.fromBits(0,0),av);
+			var dv=cv[0],ev=cv[1];
+			var fv=$hs_eqAddrzh(ev,null);
+			switch(fv.g){
+			case 1:
+			 var gv=$t(function(){
+			  var hv=$d(1,[ev],"sat");
+			  var iv=$d(1,[hv],"sat");
+			  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(iv);
+			 },[ev],"sat");
+			 $r($hs_raiseIOzh(gv,dv));break;
+			case 2:
+			 var lv=$hs_touchzh(Uu,dv);
+			 var jv=$d(1,[bv],"sat");
+			 var kv=$d(1,[jv,$$Engine$M],"sat");
+			 $r([lv,kv]);break;
+			}
+		       },[Uu,mv,Wu,Ju,nv]);
+		      },[Uu,mv,Ju,nv]);
+		     },[Ju],"sat");
+		     $$LanguageziJavascriptziJSCziObject_zh.C([$$Engine$a,$$Engine$b,Mu,Lu,Ku,Iu],function(ov){
+		      var pv=ov[0],qv=ov[1];
+		      var rv=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),pv);
+		      var sv=rv[0],tv=rv[1];
+		      var uv=$hs_unsafeFreezzeByteArrayzh(tv,sv);
+		      var vv=uv[0],wv=uv[1];
+		      var zG=$hs_byteArrayContentszh(wv);
+		      var AG=$hs_writeAddrOffAddrzh(zG,goog.math.Long.fromBits(0,0),null,vv);
+		      var xv=$f(3,function(yv,zv,Av){
+		       $M(Av,function(Bv){
+			switch(Bv.g){
+			case 1:
+			 $A($$Engine$N);break;
+			case 2:
+			 var Cv=Bv.v[0],Dv=Bv.v[1];
+			 $M(Dv,function(Ev){
+			  switch(Ev.g){
+			  case 1:
+			   var Fv=$t(function(){
+			    var Gv=$f(2,function(Hv,Iv){
+			     var Jv=$d(1,[Cv,$$Engine$H],"sat");
+			     $r([Iv,Jv]);
+			    },[Cv],"sat");
+			    $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$a,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,Gv,$$GHCziTuple_Z0T);
+			   },[Cv],"m");
+			   var Kv=$f(2,function(Lv,Mv){
+			    Fv.C([Lv,Mv],function(Nv){
+			     var Ov=Nv[0];
+			     var Pv=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Ov);
+			     var Qv=Pv[0],Rv=Pv[1];
+			     var Sv=$hs_unsafeFreezzeByteArrayzh(Rv,Qv);
+			     var Tv=Sv[0],Uv=Sv[1];
+			     var Jy=$hs_byteArrayContentszh(Uv);
+			     var Ky=$hs_writeAddrOffAddrzh(Jy,goog.math.Long.fromBits(0,0),null,Tv);
+			     $M(Lv,function(Vv){
+			      var Wv=Vv.v[0];
+			      $M(Cv,function(Xv){
+			       var Yv=Xv.v[0];
+			       $M($$Engine$W,function(Zv){
+				var aw=Zv.v[0];
+				var $ff=JSObjectGetProperty(Wv,Yv,aw,Jy);
+				var bw=[Ky,$ff];
+				var cw=bw[0],dw=bw[1];
+				var ew=$hs_readAddrOffAddrzh(Jy,goog.math.Long.fromBits(0,0),cw);
+				var fw=ew[0],gw=ew[1];
+				var hw=$hs_eqAddrzh(gw,null);
+				switch(hw.g){
 				case 1:
-				 $$LanguageziJavascriptziJSCziValue_zdwa4.C([wF,Aw,vF],function(yF){
-				  var zF=yF[0],AF=yF[1];
-				  var BF=$t(function(){
-				   var CF=$d(1,[wF],"sat");
-				   var DF=$t(function(){
-				    $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(AF);
-				   },[AF],"sat");
-				   var EF=$d(1,[DF,CF],"sat");
-				   $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(EF);
-				  },[wF,AF],"sat");
-				  $r($hs_raiseIOzh(BF,zF));
-				 },[wF]);break;
+				 var iw=$t(function(){
+				  var jw=$d(1,[gw],"sat");
+				  var kw=$d(1,[jw],"sat");
+				  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(kw);
+				 },[gw],"sat");
+				 $r($hs_raiseIOzh(iw,fw));break;
 				case 2:
-				 var jK=$hs_touchzh(rB,vF);
-				 $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$N,Bw,jK],function(FF){
-				  var GF=FF[0],HF=FF[1];
-				  var IF=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),GF);
-				  var JF=IF[0],KF=IF[1];
-				  var LF=$hs_unsafeFreezzeByteArrayzh(KF,JF);
-				  var MF=LF[0],NF=LF[1];
-				  var hK=$hs_byteArrayContentszh(NF);
-				  var iK=$hs_writeAddrOffAddrzh(hK,goog.math.Long.fromBits(0,0),null,MF);
-				  var OF=$f(3,function(PF,QF,RF){
-				   $M(RF,function(SF){
-				    switch(SF.g){
-				    case 1:
-				     $A($$Engine$O);break;
-				    case 2:
-				     var TF=SF.v[0],UF=SF.v[1];
-				     $M(UF,function(VF){
-				      switch(VF.g){
-				      case 1:
-				       var WF=$t(function(){
-					var XF=$f(2,function(YF,ZF){
-					 $$Engine$f1.C([YF,ZF],function(aG){
-					  var bG=aG[0],cG=aG[1];
-					  var dG=$d(1,[TF,cG],"sat");
-					  $r([bG,dG]);
-					 },[TF]);
-					},[TF],"sat");
-					$$LanguageziJavascriptziJSCziObject_zh.J($$Engine$b,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,XF,$$GHCziTuple_Z0T);
-				       },[TF],"m");
-				       var eG=$f(2,function(fG,gG){
-					WF.C([fG,gG],function(hG){
-					 var iG=hG[0];
-					 $$Engine$d1.C([fG,iG],function(jG){
-					  var kG=jG[0],lG=jG[1];
-					  var mG=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),kG);
-					  var nG=mG[0],oG=mG[1];
-					  var pG=$hs_unsafeFreezzeByteArrayzh(oG,nG);
-					  var qG=pG[0],rG=pG[1];
-					  var KJ=$hs_byteArrayContentszh(rG);
-					  var LJ=$hs_writeAddrOffAddrzh(KJ,goog.math.Long.fromBits(0,0),null,qG);
-					  $M(fG,function(sG){
-					   var tG=sG.v[0];
-					   $M(TF,function(uG){
-					    var vG=uG.v[0];
-					    $M(lG,function(wG){
-					     var xG=wG.v[0];
-					     var $ff=JSObjectGetProperty(tG,vG,xG,KJ);
-					     var yG=[LJ,$ff];
-					     var zG=yG[0],AG=yG[1];
-					     var BG=$hs_readAddrOffAddrzh(KJ,goog.math.Long.fromBits(0,0),zG);
-					     var CG=BG[0],DG=BG[1];
-					     var EG=$hs_eqAddrzh(DG,null);
-					     switch(EG.g){
-					     case 1:
-					      $$LanguageziJavascriptziJSCziValue_zdwa4.C([DG,tG,CG],function(FG){
-					       var GG=FG[0],HG=FG[1];
-					       var IG=$t(function(){
-						var JG=$d(1,[DG],"sat");
-						var KG=$t(function(){
-						 $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(HG);
-						},[HG],"sat");
-						var LG=$d(1,[KG,JG],"sat");
-						$$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(LG);
-					       },[DG,HG],"sat");
-					       $r($hs_raiseIOzh(IG,GG));
-					      },[DG]);break;
-					     case 2:
-					      var JJ=$hs_touchzh(rG,CG);
-					      $$Engine$e1.C([sG,JJ],function(MG){
-					       var NG=MG[0],OG=MG[1];
-					       var PG=$d(1,[AG],"sat");
-					       var QG=$d(1,[PG,OG],"sat");
-					       $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,QG,sG,NG],function(RG){
-						var SG=RG[0],TG=RG[1];
-						$M(TG,function(UG){
-						 switch(UG.g){
-						 case 3:
-						  $r([SG,$$GHCziTuple_Z0T]);break;
-						 case 4:
-						  var VG=UG.v[0];
-						  $M(VG,function(WG){
-						   var XG=WG.v[0];
-						   var YG=XG==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
-						   switch(YG.g){
-						   case 1:
-						    $r([SG,$$GHCziTuple_Z0T]);break;
-						   case 2:
-						    $$Engine$c1.C([sG,SG],function(ZG){
-						     var aH=ZG[0],bH=ZG[1];
-						     var cH=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),aH);
-						     var dH=cH[0],eH=cH[1];
-						     var fH=$hs_unsafeFreezzeByteArrayzh(eH,dH);
-						     var gH=fH[0],hH=fH[1];
-						     var HJ=$hs_byteArrayContentszh(hH);
-						     var IJ=$hs_writeAddrOffAddrzh(HJ,goog.math.Long.fromBits(0,0),null,gH);
-						     $M(bH,function(iH){
-						      var jH=iH.v[0];
-						      var $ff=JSObjectGetProperty(tG,vG,jH,HJ);
-						      var kH=[IJ,$ff];
-						      var lH=kH[0],mH=kH[1];
-						      var nH=$hs_readAddrOffAddrzh(HJ,goog.math.Long.fromBits(0,0),lH);
-						      var oH=nH[0],pH=nH[1];
-						      var qH=$hs_eqAddrzh(pH,null);
-						      switch(qH.g){
-						      case 1:
-						       $$LanguageziJavascriptziJSCziValue_zdwa4.C([pH,tG,oH],function(rH){
-							var sH=rH[0],tH=rH[1];
-							var uH=$t(function(){
-							 var vH=$d(1,[pH],"sat");
-							 var wH=$t(function(){
-							  $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(tH);
-							 },[tH],"sat");
-							 var xH=$d(1,[wH,vH],"sat");
-							 $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(xH);
-							},[pH,tH],"sat");
-							$r($hs_raiseIOzh(uH,sH));
-						       },[pH]);break;
-						      case 2:
-						       var GJ=$hs_touchzh(hH,oH);
-						       var yH=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),GJ);
-						       var zH=yH[0],AH=yH[1];
-						       var BH=$hs_unsafeFreezzeByteArrayzh(AH,zH);
-						       var CH=BH[0],DH=BH[1];
-						       var EJ=$hs_byteArrayContentszh(DH);
-						       var FJ=$hs_writeAddrOffAddrzh(EJ,goog.math.Long.fromBits(0,0),null,CH);
-						       var $ff=JSObjectGetPropertyAtIndex(tG,mH,goog.math.Long.fromBits(0,0),EJ);
-						       var EH=[FJ,$ff];
-						       var FH=EH[0],GH=EH[1];
-						       var HH=$hs_readAddrOffAddrzh(EJ,goog.math.Long.fromBits(0,0),FH);
-						       var IH=HH[0],JH=HH[1];
-						       var KH=$hs_eqAddrzh(JH,null);
-						       switch(KH.g){
-						       case 1:
-							$$LanguageziJavascriptziJSCziValue_zdwa4.C([JH,tG,IH],function(LH){
-							 var MH=LH[0],NH=LH[1];
-							 var OH=$t(function(){
-							  var PH=$d(1,[JH],"sat");
-							  var QH=$t(function(){
-							   $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(NH);
-							  },[NH],"sat");
-							  var RH=$d(1,[QH,PH],"sat");
-							  $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(RH);
-							 },[JH,NH],"sat");
-							 $r($hs_raiseIOzh(OH,MH));
-							},[JH]);break;
-						       case 2:
-							var DJ=$hs_touchzh(DH,IH);
-							$$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$J,sG,DJ],function(SH){
-							 var TH=SH[0],UH=SH[1];
-							 var VH=$d(1,[GH],"sat");
-							 var WH=$d(1,[VH,UH],"sat");
-							 $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,WH,sG,TH],function(XH){
-							  var YH=XH[0],ZH=XH[1];
-							  var aI=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),YH);
-							  var bI=aI[0],cI=aI[1];
-							  var dI=$hs_unsafeFreezzeByteArrayzh(cI,bI);
-							  var eI=dI[0],fI=dI[1];
-							  var BJ=$hs_byteArrayContentszh(fI);
-							  var CJ=$hs_writeAddrOffAddrzh(BJ,goog.math.Long.fromBits(0,0),null,eI);
-							  var $ff=JSObjectGetPropertyAtIndex(tG,mH,goog.math.Long.fromBits(0,0),BJ);
-							  var gI=[CJ,$ff];
-							  var hI=gI[0],iI=gI[1];
-							  var jI=$hs_readAddrOffAddrzh(BJ,goog.math.Long.fromBits(0,0),hI);
-							  var kI=jI[0],lI=jI[1];
-							  var mI=$hs_eqAddrzh(lI,null);
-							  switch(mI.g){
-							  case 1:
-							   $$LanguageziJavascriptziJSCziValue_zdwa4.C([lI,tG,kI],function(nI){
-							    var oI=nI[0],pI=nI[1];
-							    var qI=$t(function(){
-							     var rI=$d(1,[lI],"sat");
-							     var sI=$t(function(){
-							      $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(pI);
-							     },[pI],"sat");
-							     var tI=$d(1,[sI,rI],"sat");
-							     $$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(tI);
-							    },[lI,pI],"sat");
-							    $r($hs_raiseIOzh(qI,oI));
-							   },[lI]);break;
-							  case 2:
-							   var AJ=$hs_touchzh(fI,kI);
-							   $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.C([$$Engine$A,$$Engine$K,sG,AJ],function(uI){
-							    var vI=uI[0],wI=uI[1];
-							    var xI=$d(1,[iI],"sat");
-							    var yI=$d(1,[xI,wI],"sat");
-							    $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsJSPropRef2,yI,sG,vI],function(zI){
-							     var AI=zI[0],BI=zI[1];
-							     $M(ZH,function(CI){
-							      switch(CI.g){
-							      case 4:
-							       var DI=CI.v[0];
-							       $M(BI,function(EI){
-								switch(EI.g){
-								case 4:
-								 var FI=EI.v[0];
-								 var GI=$hs_readMutVarzh(rg,AI);
-								 var HI=GI[0],II=GI[1];
-								 $M(II,function(JI){
-								  switch(JI.g){
-								  case 1:
-								   $r([HI,$$GHCziTuple_Z0T]);break;
-								  case 2:
-								   var zJ=$hs_writeMutVarzh(rg,$$Engine_Up,HI);
-								   var KI=$t(function(){
-								    var LI=$t(function(){
-								     $M(FI,function(MI){
-								      var NI=MI.v[0];
-								      var VI=$hs_double2Intzh(NI);
-								      var dJ=$hs_int2Doublezh(VI);
-								      var OI=NI<dJ?$$GHCziTypes_True:$$GHCziTypes_False;
-								      switch(OI.g){
-								      case 1:
-								       $M(iw,function(PI){
-									var QI=PI.v[0];
-									var UI=VI.subtract(QI);
-									var TI=$hs_int2Doublezh(UI);
-									var SI=TI/0.25;
-									var RI=1000.0-SI;
-									$R(1,[RI],"D#");
-								       },[VI]);break;
-								      case 2:
-								       $M(iw,function(WI){
-									var XI=WI.v[0];
-									var cJ=VI.subtract(goog.math.Long.fromBits(1,0));
-									var bJ=cJ.subtract(XI);
-									var aJ=$hs_int2Doublezh(bJ);
-									var ZI=aJ/0.25;
-									var YI=1000.0-ZI;
-									$R(1,[YI],"D#");
-								       },[VI]);break;
-								      }
-								     },[iw]);
-								    },[iw,FI],"sat");
-								    var eJ=$t(function(){
-								     $M(DI,function(fJ){
-								      var gJ=fJ.v[0];
-								      var oJ=$hs_double2Intzh(gJ);
-								      var wJ=$hs_int2Doublezh(oJ);
-								      var hJ=gJ<wJ?$$GHCziTypes_True:$$GHCziTypes_False;
-								      switch(hJ.g){
-								      case 1:
-								       $M(hw,function(iJ){
-									var jJ=iJ.v[0];
-									var nJ=oJ.subtract(jJ);
-									var mJ=$hs_int2Doublezh(nJ);
-									var lJ=mJ/0.25;
-									var kJ=lJ+ -1400.0;
-									$R(1,[kJ],"D#");
-								       },[oJ]);break;
-								      case 2:
-								       $M(hw,function(pJ){
-									var qJ=pJ.v[0];
-									var vJ=oJ.subtract(goog.math.Long.fromBits(1,0));
-									var uJ=vJ.subtract(qJ);
-									var tJ=$hs_int2Doublezh(uJ);
-									var sJ=tJ/0.25;
-									var rJ=sJ+ -1400.0;
-									$R(1,[rJ],"D#");
-								       },[oJ]);break;
-								      }
-								     },[hw]);
-								    },[hw,DI],"sat");
-								    var xJ=$d(1,[eJ,LI],"sat");
-								    var yJ=$d(3,[xJ],"sat");
-								    og.J(yJ);
-								   },[og,hw,iw,DI,FI],"sat");
-								   $$FRPziSodiumziPlain_sync1.J(KI,zJ);break;
-								  }
-								 },[rg,og,hw,iw,HI,DI,FI]);break;
-								default:
-								 $r([AI,$$GHCziTuple_Z0T]);
-								}
-							       },[rg,og,hw,iw,AI,DI]);break;
-							      default:
-							       $r([AI,$$GHCziTuple_Z0T]);
-							      }
-							     },[rg,og,hw,iw,AI,BI]);
-							    },[rg,og,hw,iw,ZH]);
-							   },[rg,og,hw,iw,sG,iI,ZH]);break;
-							  }
-							 },[rg,og,hw,iw,tG,sG,mH]);
-							},[rg,og,hw,iw,tG,sG,mH,GH]);break;
-						       }break;
-						      }
-						     },[rg,og,hw,iw,tG,vG,sG,hH,HJ,IJ]);
-						    },[rg,og,hw,iw,tG,vG,sG]);break;
-						   }
-						  },[rg,og,hw,iw,tG,vG,sG,SG]);break;
-						 case 5:
-						  $r([SG,$$GHCziTuple_Z0T]);break;
-						 case 6:
-						  $r([SG,$$GHCziTuple_Z0T]);break;
-						 default:
-						  $r([SG,$$GHCziTuple_Z0T]);
-						 }
-						},[rg,og,hw,iw,tG,vG,sG,SG]);
-					       },[rg,og,hw,iw,tG,vG,sG]);
-					      },[rg,og,hw,iw,tG,vG,sG,AG]);break;
-					     }
-					    },[rg,og,hw,iw,rG,KJ,tG,vG,LJ,sG]);
-					   },[rg,og,hw,iw,rG,KJ,lG,tG,LJ,sG]);
-					  },[rg,og,hw,iw,TF,rG,KJ,lG,LJ]);
-					 },[rg,og,hw,iw,TF,fG]);
-					},[rg,og,hw,iw,TF,fG]);
-				       },[rg,og,hw,iw,TF,WF],"sat");
-				       $A(eG);break;
-				      case 2:
-				       $A($$Engine$O);break;
-				      }
-				     },[rg,og,hw,iw,TF]);break;
-				    }
-				   },[rg,og,hw,iw]);
-				  },[rg,og,hw,iw],"sat");
-				  $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,OF,Bw,iK],function(MJ){
-				   var NJ=MJ[0],OJ=MJ[1];
-				   $M(HF,function(PJ){
-				    var QJ=PJ.v[0];
-				    $M(OJ,function(RJ){
-				     var SJ=RJ.v[0];
-				     var $ff=JSObjectSetProperty(Aw,RA,QJ,SJ,goog.math.Long.fromBits(0,0),hK);
-				     var TJ=[NJ,$ff];
-				     var UJ=TJ[0];
-				     var VJ=$hs_readAddrOffAddrzh(hK,goog.math.Long.fromBits(0,0),UJ);
-				     var WJ=VJ[0],XJ=VJ[1];
-				     var YJ=$hs_eqAddrzh(XJ,null);
-				     switch(YJ.g){
+				 var Iy=$hs_touchzh(Uv,fw);
+				 var lw=$d(1,[dw],"sat");
+				 var mw=$d(1,[lw,$$Engine$S],"sat");
+				 $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,mw,Vv,Iy],function(nw){
+				  var ow=nw[0],pw=nw[1];
+				  $M(pw,function(qw){
+				   switch(qw.g){
+				   case 3:
+				    $r([ow,$$GHCziTuple_Z0T]);break;
+				   case 4:
+				    var rw=qw.v[0];
+				    $M(rw,function(sw){
+				     var tw=sw.v[0];
+				     var uw=tw==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
+				     switch(uw.g){
 				     case 1:
-				      $$LanguageziJavascriptziJSCziValue_zdwa4.C([XJ,Aw,WJ],function(ZJ){
-				       var aK=ZJ[0],bK=ZJ[1];
-				       var cK=$t(function(){
-					var dK=$d(1,[XJ],"sat");
-					var eK=$t(function(){
-					 $$LanguageziJavascriptziJSCziValue_zdfShowJSValuezuzdcshow.J(bK);
-					},[bK],"sat");
-					var fK=$d(1,[eK,dK],"sat");
-					$$LanguageziJavascriptziJSCziValue_zdfExceptionJSExceptionzuzdctoException.J(fK);
-				       },[XJ,bK],"sat");
-				       $r($hs_raiseIOzh(cK,aK));
-				      },[XJ]);break;
+				      $r([ow,$$GHCziTuple_Z0T]);break;
 				     case 2:
-				      var gK=$hs_touchzh(NF,WJ);
-				      Dh.J(gK);break;
+				      var vw=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),ow);
+				      var ww=vw[0],xw=vw[1];
+				      var yw=$hs_unsafeFreezzeByteArrayzh(xw,ww);
+				      var zw=yw[0],Aw=yw[1];
+				      var Gy=$hs_byteArrayContentszh(Aw);
+				      var Hy=$hs_writeAddrOffAddrzh(Gy,goog.math.Long.fromBits(0,0),null,zw);
+				      var $ff=JSObjectGetProperty(Wv,Yv,aw,Gy);
+				      var Bw=[Hy,$ff];
+				      var Cw=Bw[0],Dw=Bw[1];
+				      var Ew=$hs_readAddrOffAddrzh(Gy,goog.math.Long.fromBits(0,0),Cw);
+				      var Fw=Ew[0],Gw=Ew[1];
+				      var Hw=$hs_eqAddrzh(Gw,null);
+				      switch(Hw.g){
+				      case 1:
+				       var Iw=$t(function(){
+					var Jw=$d(1,[Gw],"sat");
+					var Kw=$d(1,[Jw],"sat");
+					$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Kw);
+				       },[Gw],"sat");
+				       $r($hs_raiseIOzh(Iw,Fw));break;
+				      case 2:
+				       var Fy=$hs_touchzh(Aw,Fw);
+				       var Lw=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Fy);
+				       var Mw=Lw[0],Nw=Lw[1];
+				       var Ow=$hs_unsafeFreezzeByteArrayzh(Nw,Mw);
+				       var Pw=Ow[0],Qw=Ow[1];
+				       var Dy=$hs_byteArrayContentszh(Qw);
+				       var Ey=$hs_writeAddrOffAddrzh(Dy,goog.math.Long.fromBits(0,0),null,Pw);
+				       var $ff=JSObjectGetPropertyAtIndex(Wv,Dw,goog.math.Long.fromBits(0,0),Dy);
+				       var Rw=[Ey,$ff];
+				       var Sw=Rw[0],Tw=Rw[1];
+				       var Uw=$hs_readAddrOffAddrzh(Dy,goog.math.Long.fromBits(0,0),Sw);
+				       var Vw=Uw[0],Ww=Uw[1];
+				       var Xw=$hs_eqAddrzh(Ww,null);
+				       switch(Xw.g){
+				       case 1:
+					var Yw=$t(function(){
+					 var Zw=$d(1,[Ww],"sat");
+					 var ax=$d(1,[Zw],"sat");
+					 $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(ax);
+					},[Ww],"sat");
+					$r($hs_raiseIOzh(Yw,Vw));break;
+				       case 2:
+					var Cy=$hs_touchzh(Qw,Vw);
+					var bx=$d(1,[Tw],"sat");
+					var cx=$d(1,[bx,$$Engine$U],"sat");
+					$$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,cx,Vv,Cy],function(dx){
+					 var ex=dx[0],fx=dx[1];
+					 var gx=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),ex);
+					 var hx=gx[0],ix=gx[1];
+					 var jx=$hs_unsafeFreezzeByteArrayzh(ix,hx);
+					 var kx=jx[0],lx=jx[1];
+					 var Ay=$hs_byteArrayContentszh(lx);
+					 var By=$hs_writeAddrOffAddrzh(Ay,goog.math.Long.fromBits(0,0),null,kx);
+					 var $ff=JSObjectGetPropertyAtIndex(Wv,Dw,goog.math.Long.fromBits(0,0),Ay);
+					 var mx=[By,$ff];
+					 var nx=mx[0],ox=mx[1];
+					 var px=$hs_readAddrOffAddrzh(Ay,goog.math.Long.fromBits(0,0),nx);
+					 var qx=px[0],rx=px[1];
+					 var sx=$hs_eqAddrzh(rx,null);
+					 switch(sx.g){
+					 case 1:
+					  var tx=$t(function(){
+					   var ux=$d(1,[rx],"sat");
+					   var vx=$d(1,[ux],"sat");
+					   $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(vx);
+					  },[rx],"sat");
+					  $r($hs_raiseIOzh(tx,qx));break;
+					 case 2:
+					  var zy=$hs_touchzh(lx,qx);
+					  var wx=$d(1,[ox],"sat");
+					  var xx=$d(1,[wx,$$Engine$T],"sat");
+					  $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,xx,Vv,zy],function(yx){
+					   var zx=yx[0],Ax=yx[1];
+					   $M(fx,function(Bx){
+					    switch(Bx.g){
+					    case 4:
+					     var Cx=Bx.v[0];
+					     $M(Ax,function(Dx){
+					      switch(Dx.g){
+					      case 4:
+					       var Ex=Dx.v[0];
+					       var Fx=$hs_readMutVarzh(rg,zx);
+					       var Gx=Fx[0],Hx=Fx[1];
+					       $M(Hx,function(Ix){
+						switch(Ix.g){
+						case 1:
+						 var yy=$hs_writeMutVarzh(rg,$$Engine_Down,Gx);
+						 var Jx=$t(function(){
+						  var Kx=$t(function(){
+						   $M(Ex,function(Lx){
+						    var Mx=Lx.v[0];
+						    var Ux=$hs_double2Intzh(Mx);
+						    var cy=$hs_int2Doublezh(Ux);
+						    var Nx=Mx<cy?$$GHCziTypes_True:$$GHCziTypes_False;
+						    switch(Nx.g){
+						    case 1:
+						     $M(ou,function(Ox){
+						      var Px=Ox.v[0];
+						      var Tx=Ux.subtract(Px);
+						      var Sx=$hs_int2Doublezh(Tx);
+						      var Rx=Sx/0.25;
+						      var Qx=1000.0-Rx;
+						      $R(1,[Qx],"D#");
+						     },[Ux]);break;
+						    case 2:
+						     $M(ou,function(Vx){
+						      var Wx=Vx.v[0];
+						      var by=Ux.subtract(goog.math.Long.fromBits(1,0));
+						      var ay=by.subtract(Wx);
+						      var Zx=$hs_int2Doublezh(ay);
+						      var Yx=Zx/0.25;
+						      var Xx=1000.0-Yx;
+						      $R(1,[Xx],"D#");
+						     },[Ux]);break;
+						    }
+						   },[ou]);
+						  },[Ex,ou],"sat");
+						  var dy=$t(function(){
+						   $M(Cx,function(ey){
+						    var fy=ey.v[0];
+						    var ny=$hs_double2Intzh(fy);
+						    var vy=$hs_int2Doublezh(ny);
+						    var gy=fy<vy?$$GHCziTypes_True:$$GHCziTypes_False;
+						    switch(gy.g){
+						    case 1:
+						     $M(nu,function(hy){
+						      var iy=hy.v[0];
+						      var my=ny.subtract(iy);
+						      var ly=$hs_int2Doublezh(my);
+						      var ky=ly/0.25;
+						      var jy=ky+ -1400.0;
+						      $R(1,[jy],"D#");
+						     },[ny]);break;
+						    case 2:
+						     $M(nu,function(oy){
+						      var py=oy.v[0];
+						      var uy=ny.subtract(goog.math.Long.fromBits(1,0));
+						      var ty=uy.subtract(py);
+						      var sy=$hs_int2Doublezh(ty);
+						      var ry=sy/0.25;
+						      var qy=ry+ -1400.0;
+						      $R(1,[qy],"D#");
+						     },[ny]);break;
+						    }
+						   },[nu]);
+						  },[Cx,nu],"sat");
+						  var wy=$d(1,[dy,Kx],"sat");
+						  var xy=$d(1,[wy],"sat");
+						  og.J(xy);
+						 },[og,Cx,nu,Ex,ou],"sat");
+						 $$FRPziSodiumziPlain_sync1.J(Jx,yy);break;
+						case 2:
+						 $r([Gx,$$GHCziTuple_Z0T]);break;
+						}
+					       },[rg,og,Gx,Cx,nu,Ex,ou]);break;
+					      default:
+					       $r([zx,$$GHCziTuple_Z0T]);
+					      }
+					     },[rg,og,zx,Cx,nu,ou]);break;
+					    default:
+					     $r([zx,$$GHCziTuple_Z0T]);
+					    }
+					   },[rg,og,zx,Ax,nu,ou]);
+					  },[rg,og,fx,nu,ou]);break;
+					 }
+					},[rg,og,Wv,Vv,Dw,nu,ou]);break;
+				       }break;
+				      }break;
 				     }
-				    },[sg,ng,Xf,uh,Dh,Aw,RA,NF,hK,QJ,NJ]);
-				   },[sg,ng,Xf,uh,Dh,Aw,RA,NF,hK,OJ,NJ]);
-				  },[sg,ng,Xf,uh,Dh,Aw,RA,NF,hK,HF]);
-				 },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,hw,iw,RA]);break;
+				    },[rg,og,Wv,Yv,aw,Vv,ow,nu,ou]);break;
+				   case 5:
+				    $r([ow,$$GHCziTuple_Z0T]);break;
+				   case 6:
+				    $r([ow,$$GHCziTuple_Z0T]);break;
+				   default:
+				    $r([ow,$$GHCziTuple_Z0T]);
+				   }
+				  },[rg,og,Wv,Yv,aw,Vv,ow,nu,ou]);
+				 },[rg,og,Wv,Yv,aw,Vv,nu,ou]);break;
 				}
-			       },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,hw,iw,RA,rB,kK,pF,mF]);
-			      },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,hw,iw,RA,rB,kK,nF,mF]);
-			     },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,hw,iw,RA,rB,kK,lB]);
-			    },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,hw,iw,RA]);break;
-			   }
-			  },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,Ow,nK,hw,iw,RA,TA,OA]);
-			 },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,Ow,nK,hw,iw,PA,RA,OA]);
-			},[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,Ow,nK,hw,iw,Iw,PA,OA]);
-		       },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,Ow,nK,hw,iw,Fw,Iw]);
-		      },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,hw,iw,Fw]);
-		     },[sg,rg,og,ng,Xf,uh,Dh,Aw,Bw,hw,iw]);
-		    },[Wf,sg,rg,og,ng,Xf,uh,Dh,uw,hw,iw]);
-		   },[Wf,sg,rg,og,ng,Xf,uh,Dh,hw,iw]);
-		  },[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh,ew]);
+			       },[rg,og,Uv,Jy,Wv,Yv,Ky,Vv,nu,ou]);
+			      },[rg,og,Uv,Jy,Wv,Ky,Vv,nu,ou]);
+			     },[rg,og,Cv,Uv,Jy,Ky,nu,ou]);
+			    },[rg,og,Cv,Lv,nu,ou]);
+			   },[rg,og,Cv,Fv,nu,ou],"sat");
+			   $A(Kv);break;
+			  case 2:
+			   $A($$Engine$N);break;
+			  }
+			 },[rg,og,Cv,nu,ou]);break;
+			}
+		       },[rg,og,nu,ou]);
+		      },[rg,og,nu,ou],"sat");
+		      $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,xv,Ku,AG],function(Ly){
+		       var My=Ly[0],Ny=Ly[1];
+		       $M(qv,function(Oy){
+			var Py=Oy.v[0];
+			$M($$Engine$X,function(Qy){
+			 var Ry=Qy.v[0];
+			 $M(Ny,function(Sy){
+			  var Ty=Sy.v[0];
+			  var $ff=JSObjectSetProperty(Gu,Py,Ry,Ty,goog.math.Long.fromBits(0,0),zG);
+			  var Uy=[My,$ff];
+			  var Vy=Uy[0];
+			  var Wy=$hs_readAddrOffAddrzh(zG,goog.math.Long.fromBits(0,0),Vy);
+			  var Xy=Wy[0],Yy=Wy[1];
+			  var Zy=$hs_eqAddrzh(Yy,null);
+			  switch(Zy.g){
+			  case 1:
+			   var az=$t(function(){
+			    var bz=$d(1,[Yy],"sat");
+			    var cz=$d(1,[bz],"sat");
+			    $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(cz);
+			   },[Yy],"sat");
+			   $r($hs_raiseIOzh(az,Xy));break;
+			  case 2:
+			   var yG=$hs_touchzh(wv,Xy);
+			   var dz=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),yG);
+			   var ez=dz[0],fz=dz[1];
+			   var gz=$hs_unsafeFreezzeByteArrayzh(fz,ez);
+			   var hz=gz[0],iz=gz[1];
+			   var wG=$hs_byteArrayContentszh(iz);
+			   var xG=$hs_writeAddrOffAddrzh(wG,goog.math.Long.fromBits(0,0),null,hz);
+			   var jz=$f(3,function(kz,lz,mz){
+			    $M(mz,function(nz){
+			     switch(nz.g){
+			     case 1:
+			      $A($$Engine$O);break;
+			     case 2:
+			      var oz=nz.v[0],pz=nz.v[1];
+			      $M(pz,function(qz){
+			       switch(qz.g){
+			       case 1:
+				var rz=$t(function(){
+				 var sz=$f(2,function(tz,uz){
+				  var vz=$d(1,[oz,$$Engine$H],"sat");
+				  $r([uz,vz]);
+				 },[oz],"sat");
+				 $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$a,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,sz,$$GHCziTuple_Z0T);
+				},[oz],"m");
+				var wz=$f(2,function(xz,yz){
+				 rz.C([xz,yz],function(zz){
+				  var Az=zz[0];
+				  var Bz=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),Az);
+				  var Cz=Bz[0],Dz=Bz[1];
+				  var Ez=$hs_unsafeFreezzeByteArrayzh(Dz,Cz);
+				  var Fz=Ez[0],Gz=Ez[1];
+				  var qC=$hs_byteArrayContentszh(Gz);
+				  var rC=$hs_writeAddrOffAddrzh(qC,goog.math.Long.fromBits(0,0),null,Fz);
+				  $M(xz,function(Hz){
+				   var Iz=Hz.v[0];
+				   $M(oz,function(Jz){
+				    var Kz=Jz.v[0];
+				    $M($$Engine$W,function(Lz){
+				     var Mz=Lz.v[0];
+				     var $ff=JSObjectGetProperty(Iz,Kz,Mz,qC);
+				     var Nz=[rC,$ff];
+				     var Oz=Nz[0],Pz=Nz[1];
+				     var Qz=$hs_readAddrOffAddrzh(qC,goog.math.Long.fromBits(0,0),Oz);
+				     var Rz=Qz[0],Sz=Qz[1];
+				     var Tz=$hs_eqAddrzh(Sz,null);
+				     switch(Tz.g){
+				     case 1:
+				      var Uz=$t(function(){
+				       var Vz=$d(1,[Sz],"sat");
+				       var Wz=$d(1,[Vz],"sat");
+				       $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(Wz);
+				      },[Sz],"sat");
+				      $r($hs_raiseIOzh(Uz,Rz));break;
+				     case 2:
+				      var pC=$hs_touchzh(Gz,Rz);
+				      var Xz=$d(1,[Pz],"sat");
+				      var Yz=$d(1,[Xz,$$Engine$S],"sat");
+				      $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,Yz,Hz,pC],function(Zz){
+				       var aA=Zz[0],bA=Zz[1];
+				       $M(bA,function(cA){
+					switch(cA.g){
+					case 3:
+					 $r([aA,$$GHCziTuple_Z0T]);break;
+					case 4:
+					 var dA=cA.v[0];
+					 $M(dA,function(eA){
+					  var fA=eA.v[0];
+					  var gA=fA==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
+					  switch(gA.g){
+					  case 1:
+					   $r([aA,$$GHCziTuple_Z0T]);break;
+					  case 2:
+					   var hA=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),aA);
+					   var iA=hA[0],jA=hA[1];
+					   var kA=$hs_unsafeFreezzeByteArrayzh(jA,iA);
+					   var lA=kA[0],mA=kA[1];
+					   var nC=$hs_byteArrayContentszh(mA);
+					   var oC=$hs_writeAddrOffAddrzh(nC,goog.math.Long.fromBits(0,0),null,lA);
+					   var $ff=JSObjectGetProperty(Iz,Kz,Mz,nC);
+					   var nA=[oC,$ff];
+					   var oA=nA[0],pA=nA[1];
+					   var qA=$hs_readAddrOffAddrzh(nC,goog.math.Long.fromBits(0,0),oA);
+					   var rA=qA[0],sA=qA[1];
+					   var tA=$hs_eqAddrzh(sA,null);
+					   switch(tA.g){
+					   case 1:
+					    var uA=$t(function(){
+					     var vA=$d(1,[sA],"sat");
+					     var wA=$d(1,[vA],"sat");
+					     $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(wA);
+					    },[sA],"sat");
+					    $r($hs_raiseIOzh(uA,rA));break;
+					   case 2:
+					    var mC=$hs_touchzh(mA,rA);
+					    var xA=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),mC);
+					    var yA=xA[0],zA=xA[1];
+					    var AA=$hs_unsafeFreezzeByteArrayzh(zA,yA);
+					    var BA=AA[0],CA=AA[1];
+					    var kC=$hs_byteArrayContentszh(CA);
+					    var lC=$hs_writeAddrOffAddrzh(kC,goog.math.Long.fromBits(0,0),null,BA);
+					    var $ff=JSObjectGetPropertyAtIndex(Iz,pA,goog.math.Long.fromBits(0,0),kC);
+					    var DA=[lC,$ff];
+					    var EA=DA[0],FA=DA[1];
+					    var GA=$hs_readAddrOffAddrzh(kC,goog.math.Long.fromBits(0,0),EA);
+					    var HA=GA[0],IA=GA[1];
+					    var JA=$hs_eqAddrzh(IA,null);
+					    switch(JA.g){
+					    case 1:
+					     var KA=$t(function(){
+					      var LA=$d(1,[IA],"sat");
+					      var MA=$d(1,[LA],"sat");
+					      $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(MA);
+					     },[IA],"sat");
+					     $r($hs_raiseIOzh(KA,HA));break;
+					    case 2:
+					     var jC=$hs_touchzh(CA,HA);
+					     var NA=$d(1,[FA],"sat");
+					     var OA=$d(1,[NA,$$Engine$U],"sat");
+					     $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,OA,Hz,jC],function(PA){
+					      var QA=PA[0],RA=PA[1];
+					      var SA=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),QA);
+					      var TA=SA[0],UA=SA[1];
+					      var VA=$hs_unsafeFreezzeByteArrayzh(UA,TA);
+					      var WA=VA[0],XA=VA[1];
+					      var hC=$hs_byteArrayContentszh(XA);
+					      var iC=$hs_writeAddrOffAddrzh(hC,goog.math.Long.fromBits(0,0),null,WA);
+					      var $ff=JSObjectGetPropertyAtIndex(Iz,pA,goog.math.Long.fromBits(0,0),hC);
+					      var YA=[iC,$ff];
+					      var ZA=YA[0],aB=YA[1];
+					      var bB=$hs_readAddrOffAddrzh(hC,goog.math.Long.fromBits(0,0),ZA);
+					      var cB=bB[0],dB=bB[1];
+					      var eB=$hs_eqAddrzh(dB,null);
+					      switch(eB.g){
+					      case 1:
+					       var fB=$t(function(){
+						var gB=$d(1,[dB],"sat");
+						var hB=$d(1,[gB],"sat");
+						$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(hB);
+					       },[dB],"sat");
+					       $r($hs_raiseIOzh(fB,cB));break;
+					      case 2:
+					       var gC=$hs_touchzh(XA,cB);
+					       var iB=$d(1,[aB],"sat");
+					       var jB=$d(1,[iB,$$Engine$T],"sat");
+					       $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,jB,Hz,gC],function(kB){
+						var lB=kB[0],mB=kB[1];
+						$M(RA,function(nB){
+						 switch(nB.g){
+						 case 4:
+						  var oB=nB.v[0];
+						  $M(mB,function(pB){
+						   switch(pB.g){
+						   case 4:
+						    var qB=pB.v[0];
+						    var rB=$t(function(){
+						     var sB=$t(function(){
+						      $M(qB,function(tB){
+						       var uB=tB.v[0];
+						       var CB=$hs_double2Intzh(uB);
+						       var KB=$hs_int2Doublezh(CB);
+						       var vB=uB<KB?$$GHCziTypes_True:$$GHCziTypes_False;
+						       switch(vB.g){
+						       case 1:
+							$M(ou,function(wB){
+							 var xB=wB.v[0];
+							 var BB=CB.subtract(xB);
+							 var AB=$hs_int2Doublezh(BB);
+							 var zB=AB/0.25;
+							 var yB=1000.0-zB;
+							 $R(1,[yB],"D#");
+							},[CB]);break;
+						       case 2:
+							$M(ou,function(DB){
+							 var EB=DB.v[0];
+							 var JB=CB.subtract(goog.math.Long.fromBits(1,0));
+							 var IB=JB.subtract(EB);
+							 var HB=$hs_int2Doublezh(IB);
+							 var GB=HB/0.25;
+							 var FB=1000.0-GB;
+							 $R(1,[FB],"D#");
+							},[CB]);break;
+						       }
+						      },[ou]);
+						     },[ou,qB],"sat");
+						     var LB=$t(function(){
+						      $M(oB,function(MB){
+						       var NB=MB.v[0];
+						       var VB=$hs_double2Intzh(NB);
+						       var dC=$hs_int2Doublezh(VB);
+						       var OB=NB<dC?$$GHCziTypes_True:$$GHCziTypes_False;
+						       switch(OB.g){
+						       case 1:
+							$M(nu,function(PB){
+							 var QB=PB.v[0];
+							 var UB=VB.subtract(QB);
+							 var TB=$hs_int2Doublezh(UB);
+							 var SB=TB/0.25;
+							 var RB=SB+ -1400.0;
+							 $R(1,[RB],"D#");
+							},[VB]);break;
+						       case 2:
+							$M(nu,function(WB){
+							 var XB=WB.v[0];
+							 var cC=VB.subtract(goog.math.Long.fromBits(1,0));
+							 var bC=cC.subtract(XB);
+							 var aC=$hs_int2Doublezh(bC);
+							 var ZB=aC/0.25;
+							 var YB=ZB+ -1400.0;
+							 $R(1,[YB],"D#");
+							},[VB]);break;
+						       }
+						      },[nu]);
+						     },[nu,oB],"sat");
+						     var eC=$d(1,[LB,sB],"sat");
+						     var fC=$d(2,[eC],"sat");
+						     og.J(fC);
+						    },[og,nu,ou,oB,qB],"sat");
+						    $$FRPziSodiumziPlain_sync1.J(rB,lB);break;
+						   default:
+						    $r([lB,$$GHCziTuple_Z0T]);
+						   }
+						  },[og,nu,ou,lB,oB]);break;
+						 default:
+						  $r([lB,$$GHCziTuple_Z0T]);
+						 }
+						},[og,nu,ou,lB,mB]);
+					       },[og,nu,ou,RA]);break;
+					      }
+					     },[og,nu,ou,Iz,Hz,pA]);break;
+					    }break;
+					   }break;
+					  }
+					 },[og,nu,ou,Iz,Kz,Mz,Hz,aA]);break;
+					case 5:
+					 $r([aA,$$GHCziTuple_Z0T]);break;
+					case 6:
+					 $r([aA,$$GHCziTuple_Z0T]);break;
+					default:
+					 $r([aA,$$GHCziTuple_Z0T]);
+					}
+				       },[og,nu,ou,Iz,Kz,Mz,Hz,aA]);
+				      },[og,nu,ou,Iz,Kz,Mz,Hz]);break;
+				     }
+				    },[og,nu,ou,Gz,qC,Iz,Kz,rC,Hz]);
+				   },[og,nu,ou,Gz,qC,Iz,rC,Hz]);
+				  },[og,nu,ou,oz,Gz,qC,rC]);
+				 },[og,nu,ou,oz,xz]);
+				},[og,nu,ou,oz,rz],"sat");
+				$A(wz);break;
+			       case 2:
+				$A($$Engine$O);break;
+			       }
+			      },[og,nu,ou,oz]);break;
+			     }
+			    },[og,nu,ou]);
+			   },[og,nu,ou],"sat");
+			   $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,jz,Ku,xG],function(sC){
+			    var tC=sC[0],uC=sC[1];
+			    $M($$Engine$V,function(vC){
+			     var wC=vC.v[0];
+			     $M(uC,function(xC){
+			      var yC=xC.v[0];
+			      var $ff=JSObjectSetProperty(Gu,Py,wC,yC,goog.math.Long.fromBits(0,0),wG);
+			      var zC=[tC,$ff];
+			      var AC=zC[0];
+			      var BC=$hs_readAddrOffAddrzh(wG,goog.math.Long.fromBits(0,0),AC);
+			      var CC=BC[0],DC=BC[1];
+			      var EC=$hs_eqAddrzh(DC,null);
+			      switch(EC.g){
+			      case 1:
+			       var FC=$t(function(){
+				var GC=$d(1,[DC],"sat");
+				var HC=$d(1,[GC],"sat");
+				$$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(HC);
+			       },[DC],"sat");
+			       $r($hs_raiseIOzh(FC,CC));break;
+			      case 2:
+			       var vG=$hs_touchzh(iz,CC);
+			       var IC=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),vG);
+			       var JC=IC[0],KC=IC[1];
+			       var LC=$hs_unsafeFreezzeByteArrayzh(KC,JC);
+			       var MC=LC[0],NC=LC[1];
+			       var tG=$hs_byteArrayContentszh(NC);
+			       var uG=$hs_writeAddrOffAddrzh(tG,goog.math.Long.fromBits(0,0),null,MC);
+			       var OC=$f(3,function(PC,QC,RC){
+				$M(RC,function(SC){
+				 switch(SC.g){
+				 case 1:
+				  $A($$Engine$P);break;
+				 case 2:
+				  var TC=SC.v[0],UC=SC.v[1];
+				  $M(UC,function(VC){
+				   switch(VC.g){
+				   case 1:
+				    var WC=$t(function(){
+				     var XC=$f(2,function(YC,ZC){
+				      var aD=$d(1,[TC,$$Engine$H],"sat");
+				      $r([ZC,aD]);
+				     },[TC],"sat");
+				     $$LanguageziJavascriptziJSCziObject_zh.J($$Engine$a,$$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZLZR1,XC,$$GHCziTuple_Z0T);
+				    },[TC],"m");
+				    var bD=$f(2,function(cD,dD){
+				     WC.C([cD,dD],function(eD){
+				      var fD=eD[0];
+				      var gD=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),fD);
+				      var hD=gD[0],iD=gD[1];
+				      var jD=$hs_unsafeFreezzeByteArrayzh(iD,hD);
+				      var kD=jD[0],lD=jD[1];
+				      var aG=$hs_byteArrayContentszh(lD);
+				      var bG=$hs_writeAddrOffAddrzh(aG,goog.math.Long.fromBits(0,0),null,kD);
+				      $M(cD,function(mD){
+				       var nD=mD.v[0];
+				       $M(TC,function(oD){
+					var pD=oD.v[0];
+					$M($$Engine$R,function(qD){
+					 var rD=qD.v[0];
+					 var $ff=JSObjectGetProperty(nD,pD,rD,aG);
+					 var sD=[bG,$ff];
+					 var tD=sD[0],uD=sD[1];
+					 var vD=$hs_readAddrOffAddrzh(aG,goog.math.Long.fromBits(0,0),tD);
+					 var wD=vD[0],xD=vD[1];
+					 var yD=$hs_eqAddrzh(xD,null);
+					 switch(yD.g){
+					 case 1:
+					  var zD=$t(function(){
+					   var AD=$d(1,[xD],"sat");
+					   var BD=$d(1,[AD],"sat");
+					   $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(BD);
+					  },[xD],"sat");
+					  $r($hs_raiseIOzh(zD,wD));break;
+					 case 2:
+					  var ZF=$hs_touchzh(lD,wD);
+					  var CD=$d(1,[uD],"sat");
+					  var DD=$d(1,[CD,$$Engine$S],"sat");
+					  $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,DD,mD,ZF],function(ED){
+					   var FD=ED[0],GD=ED[1];
+					   $M(GD,function(HD){
+					    switch(HD.g){
+					    case 3:
+					     $r([FD,$$GHCziTuple_Z0T]);break;
+					    case 4:
+					     var ID=HD.v[0];
+					     $M(ID,function(JD){
+					      var KD=JD.v[0];
+					      var LD=KD==1.0?$$GHCziTypes_True:$$GHCziTypes_False;
+					      switch(LD.g){
+					      case 1:
+					       $r([FD,$$GHCziTuple_Z0T]);break;
+					      case 2:
+					       var MD=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),FD);
+					       var ND=MD[0],OD=MD[1];
+					       var PD=$hs_unsafeFreezzeByteArrayzh(OD,ND);
+					       var QD=PD[0],RD=PD[1];
+					       var XF=$hs_byteArrayContentszh(RD);
+					       var YF=$hs_writeAddrOffAddrzh(XF,goog.math.Long.fromBits(0,0),null,QD);
+					       var $ff=JSObjectGetProperty(nD,pD,rD,XF);
+					       var SD=[YF,$ff];
+					       var TD=SD[0],UD=SD[1];
+					       var VD=$hs_readAddrOffAddrzh(XF,goog.math.Long.fromBits(0,0),TD);
+					       var WD=VD[0],XD=VD[1];
+					       var YD=$hs_eqAddrzh(XD,null);
+					       switch(YD.g){
+					       case 1:
+						var ZD=$t(function(){
+						 var aE=$d(1,[XD],"sat");
+						 var bE=$d(1,[aE],"sat");
+						 $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(bE);
+						},[XD],"sat");
+						$r($hs_raiseIOzh(ZD,WD));break;
+					       case 2:
+						var WF=$hs_touchzh(RD,WD);
+						var cE=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),WF);
+						var dE=cE[0],eE=cE[1];
+						var fE=$hs_unsafeFreezzeByteArrayzh(eE,dE);
+						var gE=fE[0],hE=fE[1];
+						var UF=$hs_byteArrayContentszh(hE);
+						var VF=$hs_writeAddrOffAddrzh(UF,goog.math.Long.fromBits(0,0),null,gE);
+						var $ff=JSObjectGetPropertyAtIndex(nD,UD,goog.math.Long.fromBits(0,0),UF);
+						var iE=[VF,$ff];
+						var jE=iE[0],kE=iE[1];
+						var lE=$hs_readAddrOffAddrzh(UF,goog.math.Long.fromBits(0,0),jE);
+						var mE=lE[0],nE=lE[1];
+						var oE=$hs_eqAddrzh(nE,null);
+						switch(oE.g){
+						case 1:
+						 var pE=$t(function(){
+						  var qE=$d(1,[nE],"sat");
+						  var rE=$d(1,[qE],"sat");
+						  $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(rE);
+						 },[nE],"sat");
+						 $r($hs_raiseIOzh(pE,mE));break;
+						case 2:
+						 var TF=$hs_touchzh(hE,mE);
+						 var sE=$d(1,[kE],"sat");
+						 var tE=$d(1,[sE,$$Engine$U],"sat");
+						 $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,tE,mD,TF],function(uE){
+						  var vE=uE[0],wE=uE[1];
+						  var xE=$hs_newAlignedPinnedByteArrayzh(goog.math.Long.fromBits(8,0),goog.math.Long.fromBits(8,0),vE);
+						  var yE=xE[0],zE=xE[1];
+						  var AE=$hs_unsafeFreezzeByteArrayzh(zE,yE);
+						  var BE=AE[0],CE=AE[1];
+						  var RF=$hs_byteArrayContentszh(CE);
+						  var SF=$hs_writeAddrOffAddrzh(RF,goog.math.Long.fromBits(0,0),null,BE);
+						  var $ff=JSObjectGetPropertyAtIndex(nD,UD,goog.math.Long.fromBits(0,0),RF);
+						  var DE=[SF,$ff];
+						  var EE=DE[0],FE=DE[1];
+						  var GE=$hs_readAddrOffAddrzh(RF,goog.math.Long.fromBits(0,0),EE);
+						  var HE=GE[0],IE=GE[1];
+						  var JE=$hs_eqAddrzh(IE,null);
+						  switch(JE.g){
+						  case 1:
+						   var KE=$t(function(){
+						    var LE=$d(1,[IE],"sat");
+						    var ME=$d(1,[LE],"sat");
+						    $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(ME);
+						   },[IE],"sat");
+						   $r($hs_raiseIOzh(KE,HE));break;
+						  case 2:
+						   var QF=$hs_touchzh(CE,HE);
+						   var NE=$d(1,[FE],"sat");
+						   var OE=$d(1,[NE,$$Engine$T],"sat");
+						   $$LanguageziJavascriptziJSCziValue_deRefVal.C([$$LanguageziJavascriptziJSCziProperties_zdfMakeArgRefsJSPropRef2,OE,mD,QF],function(PE){
+						    var QE=PE[0],RE=PE[1];
+						    $M(wE,function(SE){
+						     switch(SE.g){
+						     case 4:
+						      var TE=SE.v[0];
+						      $M(RE,function(UE){
+						       switch(UE.g){
+						       case 4:
+							var VE=UE.v[0];
+							var WE=$hs_readMutVarzh(rg,QE);
+							var XE=WE[0],YE=WE[1];
+							$M(YE,function(ZE){
+							 switch(ZE.g){
+							 case 1:
+							  $r([XE,$$GHCziTuple_Z0T]);break;
+							 case 2:
+							  var PF=$hs_writeMutVarzh(rg,$$Engine_Up,XE);
+							  var aF=$t(function(){
+							   var bF=$t(function(){
+							    $M(VE,function(cF){
+							     var dF=cF.v[0];
+							     var lF=$hs_double2Intzh(dF);
+							     var tF=$hs_int2Doublezh(lF);
+							     var eF=dF<tF?$$GHCziTypes_True:$$GHCziTypes_False;
+							     switch(eF.g){
+							     case 1:
+							      $M(ou,function(fF){
+							       var gF=fF.v[0];
+							       var kF=lF.subtract(gF);
+							       var jF=$hs_int2Doublezh(kF);
+							       var iF=jF/0.25;
+							       var hF=1000.0-iF;
+							       $R(1,[hF],"D#");
+							      },[lF]);break;
+							     case 2:
+							      $M(ou,function(mF){
+							       var nF=mF.v[0];
+							       var sF=lF.subtract(goog.math.Long.fromBits(1,0));
+							       var rF=sF.subtract(nF);
+							       var qF=$hs_int2Doublezh(rF);
+							       var pF=qF/0.25;
+							       var oF=1000.0-pF;
+							       $R(1,[oF],"D#");
+							      },[lF]);break;
+							     }
+							    },[ou]);
+							   },[ou,VE],"sat");
+							   var uF=$t(function(){
+							    $M(TE,function(vF){
+							     var wF=vF.v[0];
+							     var EF=$hs_double2Intzh(wF);
+							     var MF=$hs_int2Doublezh(EF);
+							     var xF=wF<MF?$$GHCziTypes_True:$$GHCziTypes_False;
+							     switch(xF.g){
+							     case 1:
+							      $M(nu,function(yF){
+							       var zF=yF.v[0];
+							       var DF=EF.subtract(zF);
+							       var CF=$hs_int2Doublezh(DF);
+							       var BF=CF/0.25;
+							       var AF=BF+ -1400.0;
+							       $R(1,[AF],"D#");
+							      },[EF]);break;
+							     case 2:
+							      $M(nu,function(FF){
+							       var GF=FF.v[0];
+							       var LF=EF.subtract(goog.math.Long.fromBits(1,0));
+							       var KF=LF.subtract(GF);
+							       var JF=$hs_int2Doublezh(KF);
+							       var IF=JF/0.25;
+							       var HF=IF+ -1400.0;
+							       $R(1,[HF],"D#");
+							      },[EF]);break;
+							     }
+							    },[nu]);
+							   },[nu,TE],"sat");
+							   var NF=$d(1,[uF,bF],"sat");
+							   var OF=$d(3,[NF],"sat");
+							   og.J(OF);
+							  },[og,nu,ou,TE,VE],"sat");
+							  $$FRPziSodiumziPlain_sync1.J(aF,PF);break;
+							 }
+							},[rg,og,nu,ou,XE,TE,VE]);break;
+						       default:
+							$r([QE,$$GHCziTuple_Z0T]);
+						       }
+						      },[rg,og,nu,ou,QE,TE]);break;
+						     default:
+						      $r([QE,$$GHCziTuple_Z0T]);
+						     }
+						    },[rg,og,nu,ou,QE,RE]);
+						   },[rg,og,nu,ou,wE]);break;
+						  }
+						 },[rg,og,nu,ou,nD,mD,UD]);break;
+						}break;
+					       }break;
+					      }
+					     },[rg,og,nu,ou,nD,pD,rD,mD,FD]);break;
+					    case 5:
+					     $r([FD,$$GHCziTuple_Z0T]);break;
+					    case 6:
+					     $r([FD,$$GHCziTuple_Z0T]);break;
+					    default:
+					     $r([FD,$$GHCziTuple_Z0T]);
+					    }
+					   },[rg,og,nu,ou,nD,pD,rD,mD,FD]);
+					  },[rg,og,nu,ou,nD,pD,rD,mD]);break;
+					 }
+					},[rg,og,nu,ou,lD,aG,nD,pD,bG,mD]);
+				       },[rg,og,nu,ou,lD,aG,nD,bG,mD]);
+				      },[rg,og,nu,ou,TC,lD,aG,bG]);
+				     },[rg,og,nu,ou,TC,cD]);
+				    },[rg,og,nu,ou,TC,WC],"sat");
+				    $A(bD);break;
+				   case 2:
+				    $A($$Engine$P);break;
+				   }
+				  },[rg,og,nu,ou,TC]);break;
+				 }
+				},[rg,og,nu,ou]);
+			       },[rg,og,nu,ou],"sat");
+			       $$LanguageziJavascriptziJSCziObject_zdfMakeArgRefsZLzmzgZR2.C([$$GHCziPtr_nullPtr,OC,Ku,uG],function(cG){
+				var dG=cG[0],eG=cG[1];
+				$M($$Engine$Q,function(fG){
+				 var gG=fG.v[0];
+				 $M(eG,function(hG){
+				  var iG=hG.v[0];
+				  var $ff=JSObjectSetProperty(Gu,Py,gG,iG,goog.math.Long.fromBits(0,0),tG);
+				  var jG=[dG,$ff];
+				  var kG=jG[0];
+				  var lG=$hs_readAddrOffAddrzh(tG,goog.math.Long.fromBits(0,0),kG);
+				  var mG=lG[0],nG=lG[1];
+				  var oG=$hs_eqAddrzh(nG,null);
+				  switch(oG.g){
+				  case 1:
+				   var pG=$t(function(){
+				    var qG=$d(1,[nG],"sat");
+				    var rG=$d(1,[qG],"sat");
+				    $$LanguageziJavascriptziJSCziException_zdfExceptionJSExceptionzuzdctoException.J(rG);
+				   },[nG],"sat");
+				   $r($hs_raiseIOzh(pG,mG));break;
+				  case 2:
+				   var sG=$hs_touchzh(NC,mG);
+				   Dh.J(sG);break;
+				  }
+				 },[sg,ng,Xf,uh,Dh,Gu,Py,NC,tG,gG,dG]);
+				},[sg,ng,Xf,uh,Dh,Gu,Py,NC,tG,eG,dG]);
+			       },[sg,ng,Xf,uh,Dh,Gu,Py,NC,tG]);break;
+			      }
+			     },[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,nu,ou,Py,iz,wG,wC,tC]);
+			    },[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,nu,ou,Py,iz,wG,uC,tC]);
+			   },[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,nu,ou,Py,iz,wG]);break;
+			  }
+			 },[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,wv,zG,nu,ou,Py,Ry,My]);
+			},[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,wv,zG,nu,ou,Ny,Py,My]);
+		       },[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,wv,zG,nu,ou,Ny,My]);
+		      },[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,wv,zG,nu,ou,qv]);
+		     },[sg,rg,og,ng,Xf,uh,Dh,Gu,Ku,nu,ou]);
+		    },[Wf,sg,rg,og,ng,Xf,uh,Dh,Au,nu,ou]);
+		   },[Wf,sg,rg,og,ng,Xf,uh,Dh,nu,ou]);
+		  },[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh,ku]);
 		 },[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh]);break;
 		}
-	       },[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh,Bh,Yv]);break;
+	       },[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh,Bh,eu]);break;
 	      }
 	     },[Vf,Wf,sg,rg,og,ng,Xf,uh,Dh,Bh]);
 	    },[Vf,Wf,sg,rg,og,ng,Xf,uh],"$j");
-	    var pK=$hs_eqAddrzh(zh,null);
-	    switch(pK.g){
+	    var BG=$hs_eqAddrzh(zh,null);
+	    switch(BG.g){
 	    case 1:
-	     var qK=$f(1,function(rK){
-	      var sK=$d(1,[zh],"sat");
-	      $r([rK,sK]);
+	     var CG=$f(1,function(DG){
+	      var EG=$d(1,[zh],"sat");
+	      $r([DG,EG]);
 	     },[zh],"sat");
-	     $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkHTMLElement1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,qK,xK],function(tK){
-	      var uK=tK[0],vK=tK[1];
-	      var wK=$d(2,[vK],"sat");
-	      Ah.J(uK,wK);
+	     $$SystemziGlibziGObject_zdwa1.C([$$GraphicsziUIziGtkziWebKitziTypes_mkHTMLElement1,$$GraphicsziUIziGtkziGeneralziThreading_objectUnrefFromMainloop,CG,JG],function(FG){
+	      var GG=FG[0],HG=FG[1];
+	      var IG=$d(2,[HG],"sat");
+	      Ah.J(GG,IG);
 	     },[Vf,Wf,sg,rg,og,ng,Xf,uh,Ah]);break;
 	    case 2:
-	     Ah.J(xK,$$DataziMaybe_Nothing);break;
+	     Ah.J(JG,$$DataziMaybe_Nothing);break;
 	    }
 	   },[Vf,Wf,sg,rg,og,th,ng,Xf]);
 	  },[Vf,dg,Wf,sg,rg,og,ng,Xf]);
@@ -51496,30 +48261,30 @@ var $$Engine_engine1=$f(4,function(Vf,Wf,Xf,Yf){
 },[],"in `main:Engine'");
 var $$Engine_Up=$D(1,function(){
  $r([]);
-},"at src/Engine.hs:111:20");
+},"at src/Engine.hs:112:20");
 var $$Engine_Down=$D(2,function(){
  $r([]);
-},"at src/Engine.hs:111:25");
-var $$Engine$a=$F(1,function(P1){
- $$LanguageziJavascriptziJSCziValue_zdfMakeArgRefsZMZNzuzdcmakeArgRefs.J($$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZNzuzdcmakeValueRef,P1);
+},"at src/Engine.hs:112:25");
+var $$Engine$a=$F(3,function(KG,LG,MG){
+ KG.J(LG,MG);
 },"a");
-var $$Engine$b=$F(3,function(yK,zK,AK){
- yK.J(zK,AK);
+var $$Engine$b=$F(1,function(P1){
+ $$LanguageziJavascriptziJSCziArguments_zdfMakeArgRefsZMZNzuzdcmakeArgRefs.J($$LanguageziJavascriptziJSCziValue_zdfMakeValueRefZMZNzuzdcmakeValueRef,P1);
 },"a1");
 var $$Engine$c=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:74:9-17");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:75:9-17");
 },"a2");
 var $$Engine$d=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:77:9-19");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:78:9-19");
 },"a3");
 var $$Engine$e=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:95:17-27");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:96:17-27");
 },"a4");
 var $$Engine$f=$T(function(){
  $$GHCziCString_unpackCStringzh.J("src");
 },"lvl");
-var $$Engine$g=$F(2,function(BK,CK){
- $$GHCziCString_unpackFoldrCStringzh.J("http://ghcjs.github.com/",BK,CK);
+var $$Engine$g=$F(2,function(NG,OG){
+ $$GHCziCString_unpackFoldrCStringzh.J("http://ghcjs.github.com/",NG,OG);
 },"lvl1");
 var $$Engine$h=$T(function(){
  $$GHCziCString_unpackCStringzh.J("style");
@@ -51533,96 +48298,96 @@ var $$Engine$j=$T(function(){
 var $$Engine$k=$T(function(){
  $$GHCziCString_unpackCStringzh.J("-webkit-touch-callout:none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none");
 },"lvl5");
-var $$Engine$l=$F(4,function(DK,EK,FK,GK){
- var HK=$t(function(){
-  $M(EK,function(IK){
-   var JK=IK.v[0],KK=IK.v[1];
-   $M(JK,function(LK){
-    var MK=LK.v[0],NK=LK.v[1];
-    $M(KK,function(OK){
-     var PK=OK.v[0],QK=OK.v[1];
-     $$Engine_zdwfromWorldRect.C([MK,NK,PK,QK],function(RK){
-      var SK=RK[0],TK=RK[1];
-      $M(TK,function(UK){
-       var VK=UK.v[0],WK=UK.v[1];
-       $R(1,[SK,VK,WK],"(,,)");
-      },[SK]);
+var $$Engine$l=$F(4,function(PG,QG,RG,SG){
+ var TG=$t(function(){
+  $M(QG,function(UG){
+   var VG=UG.v[0],WG=UG.v[1];
+   $M(VG,function(XG){
+    var YG=XG.v[0],ZG=XG.v[1];
+    $M(WG,function(aH){
+     var bH=aH.v[0],cH=aH.v[1];
+     $$Engine_zdwfromWorldRect.C([YG,ZG,bH,cH],function(dH){
+      var eH=dH[0],fH=dH[1];
+      $M(fH,function(gH){
+       var hH=gH.v[0],iH=gH.v[1];
+       $R(1,[eH,hH,iH],"(,,)");
+      },[eH]);
      },[]);
-    },[MK,NK]);
-   },[KK]);
+    },[YG,ZG]);
+   },[WG]);
   },[]);
- },[EK],"ds");
- var XK=$t(function(){
-  $M(HK,function(YK){
-   var ZK=YK.v[0];
-   $M(ZK,function(aL){
-    var bL=aL.v[0],cL=aL.v[1];
-    var dL=$t(function(){
-     $M(cL,function(eL){
-      var fL=eL.v[0];
-      var gL=$t(function(){
-       var hL=$t(function(){
-	$M(bL,function(iL){
-	 var jL=iL.v[0];
-	 var kL=$t(function(){
-	  var lL=$t(function(){
-	   $M(FK,function(mL){
-	    var nL=mL.v[0];
-	    $$GHCziShow_zdwshowSignedInt.C([goog.math.Long.fromBits(0,0),nL,$$GHCziTypes_ZMZN],function(oL){
-	     $$GHCziBase_zpzp.J(oL,$$Engine$k);
+ },[QG],"ds");
+ var jH=$t(function(){
+  $M(TG,function(kH){
+   var lH=kH.v[0];
+   $M(lH,function(mH){
+    var nH=mH.v[0],oH=mH.v[1];
+    var pH=$t(function(){
+     $M(oH,function(qH){
+      var rH=qH.v[0];
+      var sH=$t(function(){
+       var tH=$t(function(){
+	$M(nH,function(uH){
+	 var vH=uH.v[0];
+	 var wH=$t(function(){
+	  var xH=$t(function(){
+	   $M(RG,function(yH){
+	    var zH=yH.v[0];
+	    $$GHCziShow_zdwshowSignedInt.C([goog.math.Long.fromBits(0,0),zH,$$GHCziTypes_ZMZN],function(AH){
+	     $$GHCziBase_zpzp.J(AH,$$Engine$k);
 	    },[]);
 	   },[]);
-	  },[FK],"sat");
-	  $$GHCziCString_unpackAppendCStringzh.J("px;zIndex:",lL);
-	 },[FK],"sat");
-	 $$GHCziShow_zdwshowSignedInt.C([goog.math.Long.fromBits(0,0),jL,$$GHCziTypes_ZMZN],function(pL){
-	  $$GHCziBase_zpzp.J(pL,kL);
-	 },[kL]);
-	},[FK]);
-       },[bL,FK],"sat");
-       $$GHCziCString_unpackAppendCStringzh.J("px;left:",hL);
-      },[bL,FK],"sat");
-      $$GHCziShow_zdwshowSignedInt.C([goog.math.Long.fromBits(0,0),fL,$$GHCziTypes_ZMZN],function(qL){
-       $$GHCziBase_zpzp.J(qL,gL);
-      },[gL]);
-     },[bL,FK]);
-    },[cL,bL,FK],"sat");
-    $$GHCziCString_unpackAppendCStringzh.J("position:absolute;top:",dL);
-   },[FK]);
-  },[FK]);
- },[HK,FK],"sat");
- $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.C([$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,DK,$$Engine$h,XK,GK],function(rL){
-  var sL=rL[0];
-  var tL=$t(function(){
-   $M(HK,function(uL){
-    var vL=uL.v[1];
-    $M(vL,function(wL){
-     var xL=wL.v[0];
-     $$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),xL,$$GHCziTypes_ZMZN);
+	  },[RG],"sat");
+	  $$GHCziCString_unpackAppendCStringzh.J("px;zIndex:",xH);
+	 },[RG],"sat");
+	 $$GHCziShow_zdwshowSignedInt.C([goog.math.Long.fromBits(0,0),vH,$$GHCziTypes_ZMZN],function(BH){
+	  $$GHCziBase_zpzp.J(BH,wH);
+	 },[wH]);
+	},[RG]);
+       },[nH,RG],"sat");
+       $$GHCziCString_unpackAppendCStringzh.J("px;left:",tH);
+      },[nH,RG],"sat");
+      $$GHCziShow_zdwshowSignedInt.C([goog.math.Long.fromBits(0,0),rH,$$GHCziTypes_ZMZN],function(CH){
+       $$GHCziBase_zpzp.J(CH,sH);
+      },[sH]);
+     },[nH,RG]);
+    },[oH,nH,RG],"sat");
+    $$GHCziCString_unpackAppendCStringzh.J("position:absolute;top:",pH);
+   },[RG]);
+  },[RG]);
+ },[TG,RG],"sat");
+ $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.C([$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,PG,$$Engine$h,jH,SG],function(DH){
+  var EH=DH[0];
+  var FH=$t(function(){
+   $M(TG,function(GH){
+    var HH=GH.v[1];
+    $M(HH,function(IH){
+     var JH=IH.v[0];
+     $$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),JH,$$GHCziTypes_ZMZN);
     },[]);
    },[]);
-  },[HK],"sat");
-  $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.C([$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,DK,$$Engine$i,tL,sL],function(yL){
-   var zL=yL[0];
-   var AL=$t(function(){
-    $M(HK,function(BL){
-     var CL=BL.v[2];
-     $M(CL,function(DL){
-      var EL=DL.v[0];
-      $$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),EL,$$GHCziTypes_ZMZN);
+  },[TG],"sat");
+  $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.C([$$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,PG,$$Engine$i,FH,EH],function(KH){
+   var LH=KH[0];
+   var MH=$t(function(){
+    $M(TG,function(NH){
+     var OH=NH.v[2];
+     $M(OH,function(PH){
+      var QH=PH.v[0];
+      $$GHCziShow_zdwshowSignedInt.J(goog.math.Long.fromBits(0,0),QH,$$GHCziTypes_ZMZN);
      },[]);
     },[]);
-   },[HK],"sat");
-   $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.J($$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,DK,$$Engine$j,AL,zL);
-  },[HK,DK]);
- },[HK,DK]);
+   },[TG],"sat");
+   $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.J($$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,PG,$$Engine$j,MH,LH);
+  },[TG,PG]);
+ },[TG,PG]);
 },"a5");
-var $$Engine$m=$F(1,function(FL){
- $M(FL,function(GL){
-  var HL=GL.v[1];
-  $M(HL,function(IL){
-   var JL=IL.v[0];
-   $A(JL);
+var $$Engine$m=$F(1,function(RH){
+ $M(RH,function(SH){
+  var TH=SH.v[1];
+  $M(TH,function(UH){
+   var VH=UH.v[0];
+   $A(VH);
   },[]);
  },[]);
 },"lvl6");
@@ -51630,7 +48395,7 @@ var $$Engine$n=$T(function(){
  $$GHCziCString_unpackCStringzh.J("img");
 },"lvl7");
 var $$Engine$o=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:228:25-32");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:241:25-32");
 },"a6");
 var $$Engine$p=$T(function(){
  $$GHCziCString_unpackCStringzh.J("ondragstart");
@@ -51641,269 +48406,211 @@ var $$Engine$q=$T(function(){
 var $$Engine$r=$D(1,function(){
  $r([goog.math.Long.fromBits(4293967296,4294967295)]);
 },"lvl10");
-var $$Engine$s=$F(4,function(KL,LL,ML,NL){
- $M(LL,function(OL){
-  var PL=OL.v[0],QL=OL.v[1];
-  $M(QL,function(RL){
-   var SL=RL.v[0],TL=RL.v[1];
-   $M(TL,function(UL){
-    var VL=UL.v[0],WL=UL.v[1];
-    $M(VL,function(XL){
-     var YL=XL.v[0],ZL=XL.v[1];
-     $M(PL,function(aM){
-      var bM=aM.v[0],cM=aM.v[1];
-      $M(bM,function(dM){
-       var eM=dM.v[0],fM=dM.v[1];
-       $M(YL,function(gM){
-	var hM=gM.v[0],iM=gM.v[1];
-	$M(eM,function(jM){
-	 var kM=jM.v[0],lM=jM.v[1];
-	 $M(hM,function(mM){
-	  var nM=mM.v[0];
-	  $M(kM,function(oM){
-	   var pM=oM.v[0];
-	   var qM=$f(1,function(rM){
-	    $$GHCziClasses_zdfEqZMZNzuzdczeze1.C([WL,cM],function(sM){
-	     switch(sM.g){
+var $$Engine$s=$F(4,function(WH,XH,YH,ZH){
+ $M(XH,function(aI){
+  var bI=aI.v[0],cI=aI.v[1];
+  $M(cI,function(dI){
+   var eI=dI.v[0],fI=dI.v[1];
+   $M(fI,function(gI){
+    var hI=gI.v[0],iI=gI.v[1];
+    $M(hI,function(jI){
+     var kI=jI.v[0],lI=jI.v[1];
+     $M(bI,function(mI){
+      var nI=mI.v[0],oI=mI.v[1];
+      $M(nI,function(pI){
+       var qI=pI.v[0],rI=pI.v[1];
+       $M(kI,function(sI){
+	var tI=sI.v[0],uI=sI.v[1];
+	$M(qI,function(vI){
+	 var wI=vI.v[0],xI=vI.v[1];
+	 $M(tI,function(yI){
+	  var zI=yI.v[0];
+	  $M(wI,function(AI){
+	   var BI=AI.v[0];
+	   var CI=$f(1,function(DI){
+	    $$GHCziClasses_zdfEqZMZNzuzdczeze1.C([iI,oI],function(EI){
+	     switch(EI.g){
 	     case 1:
-	      var tM=$t(function(){
-	       $$Engine$g.J($$GHCziTypes_ZC,cM);
-	      },[cM],"sat");
-	      $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.J($$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,SL,$$Engine$f,tM,rM);break;
+	      var FI=$t(function(){
+	       $$Engine$g.J($$GHCziTypes_ZC,oI);
+	      },[oI],"sat");
+	      $$GraphicsziUIziGtkziWebKitziDOMziElement_elementSetAttribute1.J($$GraphicsziUIziGtkziWebKitziTypes_zdfGObjectClassHTMLElement,eI,$$Engine$f,FI,DI);break;
 	     case 2:
-	      $r([rM,$$GHCziTuple_Z0T]);break;
+	      $r([DI,$$GHCziTuple_Z0T]);break;
 	     }
-	    },[cM,SL,rM]);
-	   },[WL,cM,SL],"a11");
-	   var uM=nM==pM?$$GHCziTypes_True:$$GHCziTypes_False;
-	   switch(uM.g){
+	    },[oI,eI,DI]);
+	   },[iI,oI,eI],"a9");
+	   var GI=zI==BI?$$GHCziTypes_True:$$GHCziTypes_False;
+	   switch(GI.g){
 	   case 1:
-	    $$Engine$l.C([SL,dM,KL,NL],function(vM){
-	     var wM=vM[0];
-	     qM.C([wM],function(xM){
-	      var yM=xM[0];
-	      ML.J(yM);
-	     },[ML]);
-	    },[qM,ML]);break;
+	    $$Engine$l.C([eI,pI,WH,ZH],function(HI){
+	     var II=HI[0];
+	     CI.C([II],function(JI){
+	      var KI=JI[0];
+	      YH.J(KI);
+	     },[YH]);
+	    },[CI,YH]);break;
 	   case 2:
-	    $M(iM,function(zM){
-	     var AM=zM.v[0];
-	     $M(lM,function(BM){
-	      var CM=BM.v[0];
-	      var DM=AM==CM?$$GHCziTypes_True:$$GHCziTypes_False;
-	      switch(DM.g){
+	    $M(uI,function(LI){
+	     var MI=LI.v[0];
+	     $M(xI,function(NI){
+	      var OI=NI.v[0];
+	      var PI=MI==OI?$$GHCziTypes_True:$$GHCziTypes_False;
+	      switch(PI.g){
 	      case 1:
-	       $$Engine$l.C([SL,dM,KL,NL],function(EM){
-		var FM=EM[0];
-		qM.C([FM],function(GM){
-		 var HM=GM[0];
-		 ML.J(HM);
-		},[ML]);
-	       },[qM,ML]);break;
+	       $$Engine$l.C([eI,pI,WH,ZH],function(QI){
+		var RI=QI[0];
+		CI.C([RI],function(SI){
+		 var TI=SI[0];
+		 YH.J(TI);
+		},[YH]);
+	       },[CI,YH]);break;
 	      case 2:
-	       $M(ZL,function(IM){
-		var JM=IM.v[0],KM=IM.v[1];
-		$M(fM,function(LM){
-		 var MM=LM.v[0],NM=LM.v[1];
-		 $M(JM,function(OM){
-		  var PM=OM.v[0];
-		  $M(MM,function(QM){
-		   var RM=QM.v[0];
-		   var SM=PM==RM?$$GHCziTypes_True:$$GHCziTypes_False;
-		   switch(SM.g){
+	       $M(lI,function(UI){
+		var VI=UI.v[0],WI=UI.v[1];
+		$M(rI,function(XI){
+		 var YI=XI.v[0],ZI=XI.v[1];
+		 $M(VI,function(aJ){
+		  var bJ=aJ.v[0];
+		  $M(YI,function(cJ){
+		   var dJ=cJ.v[0];
+		   var eJ=bJ==dJ?$$GHCziTypes_True:$$GHCziTypes_False;
+		   switch(eJ.g){
 		   case 1:
-		    $$Engine$l.C([SL,dM,KL,NL],function(TM){
-		     var UM=TM[0];
-		     qM.C([UM],function(VM){
-		      var WM=VM[0];
-		      ML.J(WM);
-		     },[ML]);
-		    },[qM,ML]);break;
+		    $$Engine$l.C([eI,pI,WH,ZH],function(fJ){
+		     var gJ=fJ[0];
+		     CI.C([gJ],function(hJ){
+		      var iJ=hJ[0];
+		      YH.J(iJ);
+		     },[YH]);
+		    },[CI,YH]);break;
 		   case 2:
-		    $M(KM,function(XM){
-		     var YM=XM.v[0];
-		     $M(NM,function(ZM){
-		      var aN=ZM.v[0];
-		      var bN=YM==aN?$$GHCziTypes_True:$$GHCziTypes_False;
-		      switch(bN.g){
+		    $M(WI,function(jJ){
+		     var kJ=jJ.v[0];
+		     $M(ZI,function(lJ){
+		      var mJ=lJ.v[0];
+		      var nJ=kJ==mJ?$$GHCziTypes_True:$$GHCziTypes_False;
+		      switch(nJ.g){
 		      case 1:
-		       $$Engine$l.C([SL,dM,KL,NL],function(cN){
-			var dN=cN[0];
-			qM.C([dN],function(eN){
-			 var fN=eN[0];
-			 ML.J(fN);
-			},[ML]);
-		       },[qM,ML]);break;
+		       $$Engine$l.C([eI,pI,WH,ZH],function(oJ){
+			var pJ=oJ[0];
+			CI.C([pJ],function(qJ){
+			 var rJ=qJ[0];
+			 YH.J(rJ);
+			},[YH]);
+		       },[CI,YH]);break;
 		      case 2:
-		       qM.C([NL],function(gN){
-			var hN=gN[0];
-			ML.J(hN);
-		       },[ML]);break;
+		       CI.C([ZH],function(sJ){
+			var tJ=sJ[0];
+			YH.J(tJ);
+		       },[YH]);break;
 		      }
-		     },[SL,qM,dM,KL,NL,ML,YM]);
-		    },[SL,qM,dM,KL,NL,ML,NM]);break;
+		     },[eI,CI,pI,WH,ZH,YH,kJ]);
+		    },[eI,CI,pI,WH,ZH,YH,ZI]);break;
 		   }
-		  },[SL,qM,dM,KL,NL,ML,PM,KM,NM]);
-		 },[SL,qM,dM,KL,NL,ML,MM,KM,NM]);
-		},[SL,qM,dM,KL,NL,ML,JM,KM]);
-	       },[SL,qM,dM,KL,NL,ML,fM]);break;
+		  },[eI,CI,pI,WH,ZH,YH,bJ,WI,ZI]);
+		 },[eI,CI,pI,WH,ZH,YH,YI,WI,ZI]);
+		},[eI,CI,pI,WH,ZH,YH,VI,WI]);
+	       },[eI,CI,pI,WH,ZH,YH,rI]);break;
 	      }
-	     },[SL,qM,dM,KL,NL,ML,AM,ZL,fM]);
-	    },[SL,qM,dM,KL,NL,ML,lM,ZL,fM]);break;
+	     },[eI,CI,pI,WH,ZH,YH,MI,lI,rI]);
+	    },[eI,CI,pI,WH,ZH,YH,xI,lI,rI]);break;
 	   }
-	  },[WL,cM,SL,nM,dM,KL,NL,ML,iM,lM,ZL,fM]);
-	 },[kM,WL,cM,SL,dM,KL,NL,ML,iM,lM,ZL,fM]);
-	},[hM,WL,cM,SL,dM,KL,NL,ML,iM,ZL,fM]);
-       },[eM,WL,cM,SL,dM,KL,NL,ML,ZL,fM]);
-      },[YL,WL,cM,SL,KL,NL,ML,ZL]);
-     },[YL,WL,SL,KL,NL,ML,ZL]);
-    },[PL,WL,SL,KL,NL,ML]);
-   },[PL,SL,KL,NL,ML]);
-  },[PL,KL,NL,ML]);
- },[KL,NL,ML]);
+	  },[iI,oI,eI,zI,pI,WH,ZH,YH,uI,xI,lI,rI]);
+	 },[wI,iI,oI,eI,pI,WH,ZH,YH,uI,xI,lI,rI]);
+	},[tI,iI,oI,eI,pI,WH,ZH,YH,uI,lI,rI]);
+       },[qI,iI,oI,eI,pI,WH,ZH,YH,lI,rI]);
+      },[kI,iI,oI,eI,WH,ZH,YH,lI]);
+     },[kI,iI,eI,WH,ZH,YH,lI]);
+    },[bI,iI,eI,WH,ZH,YH]);
+   },[bI,eI,WH,ZH,YH]);
+  },[bI,WH,ZH,YH]);
+ },[WH,ZH,YH]);
 },"lvl11");
-var $$Engine$t=$F(1,function(iN){
- $r([iN,$$GHCziTuple_Z0T]);
+var $$Engine$t=$F(1,function(uJ){
+ $r([uJ,$$GHCziTuple_Z0T]);
 },"lvl12");
 var $$Engine$x=$T(function(){
  $$GHCziCString_unpackCStringzh.J("Haskell Freecell");
 },"lvl15");
 var $$Engine$y=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:120:5-18");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at src/Engine.hs:121:5-18");
 },"a8");
 var $$Engine$z=$T(function(){
  $$GHCziCString_unpackCStringzh.J("document");
-},"a9");
-var $$Engine$A=$F(2,function(JP,KP){
- $A(JP);
 },"lvl16");
+var $$Engine$A=$T(function(){
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$z);
+},"rname");
 var $$Engine$B=$T(function(){
- $$GHCziCString_unpackCStringzh.J("getElementById");
-},"lvl17");
+ $$GHCziCString_unpackCStringzh.J("pageY");
+},"w2");
 var $$Engine$C=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$B);
-},"lvl18");
-var $$Engine$D=$F(2,function(LP,MP){
- $M(LP,function(NP){
-  var OP=NP.v[0];
-  $$LanguageziJavascriptziJSCziObject_zdwa.C([$$Engine$z,OP,MP],function(PP){
-   var QP=PP[0],RP=PP[1];
-   $$Engine$C.C([NP,QP],function(SP){
-    var TP=SP[0],UP=SP[1];
-    var VP=$d(1,[RP,UP],"sat");
-    $r([TP,VP]);
-   },[RP]);
-  },[NP]);
- },[MP]);
-},"a10");
+ $$GHCziCString_unpackCStringzh.J("pageX");
+},"w1");
+var $$Engine$D=$T(function(){
+ $$GHCziCString_unpackCStringzh.J("lenght");
+},"w3");
 var $$Engine$E=$T(function(){
- $$GHCziCString_unpackCStringzh.J("ontouchstart");
-},"lvl19");
+ $$GHCziCString_unpackCStringzh.J("changedTouches");
+},"w4");
 var $$Engine$F=$T(function(){
- $$ControlziExceptionziBase_patError.J("src/Engine.hs:(142,37)-(152,30)|lambda");
-},"lvl20");
+ $$GHCziCString_unpackCStringzh.J("touches");
+},"w5");
 var $$Engine$G=$T(function(){
  $$GHCziCString_unpackCStringzh.J("preventDefault");
-},"lvl21");
+},"w6");
 var $$Engine$H=$T(function(){
- $$GHCziCString_unpackCStringzh.J("touches");
-},"lvl22");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$G);
+},"rname1");
 var $$Engine$I=$T(function(){
- $$GHCziCString_unpackCStringzh.J("length");
-},"lvl23");
-var $$Engine$J=$T(function(){
- $$GHCziCString_unpackCStringzh.J("pageX");
-},"lvl24");
-var $$Engine$K=$T(function(){
- $$GHCziCString_unpackCStringzh.J("pageY");
-},"lvl25");
-var $$Engine$L=$T(function(){
- $$GHCziCString_unpackCStringzh.J("ontouchmove");
-},"lvl26");
-var $$Engine$M=$T(function(){
- $$ControlziExceptionziBase_patError.J("src/Engine.hs:(153,36)-(163,30)|lambda");
-},"lvl27");
-var $$Engine$N=$T(function(){
  $$GHCziCString_unpackCStringzh.J("ontouchend");
-},"lvl28");
+},"w7");
+var $$Engine$J=$T(function(){
+ $$GHCziCString_unpackCStringzh.J("ontouchmove");
+},"w8");
+var $$Engine$K=$T(function(){
+ $$GHCziCString_unpackCStringzh.J("ontouchstart");
+},"w9");
+var $$Engine$L=$T(function(){
+ $$GHCziCString_unpackCStringzh.J("getElementById");
+},"w10");
+var $$Engine$M=$T(function(){
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$L);
+},"rname2");
+var $$Engine$N=$T(function(){
+ $$ControlziExceptionziBase_patError.J("src/Engine.hs:(155,36)-(165,30)|lambda");
+},"lvl17");
 var $$Engine$O=$T(function(){
- $$ControlziExceptionziBase_patError.J("src/Engine.hs:(164,35)-(174,30)|lambda");
-},"lvl29");
+ $$ControlziExceptionziBase_patError.J("src/Engine.hs:(166,35)-(176,30)|lambda");
+},"lvl18");
 var $$Engine$P=$T(function(){
- $$GHCziCString_unpackCStringzh.J("changedTouches");
-},"lvl30");
+ $$ControlziExceptionziBase_patError.J("src/Engine.hs:(177,34)-(187,30)|lambda");
+},"lvl19");
 var $$Engine$Q=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$P);
-},"lvl31");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$I);
+},"lvl20");
 var $$Engine$R=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$P);
-},"lvl32");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$E);
+},"rname3");
 var $$Engine$S=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$I);
-},"lvl33");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$D);
+},"rname4");
 var $$Engine$T=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$G);
-},"lvl34");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$B);
+},"lvl21");
 var $$Engine$U=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl35");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$C);
+},"lvl22");
 var $$Engine$V=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl36");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$J);
+},"lvl23");
 var $$Engine$W=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$I);
-},"lvl37");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$F);
+},"rname5");
 var $$Engine$X=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$G);
-},"lvl38");
-var $$Engine$Y=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl39");
-var $$Engine$Z=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl40");
-var $$Engine$a1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$I);
-},"lvl41");
-var $$Engine$b1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$G);
-},"lvl42");
-var $$Engine$c1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$P);
-},"lvl43");
-var $$Engine$d1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$P);
-},"lvl44");
-var $$Engine$e1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$I);
-},"lvl45");
-var $$Engine$f1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$G);
-},"lvl46");
-var $$Engine$g1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl47");
-var $$Engine$h1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl48");
-var $$Engine$i1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$I);
-},"lvl49");
-var $$Engine$j1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$G);
-},"lvl50");
-var $$Engine$k1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl51");
-var $$Engine$l1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$H);
-},"lvl52");
-var $$Engine$m1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$I);
-},"lvl53");
-var $$Engine$n1=$T(function(){
- $$LanguageziJavascriptziJSCziValue_zdwzdcmakeStringRef.J($$Engine$A,$$Engine$G);
-},"lvl54");
+ $$LanguageziJavascriptziJSCziString_zdfMakeStringRefZMZNzuzdcmakeStringRef.J($$Engine$K);
+},"lvl24");
 var $$Freecell_zdfShowLocation2=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
 },"in `main:Freecell'");

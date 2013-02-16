@@ -28,8 +28,6 @@ lib.rtdep('lib.colors', 'lib.PreferenceManager',
  *
  * @param {string} opt_profileId Optional preference profile name.  If not
  *     provided, defaults to 'default'.
- *
- * @constructor
  */
 hterm.Terminal = function(opt_profileId) {
   this.profileId_ = null;
@@ -513,8 +511,7 @@ hterm.Terminal.prototype.syncMousePasteButton = function() {
 hterm.Terminal.prototype.syncBoldSafeState = function() {
   var enableBold = this.prefs_.get('enable-bold');
   if (enableBold !== null) {
-    this.primaryScreen_.textAttributes.enableBold = enableBold;
-    this.alternateScreen_.textAttributes.enableBold = enableBold;
+    this.screen_.textAttributes.enableBold = enableBold;
     return;
   }
 
@@ -528,8 +525,7 @@ hterm.Terminal.prototype.syncBoldSafeState = function() {
                  this.scrollPort_.getFontFamily());
   }
 
-  this.primaryScreen_.textAttributes.enableBold = isBoldSafe;
-  this.alternateScreen_.textAttributes.enableBold = isBoldSafe;
+  this.screen_.textAttributes.enableBold = isBoldSafe;
 };
 
 /**

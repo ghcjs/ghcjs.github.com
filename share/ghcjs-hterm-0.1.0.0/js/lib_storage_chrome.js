@@ -7,8 +7,6 @@
 /**
  * chrome.storage based class with an async interface that is interchangeable
  * with other lib.Storage.* implementations.
- *
- * @constructor
  */
 lib.Storage.Chrome = function(storage) {
   this.storage_ = storage;

@@ -371,7 +371,7 @@ var $$SystemziGlibziAttributes_set1=$f(3,function(j,k,l){
   },[o,j,m]);
  },[j],"a");
  m.J(k,l);
-},[],"in `glib-0.12.3.1:System.Glib.Attributes'");
+},[],"in `glib-0.12.4:System.Glib.Attributes'");
 var $$SystemziGlibziFFI_nullForeignPtr1=$f(1,function(J){
  var Q=$hs_noDuplicatezh(J);
  var K=$hs_newMutVarzh($$GHCziForeignPtr_mallocForeignPtr3,Q);
@@ -380,7 +380,7 @@ var $$SystemziGlibziFFI_nullForeignPtr1=$f(1,function(J){
  var O=$d(1,[N],"sat");
  var P=$d(1,[null,O],"sat");
  $r([L,P]);
-},[],"in `glib-0.12.3.1:System.Glib.FFI'");
+},[],"in `glib-0.12.4:System.Glib.FFI'");
 var $$SystemziGlibziFFI_nullForeignPtr=$t(function(){
  $$GHCziIO_unsafeDupablePerformIO.J($$SystemziGlibziFFI_nullForeignPtr1);
 },[],"at System/Glib/FFI.hs:66:1");
@@ -414,7 +414,7 @@ var $$SystemziGlibziGType_typeInstanceIsA=$f(2,function(b,c){
 },[],"at System/Glib/GType.chs:45:1");
 var $$SystemziGlibziGTypeConstants_string1=$D(1,function(){
  $r([goog.math.Long.fromBits(64,0)]);
-},"in `glib-0.12.3.1:System.Glib.GTypeConstants'");
+},"in `glib-0.12.4:System.Glib.GTypeConstants'");
 var $$SystemziGlibziGValueTypes_gzuvaluezusetzustring=$f(3,function(a,b,c){
  $$SystemziGlibziGValueTypes$c.J(a,b,c);
 },[],"at System/Glib/GValueTypes.chs:287:3");
@@ -447,10 +447,10 @@ var $$SystemziGlibziGValueTypes_zdwa4=$f(2,function(W2,X2){
    $r([b3,$$GHCziTypes_ZMZN]);break;
   }
  },[X2]);
-},[],"in `glib-0.12.3.1:System.Glib.GValueTypes'");
+},[],"in `glib-0.12.4:System.Glib.GValueTypes'");
 var $$SystemziGlibziGValueTypes_valueGetString1=$f(2,function(b,c){
  $$SystemziGlibziGValueTypes_zdwa4.J(b,c);
-},[],"in `glib-0.12.3.1:System.Glib.GValueTypes'");
+},[],"in `glib-0.12.4:System.Glib.GValueTypes'");
 var $$SystemziGlibziGValueTypes$c=$F(3,function(j6,k6,l6){
  $M(j6,function(m6){
   var n6=m6.v[0];
@@ -471,10 +471,10 @@ var $$SystemziGlibziMainLoop_priorityHigh=$D(1,function(){
 },"at System/Glib/MainLoop.chs:207:1");
 var $$SystemziGlibziMainLoop_idleAdd3=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
-},"in `glib-0.12.3.1:System.Glib.MainLoop'");
+},"in `glib-0.12.4:System.Glib.MainLoop'");
 var $$SystemziGlibziMainLoop_idleAdd2=$D(1,function(){
  $r([goog.math.Long.fromBits(1,0)]);
-},"in `glib-0.12.3.1:System.Glib.MainLoop'");
+},"in `glib-0.12.4:System.Glib.MainLoop'");
 var $$SystemziGlibziMainLoop_timeoutAdd2=$f(4,function(o5,p5,q5,r5){
  var s5=$f(1,function(t5){
   o5.C([t5],function(u5){
@@ -516,7 +516,7 @@ var $$SystemziGlibziMainLoop_timeoutAdd2=$f(4,function(o5,p5,q5,r5){
    },[D5,F5,C5]);
   },[q5,D5,C5]);
  },[p5,q5]);
-},[],"in `glib-0.12.3.1:System.Glib.MainLoop'");
+},[],"in `glib-0.12.4:System.Glib.MainLoop'");
 var $$SystemziGlibziMainLoop$a=$F(2,function(u6,v6){
  var w6=[v6,u6];
  var x6=w6[0],y6=w6[1];
@@ -571,7 +571,7 @@ var $$SystemziGlibziProperties_newAttrFromBoolProperty2=$f(7,function(a,b,c,d,e,
    $$GHCziForeign_charIsRepresentable3.J(l,d,n,k);
   },[a,e,d,b,c,f]);
  },[g,a,e,d,b,c,f]);
-},[],"in `glib-0.12.3.1:System.Glib.Properties'");
+},[],"in `glib-0.12.4:System.Glib.Properties'");
 var $$SystemziGlibziProperties_newAttrFromBoolProperty4=$f(6,function(B4,C4,D4,E4,F4,G4){
  $M($$GHCziIOziEncoding_getForeignEncoding1,function(H4){
   var I4=H4.v[0];
@@ -617,13 +617,13 @@ var $$SystemziGlibziProperties_newAttrFromBoolProperty4=$f(6,function(B4,C4,D4,E
    $$GHCziForeign_charIsRepresentable3.J(L4,E4,N4,K4);
   },[B4,F4,E4,C4,D4]);
  },[G4,B4,F4,E4,C4,D4]);
-},[],"in `glib-0.12.3.1:System.Glib.Properties'");
+},[],"in `glib-0.12.4:System.Glib.Properties'");
 var $$SystemziGlibziSignals_connectGeneric3=$D(1,function(){
  $r([goog.math.Long.fromBits(0,0)]);
-},"in `glib-0.12.3.1:System.Glib.Signals'");
+},"in `glib-0.12.4:System.Glib.Signals'");
 var $$SystemziGlibziSignals_connectGeneric2=$D(1,function(){
  $r([goog.math.Long.fromBits(1,0)]);
-},"in `glib-0.12.3.1:System.Glib.Signals'");
+},"in `glib-0.12.4:System.Glib.Signals'");
 var $$SystemziGlibziSignals_connectGeneric1=$f(6,function(N1,O1,P1,Q1,R1,S1){
  var T1=[S1,R1];
  var U1=T1[0],V1=T1[1];
@@ -671,7 +671,7 @@ var $$SystemziGlibziSignals_connectGeneric1=$f(6,function(N1,O1,P1,Q1,R1,S1){
    },[Q1]);
   },[N1,Q1,P1,O1,Y1]);
  },[X1,N1,Q1,P1,O1,Y1]);
-},[],"in `glib-0.12.3.1:System.Glib.Signals'");
+},[],"in `glib-0.12.4:System.Glib.Signals'");
 var $$SystemziGlibziUTFString_withUTFString=$f(1,function(p7){
  var q7=$t(function(){
   $$SystemziGlibziUTFString_toUTF.J(p7);
@@ -680,7 +680,7 @@ var $$SystemziGlibziUTFString_withUTFString=$f(1,function(p7){
 },[],"at System/Glib/UTFString.hs:58:1");
 var $$GraphicsziUIziGtkziAbstractziObject_makeNewObject2=$t(function(){
  $$GHCziCString_unpackCStringzh.J("makeNewObject: object is NULL");
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Abstract.Object'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Abstract.Object'");
 var $$GraphicsziUIziGtkziAbstractziObject_zdwa=$f(4,function(D,E,F,G){
  F.C([G],function(H){
   var I=H[0],J=H[1];
@@ -709,13 +709,13 @@ var $$GraphicsziUIziGtkziAbstractziObject_zdwa=$f(4,function(D,E,F,G){
    }
   },[E,D,I]);
  },[E,D]);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Abstract.Object'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Abstract.Object'");
 var $$GraphicsziUIziGtkziAbstractziWidget_afterDestroy2=$t(function(){
  $$GHCziCString_unpackCStringzh.J("destroy");
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Abstract.Widget'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Abstract.Widget'");
 var $$GraphicsziUIziGtkziGeneralziGeneral_mainQuit=$f(1,function(a){
  $$GraphicsziUIziGtkziGeneralziGeneral$b.J(a);
-},[],"at Graphics/UI/Gtk/General/General.chs:237:1");
+},[],"at Graphics/UI/Gtk/General/General.chs:241:1");
 var $$GraphicsziUIziGtkziGeneralziGeneral_timeoutAdd2=$f(4,function(h1,i1,j1,k1){
  var l1=$f(1,function(m1){
   var $ff=gdk_threads_enter();
@@ -730,7 +730,7 @@ var $$GraphicsziUIziGtkziGeneralziGeneral_timeoutAdd2=$f(4,function(h1,i1,j1,k1)
   },[]);
  },[h1],"sat");
  $$SystemziGlibziMainLoop_timeoutAdd2.J(l1,i1,j1,k1);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.General.General'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.General.General'");
 var $$GraphicsziUIziGtkziGeneralziGeneral_initGUI=$f(1,function(a){
  $$GraphicsziUIziGtkziGeneralziGeneral$j.J(a);
 },[],"at Graphics/UI/Gtk/General/General.chs:143:1");
@@ -747,7 +747,7 @@ var $$GraphicsziUIziGtkziGeneralziGeneral$d=$T(function(){
  $$GHCziErr_error.J($$GraphicsziUIziGtkziGeneralziGeneral$c);
 },"lvl1");
 var $$GraphicsziUIziGtkziGeneralziGeneral$e=$T(function(){
- $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at Graphics/UI/Gtk/General/General.chs:157:9-16");
+ $$GHCziCString_unpackCStringzh.J("Pattern match failure in do expression at Graphics/UI/Gtk/General/General.chs:158:9-16");
 },"a2");
 var $$GraphicsziUIziGtkziGeneralziGeneral$f=$F(2,function(S2,T2){
  $M(S2,function(U2){
@@ -843,43 +843,46 @@ var $$GraphicsziUIziGtkziGeneralziGeneral$i=$F(1,function(f4){
  },[]);
 },"a5");
 var $$GraphicsziUIziGtkziGeneralziGeneral$j=$F(1,function(n4){
+ var $ff=gtk2hs_initialise();
+ var o4=[n4,$ff];
+ var p4=o4[0];
  var $ff=rtsSupportsBoundThreads();
- var o4=[$$GHCziPrim_realWorldzh,$ff];
- var p4=o4[1];
- $M(p4,function(q4){
-  switch(q4.toString()){
+ var q4=[$$GHCziPrim_realWorldzh,$ff];
+ var r4=q4[1];
+ $M(r4,function(s4){
+  switch(s4.toString()){
   case "0":
-   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(n4);break;
+   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(p4);break;
   default:
    var $ff=gtk2hs_threads_initialise();
-   var r4=[n4,$ff];
-   var s4=r4[0];
-   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(s4);
+   var t4=[p4,$ff];
+   var u4=t4[0];
+   $$GraphicsziUIziGtkziGeneralziGeneral$i.J(u4);
   }
- },[n4]);
+ },[p4]);
 },"a6");
-var $$GraphicsziUIziGtkziTypes_mkScrolledWindow1=$f(1,function(K5){
- $A(K5);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
-var $$GraphicsziUIziGtkziTypes_mkWindow1=$f(1,function(G6){
- $A(G6);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
-var $$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow1=$f(1,function(Y9){
- $A(Y9);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
-var $$GraphicsziUIziGtkziTypes_zdfGObjectClassAboutDialog1=$f(1,function(aa){
- $A(aa);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_mkScrolledWindow1=$f(1,function(u7){
+ $A(u7);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow1=$f(1,function(R7){
+ $A(R7);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_mkWindow1=$f(1,function(S7){
+ $A(S7);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
+var $$GraphicsziUIziGtkziTypes_zdfGObjectClassAboutDialog1=$f(1,function(ja){
+ $A(ja);
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Types'");
 var $$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow=$D(1,function(){
  $r([$$GraphicsziUIziGtkziTypes_zdfGObjectClassWindow1,$$GraphicsziUIziGtkziTypes_zdfGObjectClassAboutDialog1]);
-},"at Graphics/UI/Gtk/Types.chs:2243:10");
+},"at Graphics/UI/Gtk/Types.chs:2255:10");
 var $$GraphicsziUIziGtkziWindowsziWindow_windowNew2=$f(1,function(xo){
  var $ff=gtk_window_new(goog.math.Long.fromBits(0,0));
  var yo=[xo,$ff];
  var zo=yo[0],Ao=yo[1];
  var Bo=$d(1,[Ao],"sat");
  $r([zo,Bo]);
-},[],"in `gtk-0.12.3.1:Graphics.UI.Gtk.Windows.Window'");
+},[],"in `gtk-0.12.4:Graphics.UI.Gtk.Windows.Window'");
 var $$GraphicsziUIziGtkziWebKitziDOMziDocument_documentGetElementById1=$f(4,function(fl,gl,hl,il){
  var jl=$t(function(){
   $$SystemziGlibziTypes_toGObject.J(fl,gl);
