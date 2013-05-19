@@ -1,6 +1,6 @@
-commit fed5ba106196d98e2cdd66121a8c524674420426
+commit e2f7df30be127f04a9f0beba936eab90d724e57b
 Author: Hamish Mackenzie <Hamish.K.Mackenzie@googlemail.com>
-Date:   Sat May 18 15:02:15 2013 +1200
+Date:   Sun May 19 16:28:42 2013 +1200
 
     GHCJS Patch
 
@@ -470,3 +470,16 @@ index 617e691..f69bb4c 100644
          deriving (Read, Show, Eq)
  
  isARM :: Arch -> Bool
+diff --git a/mk/config.mk.in b/mk/config.mk.in
+index 5ef1f5c..42fd377 100644
+--- a/mk/config.mk.in
++++ b/mk/config.mk.in
+@@ -139,7 +139,7 @@ else ifeq "$(TargetOS_CPP)" "freebsd"
+ # rtld(1)), so disable it by default (see #7819).
+ DYNAMIC_GHC_PROGRAMS = NO
+ else
+-DYNAMIC_GHC_PROGRAMS = YES
++DYNAMIC_GHC_PROGRAMS = NO
+ endif
+ 
+ # Build a compiler that will build *unregisterised* libraries and
