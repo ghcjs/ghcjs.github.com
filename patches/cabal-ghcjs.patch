@@ -1,0 +1,1257 @@
+commit 8e4222ccb5d48f261ea6f6a5da0ddd1f3da1263c
+Author: Hamish Mackenzie <Hamish.K.Mackenzie@googlemail.com>
+Date:   Mon May 20 15:34:41 2013 +1200
+
+    Luite's patch
+
+diff --git a/Cabal/Cabal.cabal b/Cabal/Cabal.cabal
+index 0ce9cfb..cc8e1db 100644
+--- a/Cabal/Cabal.cabal
++++ b/Cabal/Cabal.cabal
+@@ -1,5 +1,5 @@
+ name: Cabal
+-version: 1.17.0
++version: 1.17.0.1
+ copyright: 2003-2006, Isaac Jones
+            2005-2011, Duncan Coutts
+ license: BSD3
+@@ -163,6 +163,7 @@ library
+     Distribution.Simple.Compiler
+     Distribution.Simple.Configure
+     Distribution.Simple.GHC
++    Distribution.Simple.GHCJS
+     Distribution.Simple.Haddock
+     Distribution.Simple.Hpc
+     Distribution.Simple.Hugs
+diff --git a/Cabal/Distribution/Compiler.hs b/Cabal/Distribution/Compiler.hs
+index 49947e5..99cf832 100644
+--- a/Cabal/Distribution/Compiler.hs
++++ b/Cabal/Distribution/Compiler.hs
+@@ -73,17 +73,17 @@ import qualified System.Info (compilerName, compilerVersion)
+ import Distribution.Text (Text(..), display)
+ import qualified Distribution.Compat.ReadP as Parse
+ import qualified Text.PrettyPrint as Disp
+-import Text.PrettyPrint ((<>))
++import Text.PrettyPrint ((<>), empty)
+ 
+ import qualified Data.Char as Char (toLower, isDigit, isAlphaNum)
+ import Control.Monad (when)
+ 
+-data CompilerFlavor = GHC | NHC | YHC | Hugs | HBC | Helium | JHC | LHC | UHC
++data CompilerFlavor = GHC | GHCJS | NHC | YHC | Hugs | HBC | Helium | JHC | LHC | UHC
+                     | OtherCompiler String
+   deriving (Show, Read, Eq, Ord, Typeable, Data)
+ 
+ knownCompilerFlavors :: [CompilerFlavor]
+-knownCompilerFlavors = [GHC, NHC, YHC, Hugs, HBC, Helium, JHC, LHC, UHC]
++knownCompilerFlavors = [GHC, GHCJS, NHC, YHC, Hugs, HBC, Helium, JHC, LHC, UHC]
+ 
+ instance Text CompilerFlavor where
+   disp (OtherCompiler name) = Disp.text name
+@@ -134,7 +134,7 @@ buildCompilerVersion :: Version
+ buildCompilerVersion = System.Info.compilerVersion
+ 
+ buildCompilerId :: CompilerId
+-buildCompilerId = CompilerId buildCompilerFlavor buildCompilerVersion
++buildCompilerId = CompilerId buildCompilerFlavor buildCompilerVersion Nothing
+ 
+ -- | The default compiler flavour to pick when compiling stuff. This defaults
+ -- to the compiler used to build the Cabal lib.
+@@ -151,17 +151,20 @@ defaultCompilerFlavor = case buildCompilerFlavor of
+ -- * Compiler Id
+ -- ------------------------------------------------------------
+ 
+-data CompilerId = CompilerId CompilerFlavor Version
++data CompilerId = CompilerId CompilerFlavor Version (Maybe CompilerId)
+   deriving (Eq, Ord, Read, Show)
+ 
+ instance Text CompilerId where
+-  disp (CompilerId f (Version [] _)) = disp f
+-  disp (CompilerId f v) = disp f <> Disp.char '-' <> disp v
++  disp (CompilerId f (Version [] _) sub) = disp f <>
++    maybe empty ((Disp.char '_' <>) . disp) sub
++  disp (CompilerId f v sub) = disp f <> Disp.char '-' <> disp v <>
++    maybe empty ((Disp.char '_' <>) . disp) sub
+ 
+   parse = do
+     flavour <- parse
+     version <- (Parse.char '-' >> parse) Parse.<++ return (Version [] [])
+-    return (CompilerId flavour version)
++    subId   <- (Parse.char '_' >> parse >>= return . Just) Parse.<++ return Nothing
++    return (CompilerId flavour version subId)
+ 
+ lowercase :: String -> String
+ lowercase = map Char.toLower
+diff --git a/Cabal/Distribution/PackageDescription.hs b/Cabal/Distribution/PackageDescription.hs
+index 8abce0f..186ef51 100644
+--- a/Cabal/Distribution/PackageDescription.hs
++++ b/Cabal/Distribution/PackageDescription.hs
+@@ -195,7 +195,8 @@ data PackageDescription
+         dataDir        :: FilePath,
+         extraSrcFiles  :: [FilePath],
+         extraTmpFiles  :: [FilePath],
+-        extraHtmlFiles :: [FilePath]
++        extraHtmlFiles :: [FilePath],
++        extraJsFiles   :: [FilePath]
+     }
+     deriving (Show, Read, Eq, Typeable, Data)
+ 
+@@ -259,7 +260,8 @@ emptyPackageDescription
+                       dataDir      = "",
+                       extraSrcFiles = [],
+                       extraTmpFiles = [],
+-                      extraHtmlFiles = []
++                      extraHtmlFiles = [],
++                      extraJsFiles = []
+                      }
+ 
+ -- | The type of build system used by this package.
+@@ -642,6 +644,7 @@ data BuildInfo = BuildInfo {
+         pkgconfigDepends  :: [Dependency], -- ^ pkg-config packages that are used
+         frameworks        :: [String], -- ^support frameworks for Mac OS X
+         cSources          :: [FilePath],
++        jsSources         :: [FilePath], -- ^ JavaScript sources
+         hsSourceDirs      :: [FilePath], -- ^ where to look for the haskell module hierarchy
+         otherModules      :: [ModuleName], -- ^ non-exposed or non-main modules
+ 
+@@ -676,6 +679,7 @@ instance Monoid BuildInfo where
+     pkgconfigDepends  = [],
+     frameworks        = [],
+     cSources          = [],
++    jsSources         = [],
+     hsSourceDirs      = [],
+     otherModules      = [],
+     defaultLanguage   = Nothing,
+@@ -703,6 +707,7 @@ instance Monoid BuildInfo where
+     pkgconfigDepends  = combine    pkgconfigDepends,
+     frameworks        = combineNub frameworks,
+     cSources          = combineNub cSources,
++    jsSources         = combineNub jsSources,
+     hsSourceDirs      = combineNub hsSourceDirs,
+     otherModules      = combineNub otherModules,
+     defaultLanguage   = combineMby defaultLanguage,
+diff --git a/Cabal/Distribution/PackageDescription/Check.hs b/Cabal/Distribution/PackageDescription/Check.hs
+index 8db4a33..0fe1c10 100644
+--- a/Cabal/Distribution/PackageDescription/Check.hs
++++ b/Cabal/Distribution/PackageDescription/Check.hs
+@@ -1234,7 +1234,7 @@ checkPackageVersions pkg =
+     -- using no package index and the current platform.
+     finalised = finalizePackageDescription
+                               [] (const True) buildPlatform
+-                              (CompilerId buildCompilerFlavor (Version [] []))
++                              (CompilerId buildCompilerFlavor (Version [] []) Nothing)
+                               [] pkg
+     baseDependency = case finalised of
+       Right (pkg', _) | not (null baseDeps) ->
+diff --git a/Cabal/Distribution/PackageDescription/Configuration.hs b/Cabal/Distribution/PackageDescription/Configuration.hs
+index 7ee6273..5676446 100644
+--- a/Cabal/Distribution/PackageDescription/Configuration.hs
++++ b/Cabal/Distribution/PackageDescription/Configuration.hs
+@@ -70,7 +70,7 @@ import Distribution.PackageDescription.Utils
+ import Distribution.Version
+          ( VersionRange, anyVersion, intersectVersionRanges, withinRange )
+ import Distribution.Compiler
+-         ( CompilerId(CompilerId) )
++         ( CompilerId(CompilerId), CompilerFlavor(..) )
+ import Distribution.System
+          ( Platform(..), OS, Arch )
+ import Distribution.Simple.Utils
+@@ -128,13 +128,15 @@ simplifyCondition cond i = fv . walk $ cond
+ --   the names of all the flags occurring in the condition.
+ simplifyWithSysParams :: OS -> Arch -> CompilerId -> Condition ConfVar
+                       -> (Condition FlagName, [FlagName])
+-simplifyWithSysParams os arch (CompilerId comp compVer) cond = (cond', flags)
++simplifyWithSysParams os arch cid cond = (cond', flags)
+   where
++    compCheck c vr (CompilerId comp compVer sub) =
++      comp == c && compVer `withinRange` vr ||
++      maybe False (compCheck c vr) sub
+     (cond', flags) = simplifyCondition cond interp
+     interp (OS os')    = Right $ os' == os
+     interp (Arch arch') = Right $ arch' == arch
+-    interp (Impl comp' vr) = Right $ comp' == comp
+-                                  && compVer `withinRange` vr
++    interp (Impl comp vr) = Right $ compCheck comp vr cid
+     interp (Flag  f)   = Left f
+ 
+ -- TODO: Add instances and check
+diff --git a/Cabal/Distribution/PackageDescription/Parse.hs b/Cabal/Distribution/PackageDescription/Parse.hs
+index 7197b1b..efb35be 100644
+--- a/Cabal/Distribution/PackageDescription/Parse.hs
++++ b/Cabal/Distribution/PackageDescription/Parse.hs
+@@ -175,6 +175,9 @@ pkgDescrFieldDescrs =
+  , listField "extra-html-files"
+            showFilePath    parseFilePathQ
+            extraHtmlFiles         (\val pkg -> pkg{extraHtmlFiles=val})
++ , listField "extra-js-files"
++           showFilePath    parseFilePathQ
++           extraJsFiles           (\val pkg -> pkg{extraJsFiles=val})
+  ]
+ 
+ -- | Store any fields beginning with "x-" in the customFields field of
+@@ -413,7 +416,9 @@ binfoFieldDescrs =
+  , listField   "c-sources"
+            showFilePath       parseFilePathQ
+            cSources           (\paths binfo -> binfo{cSources=paths})
+-
++ , listField   "js-sources"
++           showFilePath       parseFilePathQ
++           jsSources          (\paths binfo -> binfo{jsSources=paths})
+  , simpleField "default-language"
+            (maybe empty disp) (option Nothing (fmap Just parseLanguageQ))
+            defaultLanguage    (\lang  binfo -> binfo{defaultLanguage=lang})
+diff --git a/Cabal/Distribution/Simple/Build.hs b/Cabal/Distribution/Simple/Build.hs
+index bb2d4f4..c176d84 100644
+--- a/Cabal/Distribution/Simple/Build.hs
++++ b/Cabal/Distribution/Simple/Build.hs
+@@ -52,12 +52,13 @@ module Distribution.Simple.Build (
+     writeAutogenFiles,
+   ) where
+ 
+-import qualified Distribution.Simple.GHC  as GHC
+-import qualified Distribution.Simple.JHC  as JHC
+-import qualified Distribution.Simple.LHC  as LHC
+-import qualified Distribution.Simple.NHC  as NHC
+-import qualified Distribution.Simple.Hugs as Hugs
+-import qualified Distribution.Simple.UHC  as UHC
++import qualified Distribution.Simple.GHC   as GHC
++import qualified Distribution.Simple.GHCJS as GHCJS
++import qualified Distribution.Simple.JHC   as JHC
++import qualified Distribution.Simple.LHC   as LHC
++import qualified Distribution.Simple.NHC   as NHC
++import qualified Distribution.Simple.Hugs  as Hugs
++import qualified Distribution.Simple.UHC   as UHC
+ 
+ import qualified Distribution.Simple.Build.Macros      as Build.Macros
+ import qualified Distribution.Simple.Build.PathsModule as Build.PathsModule
+@@ -323,25 +324,27 @@ buildLib :: Verbosity -> PackageDescription -> LocalBuildInfo
+                       -> Library            -> ComponentLocalBuildInfo -> IO ()
+ buildLib verbosity pkg_descr lbi lib clbi =
+   case compilerFlavor (compiler lbi) of
+-    GHC  -> GHC.buildLib  verbosity pkg_descr lbi lib clbi
+-    JHC  -> JHC.buildLib  verbosity pkg_descr lbi lib clbi
+-    LHC  -> LHC.buildLib  verbosity pkg_descr lbi lib clbi
+-    Hugs -> Hugs.buildLib verbosity pkg_descr lbi lib clbi
+-    NHC  -> NHC.buildLib  verbosity pkg_descr lbi lib clbi
+-    UHC  -> UHC.buildLib  verbosity pkg_descr lbi lib clbi
+-    _    -> die "Building is not supported with this compiler."
++    GHC   -> GHC.buildLib  verbosity pkg_descr lbi lib clbi
++    GHCJS -> GHCJS.buildLib verbosity pkg_descr lbi lib clbi
++    JHC   -> JHC.buildLib  verbosity pkg_descr lbi lib clbi
++    LHC   -> LHC.buildLib  verbosity pkg_descr lbi lib clbi
++    Hugs  -> Hugs.buildLib verbosity pkg_descr lbi lib clbi
++    NHC   -> NHC.buildLib  verbosity pkg_descr lbi lib clbi
++    UHC   -> UHC.buildLib  verbosity pkg_descr lbi lib clbi
++    _     -> die "Building is not supported with this compiler."
+ 
+ buildExe :: Verbosity -> PackageDescription -> LocalBuildInfo
+                       -> Executable         -> ComponentLocalBuildInfo -> IO ()
+ buildExe verbosity pkg_descr lbi exe clbi =
+   case compilerFlavor (compiler lbi) of
+-    GHC  -> GHC.buildExe  verbosity pkg_descr lbi exe clbi
+-    JHC  -> JHC.buildExe  verbosity pkg_descr lbi exe clbi
+-    LHC  -> LHC.buildExe  verbosity pkg_descr lbi exe clbi
+-    Hugs -> Hugs.buildExe verbosity pkg_descr lbi exe clbi
+-    NHC  -> NHC.buildExe  verbosity pkg_descr lbi exe clbi
+-    UHC  -> UHC.buildExe  verbosity pkg_descr lbi exe clbi
+-    _    -> die "Building is not supported with this compiler."
++    GHC   -> GHC.buildExe  verbosity pkg_descr lbi exe clbi
++    GHCJS -> GHCJS.buildExe  verbosity pkg_descr lbi exe clbi
++    JHC   -> JHC.buildExe  verbosity pkg_descr lbi exe clbi
++    LHC   -> LHC.buildExe  verbosity pkg_descr lbi exe clbi
++    Hugs  -> Hugs.buildExe verbosity pkg_descr lbi exe clbi
++    NHC   -> NHC.buildExe  verbosity pkg_descr lbi exe clbi
++    UHC   -> UHC.buildExe  verbosity pkg_descr lbi exe clbi
++    _     -> die "Building is not supported with this compiler."
+ 
+ initialBuildSteps :: FilePath -- ^"dist" prefix
+                   -> PackageDescription  -- ^mostly information from the .cabal file
+diff --git a/Cabal/Distribution/Simple/Build/PathsModule.hs b/Cabal/Distribution/Simple/Build/PathsModule.hs
+index 5f1d518..1f973c5 100644
+--- a/Cabal/Distribution/Simple/Build/PathsModule.hs
++++ b/Cabal/Distribution/Simple/Build/PathsModule.hs
+@@ -159,6 +159,9 @@ generate pkg_descr lbi =
+         supportsRelocatableProgs GHC  = case buildOS of
+                            Windows   -> True
+                            _         -> False
++        supportsRelocatableProgs GHCJS = case buildOS of
++                           Windows   -> True
++                           _         -> False
+         supportsRelocatableProgs _    = False
+ 
+         paths_modulename = autogenModuleName pkg_descr
+@@ -173,7 +176,8 @@ generate pkg_descr lbi =
+         path_sep = show [pathSeparator]
+ 
+         supports_language_pragma =
+-          compilerFlavor (compiler lbi) == GHC &&
++          (compilerFlavor (compiler lbi) == GHC ||
++           compilerFlavor (compiler lbi) == GHCJS) &&
+             (compilerVersion (compiler lbi)
+               `withinRange` orLaterVersion (Version [6,6,1] []))
+ 
+diff --git a/Cabal/Distribution/Simple/BuildPaths.hs b/Cabal/Distribution/Simple/BuildPaths.hs
+index d7b35ba..dac53e2 100644
+--- a/Cabal/Distribution/Simple/BuildPaths.hs
++++ b/Cabal/Distribution/Simple/BuildPaths.hs
+@@ -120,9 +120,11 @@ mkProfLibName (LibraryName lib) =  "lib" ++ lib ++ "_p" <.> "a"
+ -- libHS<packagename>-<compilerFlavour><compilerVersion>
+ -- e.g. libHSbase-2.1-ghc6.6.1.so
+ mkSharedLibName :: CompilerId -> LibraryName -> String
+-mkSharedLibName (CompilerId compilerFlavor compilerVersion) (LibraryName lib)
+-  = "lib" ++ lib ++ "-" ++ comp <.> dllExtension
+-  where comp = display compilerFlavor ++ display compilerVersion
++mkSharedLibName cid (LibraryName lib)
++  = "lib" ++ lib ++ "-" ++ comp cid <.> dllExtension
++  where comp (CompilerId compilerFlavor compilerVersion sub) = 
++          display compilerFlavor ++ display compilerVersion ++
++          maybe "" (('_' :) . comp) sub
+ 
+ -- ------------------------------------------------------------
+ -- * Platform file extensions
+diff --git a/Cabal/Distribution/Simple/Compiler.hs b/Cabal/Distribution/Simple/Compiler.hs
+index 9c51208..766a975 100644
+--- a/Cabal/Distribution/Simple/Compiler.hs
++++ b/Cabal/Distribution/Simple/Compiler.hs
+@@ -93,10 +93,10 @@ showCompilerId :: Compiler -> String
+ showCompilerId = display . compilerId
+ 
+ compilerFlavor ::  Compiler -> CompilerFlavor
+-compilerFlavor = (\(CompilerId f _) -> f) . compilerId
++compilerFlavor = (\(CompilerId f _ _) -> f) . compilerId
+ 
+ compilerVersion :: Compiler -> Version
+-compilerVersion = (\(CompilerId _ v) -> v) . compilerId
++compilerVersion = (\(CompilerId _ v _) -> v) . compilerId
+ 
+ -- ------------------------------------------------------------
+ -- * Package databases
+diff --git a/Cabal/Distribution/Simple/Configure.hs b/Cabal/Distribution/Simple/Configure.hs
+index 8ec8f20..efcf94a 100644
+--- a/Cabal/Distribution/Simple/Configure.hs
++++ b/Cabal/Distribution/Simple/Configure.hs
+@@ -128,9 +128,10 @@ import Distribution.Verbosity
+ import Distribution.Simple.Program.Db
+     ( lookupProgram )
+ import Distribution.Simple.Program.Builtin
+-    ( ghcProgram )
++    ( ghcProgram, ghcjsProgram )
+ 
+ import qualified Distribution.Simple.GHC  as GHC
++import qualified Distribution.Simple.GHCJS as GHCJS
+ import qualified Distribution.Simple.JHC  as JHC
+ import qualified Distribution.Simple.LHC  as LHC
+ import qualified Distribution.Simple.NHC  as NHC
+@@ -497,6 +498,7 @@ configure (pkg_descr0, pbi) cfg
+                 then return False
+                 else case flavor of
+                             GHC | version >= Version [6,5] [] -> return True
++                            GHCJS | version >= Version [6,5] [] -> return True
+                             _ -> do warn verbosity
+                                          ("this compiler does not support " ++
+                                           "--enable-split-objs; ignoring")
+@@ -505,13 +507,18 @@ configure (pkg_descr0, pbi) cfg
+ 
+         sharedLibsByDefault <-
+             case compilerId comp of
+-            CompilerId GHC _ ->
++            CompilerId GHC _ _ ->
+                 case lookupProgram ghcProgram programsConfig''' of
+                 Just ghcProg ->
+                     -- if ghc is dynamic, then ghci needs a shared
+                     -- library, so we build one by default.
+                     GHC.ghcDynamic verbosity ghcProg
+                 Nothing -> return False
++            CompilerId GHCJS _ _ ->
++                case lookupProgram ghcjsProgram programsConfig''' of
++                Just ghcjsProg ->
++                    GHCJS.ghcDynamicByDefault verbosity ghcjsProg
++                Nothing -> return False
+             _ -> return False
+ 
+         let lbi = LocalBuildInfo {
+@@ -682,6 +689,7 @@ getInstalledPackages verbosity comp packageDBs progconf = do
+   info verbosity "Reading installed packages..."
+   case compilerFlavor comp of
+     GHC -> GHC.getInstalledPackages verbosity packageDBs progconf
++    GHCJS -> GHCJS.getInstalledPackages verbosity packageDBs progconf
+     Hugs->Hugs.getInstalledPackages verbosity packageDBs progconf
+     JHC -> JHC.getInstalledPackages verbosity packageDBs progconf
+     LHC -> LHC.getInstalledPackages verbosity packageDBs progconf
+@@ -862,6 +870,7 @@ configCompiler Nothing _ _ _ _ = die "Unknown compiler"
+ configCompiler (Just hcFlavor) hcPath hcPkg conf verbosity = do
+   (comp, maybePlatform, programsConfig) <- case hcFlavor of
+     GHC  -> GHC.configure  verbosity hcPath hcPkg conf
++    GHCJS -> GHCJS.configure verbosity hcPath hcPkg conf
+     JHC  -> JHC.configure  verbosity hcPath hcPkg conf
+     LHC  -> do (_, _, ghcConf) <- GHC.configure  verbosity Nothing hcPkg conf
+                LHC.configure  verbosity hcPath Nothing ghcConf
+@@ -1137,6 +1146,7 @@ checkForeignDeps pkg lbi verbosity = do
+                 in ["-D__GLASGOW_HASKELL__=" ++ versionInt version] ++
+                    map (\os   -> "-D" ++ os   ++ "_HOST_OS=1")   ghcOS ++
+                    map (\arch -> "-D" ++ arch ++ "_HOST_ARCH=1") ghcArch
++            GHCJS -> ["-D__GLASGOW_HASKELL__=" ++ versionInt version]
+             JHC  -> ["-D__JHC__=" ++ versionInt version]
+             NHC  -> ["-D__NHC__=" ++ versionInt version]
+             Hugs -> ["-D__HUGS__"]
+diff --git a/Cabal/Distribution/Simple/GHC.hs b/Cabal/Distribution/Simple/GHC.hs
+index 939715b..6b850bf 100644
+--- a/Cabal/Distribution/Simple/GHC.hs
++++ b/Cabal/Distribution/Simple/GHC.hs
+@@ -72,6 +72,14 @@ module Distribution.Simple.GHC (
+         componentGhcOptions,
+         ghcLibDir,
+         ghcDynamic,
++
++        getLanguages, getExtensions,
++        configureToolchain,
++        guessToolFromGhcPath, guessHsc2hsFromGhcPath,
++        targetPlatform, GhcOptions,
++        checkPackageDbStack, checkPackageDbEnvVar,
++        substTopDir, buildLib', buildExe', ghcLibDir',
++        libAbiHash', initPackageDB', registerPackage'
+  ) where
+ 
+ import qualified Distribution.Simple.GHC.IPI641 as IPI641
+@@ -104,7 +112,8 @@ import Distribution.Simple.Program
+          , userMaybeSpecifyPath, programPath, lookupProgram, addKnownProgram
+          , ghcProgram, ghcPkgProgram, hsc2hsProgram
+          , arProgram, ranlibProgram, ldProgram
+-         , gccProgram, stripProgram )
++         , gccProgram, stripProgram
++         )
+ import qualified Distribution.Simple.Program.HcPkg as HcPkg
+ import qualified Distribution.Simple.Program.Ar    as Ar
+ import qualified Distribution.Simple.Program.Ld    as Ld
+@@ -194,7 +203,7 @@ configure verbosity hcPath hcPkgPath conf0 = do
+   ghcInfo <- getGhcInfo verbosity ghcProg
+ 
+   let comp = Compiler {
+-        compilerId             = CompilerId GHC ghcVersion,
++        compilerId             = CompilerId GHC ghcVersion Nothing,
+         compilerLanguages      = languages,
+         compilerExtensions     = extensions
+       }
+@@ -648,9 +657,21 @@ substTopDir topDir ipo
+ 
+ -- | Build a library with GHC.
+ --
+-buildLib :: Verbosity -> PackageDescription -> LocalBuildInfo
+-                      -> Library            -> ComponentLocalBuildInfo -> IO ()
++buildLib :: Verbosity -> PackageDescription       -> LocalBuildInfo
++                      -> Library                  -> ComponentLocalBuildInfo -> IO ()
+ buildLib verbosity pkg_descr lbi lib clbi = do
++  libBi <- hackThreadedFlag verbosity
++         (compiler lbi) (withProfLib lbi) (libBuildInfo lib)
++  buildLib' ghcProgram haveStubO fixOdir libBi verbosity pkg_descr lbi lib clbi
++    where
++      ghcVersion = compilerVersion (compiler lbi)
++      haveStubO  = ghcVersion < Version [7,2] [] -- ghc-7.2+ does not make _stub.o files
++      fixOdir    = fixComponentCcGhcOptionsOdir lbi -- work around ghc 6.4.0 bug
++
++buildLib' :: Program -> Bool -> (FilePath -> FilePath -> FilePath) -> BuildInfo
++          -> Verbosity -> PackageDescription -> LocalBuildInfo -> Library
++          -> ComponentLocalBuildInfo -> IO ()
++buildLib' program haveStubO fixOdir libBi verbosity pkg_descr lbi lib clbi = do
+   libName <- case componentLibraries clbi of
+              [libName] -> return libName
+              [] -> die "No library name found when building library"
+@@ -662,15 +683,10 @@ buildLib verbosity pkg_descr lbi lib clbi = do
+       whenProfLib = when (withProfLib lbi)
+       whenSharedLib forceShared = when (forceShared || withSharedLib lbi)
+       whenGHCiLib = when (withGHCiLib lbi && withVanillaLib lbi)
+-      comp = compiler lbi
+-      ghcVersion = compilerVersion comp
+ 
+-  (ghcProg, _) <- requireProgram verbosity ghcProgram (withPrograms lbi)
++  (ghcProg, _) <- requireProgram verbosity program (withPrograms lbi)
+   let runGhcProg = runGHC verbosity ghcProg
+ 
+-  libBi <- hackThreadedFlag verbosity
+-             comp (withProfLib lbi) (libBuildInfo lib)
+-
+   isGhcDynamic <- ghcDynamic verbosity ghcProg
+   dynamicTooSupported <- ghcSupportsDynamicToo verbosity ghcProg
+   let libTargetDir = pref
+@@ -727,7 +743,7 @@ buildLib verbosity pkg_descr lbi lib clbi = do
+      info verbosity "Building C Sources..."
+      sequence_
+        [ do let vanillaCcOpts = (componentCcGhcOptions verbosity lbi
+-                                    libBi clbi pref filename)
++                                    libBi clbi (fixOdir pref filename) filename)
+                 profCcOpts    = vanillaCcOpts `mappend` mempty {
+                                   ghcOptProfilingMode = toFlag True,
+                                   ghcOptObjSuffix     = toFlag "p_o"
+@@ -762,17 +778,17 @@ buildLib verbosity pkg_descr lbi lib clbi = do
+   stubObjs <- fmap catMaybes $ sequence
+     [ findFileWithExtension [objExtension] [libTargetDir]
+         (ModuleName.toFilePath x ++"_stub")
+-    | ghcVersion < Version [7,2] [] -- ghc-7.2+ does not make _stub.o files
++    | haveStubO -- ghc-7.2+ does not make _stub.o files
+     , x <- libModules lib ]
+   stubProfObjs <- fmap catMaybes $ sequence
+     [ findFileWithExtension ["p_" ++ objExtension] [libTargetDir]
+         (ModuleName.toFilePath x ++"_stub")
+-    | ghcVersion < Version [7,2] [] -- ghc-7.2+ does not make _stub.o files
++    | haveStubO -- ghc-7.2+ does not make _stub.o files
+     , x <- libModules lib ]
+   stubSharedObjs <- fmap catMaybes $ sequence
+     [ findFileWithExtension ["dyn_" ++ objExtension] [libTargetDir]
+         (ModuleName.toFilePath x ++"_stub")
+-    | ghcVersion < Version [7,2] [] -- ghc-7.2+ does not make _stub.o files
++    | haveStubO -- ghc-7.2+ does not make _stub.o files
+     , x <- libModules lib ]
+ 
+   hObjs     <- getHaskellObjects lib lbi
+@@ -856,16 +872,24 @@ buildLib verbosity pkg_descr lbi lib clbi = do
+ --
+ buildExe :: Verbosity -> PackageDescription -> LocalBuildInfo
+                       -> Executable         -> ComponentLocalBuildInfo -> IO ()
+-buildExe verbosity _pkg_descr lbi
++buildExe verbosity pkg_descr lbi exe clbi = do
++  exeBi <- hackThreadedFlag verbosity
++             (compiler lbi) (withProfExe lbi) (buildInfo exe)
++  buildExe' ghcProgram fixOdir exeBi verbosity pkg_descr lbi exe clbi
++    where
++      fixOdir = fixComponentCcGhcOptionsOdir lbi -- work around ghc 6.4.0 bug
++
++
++buildExe' :: Program -> (FilePath -> FilePath -> FilePath) -> BuildInfo
++          -> Verbosity  -> PackageDescription  -> LocalBuildInfo
++          -> Executable -> ComponentLocalBuildInfo -> IO ()
++buildExe' program fixOdir exeBi verbosity _pkg_descr lbi
+   exe@Executable { exeName = exeName', modulePath = modPath } clbi = do
+   let pref = buildDir lbi
+ 
+-  (ghcProg, _) <- requireProgram verbosity ghcProgram (withPrograms lbi)
++  (ghcProg, _) <- requireProgram verbosity program (withPrograms lbi)
+   let runGhcProg = runGHC verbosity ghcProg
+ 
+-  exeBi <- hackThreadedFlag verbosity
+-             (compiler lbi) (withProfExe lbi) (buildInfo exe)
+-
+   -- exeNameReal, the name that GHC really uses (with .exe on Windows)
+   let exeNameReal = exeName' <.>
+                     (if takeExtension exeName' /= ('.':exeExtension)
+@@ -939,7 +963,7 @@ buildExe verbosity _pkg_descr lbi
+    info verbosity "Building C Sources..."
+    sequence_
+      [ do let opts = (componentCcGhcOptions verbosity lbi exeBi clbi
+-                         exeDir filename) `mappend` mempty {
++                         (fixOdir exeDir filename) filename) `mappend` mempty {
+                        ghcOptDynamic       = toFlag (withDynExe lbi),
+                        ghcOptProfilingMode = toFlag (withProfExe lbi)
+                      }
+@@ -996,9 +1020,14 @@ getHaskellObjects lib lbi pref wanted_obj_ext allow_split_objs
+ --
+ libAbiHash :: Verbosity -> PackageDescription -> LocalBuildInfo
+            -> Library -> ComponentLocalBuildInfo -> IO String
+-libAbiHash verbosity pkg_descr lbi lib clbi = do
++libAbiHash verbosity pkg_descr lbi lib clbi = do 
+   libBi <- hackThreadedFlag verbosity
+              (compiler lbi) (withProfLib lbi) (libBuildInfo lib)
++  libAbiHash' ghcProgram libBi verbosity pkg_descr lbi lib clbi
++
++libAbiHash' :: Program -> BuildInfo -> Verbosity -> PackageDescription
++            -> LocalBuildInfo -> Library -> ComponentLocalBuildInfo -> IO String
++libAbiHash' program libBi verbosity pkg_descr lbi lib clbi = do
+   let
+       vanillaArgs =
+         (componentGhcOptions verbosity lbi libBi clbi (buildDir lbi))
+@@ -1025,7 +1054,7 @@ libAbiHash verbosity pkg_descr lbi lib clbi = do
+            else if withProfLib    lbi then profArgs
+            else error "libAbiHash: Can't find an enabled library way"
+   --
+-  (ghcProg, _) <- requireProgram verbosity ghcProgram (withPrograms lbi)
++  (ghcProg, _) <- requireProgram verbosity program (withPrograms lbi)
+   getProgramInvocationOutput verbosity (ghcInvocation ghcProg ghcArgs)
+ 
+ 
+@@ -1068,7 +1097,7 @@ componentCcGhcOptions :: Verbosity -> LocalBuildInfo
+                       -> BuildInfo -> ComponentLocalBuildInfo
+                       -> FilePath -> FilePath
+                       -> GhcOptions
+-componentCcGhcOptions verbosity lbi bi clbi pref filename =
++componentCcGhcOptions verbosity lbi bi clbi odir filename =
+     mempty {
+       ghcOptVerbosity      = toFlag verbosity,
+       ghcOptMode           = toFlag GhcModeCompile,
+@@ -1083,10 +1112,12 @@ componentCcGhcOptions verbosity lbi bi clbi pref filename =
+                                   _              -> ["-O2"],
+       ghcOptObjDir         = toFlag odir
+     }
+-  where
+-    odir | compilerVersion (compiler lbi) >= Version [6,4,1] []  = pref
+-         | otherwise = pref </> takeDirectory filename
+-         -- ghc 6.4.0 had a bug in -odir handling for C compilations.
++
++fixComponentCcGhcOptionsOdir :: LocalBuildInfo -> FilePath -> FilePath -> FilePath
++fixComponentCcGhcOptionsOdir lbi pref filename
++   | compilerVersion (compiler lbi) >= Version [6,4,1] []  = pref
++   | otherwise = pref </> takeDirectory filename
++   -- ghc 6.4.0 had a bug in -odir handling for C compilations.
+ 
+ mkGHCiLibName :: LibraryName -> String
+ mkGHCiLibName (LibraryName lib) = lib <.> "o"
+@@ -1201,9 +1232,14 @@ updateLibArchive verbosity lbi path
+ 
+ -- | Create an empty package DB at the specified location.
+ initPackageDB :: Verbosity -> ProgramConfiguration -> FilePath -> IO ()
+-initPackageDB verbosity conf dbPath = HcPkg.init verbosity ghcPkgProg dbPath
++initPackageDB = initPackageDB' ghcPkgProgram
++
++initPackageDB' :: Program -> Verbosity -> ProgramConfiguration
++               -> FilePath -> IO ()
++initPackageDB' program verbosity conf dbPath =
++  HcPkg.init verbosity ghcPkgProg dbPath
+   where
+-    Just ghcPkgProg = lookupProgram ghcPkgProgram conf
++    Just ghcPkgProg = lookupProgram program conf
+ 
+ -- | Run 'ghc-pkg' using a given package DB stack, directly forwarding the
+ -- provided command-line arguments to it.
+@@ -1222,8 +1258,13 @@ registerPackage
+   -> Bool
+   -> PackageDBStack
+   -> IO ()
+-registerPackage verbosity installedPkgInfo _pkg lbi _inplace packageDbs = do
+-  let Just ghcPkg = lookupProgram ghcPkgProgram (withPrograms lbi)
++registerPackage = registerPackage' ghcPkgProgram
++
++registerPackage' :: Program -> Verbosity -> InstalledPackageInfo
++                 -> PackageDescription -> LocalBuildInfo
++                 -> Bool -> PackageDBStack -> IO ()
++registerPackage' program verbosity installedPkgInfo _pkg lbi _inplace packageDbs = do
++  let Just ghcPkg = lookupProgram program (withPrograms lbi)
+   HcPkg.reregister verbosity ghcPkg packageDbs (Right installedPkgInfo)
+ 
+ -- -----------------------------------------------------------------------------
+diff --git a/Cabal/Distribution/Simple/GHCJS.hs b/Cabal/Distribution/Simple/GHCJS.hs
+new file mode 100644
+index 0000000..674c52b
+--- /dev/null
++++ b/Cabal/Distribution/Simple/GHCJS.hs
+@@ -0,0 +1,233 @@
++module Distribution.Simple.GHCJS (
++        configure, getInstalledPackages,
++        buildLib, buildExe,
++        installLib, installExe,
++        libAbiHash,
++        initPackageDB,
++        registerPackage,
++        componentGhcOptions,
++        ghcLibDir,
++        ghcDynamicByDefault
++  ) where
++
++import Control.Monad (when)
++import Distribution.PackageDescription as PD
++         ( PackageDescription, BuildInfo(..), Executable(..)
++         , Library(..), libModules )
++import Distribution.InstalledPackageInfo
++         ( InstalledPackageInfo )
++import Distribution.Simple.Compiler
++         ( CompilerFlavor(..), CompilerId(..), Compiler(..)
++         , PackageDBStack, PackageDB(..) )
++import Distribution.Simple.LocalBuildInfo
++         ( LocalBuildInfo(..), ComponentLocalBuildInfo(..) )
++import Distribution.Simple.InstallDirs hiding ( absoluteInstallDirs )
++import Distribution.Simple.PackageIndex (PackageIndex)
++import qualified Distribution.Simple.PackageIndex as PackageIndex
++import Distribution.Simple.Program
++         ( Program(..), ConfiguredProgram(..), ProgramConfiguration
++         , requireProgramVersion, rawSystemProgramStdoutConf
++         , userMaybeSpecifyPath, programPath, addKnownProgram
++         , ghcjsProgram, ghcjsPkgProgram, hsc2hsProgram
++         , ghcProgram, lookupProgram
++         )
++import Distribution.Text
++         ( display )
++import Distribution.Verbosity
++import Distribution.Version
++         ( Version(..), anyVersion, orLaterVersion )
++import Distribution.Simple.BuildPaths
++import Distribution.Simple.Utils
++import Distribution.System ( Platform )
++import Data.Monoid ( mconcat )
++import System.FilePath          ( (</>), (<.>) )
++import qualified Distribution.Simple.Program.HcPkg as HcPkg
++import qualified Distribution.Simple.GHC as GHC
++import Data.Char ( isSpace )
++
++configure :: Verbosity -> Maybe FilePath -> Maybe FilePath
++          -> ProgramConfiguration -> IO (Compiler, Maybe Platform, ProgramConfiguration)
++configure verbosity hcPath hcPkgPath conf0 = do
++  (ghcjsProg, ghcjsVersion, conf1) <-
++    requireProgramVersion verbosity ghcjsProgram
++      (orLaterVersion (Version [0,1] []))
++      (userMaybeSpecifyPath "ghcjs" hcPath conf0)
++
++  ghcjsGhcVersion <- findProgramVersion "--numeric-ghc-version" id verbosity
++    (programPath ghcjsProg)
++
++  -- we also need GHC to be installed
++  (ghcProg, ghcVersion, conf2) <-
++    requireProgramVersion verbosity ghcProgram
++      (orLaterVersion (Version [6,4] []))
++      (userMaybeSpecifyPath "ghc" hcPath conf1)
++
++  -- This is slightly tricky, we have to configure ghc first, then we use the
++  -- location of ghc to help find ghc-pkg in the case that the user did not
++  -- specify the location of ghc-pkg directly:
++  (ghcjsPkgProg, ghcjsPkgVersion, conf3) <-
++    requireProgramVersion verbosity ghcjsPkgProgram {
++      programFindLocation = guessGhcjsPkgFromGhcPath ghcjsProg
++    }
++    anyVersion (userMaybeSpecifyPath "ghcjs-pkg" hcPkgPath conf2)
++
++  when (ghcjsVersion /= ghcjsPkgVersion) $ die $
++       "Version mismatch between ghcjs and ghcjs-pkg: "
++    ++ programPath ghcjsProg ++ " is version " ++ display ghcjsVersion ++ " "
++    ++ programPath ghcjsPkgProg ++ " is version " ++ display ghcjsPkgVersion
++
++  when (ghcjsGhcVersion /= Just ghcVersion) $ die $
++       "Version mismatch between ghcjs and ghc: "
++    ++ programPath ghcjsProg ++ " is compiled with ghc version "
++    ++ (maybe "<unknown>" display ghcjsGhcVersion) ++ " "
++    ++ programPath ghcProg ++ " is version " ++ display ghcVersion
++
++  -- Likewise we try to find the matching hsc2hs program.
++  let hsc2hsProgram' = hsc2hsProgram {
++                           programFindLocation = GHC.guessHsc2hsFromGhcPath ghcjsProg
++                       }
++      conf4 = addKnownProgram hsc2hsProgram' conf3
++
++  languages  <- GHC.getLanguages verbosity ghcProg
++  extensions <- GHC.getExtensions verbosity ghcProg -- do we always support the same extensions as GHC?
++
++  ghcInfo <- GHC.getGhcInfo verbosity ghcProg
++
++  let comp = Compiler {
++        compilerId             = CompilerId GHCJS ghcjsVersion (Just (CompilerId GHC ghcVersion Nothing)),
++        compilerLanguages      = languages,
++        compilerExtensions     = extensions
++      }
++      compPlatform = GHC.targetPlatform ghcInfo
++      conf5 = GHC.configureToolchain ghcProg ghcInfo conf4 -- configure gcc and ld
++  return (comp, compPlatform, conf5)
++
++guessGhcjsPkgFromGhcPath :: ConfiguredProgram -> Verbosity -> IO (Maybe FilePath)
++guessGhcjsPkgFromGhcPath = GHC.guessToolFromGhcPath "ghcjs-pkg"
++
++getInstalledPackages :: Verbosity -> PackageDBStack -> ProgramConfiguration
++                     -> IO PackageIndex
++getInstalledPackages verbosity packagedbs conf = do
++  GHC.checkPackageDbEnvVar
++  GHC.checkPackageDbStack packagedbs
++  pkgss <- getInstalledPackages' verbosity packagedbs conf
++  topDir <- GHC.ghcLibDir' verbosity ghcjsProg
++  let indexes = [ PackageIndex.fromList (map (GHC.substTopDir topDir) pkgs)
++                | (_, pkgs) <- pkgss ]
++  return $! mconcat indexes
++  where
++    Just ghcjsProg = lookupProgram ghcjsProgram conf
++
++getInstalledPackages' :: Verbosity -> [PackageDB] -> ProgramConfiguration
++                     -> IO [(PackageDB, [InstalledPackageInfo])]
++getInstalledPackages' verbosity packagedbs conf =
++  sequence
++    [ do pkgs <- HcPkg.dump verbosity ghcjsPkgProg packagedb
++         return (packagedb, pkgs)
++    | packagedb <- packagedbs ]
++  where
++    Just ghcjsPkgProg = lookupProgram ghcjsPkgProgram conf
++
++buildLib :: Verbosity
++            -> PackageDescription
++            -> LocalBuildInfo
++            -> Library
++            -> ComponentLocalBuildInfo
++            -> IO ()
++buildLib verbosity pkg_descr lbi lib clbi =
++  GHC.buildLib' ghcjsProgram False fixOdir libBi verbosity pkg_descr lbi lib clbi
++    where
++      libBi = libBuildInfo lib
++      fixOdir odir _ = odir
++
++buildExe :: Verbosity
++            -> PackageDescription
++            -> LocalBuildInfo
++            -> Executable
++            -> ComponentLocalBuildInfo
++            -> IO ()
++buildExe verbosity pkg_descr lbi exe clbi =
++  GHC.buildExe' ghcjsProgram fixOdir exeBi verbosity pkg_descr lbi exe clbi
++    where
++      exeBi = buildInfo exe
++      fixOdir odir _ = odir
++
++installLib    :: Verbosity
++              -> LocalBuildInfo
++              -> FilePath  -- ^install location
++              -> FilePath  -- ^install location for dynamic librariess
++              -> FilePath  -- ^Build location
++              -> PackageDescription
++              -> Library
++              -> ComponentLocalBuildInfo
++              -> IO ()
++installLib verbosity lbi targetDir dynlibTargetDir builtDir pkg lib clbi = do
++  GHC.installLib verbosity lbi targetDir dynlibTargetDir builtDir pkg lib clbi
++  when (hasLib) $ do copyModuleFiles "js_hi"
++                     copyModuleFiles "js"
++                     copyModuleFiles "ji"
++    where
++      hasLib    = not $ null (libModules lib)
++                     && null (cSources (libBuildInfo lib))
++      copyModuleFiles ext =
++        findModuleFiles [builtDir] [ext] (libModules lib)
++          >>= installOrdinaryFiles verbosity targetDir
++
++installExe :: Verbosity
++              -> LocalBuildInfo
++              -> InstallDirs FilePath
++              -> FilePath
++              -> (FilePath, FilePath)
++              -> PackageDescription
++              -> Executable
++              -> IO ()
++installExe verbosity _lbi installDirs buildPref (progprefix, progsuffix) _pkg exe = do
++  let binDir = bindir installDirs
++  createDirectoryIfMissingVerbose verbosity True binDir
++  let exeFileName = exeName exe <.> "jsexe"
++      fixedExeBaseName = progprefix ++ exeName exe ++ progsuffix
++      installBinary dest = do
++          installExecutableFile verbosity
++            (buildPref </> exeName exe </> exeFileName)
++            (dest <.> exeExtension)
++--  installBinary (binDir </> fixedExeBaseName)
++  return ()
++
++libAbiHash :: Verbosity
++              -> PackageDescription
++              -> LocalBuildInfo
++              -> Library
++              -> ComponentLocalBuildInfo
++              -> IO String
++libAbiHash verbosity pkg_descr lbi lib clbi =
++  GHC.libAbiHash' ghcjsProgram (libBuildInfo lib) verbosity pkg_descr lbi lib clbi
++
++initPackageDB :: Verbosity
++                 -> ProgramConfiguration -> FilePath -> IO ()
++initPackageDB = GHC.initPackageDB' ghcjsPkgProgram
++
++registerPackage :: Verbosity
++                   -> InstalledPackageInfo
++                   -> PackageDescription
++                   -> LocalBuildInfo
++                   -> Bool
++                   -> PackageDBStack
++                   -> IO ()
++registerPackage = GHC.registerPackage' ghcjsPkgProgram
++
++componentGhcOptions :: Verbosity
++                       -> LocalBuildInfo
++                       -> BuildInfo
++                       -> ComponentLocalBuildInfo
++                       -> FilePath
++                       -> GHC.GhcOptions
++componentGhcOptions = GHC.componentGhcOptions
++
++ghcLibDir :: Verbosity -> LocalBuildInfo -> IO FilePath
++ghcLibDir verbosity lbi =
++    (reverse . dropWhile isSpace . reverse) `fmap`
++     rawSystemProgramStdoutConf verbosity ghcjsProgram (withPrograms lbi) ["--print-libdir"]
++
++ghcDynamicByDefault :: Verbosity -> ConfiguredProgram -> IO Bool
++ghcDynamicByDefault = GHC.ghcDynamicByDefault
++
+diff --git a/Cabal/Distribution/Simple/Hugs.hs b/Cabal/Distribution/Simple/Hugs.hs
+index cc90e2f..6289880 100644
+--- a/Cabal/Distribution/Simple/Hugs.hs
++++ b/Cabal/Distribution/Simple/Hugs.hs
+@@ -136,7 +136,7 @@ configure verbosity hcPath _hcPkgPath conf = do
+                             (orLaterVersion (Version [2006] [])) conf'
+ 
+   let comp = Compiler {
+-        compilerId             = CompilerId Hugs version,
++        compilerId             = CompilerId Hugs version Nothing,
+         compilerLanguages      = hugsLanguages,
+         compilerExtensions     = hugsLanguageExtensions
+       }
+diff --git a/Cabal/Distribution/Simple/Install.hs b/Cabal/Distribution/Simple/Install.hs
+index 180a6e3..6afdd77 100644
+--- a/Cabal/Distribution/Simple/Install.hs
++++ b/Cabal/Distribution/Simple/Install.hs
+@@ -62,6 +62,7 @@ import Distribution.Simple.Compiler
+ import Distribution.Simple.Setup (CopyFlags(..), CopyDest(..), fromFlag)
+ 
+ import qualified Distribution.Simple.GHC  as GHC
++import qualified Distribution.Simple.GHCJS as GHCJS
+ import qualified Distribution.Simple.NHC  as NHC
+ import qualified Distribution.Simple.JHC  as JHC
+ import qualified Distribution.Simple.LHC  as LHC
+@@ -160,6 +161,10 @@ install pkg_descr lbi flags = do
+                   GHC.installLib verbosity lbi libPref dynlibPref buildPref pkg_descr
+                 withExe pkg_descr $
+                   GHC.installExe verbosity lbi installDirs buildPref (progPrefixPref, progSuffixPref) pkg_descr
++     GHCJS-> do withLibLBI pkg_descr lbi $
++                  GHCJS.installLib verbosity lbi libPref dynlibPref buildPref pkg_descr
++                withExe pkg_descr $
++                  GHCJS.installExe verbosity lbi installDirs buildPref (progPrefixPref, progSuffixPref) pkg_descr
+      LHC  -> do withLibLBI pkg_descr lbi $
+                   LHC.installLib verbosity lbi libPref dynlibPref buildPref pkg_descr
+                 withExe pkg_descr $
+diff --git a/Cabal/Distribution/Simple/JHC.hs b/Cabal/Distribution/Simple/JHC.hs
+index f09a6e4..e066d38 100644
+--- a/Cabal/Distribution/Simple/JHC.hs
++++ b/Cabal/Distribution/Simple/JHC.hs
+@@ -106,7 +106,7 @@ configure verbosity hcPath _hcPkgPath conf = do
+ 
+   let Just version = programVersion jhcProg
+       comp = Compiler {
+-        compilerId             = CompilerId JHC version,
++        compilerId             = CompilerId JHC version Nothing,
+         compilerLanguages      = jhcLanguages,
+         compilerExtensions     = jhcLanguageExtensions
+       }
+diff --git a/Cabal/Distribution/Simple/LHC.hs b/Cabal/Distribution/Simple/LHC.hs
+index 136e8e2..f711de6 100644
+--- a/Cabal/Distribution/Simple/LHC.hs
++++ b/Cabal/Distribution/Simple/LHC.hs
+@@ -152,7 +152,7 @@ configure verbosity hcPath hcPkgPath conf = do
+   extensions <- getExtensions verbosity lhcProg
+ 
+   let comp = Compiler {
+-        compilerId             = CompilerId LHC lhcVersion,
++        compilerId             = CompilerId LHC lhcVersion Nothing,
+         compilerLanguages      = languages,
+         compilerExtensions     = extensions
+       }
+diff --git a/Cabal/Distribution/Simple/NHC.hs b/Cabal/Distribution/Simple/NHC.hs
+index 0bf55a3..2ace51e 100644
+--- a/Cabal/Distribution/Simple/NHC.hs
++++ b/Cabal/Distribution/Simple/NHC.hs
+@@ -131,7 +131,7 @@ configure verbosity hcPath _hcPkgPath conf = do
+   -- unless (null (cSources bi)) $ requireProgram ccProgram anyVersion
+ 
+   let comp = Compiler {
+-        compilerId         = CompilerId NHC nhcVersion,
++        compilerId         = CompilerId NHC nhcVersion Nothing,
+         compilerLanguages  = nhcLanguages,
+         compilerExtensions     = nhcLanguageExtensions
+       }
+diff --git a/Cabal/Distribution/Simple/PreProcess.hs b/Cabal/Distribution/Simple/PreProcess.hs
+index 97434cc..d701910 100644
+--- a/Cabal/Distribution/Simple/PreProcess.hs
++++ b/Cabal/Distribution/Simple/PreProcess.hs
+@@ -87,7 +87,8 @@ import Distribution.Simple.Program
+          , lookupProgram, requireProgram, requireProgramVersion
+          , rawSystemProgramConf, rawSystemProgram
+          , greencardProgram, cpphsProgram, hsc2hsProgram, c2hsProgram
+-         , happyProgram, alexProgram, haddockProgram, ghcProgram, gccProgram )
++         , happyProgram, alexProgram, haddockProgram, ghcProgram, ghcjsProgram
++         , gccProgram )
+ import Distribution.Simple.Test ( writeSimpleTestStub, stubFilePath, stubName )
+ import Distribution.System
+          ( OS(OSX, Windows), buildOS )
+@@ -366,26 +367,26 @@ ppCpp = ppCpp' []
+ ppCpp' :: [String] -> BuildInfo -> LocalBuildInfo -> PreProcessor
+ ppCpp' extraArgs bi lbi =
+   case compilerFlavor (compiler lbi) of
+-    GHC -> ppGhcCpp (cppArgs ++ extraArgs) bi lbi
+-    _   -> ppCpphs  (cppArgs ++ extraArgs) bi lbi
+-
++    GHC   -> ppGhcCpp ghcProgram   (>= Version [6,6] []) (cppArgs ++ extraArgs) bi lbi
++    GHCJS -> ppGhcCpp ghcjsProgram (const True)          (cppArgs ++ extraArgs) bi lbi
++    _     -> ppCpphs  (cppArgs ++ extraArgs) bi lbi
+   where cppArgs = getCppOptions bi lbi
+ 
+-ppGhcCpp :: [String] -> BuildInfo -> LocalBuildInfo -> PreProcessor
+-ppGhcCpp extraArgs _bi lbi =
++ppGhcCpp :: Program -> (Version -> Bool) -> [String] -> BuildInfo -> LocalBuildInfo -> PreProcessor
++ppGhcCpp program xHs extraArgs _bi lbi =
+   PreProcessor {
+     platformIndependent = False,
+     runPreProcessor = mkSimplePreProcessor $ \inFile outFile verbosity -> do
+-      (ghcProg, ghcVersion, _) <- requireProgramVersion verbosity
+-                                    ghcProgram anyVersion (withPrograms lbi)
+-      rawSystemProgram verbosity ghcProg $
++      (prog, version, _) <- requireProgramVersion verbosity
++                              program anyVersion (withPrograms lbi)
++      rawSystemProgram verbosity prog $
+           ["-E", "-cpp"]
+           -- This is a bit of an ugly hack. We're going to
+           -- unlit the file ourselves later on if appropriate,
+           -- so we need GHC not to unlit it now or it'll get
+           -- double-unlitted. In the future we might switch to
+           -- using cpphs --unlit instead.
+-       ++ (if ghcVersion >= Version [6,6] [] then ["-x", "hs"] else [])
++       ++ (if xHs version then ["-x", "hs"] else [])
+        ++ (if use_optP_P lbi then ["-optP-P"] else [])
+        ++ [ "-optP-include", "-optP"++ (autogenModulesDir lbi </> cppHeaderName) ]
+        ++ ["-o", outFile, inFile]
+@@ -484,6 +485,7 @@ ppHsc2hs bi lbi =
+     isELF = case buildOS of OSX -> False; Windows -> False; _ -> True;
+     packageHacks = case compilerFlavor (compiler lbi) of
+       GHC -> hackRtsPackage
++      GHCJS -> hackRtsPackage
+       _   -> id
+     -- We don't link in the actual Haskell libraries of our dependencies, so
+     -- the -u flags in the ldOptions of the rts package mean linking fails on
+@@ -550,6 +552,7 @@ hcDefines :: Compiler -> [String]
+ hcDefines comp =
+   case compilerFlavor comp of
+     GHC  -> ["-D__GLASGOW_HASKELL__=" ++ versionInt version]
++    GHCJS -> ["-D__GLASGOW_HASKELL__=" ++ versionInt version]
+     JHC  -> ["-D__JHC__=" ++ versionInt version]
+     NHC  -> ["-D__NHC__=" ++ versionInt version]
+     Hugs -> ["-D__HUGS__"]
+@@ -577,6 +580,7 @@ ppHappy _ lbi = pp { platformIndependent = True }
+   where pp = standardPP lbi happyProgram (hcFlags hc)
+         hc = compilerFlavor (compiler lbi)
+         hcFlags GHC = ["-agc"]
++        hcFlags GHCJS = ["-agc"]
+         hcFlags _ = []
+ 
+ ppAlex :: BuildInfo -> LocalBuildInfo -> PreProcessor
+@@ -584,6 +588,7 @@ ppAlex _ lbi = pp { platformIndependent = True }
+   where pp = standardPP lbi alexProgram (hcFlags hc)
+         hc = compilerFlavor (compiler lbi)
+         hcFlags GHC = ["-g"]
++        hcFlags GHCJS = ["-g"]
+         hcFlags _ = []
+ 
+ standardPP :: LocalBuildInfo -> Program -> [String] -> PreProcessor
+diff --git a/Cabal/Distribution/Simple/Program.hs b/Cabal/Distribution/Simple/Program.hs
+index c57d553..599644c 100644
+--- a/Cabal/Distribution/Simple/Program.hs
++++ b/Cabal/Distribution/Simple/Program.hs
+@@ -86,6 +86,8 @@ module Distribution.Simple.Program (
+     -- * Programs that Cabal knows about
+     , ghcProgram
+     , ghcPkgProgram
++    , ghcjsProgram
++    , ghcjsPkgProgram
+     , lhcProgram
+     , lhcPkgProgram
+     , nhcProgram
+diff --git a/Cabal/Distribution/Simple/Program/Builtin.hs b/Cabal/Distribution/Simple/Program/Builtin.hs
+index 48446fa..d9f018f 100644
+--- a/Cabal/Distribution/Simple/Program/Builtin.hs
++++ b/Cabal/Distribution/Simple/Program/Builtin.hs
+@@ -18,6 +18,8 @@ module Distribution.Simple.Program.Builtin (
+     -- * Programs that Cabal knows about
+     ghcProgram,
+     ghcPkgProgram,
++    ghcjsProgram,
++    ghcjsPkgProgram,
+     lhcProgram,
+     lhcPkgProgram,
+     nhcProgram,
+@@ -62,6 +64,8 @@ builtinPrograms =
+     -- compilers and related progs
+       ghcProgram
+     , ghcPkgProgram
++    , ghcjsProgram
++    , ghcjsPkgProgram
+     , hugsProgram
+     , ffihugsProgram
+     , nhcProgram
+@@ -106,6 +110,21 @@ ghcPkgProgram = (simpleProgram "ghc-pkg") {
+         _               -> ""
+   }
+ 
++ghcjsProgram :: Program
++ghcjsProgram = (simpleProgram "ghcjs") {
++    programFindVersion = findProgramVersion "--numeric-version" id
++  }
++
++ghcjsPkgProgram :: Program
++ghcjsPkgProgram = (simpleProgram "ghcjs-pkg") {
++    programFindVersion = findProgramVersion "--version" $ \str ->
++      -- Invoking "ghcjs-pkg --version" gives a string like
++      -- "GHCJS package manager version 6.4.1"
++      case words str of
++        (_:_:_:_:ver:_) -> ver
++        _               -> ""
++  }
++
+ lhcProgram :: Program
+ lhcProgram = (simpleProgram "lhc") {
+     programFindVersion = findProgramVersion "--numeric-version" id
+diff --git a/Cabal/Distribution/Simple/Register.hs b/Cabal/Distribution/Simple/Register.hs
+index c45bd18..082e28a 100644
+--- a/Cabal/Distribution/Simple/Register.hs
++++ b/Cabal/Distribution/Simple/Register.hs
+@@ -73,6 +73,7 @@ import Distribution.Simple.LocalBuildInfo
+          , InstallDirs(..), absoluteInstallDirs )
+ import Distribution.Simple.BuildPaths (haddockName)
+ import qualified Distribution.Simple.GHC  as GHC
++import qualified Distribution.Simple.GHCJS as GHCJS
+ import qualified Distribution.Simple.LHC  as LHC
+ import qualified Distribution.Simple.Hugs as Hugs
+ import qualified Distribution.Simple.UHC  as UHC
+@@ -82,7 +83,7 @@ import Distribution.Simple.Compiler
+ import Distribution.Simple.Program
+          ( ProgramConfiguration, ConfiguredProgram
+          , runProgramInvocation, requireProgram, lookupProgram
+-         , ghcPkgProgram, lhcPkgProgram )
++         , ghcPkgProgram, ghcjsPkgProgram, lhcPkgProgram )
+ import Distribution.Simple.Program.Script
+          ( invocationAsSystemScript )
+ import qualified Distribution.Simple.Program.HcPkg as HcPkg
+@@ -163,6 +164,8 @@ register pkg@PackageDescription { library       = Just lib  } lbi regFlags
+       case compilerFlavor (compiler lbi) of
+         GHC  -> do (ghcPkg, _) <- requireProgram verbosity ghcPkgProgram (withPrograms lbi)
+                    writeHcPkgRegisterScript verbosity installedPkgInfo ghcPkg packageDbs
++        GHCJS -> do (ghcjsPkg, _) <- requireProgram verbosity ghcjsPkgProgram (withPrograms lbi)
++                    writeHcPkgRegisterScript verbosity installedPkgInfo ghcjsPkg packageDbs
+         LHC  -> do (lhcPkg, _) <- requireProgram verbosity lhcPkgProgram (withPrograms lbi)
+                    writeHcPkgRegisterScript verbosity installedPkgInfo lhcPkg packageDbs
+         Hugs -> notice verbosity "Registration scripts not needed for hugs"
+@@ -196,6 +199,9 @@ generateRegistrationInfo verbosity pkg lib lbi clbi inplace distPref = do
+      GHC | compilerVersion comp >= Version [6,11] [] -> do
+             s <- GHC.libAbiHash verbosity pkg lbi lib clbi
+             return (InstalledPackageId (display (packageId pkg) ++ '-':s))
++     GHCJS -> do
++            s <- GHCJS.libAbiHash verbosity pkg lbi lib clbi
++            return (InstalledPackageId (display (packageId pkg) ++ '-':s))
+      _other -> do
+             return (InstalledPackageId (display (packageId pkg)))
+ 
+@@ -241,6 +247,7 @@ registerPackage verbosity installedPkgInfo pkg lbi inplace packageDbs = do
+   setupMessage verbosity msg (packageId pkg)
+   case compilerFlavor (compiler lbi) of
+     GHC  -> GHC.registerPackage  verbosity installedPkgInfo pkg lbi inplace packageDbs
++    GHCJS -> GHCJS.registerPackage  verbosity installedPkgInfo pkg lbi inplace packageDbs
+     LHC  -> LHC.registerPackage  verbosity installedPkgInfo pkg lbi inplace packageDbs
+     Hugs -> Hugs.registerPackage verbosity installedPkgInfo pkg lbi inplace packageDbs
+     UHC  -> UHC.registerPackage  verbosity installedPkgInfo pkg lbi inplace packageDbs
+@@ -404,6 +411,14 @@ unregister pkg lbi regFlags = do
+            then writeFileAtomic unregScriptFileName
+                   (BS.Char8.pack $ invocationAsSystemScript buildOS invocation)
+             else runProgramInvocation verbosity invocation
++    GHCJS ->
++      let Just ghcjsPkg = lookupProgram ghcjsPkgProgram (withPrograms lbi)
++          invocation = HcPkg.unregisterInvocation ghcjsPkg Verbosity.normal
++                         packageDb pkgid
++      in if genScript
++           then writeFileAtomic unregScriptFileName
++                  (BS.Char8.pack $ invocationAsSystemScript buildOS invocation)
++            else runProgramInvocation verbosity invocation
+     Hugs -> do
+         _ <- tryIO $ removeDirectoryRecursive (libdir installDirs)
+         return ()
+@@ -411,7 +426,7 @@ unregister pkg lbi regFlags = do
+         _ <- tryIO $ removeDirectoryRecursive (libdir installDirs)
+         return ()
+     _ ->
+-        die ("only unregistering with GHC and Hugs is implemented")
++        die ("only unregistering with GHC, GHCJS, NHC and Hugs is implemented")
+ 
+ unregScriptFileName :: FilePath
+ unregScriptFileName = case buildOS of
+diff --git a/Cabal/Distribution/Simple/Setup.hs b/Cabal/Distribution/Simple/Setup.hs
+index bbe0f8b..3c44254 100644
+--- a/Cabal/Distribution/Simple/Setup.hs
++++ b/Cabal/Distribution/Simple/Setup.hs
+@@ -364,6 +364,7 @@ configureOptions showOrParseArgs =
+       ,option [] ["compiler"] "compiler"
+          configHcFlavor (\v flags -> flags { configHcFlavor = v })
+          (choiceOpt [ (Flag GHC, ("g", ["ghc"]), "compile with GHC")
++                    , (Flag GHCJS, ([] , ["ghcjs"]), "compile with GHCJS")
+                     , (Flag NHC, ([] , ["nhc98"]), "compile with NHC")
+                     , (Flag JHC, ([] , ["jhc"]), "compile with JHC")
+                     , (Flag LHC, ([] , ["lhc"]), "compile with LHC")
+diff --git a/Cabal/Distribution/Simple/UHC.hs b/Cabal/Distribution/Simple/UHC.hs
+index 3589937..4150100 100644
+--- a/Cabal/Distribution/Simple/UHC.hs
++++ b/Cabal/Distribution/Simple/UHC.hs
+@@ -84,7 +84,7 @@ configure verbosity hcPath _hcPkgPath conf = do
+     (userMaybeSpecifyPath "uhc" hcPath conf)
+ 
+   let comp = Compiler {
+-               compilerId         =  CompilerId UHC uhcVersion,
++               compilerId         =  CompilerId UHC uhcVersion Nothing,
+                compilerLanguages  =  uhcLanguages,
+                compilerExtensions =  uhcLanguageExtensions
+              }
+diff --git a/cabal-install/Distribution/Client/Dependency.hs b/cabal-install/Distribution/Client/Dependency.hs
+index 36d3fa1..ff9da5e 100644
+--- a/cabal-install/Distribution/Client/Dependency.hs
++++ b/cabal-install/Distribution/Client/Dependency.hs
+@@ -362,7 +362,7 @@ applySandboxInstallPolicy
+ chooseSolver :: Verbosity -> PreSolver -> CompilerId -> IO Solver
+ chooseSolver _         AlwaysTopDown _                = return TopDown
+ chooseSolver _         AlwaysModular _                = return Modular
+-chooseSolver verbosity Choose        (CompilerId f v) = do
++chooseSolver verbosity Choose        (CompilerId f v _) = do
+   let chosenSolver | f == GHC && v <= Version [7] [] = TopDown
+                    | otherwise                       = Modular
+       msg TopDown = warn verbosity "Falling back to topdown solver for GHC < 7."
+diff --git a/cabal-install/Distribution/Client/Dependency/Modular/IndexConversion.hs b/cabal-install/Distribution/Client/Dependency/Modular/IndexConversion.hs
+index 8daf115..aa656e7 100644
+--- a/cabal-install/Distribution/Client/Dependency/Modular/IndexConversion.hs
++++ b/cabal-install/Distribution/Client/Dependency/Modular/IndexConversion.hs
+@@ -153,7 +153,7 @@ convBranch :: OS -> Arch -> CompilerId ->
+               (Condition ConfVar,
+                CondTree ConfVar [Dependency] a,
+                Maybe (CondTree ConfVar [Dependency] a)) -> FlaggedDeps PN
+-convBranch os arch cid@(CompilerId cf cv) pi fds p (c', t', mf') =
++convBranch os arch cid pi fds p (c', t', mf') =
+   go c' (          convCondTree os arch cid pi fds p   t')
+         (maybe [] (convCondTree os arch cid pi fds p) mf')
+   where
+@@ -172,8 +172,11 @@ convBranch os arch cid@(CompilerId cf cv) pi fds p (c', t', mf') =
+       | arch == arch'  = t
+       | otherwise      = f
+     go (Var (Impl cf' cvr')) t f
+-      | cf == cf' && checkVR cvr' cv = t
+-      | otherwise      = f
++      | goImpl cf' cvr' cid = t
++      | otherwise           = f
++    goImpl cf' cvr' (CompilerId cf cv sub) =
++      cf == cf' && checkVR cvr' cv ||
++      maybe False (goImpl cf' cvr') sub
+ 
+ -- | Convert a Cabal dependency to a solver-specific dependency.
+ convDep :: PN -> Dependency -> Dep PN
+diff --git a/cabal-install/Distribution/Client/Install.hs b/cabal-install/Distribution/Client/Install.hs
+index 26d4924..52cfb14 100644
+--- a/cabal-install/Distribution/Client/Install.hs
++++ b/cabal-install/Distribution/Client/Install.hs
+@@ -1281,7 +1281,7 @@ withWin32SelfUpgrade verbosity configFlags compid platform pkg action = do
+ 
+   where
+     pkgid = packageId pkg
+-    (CompilerId compFlavor _) = compid
++    (CompilerId compFlavor _ _) = compid
+ 
+     exeInstallPaths defaultDirs =
+       [ InstallDirs.bindir absoluteDirs </> exeName <.> exeExtension
+diff --git a/cabal-install/Distribution/Client/InstallSymlink.hs b/cabal-install/Distribution/Client/InstallSymlink.hs
+index b51a5fb..b5d3dc4 100644
+--- a/cabal-install/Distribution/Client/InstallSymlink.hs
++++ b/cabal-install/Distribution/Client/InstallSymlink.hs
+@@ -158,7 +158,7 @@ symlinkBinaries configFlags installFlags plan =
+     prefixTemplate   = fromFlagTemplate (configProgPrefix configFlags)
+     suffixTemplate   = fromFlagTemplate (configProgSuffix configFlags)
+     platform         = InstallPlan.planPlatform plan
+-    compilerId@(CompilerId compilerFlavor _) = InstallPlan.planCompiler plan
++    compilerId@(CompilerId compilerFlavor _ _) = InstallPlan.planCompiler plan
+ 
+ symlinkBinary :: FilePath -- ^ The canonical path of the public bin dir
+                           --   eg @/home/user/bin@
+diff --git a/cabal-install/cabal-install.cabal b/cabal-install/cabal-install.cabal
+index 8ac46dc..22938e0 100644
+--- a/cabal-install/cabal-install.cabal
++++ b/cabal-install/cabal-install.cabal
+@@ -138,7 +138,7 @@ executable cabal
+       build-depends: Win32 >= 2 && < 3
+       cpp-options: -DWIN32
+     else
+-      build-depends: unix >= 1.0 && < 2.7
++      build-depends: unix >= 1.0 && < 2.8
+ 
+     if arch(arm)
+        cc-options:  -DCABAL_NO_THREADED
