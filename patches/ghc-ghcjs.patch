@@ -69,7 +69,7 @@ index 9159817..0e0ba72 100644
              PrimTarget   _ -> CC_Ccc
  
 diff --git a/compiler/main/DynFlags.hs b/compiler/main/DynFlags.hs
-index f206095..cc0736c 100644
+index f206095..137c702 100644
 --- a/compiler/main/DynFlags.hs
 +++ b/compiler/main/DynFlags.hs
 @@ -155,6 +155,7 @@ import Outputable
@@ -80,27 +80,49 @@ index f206095..cc0736c 100644
  
  import System.IO.Unsafe ( unsafePerformIO )
  import Data.IORef
-@@ -798,7 +799,8 @@ data Settings = Settings {
+@@ -479,6 +480,7 @@ data ExtensionFlag
+    | Opt_InterruptibleFFI
+    | Opt_CApiFFI
+    | Opt_GHCForeignImportPrim
++   | Opt_JavaScriptFFI
+    | Opt_ParallelArrays           -- Syntactic support for parallel arrays
+    | Opt_Arrows                   -- Arrow-notation syntax
+    | Opt_TemplateHaskell
+@@ -798,9 +800,22 @@ data Settings = Settings {
    sOpt_lo                :: [String], -- LLVM: llvm optimiser
    sOpt_lc                :: [String], -- LLVM: llc static compiler
  
 -  sPlatformConstants     :: PlatformConstants
 +  sPlatformConstants     :: PlatformConstants,
-+  sOverridePrimIface     :: Maybe ModIface
++  sOverridePrimIface     :: Maybe ModIface -- see Note [Overriding GHC.Prim]
   }
  
++{-
++Note [Overriding GHC.Prim]
++~~~~~~~~~~~~~~~~~~~~~~~~~~
++
++The sOverridePrimIface field in DynFlags allows GHC API
++clients to supply their own GHC.Prim interface.
++
++This is used in GHCJS to build code with the correct primop
++types for the JavaScript platform (Int64# vs Int#, etc.)
++independent of the host platform.
++-}
++
  targetPlatform :: DynFlags -> Platform
-@@ -1003,7 +1005,8 @@ data RtsOptsEnabled = RtsOptsNone | RtsOptsSafeOnly | RtsOptsAll
+ targetPlatform dflags = sTargetPlatform (settings dflags)
+ 
+@@ -1003,7 +1018,8 @@ data RtsOptsEnabled = RtsOptsNone | RtsOptsSafeOnly | RtsOptsAll
  -- this compilation.
  
  data Way
 -  = WayThreaded
-+  = WayCustom String
++  = WayCustom String -- for GHC API clients building custom variants
 +  | WayThreaded
    | WayDebug
    | WayProf
    | WayEventLog
-@@ -1029,6 +1032,7 @@ allowed_combination way = and [ x `allowedWith` y
+@@ -1029,6 +1045,7 @@ allowed_combination way = and [ x `allowedWith` y
          _ `allowedWith` WayDebug                = True
          WayDebug `allowedWith` _                = True
  
@@ -108,7 +130,7 @@ index f206095..cc0736c 100644
          WayProf `allowedWith` WayNDP            = True
          WayThreaded `allowedWith` WayProf       = True
          WayThreaded `allowedWith` WayEventLog   = True
-@@ -1038,6 +1042,7 @@ mkBuildTag :: [Way] -> String
+@@ -1038,6 +1055,7 @@ mkBuildTag :: [Way] -> String
  mkBuildTag ways = concat (intersperse "_" (map wayTag ways))
  
  wayTag :: Way -> String
@@ -116,7 +138,7 @@ index f206095..cc0736c 100644
  wayTag WayThreaded = "thr"
  wayTag WayDebug    = "debug"
  wayTag WayDyn      = "dyn"
-@@ -1048,6 +1053,7 @@ wayTag WayGran     = "mg"
+@@ -1048,6 +1066,7 @@ wayTag WayGran     = "mg"
  wayTag WayNDP      = "ndp"
  
  wayRTSOnly :: Way -> Bool
@@ -124,7 +146,7 @@ index f206095..cc0736c 100644
  wayRTSOnly WayThreaded = True
  wayRTSOnly WayDebug    = True
  wayRTSOnly WayDyn      = False
-@@ -1058,6 +1064,7 @@ wayRTSOnly WayGran     = False
+@@ -1058,6 +1077,7 @@ wayRTSOnly WayGran     = False
  wayRTSOnly WayNDP      = False
  
  wayDesc :: Way -> String
@@ -132,7 +154,7 @@ index f206095..cc0736c 100644
  wayDesc WayThreaded = "Threaded"
  wayDesc WayDebug    = "Debug"
  wayDesc WayDyn      = "Dynamic"
-@@ -1069,6 +1076,7 @@ wayDesc WayNDP      = "Nested data parallelism"
+@@ -1069,6 +1089,7 @@ wayDesc WayNDP      = "Nested data parallelism"
  
  -- Turn these flags on when enabling this way
  wayGeneralFlags :: Platform -> Way -> [GeneralFlag]
@@ -140,7 +162,7 @@ index f206095..cc0736c 100644
  wayGeneralFlags _ WayThreaded = []
  wayGeneralFlags _ WayDebug    = []
  wayGeneralFlags _ WayDyn      = [Opt_PIC]
-@@ -1080,6 +1088,7 @@ wayGeneralFlags _ WayNDP      = []
+@@ -1080,6 +1101,7 @@ wayGeneralFlags _ WayNDP      = []
  
  -- Turn these flags off when enabling this way
  wayUnsetGeneralFlags :: Platform -> Way -> [GeneralFlag]
@@ -148,7 +170,7 @@ index f206095..cc0736c 100644
  wayUnsetGeneralFlags _ WayThreaded = []
  wayUnsetGeneralFlags _ WayDebug    = []
  wayUnsetGeneralFlags _ WayDyn      = [-- There's no point splitting objects
-@@ -1094,6 +1103,7 @@ wayUnsetGeneralFlags _ WayGran     = []
+@@ -1094,6 +1116,7 @@ wayUnsetGeneralFlags _ WayGran     = []
  wayUnsetGeneralFlags _ WayNDP      = []
  
  wayExtras :: Platform -> Way -> DynFlags -> DynFlags
@@ -156,7 +178,7 @@ index f206095..cc0736c 100644
  wayExtras _ WayThreaded dflags = dflags
  wayExtras _ WayDebug    dflags = dflags
  wayExtras _ WayDyn      dflags = dflags
-@@ -1105,6 +1115,7 @@ wayExtras _ WayNDP      dflags = setExtensionFlag' Opt_ParallelArrays
+@@ -1105,6 +1128,7 @@ wayExtras _ WayNDP      dflags = setExtensionFlag' Opt_ParallelArrays
                                 $ setGeneralFlag' Opt_Vectorise dflags
  
  wayOptc :: Platform -> Way -> [String]
@@ -164,7 +186,7 @@ index f206095..cc0736c 100644
  wayOptc platform WayThreaded = case platformOS platform of
                                 OSOpenBSD -> ["-pthread"]
                                 OSNetBSD  -> ["-pthread"]
-@@ -1118,6 +1129,7 @@ wayOptc _ WayGran       = ["-DGRAN"]
+@@ -1118,6 +1142,7 @@ wayOptc _ WayGran       = ["-DGRAN"]
  wayOptc _ WayNDP        = []
  
  wayOptl :: Platform -> Way -> [String]
@@ -172,7 +194,7 @@ index f206095..cc0736c 100644
  wayOptl platform WayThreaded =
          case platformOS platform of
          -- FreeBSD's default threading library is the KSE-based M:N libpthread,
-@@ -1140,6 +1152,7 @@ wayOptl _ WayGran       = []
+@@ -1140,6 +1165,7 @@ wayOptl _ WayGran       = []
  wayOptl _ WayNDP        = []
  
  wayOptP :: Platform -> Way -> [String]
@@ -180,6 +202,14 @@ index f206095..cc0736c 100644
  wayOptP _ WayThreaded = []
  wayOptP _ WayDebug    = []
  wayOptP _ WayDyn      = []
+@@ -2617,6 +2643,7 @@ xFlags = [
+   ( "InterruptibleFFI",                 Opt_InterruptibleFFI, nop ),
+   ( "CApiFFI",                          Opt_CApiFFI, nop ),
+   ( "GHCForeignImportPrim",             Opt_GHCForeignImportPrim, nop ),
++  ( "JavaScriptFFI",                    Opt_JavaScriptFFI, nop ),
+   ( "LiberalTypeSynonyms",              Opt_LiberalTypeSynonyms, nop ),
+ 
+   ( "PolymorphicComponents",            Opt_RankNTypes, nop),
 diff --git a/compiler/main/HscTypes.lhs-boot b/compiler/main/HscTypes.lhs-boot
 index e69de29..cf68e73 100644
 --- a/compiler/main/HscTypes.lhs-boot
@@ -555,17 +585,21 @@ index 630157e..8a07ee6 100644
  
  Warnings
 diff --git a/compiler/typecheck/TcType.lhs b/compiler/typecheck/TcType.lhs
-index a3d3156..7fe3ab6 100644
+index a3d3156..147ac11 100644
 --- a/compiler/typecheck/TcType.lhs
 +++ b/compiler/typecheck/TcType.lhs
-@@ -1537,6 +1537,7 @@ boxedMarshalableTyCon tc
- 			 , charTyConKey
- 			 , stablePtrTyConKey
- 			 , boolTyConKey
-+                         , jsrefTyConKey -- fixme, only enable when JavaScriptFFI is enabled
- 			 ]
+@@ -1522,8 +1522,9 @@ marshalableTyCon dflags tc
+       && isUnLiftedTyCon tc
+       && not (isUnboxedTupleTyCon tc)
+       && case tyConPrimRep tc of	-- Note [Marshalling VoidRep]
+-	   VoidRep -> False
+-	   _       -> True)
++           VoidRep -> False
++           _       -> True)
++  || xopt Opt_JavaScriptFFI dflags && getUnique tc == jsrefTyConKey
+   || boxedMarshalableTyCon tc
  
- legalFIPrimArgTyCon :: DynFlags -> TyCon -> Bool
+ boxedMarshalableTyCon :: TyCon -> Bool
 diff --git a/compiler/utils/Platform.hs b/compiler/utils/Platform.hs
 index 617e691..f69bb4c 100644
 --- a/compiler/utils/Platform.hs
