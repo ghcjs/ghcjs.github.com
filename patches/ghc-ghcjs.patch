@@ -1,9 +1,32 @@
-commit e2f7df30be127f04a9f0beba936eab90d724e57b
-Author: Hamish Mackenzie <Hamish.K.Mackenzie@googlemail.com>
-Date:   Sun May 19 16:28:42 2013 +1200
-
-    GHCJS Patch
-
+diff --git a/compiler/basicTypes/Module.lhs b/compiler/basicTypes/Module.lhs
+index 27d3c52..e21028d 100644
+--- a/compiler/basicTypes/Module.lhs
++++ b/compiler/basicTypes/Module.lhs
+@@ -41,6 +41,7 @@ module Module
+         dphParPackageId,
+         mainPackageId,
+         thisGhcPackageId,
++        ghcjsPrimPackageId,
+ 
+         -- * The Module type
+         Module,
+@@ -359,7 +360,7 @@ packageIdString = unpackFS . packageIdFS
+ integerPackageId, primPackageId,
+   basePackageId, rtsPackageId,
+   thPackageId, dphSeqPackageId, dphParPackageId,
+-  mainPackageId, thisGhcPackageId  :: PackageId
++  mainPackageId, thisGhcPackageId, ghcjsPrimPackageId :: PackageId
+ primPackageId      = fsToPackageId (fsLit "ghc-prim")
+ integerPackageId   = fsToPackageId (fsLit cIntegerLibrary)
+ basePackageId      = fsToPackageId (fsLit "base")
+@@ -368,6 +369,7 @@ thPackageId        = fsToPackageId (fsLit "template-haskell")
+ dphSeqPackageId    = fsToPackageId (fsLit "dph-seq")
+ dphParPackageId    = fsToPackageId (fsLit "dph-par")
+ thisGhcPackageId   = fsToPackageId (fsLit ("ghc-" ++ cProjectVersion))
++ghcjsPrimPackageId = fsToPackageId (fsLit "ghcjs-prim")
+ 
+ -- | This is the package Id for the current program.  It is the default
+ -- package Id if you don't specify a package name.  We don't add this prefix
 diff --git a/compiler/cmm/PprC.hs b/compiler/cmm/PprC.hs
 index 00ba7ac..2399610 100644
 --- a/compiler/cmm/PprC.hs
@@ -46,7 +69,7 @@ index 9159817..0e0ba72 100644
              PrimTarget   _ -> CC_Ccc
  
 diff --git a/compiler/main/DynFlags.hs b/compiler/main/DynFlags.hs
-index 33eae5a..be836b9 100644
+index f206095..cc0736c 100644
 --- a/compiler/main/DynFlags.hs
 +++ b/compiler/main/DynFlags.hs
 @@ -155,6 +155,7 @@ import Outputable
@@ -57,7 +80,7 @@ index 33eae5a..be836b9 100644
  
  import System.IO.Unsafe ( unsafePerformIO )
  import Data.IORef
-@@ -789,7 +790,8 @@ data Settings = Settings {
+@@ -798,7 +799,8 @@ data Settings = Settings {
    sOpt_lo                :: [String], -- LLVM: llvm optimiser
    sOpt_lc                :: [String], -- LLVM: llc static compiler
  
@@ -67,7 +90,7 @@ index 33eae5a..be836b9 100644
   }
  
  targetPlatform :: DynFlags -> Platform
-@@ -994,7 +996,8 @@ data RtsOptsEnabled = RtsOptsNone | RtsOptsSafeOnly | RtsOptsAll
+@@ -1003,7 +1005,8 @@ data RtsOptsEnabled = RtsOptsNone | RtsOptsSafeOnly | RtsOptsAll
  -- this compilation.
  
  data Way
@@ -77,7 +100,7 @@ index 33eae5a..be836b9 100644
    | WayDebug
    | WayProf
    | WayEventLog
-@@ -1020,6 +1023,7 @@ allowed_combination way = and [ x `allowedWith` y
+@@ -1029,6 +1032,7 @@ allowed_combination way = and [ x `allowedWith` y
          _ `allowedWith` WayDebug                = True
          WayDebug `allowedWith` _                = True
  
@@ -85,7 +108,7 @@ index 33eae5a..be836b9 100644
          WayProf `allowedWith` WayNDP            = True
          WayThreaded `allowedWith` WayProf       = True
          WayThreaded `allowedWith` WayEventLog   = True
-@@ -1029,6 +1033,7 @@ mkBuildTag :: [Way] -> String
+@@ -1038,6 +1042,7 @@ mkBuildTag :: [Way] -> String
  mkBuildTag ways = concat (intersperse "_" (map wayTag ways))
  
  wayTag :: Way -> String
@@ -93,7 +116,7 @@ index 33eae5a..be836b9 100644
  wayTag WayThreaded = "thr"
  wayTag WayDebug    = "debug"
  wayTag WayDyn      = "dyn"
-@@ -1039,6 +1044,7 @@ wayTag WayGran     = "mg"
+@@ -1048,6 +1053,7 @@ wayTag WayGran     = "mg"
  wayTag WayNDP      = "ndp"
  
  wayRTSOnly :: Way -> Bool
@@ -101,7 +124,7 @@ index 33eae5a..be836b9 100644
  wayRTSOnly WayThreaded = True
  wayRTSOnly WayDebug    = True
  wayRTSOnly WayDyn      = False
-@@ -1049,6 +1055,7 @@ wayRTSOnly WayGran     = False
+@@ -1058,6 +1064,7 @@ wayRTSOnly WayGran     = False
  wayRTSOnly WayNDP      = False
  
  wayDesc :: Way -> String
@@ -109,7 +132,7 @@ index 33eae5a..be836b9 100644
  wayDesc WayThreaded = "Threaded"
  wayDesc WayDebug    = "Debug"
  wayDesc WayDyn      = "Dynamic"
-@@ -1060,6 +1067,7 @@ wayDesc WayNDP      = "Nested data parallelism"
+@@ -1069,6 +1076,7 @@ wayDesc WayNDP      = "Nested data parallelism"
  
  -- Turn these flags on when enabling this way
  wayGeneralFlags :: Platform -> Way -> [GeneralFlag]
@@ -117,7 +140,7 @@ index 33eae5a..be836b9 100644
  wayGeneralFlags _ WayThreaded = []
  wayGeneralFlags _ WayDebug    = []
  wayGeneralFlags _ WayDyn      = [Opt_PIC]
-@@ -1071,6 +1079,7 @@ wayGeneralFlags _ WayNDP      = []
+@@ -1080,6 +1088,7 @@ wayGeneralFlags _ WayNDP      = []
  
  -- Turn these flags off when enabling this way
  wayUnsetGeneralFlags :: Platform -> Way -> [GeneralFlag]
@@ -125,7 +148,7 @@ index 33eae5a..be836b9 100644
  wayUnsetGeneralFlags _ WayThreaded = []
  wayUnsetGeneralFlags _ WayDebug    = []
  wayUnsetGeneralFlags _ WayDyn      = [-- There's no point splitting objects
-@@ -1085,6 +1094,7 @@ wayUnsetGeneralFlags _ WayGran     = []
+@@ -1094,6 +1103,7 @@ wayUnsetGeneralFlags _ WayGran     = []
  wayUnsetGeneralFlags _ WayNDP      = []
  
  wayExtras :: Platform -> Way -> DynFlags -> DynFlags
@@ -133,7 +156,7 @@ index 33eae5a..be836b9 100644
  wayExtras _ WayThreaded dflags = dflags
  wayExtras _ WayDebug    dflags = dflags
  wayExtras _ WayDyn      dflags = dflags
-@@ -1096,6 +1106,7 @@ wayExtras _ WayNDP      dflags = setExtensionFlag' Opt_ParallelArrays
+@@ -1105,6 +1115,7 @@ wayExtras _ WayNDP      dflags = setExtensionFlag' Opt_ParallelArrays
                                 $ setGeneralFlag' Opt_Vectorise dflags
  
  wayOptc :: Platform -> Way -> [String]
@@ -141,7 +164,7 @@ index 33eae5a..be836b9 100644
  wayOptc platform WayThreaded = case platformOS platform of
                                 OSOpenBSD -> ["-pthread"]
                                 OSNetBSD  -> ["-pthread"]
-@@ -1109,6 +1120,7 @@ wayOptc _ WayGran       = ["-DGRAN"]
+@@ -1118,6 +1129,7 @@ wayOptc _ WayGran       = ["-DGRAN"]
  wayOptc _ WayNDP        = []
  
  wayOptl :: Platform -> Way -> [String]
@@ -149,7 +172,7 @@ index 33eae5a..be836b9 100644
  wayOptl platform WayThreaded =
          case platformOS platform of
          -- FreeBSD's default threading library is the KSE-based M:N libpthread,
-@@ -1131,6 +1143,7 @@ wayOptl _ WayGran       = []
+@@ -1140,6 +1152,7 @@ wayOptl _ WayGran       = []
  wayOptl _ WayNDP        = []
  
  wayOptP :: Platform -> Way -> [String]
@@ -158,9 +181,8 @@ index 33eae5a..be836b9 100644
  wayOptP _ WayDebug    = []
  wayOptP _ WayDyn      = []
 diff --git a/compiler/main/HscTypes.lhs-boot b/compiler/main/HscTypes.lhs-boot
-new file mode 100644
-index 0000000..cf68e73
---- /dev/null
+index e69de29..cf68e73 100644
+--- a/compiler/main/HscTypes.lhs-boot
 +++ b/compiler/main/HscTypes.lhs-boot
 @@ -0,0 +1,7 @@
 +\begin{code}
@@ -170,8 +192,22 @@ index 0000000..cf68e73
 +data ModIface
 +
 +\end{code}
+diff --git a/compiler/main/Packages.lhs b/compiler/main/Packages.lhs
+index cc8dfe3..6bcaa5f 100644
+--- a/compiler/main/Packages.lhs
++++ b/compiler/main/Packages.lhs
+@@ -480,7 +480,8 @@ findWiredInPackages dflags pkgs = do
+                             rtsPackageId,
+                             thPackageId,
+                             dphSeqPackageId,
+-                            dphParPackageId ]
++                            dphParPackageId,
++                            ghcjsPrimPackageId ]
+ 
+         matches :: PackageConfig -> String -> Bool
+         pc `matches` pid = display (pkgName (sourcePackageId pc)) == pid
 diff --git a/compiler/main/SysTools.lhs b/compiler/main/SysTools.lhs
-index bacd53e..df9e9d3 100644
+index 5926114..60ab0dc 100644
 --- a/compiler/main/SysTools.lhs
 +++ b/compiler/main/SysTools.lhs
 @@ -342,7 +342,8 @@ initSysTools mbMinusB
@@ -185,10 +221,10 @@ index bacd53e..df9e9d3 100644
  \end{code}
  
 diff --git a/compiler/nativeGen/AsmCodeGen.lhs b/compiler/nativeGen/AsmCodeGen.lhs
-index 34c4309..ebe29cc 100644
+index a999f8f..42eeb4f 100644
 --- a/compiler/nativeGen/AsmCodeGen.lhs
 +++ b/compiler/nativeGen/AsmCodeGen.lhs
-@@ -170,6 +170,7 @@ nativeCodeGen dflags h us cmms
+@@ -170,6 +170,7 @@ nativeCodeGen dflags this_mod h us cmms
        ArchMipseb  -> panic "nativeCodeGen: No NCG for mipseb"
        ArchMipsel  -> panic "nativeCodeGen: No NCG for mipsel"
        ArchUnknown -> panic "nativeCodeGen: No NCG for unknown arch"
@@ -323,7 +359,7 @@ index 6871210..7c39916 100644
           ( "rec",            ITrec,           bit arrowsBit .|. 
                                                bit recursiveDoBit),
 diff --git a/compiler/parser/Parser.y.pp b/compiler/parser/Parser.y.pp
-index 18651b9..880aef8 100644
+index 34c0bc6..7eb9f13 100644
 --- a/compiler/parser/Parser.y.pp
 +++ b/compiler/parser/Parser.y.pp
 @@ -260,6 +260,7 @@ incorrect.
@@ -421,6 +457,66 @@ index b53ae7c..5072908 100644
  
  instance Binary CType where
      put_ bh (CType mh fs) = do put_ bh mh
+diff --git a/compiler/prelude/PrelNames.lhs b/compiler/prelude/PrelNames.lhs
+index 09835fb..ee64982 100644
+--- a/compiler/prelude/PrelNames.lhs
++++ b/compiler/prelude/PrelNames.lhs
+@@ -250,6 +250,7 @@ basicKnownKeyNames
+         stablePtrTyConName, ptrTyConName, funPtrTyConName,
+         int8TyConName, int16TyConName, int32TyConName, int64TyConName,
+         wordTyConName, word8TyConName, word16TyConName, word32TyConName, word64TyConName,
++        jsrefTyConName,
+ 
+         -- Others
+         otherwiseIdName, inlineIdName,
+@@ -361,7 +362,7 @@ gHC_PRIM, gHC_TYPES, gHC_GENERICS,
+     tYPEABLE, tYPEABLE_INTERNAL, oLDTYPEABLE, oLDTYPEABLE_INTERNAL, gENERICS,
+     dOTNET, rEAD_PREC, lEX, gHC_INT, gHC_WORD, mONAD, mONAD_FIX, mONAD_ZIP,
+     aRROW, cONTROL_APPLICATIVE, gHC_DESUGAR, rANDOM, gHC_EXTS,
+-    cONTROL_EXCEPTION_BASE, gHC_TYPELITS, gHC_IP :: Module
++    cONTROL_EXCEPTION_BASE, gHC_TYPELITS, gHC_IP, gHCJS_PRIM :: Module
+ 
+ gHC_PRIM        = mkPrimModule (fsLit "GHC.Prim")   -- Primitive types and values
+ gHC_TYPES       = mkPrimModule (fsLit "GHC.Types")
+@@ -419,6 +420,7 @@ cONTROL_EXCEPTION_BASE = mkBaseModule (fsLit "Control.Exception.Base")
+ gHC_GENERICS    = mkBaseModule (fsLit "GHC.Generics")
+ gHC_TYPELITS    = mkBaseModule (fsLit "GHC.TypeLits")
+ gHC_IP          = mkBaseModule (fsLit "GHC.IP")
++gHCJS_PRIM      = mkGhcjsPrimModule (fsLit "GHCJS.Prim")
+ 
+ gHC_PARR' :: Module
+ gHC_PARR' = mkBaseModule (fsLit "GHC.PArr")
+@@ -454,6 +456,9 @@ mkBaseModule m = mkModule basePackageId (mkModuleNameFS m)
+ mkBaseModule_ :: ModuleName -> Module
+ mkBaseModule_ m = mkModule basePackageId m
+ 
++mkGhcjsPrimModule :: FastString -> Module
++mkGhcjsPrimModule m = mkModule ghcjsPrimPackageId (mkModuleNameFS m)
++
+ mkThisGhcModule :: FastString -> Module
+ mkThisGhcModule m = mkModule thisGhcPackageId (mkModuleNameFS m)
+ 
+@@ -1130,7 +1135,9 @@ typeNatExpTyFamName = tcQual  gHC_TYPELITS (fsLit "^")   typeNatExpTyFamNameKey
+ ipClassName :: Name
+ ipClassName         = clsQual gHC_IP (fsLit "IP")      ipClassNameKey
+ 
+-
++-- GHCJS JavaScript reference
++jsrefTyConName :: Name
++jsrefTyConName      = tcQual  gHCJS_PRIM (fsLit "JSRef") jsrefTyConKey
+ 
+ -- dotnet interop
+ objectTyConName :: Name
+@@ -1359,6 +1366,9 @@ ptrTyConKey                             = mkPreludeTyConUnique 74
+ funPtrTyConKey                          = mkPreludeTyConUnique 75
+ tVarPrimTyConKey                        = mkPreludeTyConUnique 76
+ 
++-- GHCJS JavaScript reference
++jsrefTyConKey :: Unique                 = mkPreludeTyConUnique 77
++
+ -- Parallel array type constructor
+ parrTyConKey :: Unique
+ parrTyConKey                            = mkPreludeTyConUnique 82
 diff --git a/compiler/typecheck/TcForeign.lhs b/compiler/typecheck/TcForeign.lhs
 index 630157e..8a07ee6 100644
 --- a/compiler/typecheck/TcForeign.lhs
@@ -458,6 +554,18 @@ index 630157e..8a07ee6 100644
  \end{code}
  
  Warnings
+diff --git a/compiler/typecheck/TcType.lhs b/compiler/typecheck/TcType.lhs
+index a3d3156..7fe3ab6 100644
+--- a/compiler/typecheck/TcType.lhs
++++ b/compiler/typecheck/TcType.lhs
+@@ -1537,6 +1537,7 @@ boxedMarshalableTyCon tc
+ 			 , charTyConKey
+ 			 , stablePtrTyConKey
+ 			 , boolTyConKey
++                         , jsrefTyConKey -- fixme, only enable when JavaScriptFFI is enabled
+ 			 ]
+ 
+ legalFIPrimArgTyCon :: DynFlags -> TyCon -> Bool
 diff --git a/compiler/utils/Platform.hs b/compiler/utils/Platform.hs
 index 617e691..f69bb4c 100644
 --- a/compiler/utils/Platform.hs
