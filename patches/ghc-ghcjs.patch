@@ -28,10 +28,10 @@ index 27d3c52..e21028d 100644
  -- | This is the package Id for the current program.  It is the default
  -- package Id if you don't specify a package name.  We don't add this prefix
 diff --git a/compiler/cmm/PprC.hs b/compiler/cmm/PprC.hs
-index 00ba7ac..2399610 100644
+index b0c9bd3..149968d 100644
 --- a/compiler/cmm/PprC.hs
 +++ b/compiler/cmm/PprC.hs
-@@ -937,6 +937,7 @@ is_cishCC CCallConv    = True
+@@ -938,6 +938,7 @@ is_cishCC CCallConv    = True
  is_cishCC CApiConv     = True
  is_cishCC StdCallConv  = True
  is_cishCC PrimCallConv = False
@@ -39,28 +39,162 @@ index 00ba7ac..2399610 100644
  
  -- ---------------------------------------------------------------------
  -- Find and print local and external declarations for a list of
+diff --git a/compiler/deSugar/DsForeign.lhs b/compiler/deSugar/DsForeign.lhs
+index 1053b91..24c46b5 100644
+--- a/compiler/deSugar/DsForeign.lhs
++++ b/compiler/deSugar/DsForeign.lhs
+@@ -6,7 +6,12 @@
+ Desugaring foreign declarations (see also DsCCall).
+ 
+ \begin{code}
+-module DsForeign ( dsForeigns ) where
++{-# LANGUAGE TypeFamilies #-}
++
++module DsForeign ( dsForeigns
++                 , dsForeigns'
++                 , DsForeignsHook (..)
++                 ) where
+ 
+ #include "HsVersions.h"
+ import TcRnMonad        -- temp
+@@ -30,6 +35,7 @@ import TyCon
+ import Coercion
+ import TcEnv
+ import TcType
++import Hooks
+ 
+ import CmmExpr
+ import CmmUtils
+@@ -51,6 +57,7 @@ import Util
+ 
+ import Data.Maybe
+ import Data.List
++import Data.Typeable (Typeable)
+ \end{code}
+ 
+ Desugaring of @foreign@ declarations is naturally split up into
+@@ -70,11 +77,18 @@ so we reuse the desugaring code in @DsCCall@ to deal with these.
+ type Binding = (Id, CoreExpr)   -- No rec/nonrec structure;
+                                 -- the occurrence analyser will sort it all out
+ 
++data DsForeignsHook = DsForeignsHook deriving Typeable
++type instance Hook DsForeignsHook = [LForeignDecl Id] -> DsM (ForeignStubs, OrdList Binding)
++
+ dsForeigns :: [LForeignDecl Id]
+            -> DsM (ForeignStubs, OrdList Binding)
+-dsForeigns []
++dsForeigns fos = getHooked DsForeignsHook dsForeigns' >>= ($fos)
++
++dsForeigns' :: [LForeignDecl Id]
++            -> DsM (ForeignStubs, OrdList Binding)
++dsForeigns' []
+   = return (NoStubs, nilOL)
+-dsForeigns fos = do
++dsForeigns' fos = do
+     fives <- mapM do_ldecl fos
+     let
+         (hs, cs, idss, bindss) = unzip4 fives
+diff --git a/compiler/ghc.cabal.in b/compiler/ghc.cabal.in
+index 0ef2890..3d3026d 100644
+--- a/compiler/ghc.cabal.in
++++ b/compiler/ghc.cabal.in
+@@ -58,6 +58,9 @@ Library
+     if flag(stage1) && impl(ghc < 7.5)
+         Build-Depends: old-time   >= 1   && < 1.2
+ 
++    if !flag(stage1)
++        Build-Depends: ghc-prim
++
+     if os(windows)
+         Build-Depends: Win32
+     else
+@@ -134,6 +137,7 @@ Library
+         Demand
+         Exception
+         GhcMonad
++        Hooks
+         Id
+         IdInfo
+         Literal
+diff --git a/compiler/ghc.mk b/compiler/ghc.mk
+index 2a7a8c4..cbd172d 100644
+--- a/compiler/ghc.mk
++++ b/compiler/ghc.mk
+@@ -421,7 +421,7 @@ compiler_stage3_SplitObjs = NO
+ # We therefore need to split some of the modules off into a separate
+ # DLL. This clump are the modules reachable from DynFlags:
+ compiler_stage2_dll0_START_MODULE = DynFlags
+-compiler_stage2_dll0_MODULES = Annotations Avail Bag BasicTypes Binary Bitmap BlockId BreakArray BufWrite ByteCodeAsm ByteCodeInstr ByteCodeItbls ByteCodeLink CLabel Class CmdLineParser Cmm CmmCallConv CmmExpr CmmInfo CmmMachOp CmmNode CmmType CmmUtils CoAxiom CodeGen.Platform CodeGen.Platform.ARM CodeGen.Platform.NoRegs CodeGen.Platform.PPC CodeGen.Platform.PPC_Darwin CodeGen.Platform.SPARC CodeGen.Platform.X86 CodeGen.Platform.X86_64 Coercion Config Constants CoreArity CoreFVs CoreSubst CoreSyn CoreTidy CoreUnfold CoreUtils CostCentre DataCon Demand Digraph DriverPhases DynFlags Encoding ErrUtils Exception FamInstEnv FastBool FastFunctions FastMutInt FastString FastTypes Fingerprint FiniteMap ForeignCall Hoopl Hoopl.Dataflow HsBinds HsDecls HsDoc HsExpr HsImpExp HsLit HsPat HsSyn HsTypes HsUtils HscTypes Id IdInfo IfaceSyn IfaceType InstEnv InteractiveEvalTypes Kind ListSetOps Literal Maybes MkCore MkGraph MkId Module MonadUtils Name NameEnv NameSet ObjLink OccName OccurAnal OptCoercion OrdList Outputable PackageConfig Packages Pair Panic Platform PlatformConstants PprCmm PprCmmDecl PprCmmExpr PprCore PrelNames PrelRules Pretty PrimOp RdrName Reg RegClass Rules SMRep Serialized SrcLoc StaticFlags StgCmmArgRep StgCmmClosure StgCmmEnv StgCmmLayout StgCmmMonad StgCmmProf StgCmmTicky StgCmmUtils StgSyn Stream StringBuffer TcEvidence TcType TrieMap TyCon Type TypeRep TysPrim TysWiredIn Unify UniqFM UniqSet UniqSupply Unique Util Var VarEnv VarSet
++compiler_stage2_dll0_MODULES = Annotations Avail Bag BasicTypes Binary Bitmap BlockId BreakArray BufWrite ByteCodeAsm ByteCodeInstr ByteCodeItbls ByteCodeLink CLabel Class CmdLineParser Cmm CmmCallConv CmmExpr CmmInfo CmmMachOp CmmNode CmmType CmmUtils CoAxiom CodeGen.Platform CodeGen.Platform.ARM CodeGen.Platform.NoRegs CodeGen.Platform.PPC CodeGen.Platform.PPC_Darwin CodeGen.Platform.SPARC CodeGen.Platform.X86 CodeGen.Platform.X86_64 Coercion Config Constants CoreArity CoreFVs CoreSubst CoreSyn CoreTidy CoreUnfold CoreUtils CostCentre DataCon Demand Digraph DriverPhases DynFlags Encoding ErrUtils Exception FamInstEnv FastBool FastFunctions FastMutInt FastString FastTypes Fingerprint FiniteMap ForeignCall Hooks Hoopl Hoopl.Dataflow HsBinds HsDecls HsDoc HsExpr HsImpExp HsLit HsPat HsSyn HsTypes HsUtils HscTypes Id IdInfo IfaceSyn IfaceType InstEnv InteractiveEvalTypes Kind ListSetOps Literal Maybes MkCore MkGraph MkId Module MonadUtils Name NameEnv NameSet ObjLink OccName OccurAnal OptCoercion OrdList Outputable PackageConfig Packages Pair Panic Platform PlatformConstants PprCmm PprCmmDecl PprCmmExpr PprCore PrelNames PrelRules Pretty PrimOp RdrName Reg RegClass Rules SMRep Serialized SrcLoc StaticFlags StgCmmArgRep StgCmmClosure StgCmmEnv StgCmmLayout StgCmmMonad StgCmmProf StgCmmTicky StgCmmUtils StgSyn Stream StringBuffer TcEvidence TcType TrieMap TyCon Type TypeRep TysPrim TysWiredIn Unify UniqFM UniqSet UniqSupply Unique Util Var VarEnv VarSet
+ 
+ compiler_stage2_dll0_HS_OBJS = \
+     $(patsubst %,compiler/stage2/build/%.$(dyn_osuf),$(subst .,/,$(compiler_stage2_dll0_MODULES)))
 diff --git a/compiler/iface/LoadIface.lhs b/compiler/iface/LoadIface.lhs
-index ac0b09c..9527d49 100644
+index ac0b09c..ac8af73 100644
 --- a/compiler/iface/LoadIface.lhs
 +++ b/compiler/iface/LoadIface.lhs
-@@ -516,7 +516,11 @@ findAndReadIface doc_str mod hi_boot_file
+@@ -7,6 +7,8 @@ Loading interface files
+ 
+ \begin{code}
+ {-# OPTIONS_GHC -fno-warn-orphans #-}
++{-# LANGUAGE TypeFamilies, DeriveDataTypeable #-}
++
+ module LoadIface (
+         -- RnM/TcM functions
+         loadModuleInterface, loadModuleInterfaces, 
+@@ -19,7 +21,9 @@ module LoadIface (
+         loadDecls,      -- Should move to TcIface and be renamed
+         initExternalPackageState,
+ 
+-        ifaceStats, pprModIface, showIface
++        ifaceStats, pprModIface, showIface,
++
++        GhcPrimIfaceHook (..)
+    ) where
+ 
+ #include "HsVersions.h"
+@@ -59,9 +63,11 @@ import Panic
+ import Util
+ import FastString
+ import Fingerprint
++import Hooks
+ 
+ import Control.Monad
+ import Data.IORef
++import Data.Typeable
+ import System.FilePath
+ \end{code}
+ 
+@@ -494,7 +500,13 @@ bumpDeclStats name
+ %*                                                      *
+ %*********************************************************
+ 
++
++
+ \begin{code}
++
++data GhcPrimIfaceHook = GhcPrimIfaceHook deriving Typeable
++type instance Hook GhcPrimIfaceHook = ModIface
++
+ findAndReadIface :: SDoc -> Module
+                  -> IsBootInterface     -- True  <=> Look for a .hi-boot file
+                                         -- False <=> Look for .hi file
+@@ -516,7 +528,9 @@ findAndReadIface doc_str mod hi_boot_file
  
         -- Check for GHC.Prim, and return its static interface
         if mod == gHC_PRIM
 -           then return (Succeeded (ghcPrimIface,
 +           then do
-+               dflags <- getDynFlags
-+               let iface = fromMaybe ghcPrimIface
-+                               (sOverridePrimIface (settings dflags))
++               iface <- getHooked GhcPrimIfaceHook ghcPrimIface
 +               return (Succeeded (iface,
                                     "<built in interface for GHC.Prim>"))
             else do
                 dflags <- getDynFlags
 diff --git a/compiler/llvmGen/LlvmCodeGen/CodeGen.hs b/compiler/llvmGen/LlvmCodeGen/CodeGen.hs
-index 9159817..0e0ba72 100644
+index 6f898fa..def9e2b 100644
 --- a/compiler/llvmGen/LlvmCodeGen/CodeGen.hs
 +++ b/compiler/llvmGen/LlvmCodeGen/CodeGen.hs
-@@ -311,6 +311,7 @@ genCall env target res args = do
+@@ -296,6 +296,7 @@ genCall target res args = do
                   CCallConv    -> CC_Ccc
                   CApiConv     -> CC_Ccc
                   PrimCallConv -> panic "LlvmCodeGen.CodeGen.genCall: PrimCallConv"
@@ -68,19 +202,107 @@ index 9159817..0e0ba72 100644
  
              PrimTarget   _ -> CC_Ccc
  
+diff --git a/compiler/main/DriverPipeline.hs b/compiler/main/DriverPipeline.hs
+index aa49e70..49d3320 100644
+--- a/compiler/main/DriverPipeline.hs
++++ b/compiler/main/DriverPipeline.hs
+@@ -52,6 +52,7 @@ import LlvmCodeGen      ( llvmFixupAsm )
+ import MonadUtils
+ import Platform
+ import TcRnTypes
++import SimplCore        ( loadPlugins )
+ 
+ import Exception
+ import Data.IORef       ( readIORef )
+@@ -525,9 +526,8 @@ runPipeline
+ runPipeline stop_phase hsc_env0 (input_fn, mb_phase)
+              mb_basename output maybe_loc maybe_stub_o
+ 
+-    = do let
+-             dflags0 = hsc_dflags hsc_env0
+-
++    = do dflags0 <- loadPlugins hsc_env0 (hsc_dflags hsc_env0)
++         let
+              -- Decide where dump files should go based on the pipeline output
+              dflags = dflags0 { dumpPrefix = Just (basename ++ ".") }
+              hsc_env = hsc_env0 {hsc_dflags = dflags}
+@@ -853,7 +853,7 @@ runPhase (RealPhase (Cpp sf)) input_fn dflags0
+   = do
+        src_opts <- liftIO $ getOptionsFromFile dflags0 input_fn
+        (dflags1, unhandled_flags, warns)
+-           <- liftIO $ parseDynamicFilePragma dflags0 src_opts
++           <- getPragmaDynamicFlags dflags0 src_opts
+        setDynFlags dflags1
+        liftIO $ checkProcessArgsResult dflags1 unhandled_flags
+ 
+@@ -873,7 +873,7 @@ runPhase (RealPhase (Cpp sf)) input_fn dflags0
+             -- See #2464,#3457
+             src_opts <- liftIO $ getOptionsFromFile dflags0 output_fn
+             (dflags2, unhandled_flags, warns)
+-                <- liftIO $ parseDynamicFilePragma dflags0 src_opts
++                <- getPragmaDynamicFlags dflags0 src_opts
+             liftIO $ checkProcessArgsResult dflags2 unhandled_flags
+             unless (gopt Opt_Pp dflags2) $
+                 liftIO $ handleFlagWarnings dflags2 warns
+@@ -906,7 +906,7 @@ runPhase (RealPhase (HsPp sf)) input_fn dflags
+             -- re-read pragmas now that we've parsed the file (see #3674)
+             src_opts <- liftIO $ getOptionsFromFile dflags output_fn
+             (dflags1, unhandled_flags, warns)
+-                <- liftIO $ parseDynamicFilePragma dflags src_opts
++                <- getPragmaDynamicFlags dflags src_opts
+             setDynFlags dflags1
+             liftIO $ checkProcessArgsResult dflags1 unhandled_flags
+             liftIO $ handleFlagWarnings dflags1 warns
+@@ -2153,3 +2153,12 @@ haveRtsOptsFlags dflags =
+          isJust (rtsOpts dflags) || case rtsOptsEnabled dflags of
+                                         RtsOptsSafeOnly -> False
+                                         _ -> True
++
++-- | Update the dynamic flags by parsing the file pragma and loading plugins
++getPragmaDynamicFlags :: DynFlags -> [Located String]
++                      -> CompPipeline (DynFlags, [Located String], [Located String])
++getPragmaDynamicFlags dflags0 options = do
++  (dflags1, leftover, warnings) <- parseDynamicFilePragma dflags0 options
++  s <- getPipeState
++  dflags2 <- liftIO (loadPlugins (hsc_env s) dflags1)
++  return (dflags2, leftover, warnings)
 diff --git a/compiler/main/DynFlags.hs b/compiler/main/DynFlags.hs
-index f206095..137c702 100644
+index 64ec8be..3fad535 100644
 --- a/compiler/main/DynFlags.hs
 +++ b/compiler/main/DynFlags.hs
-@@ -155,6 +155,7 @@ import Outputable
+@@ -11,6 +11,7 @@
+ --
+ -------------------------------------------------------------------------------
+ 
++{-# LANGUAGE FlexibleContexts #-}
+ {-# OPTIONS -fno-cse #-}
+ -- -fno-cse is needed for GLOBAL_VAR's to behave properly
+ 
+@@ -35,6 +36,7 @@ module DynFlags (
+         dynamicTooMkDynamicDynFlags,
+         DynFlags(..),
+         HasDynFlags(..), ContainsDynFlags(..),
++        getHooked,
+         RtsOptsEnabled(..),
+         HscTarget(..), isObjectTarget, defaultObjectTarget,
+         targetRetainsAllBindings,
+@@ -159,6 +161,7 @@ import Outputable
  import Foreign.C        ( CInt(..) )
  #endif
  import {-# SOURCE #-} ErrUtils ( Severity(..), MsgDoc, mkLocMessage )
-+import {-# SOURCE #-} HscTypes ( ModIface )
++import Hooks
  
  import System.IO.Unsafe ( unsafePerformIO )
  import Data.IORef
-@@ -479,6 +480,7 @@ data ExtensionFlag
+@@ -173,6 +176,7 @@ import qualified Data.Map as Map
+ import Data.Maybe
+ import Data.Set (Set)
+ import qualified Data.Set as Set
++import Data.Typeable
+ import Data.Word
+ import System.FilePath
+ import System.IO
+@@ -487,6 +491,7 @@ data ExtensionFlag
     | Opt_InterruptibleFFI
     | Opt_CApiFFI
     | Opt_GHCForeignImportPrim
@@ -88,31 +310,36 @@ index f206095..137c702 100644
     | Opt_ParallelArrays           -- Syntactic support for parallel arrays
     | Opt_Arrows                   -- Arrow-notation syntax
     | Opt_TemplateHaskell
-@@ -798,9 +800,22 @@ data Settings = Settings {
-   sOpt_lo                :: [String], -- LLVM: llvm optimiser
-   sOpt_lc                :: [String], -- LLVM: llc static compiler
+@@ -656,6 +661,8 @@ data DynFlags = DynFlags {
+   -- Plugins
+   pluginModNames        :: [ModuleName],
+   pluginModNameOpts     :: [(ModuleName,String)],
++  loadedPlugins         :: [ModuleName],
++  hooks                 :: Hooks,
  
--  sPlatformConstants     :: PlatformConstants
-+  sPlatformConstants     :: PlatformConstants,
-+  sOverridePrimIface     :: Maybe ModIface -- see Note [Overriding GHC.Prim]
+   --  For ghc -M
+   depMakefile           :: FilePath,
+@@ -759,6 +766,9 @@ data DynFlags = DynFlags {
+ class HasDynFlags m where
+     getDynFlags :: m DynFlags
+ 
++getHooked :: (Functor f, HasDynFlags f, Typeable a) => a -> Hook a -> f (Hook a)
++getHooked x def = fmap (fromMaybe def . lookupHook x . hooks) getDynFlags
++
+ class ContainsDynFlags t where
+     extractDynFlags :: t -> DynFlags
+     replaceDynFlags :: t -> DynFlags -> t
+@@ -814,6 +824,9 @@ data Settings = Settings {
+   sPlatformConstants     :: PlatformConstants
   }
  
 +{-
-+Note [Overriding GHC.Prim]
-+~~~~~~~~~~~~~~~~~~~~~~~~~~
-+
-+The sOverridePrimIface field in DynFlags allows GHC API
-+clients to supply their own GHC.Prim interface.
-+
-+This is used in GHCJS to build code with the correct primop
-+types for the JavaScript platform (Int64# vs Int#, etc.)
-+independent of the host platform.
 +-}
 +
  targetPlatform :: DynFlags -> Platform
  targetPlatform dflags = sTargetPlatform (settings dflags)
  
-@@ -1003,7 +1018,8 @@ data RtsOptsEnabled = RtsOptsNone | RtsOptsSafeOnly | RtsOptsAll
+@@ -1011,7 +1024,8 @@ data RtsOptsEnabled = RtsOptsNone | RtsOptsSafeOnly | RtsOptsAll
  -- this compilation.
  
  data Way
@@ -122,7 +349,7 @@ index f206095..137c702 100644
    | WayDebug
    | WayProf
    | WayEventLog
-@@ -1029,6 +1045,7 @@ allowed_combination way = and [ x `allowedWith` y
+@@ -1037,6 +1051,7 @@ allowed_combination way = and [ x `allowedWith` y
          _ `allowedWith` WayDebug                = True
          WayDebug `allowedWith` _                = True
  
@@ -130,7 +357,7 @@ index f206095..137c702 100644
          WayProf `allowedWith` WayNDP            = True
          WayThreaded `allowedWith` WayProf       = True
          WayThreaded `allowedWith` WayEventLog   = True
-@@ -1038,6 +1055,7 @@ mkBuildTag :: [Way] -> String
+@@ -1046,6 +1061,7 @@ mkBuildTag :: [Way] -> String
  mkBuildTag ways = concat (intersperse "_" (map wayTag ways))
  
  wayTag :: Way -> String
@@ -138,7 +365,7 @@ index f206095..137c702 100644
  wayTag WayThreaded = "thr"
  wayTag WayDebug    = "debug"
  wayTag WayDyn      = "dyn"
-@@ -1048,6 +1066,7 @@ wayTag WayGran     = "mg"
+@@ -1056,6 +1072,7 @@ wayTag WayGran     = "mg"
  wayTag WayNDP      = "ndp"
  
  wayRTSOnly :: Way -> Bool
@@ -146,7 +373,7 @@ index f206095..137c702 100644
  wayRTSOnly WayThreaded = True
  wayRTSOnly WayDebug    = True
  wayRTSOnly WayDyn      = False
-@@ -1058,6 +1077,7 @@ wayRTSOnly WayGran     = False
+@@ -1066,6 +1083,7 @@ wayRTSOnly WayGran     = False
  wayRTSOnly WayNDP      = False
  
  wayDesc :: Way -> String
@@ -154,7 +381,7 @@ index f206095..137c702 100644
  wayDesc WayThreaded = "Threaded"
  wayDesc WayDebug    = "Debug"
  wayDesc WayDyn      = "Dynamic"
-@@ -1069,6 +1089,7 @@ wayDesc WayNDP      = "Nested data parallelism"
+@@ -1077,6 +1095,7 @@ wayDesc WayNDP      = "Nested data parallelism"
  
  -- Turn these flags on when enabling this way
  wayGeneralFlags :: Platform -> Way -> [GeneralFlag]
@@ -162,7 +389,7 @@ index f206095..137c702 100644
  wayGeneralFlags _ WayThreaded = []
  wayGeneralFlags _ WayDebug    = []
  wayGeneralFlags _ WayDyn      = [Opt_PIC]
-@@ -1080,6 +1101,7 @@ wayGeneralFlags _ WayNDP      = []
+@@ -1088,6 +1107,7 @@ wayGeneralFlags _ WayNDP      = []
  
  -- Turn these flags off when enabling this way
  wayUnsetGeneralFlags :: Platform -> Way -> [GeneralFlag]
@@ -170,7 +397,7 @@ index f206095..137c702 100644
  wayUnsetGeneralFlags _ WayThreaded = []
  wayUnsetGeneralFlags _ WayDebug    = []
  wayUnsetGeneralFlags _ WayDyn      = [-- There's no point splitting objects
-@@ -1094,6 +1116,7 @@ wayUnsetGeneralFlags _ WayGran     = []
+@@ -1102,6 +1122,7 @@ wayUnsetGeneralFlags _ WayGran     = []
  wayUnsetGeneralFlags _ WayNDP      = []
  
  wayExtras :: Platform -> Way -> DynFlags -> DynFlags
@@ -178,7 +405,7 @@ index f206095..137c702 100644
  wayExtras _ WayThreaded dflags = dflags
  wayExtras _ WayDebug    dflags = dflags
  wayExtras _ WayDyn      dflags = dflags
-@@ -1105,6 +1128,7 @@ wayExtras _ WayNDP      dflags = setExtensionFlag' Opt_ParallelArrays
+@@ -1113,6 +1134,7 @@ wayExtras _ WayNDP      dflags = setExtensionFlag' Opt_ParallelArrays
                                 $ setGeneralFlag' Opt_Vectorise dflags
  
  wayOptc :: Platform -> Way -> [String]
@@ -186,7 +413,7 @@ index f206095..137c702 100644
  wayOptc platform WayThreaded = case platformOS platform of
                                 OSOpenBSD -> ["-pthread"]
                                 OSNetBSD  -> ["-pthread"]
-@@ -1118,6 +1142,7 @@ wayOptc _ WayGran       = ["-DGRAN"]
+@@ -1126,6 +1148,7 @@ wayOptc _ WayGran       = ["-DGRAN"]
  wayOptc _ WayNDP        = []
  
  wayOptl :: Platform -> Way -> [String]
@@ -194,7 +421,7 @@ index f206095..137c702 100644
  wayOptl platform WayThreaded =
          case platformOS platform of
          -- FreeBSD's default threading library is the KSE-based M:N libpthread,
-@@ -1140,6 +1165,7 @@ wayOptl _ WayGran       = []
+@@ -1148,6 +1171,7 @@ wayOptl _ WayGran       = []
  wayOptl _ WayNDP        = []
  
  wayOptP :: Platform -> Way -> [String]
@@ -202,7 +429,24 @@ index f206095..137c702 100644
  wayOptP _ WayThreaded = []
  wayOptP _ WayDebug    = []
  wayOptP _ WayDyn      = []
-@@ -2617,6 +2643,7 @@ xFlags = [
+@@ -1278,6 +1302,8 @@ defaultDynFlags mySettings =
+ 
+         pluginModNames          = [],
+         pluginModNameOpts       = [],
++        loadedPlugins           = [],
++        hooks                   = emptyHooks,
+ 
+         outputFile              = Nothing,
+         dynOutputFile           = Nothing,
+@@ -1304,6 +1330,7 @@ defaultDynFlags mySettings =
+         rtsBuildTag             = mkBuildTag (defaultWays mySettings),
+         splitInfo               = Nothing,
+         settings                = mySettings,
++
+         -- ghc -M values
+         depMakefile       = "Makefile",
+         depIncludePkgDeps = False,
+@@ -2648,6 +2675,7 @@ xFlags = [
    ( "InterruptibleFFI",                 Opt_InterruptibleFFI, nop ),
    ( "CApiFFI",                          Opt_CApiFFI, nop ),
    ( "GHCForeignImportPrim",             Opt_GHCForeignImportPrim, nop ),
@@ -210,18 +454,134 @@ index f206095..137c702 100644
    ( "LiberalTypeSynonyms",              Opt_LiberalTypeSynonyms, nop ),
  
    ( "PolymorphicComponents",            Opt_RankNTypes, nop),
-diff --git a/compiler/main/HscTypes.lhs-boot b/compiler/main/HscTypes.lhs-boot
-index e69de29..cf68e73 100644
---- a/compiler/main/HscTypes.lhs-boot
-+++ b/compiler/main/HscTypes.lhs-boot
-@@ -0,0 +1,7 @@
+diff --git a/compiler/main/GhcMake.hs b/compiler/main/GhcMake.hs
+index c43b18a..cf99f1b 100644
+--- a/compiler/main/GhcMake.hs
++++ b/compiler/main/GhcMake.hs
+@@ -36,6 +36,7 @@ import Module
+ import RdrName          ( RdrName )
+ import TcIface          ( typecheckIface )
+ import TcRnMonad        ( initIfaceCheck )
++import SimplCore        ( loadPlugins )
+ 
+ import Bag              ( listToBag )
+ import BasicTypes
+@@ -1407,26 +1408,27 @@ preprocessFile hsc_env src_fn mb_phase Nothing
+ 
+ preprocessFile hsc_env src_fn mb_phase (Just (buf, _time))
+   = do
+-        let dflags = hsc_dflags hsc_env
+-        let local_opts = getOptions dflags buf src_fn
++        let dflags0 = hsc_dflags hsc_env
++        let local_opts = getOptions dflags0 buf src_fn
+ 
+-        (dflags', leftovers, warns)
+-            <- parseDynamicFilePragma dflags local_opts
+-        checkProcessArgsResult dflags leftovers
+-        handleFlagWarnings dflags' warns
++        (dflags1, leftovers, warns)
++            <- parseDynamicFilePragma dflags0 local_opts
++        checkProcessArgsResult dflags1 leftovers  -- was dflags0, is that wrong?
++        handleFlagWarnings dflags1 warns -- was dflags0
++        dflags2 <- loadPlugins hsc_env dflags1
+ 
+         let needs_preprocessing
+                 | Just (Unlit _) <- mb_phase    = True
+                 | Nothing <- mb_phase, Unlit _ <- startPhase src_fn  = True
+                   -- note: local_opts is only required if there's no Unlit phase
+-                | xopt Opt_Cpp dflags'          = True
+-                | gopt Opt_Pp  dflags'          = True
++                | xopt Opt_Cpp dflags2          = True
++                | gopt Opt_Pp  dflags2          = True
+                 | otherwise                     = False
+ 
+         when needs_preprocessing $
+            throwGhcExceptionIO (ProgramError "buffer needs preprocesing; interactive check disabled")
+ 
+-        return (dflags', src_fn, buf)
++        return (dflags2, src_fn, buf)
+ 
+ 
+ -----------------------------------------------------------------------------
+diff --git a/compiler/main/Hooks.lhs b/compiler/main/Hooks.lhs
+index e69de29..206a0bf 100644
+--- a/compiler/main/Hooks.lhs
++++ b/compiler/main/Hooks.lhs
+@@ -0,0 +1,74 @@
++\section[Hooks]{Low level API hooks}
++
 +\begin{code}
++{-# LANGUAGE TypeFamilies, FlexibleContexts, CPP #-}
 +
-+module HscTypes where
++module Hooks ( Hooks
++             , Hook
++             , lookupHook
++             , emptyHooks
++#if STAGE > 1
++             , insertHook
++             , insertWithHook
++             , deleteHook
++#endif
++             ) where
 +
-+data ModIface
++import           Data.Typeable
++
++#if STAGE > 1
++import           Unsafe.Coerce
++import qualified Data.Map as M
++import           GHC.Prim (Any)
++#endif
 +
 +\end{code}
++
++%************************************************************************
++%*                                                                      *
++\subsection{Hooks}
++%*                                                                      *
++%************************************************************************
++
++\begin{code}
++
++-- | Hooks can be used by GHC API clients and plugins to replace parts of
++--   the compiler pipeline. If a Hooks is not set, GHC
++--   uses the default built-in behaviour
++
++type family Hook a :: *
++
++#if STAGE > 1
++insertHook :: Typeable a => a -> Hook a -> Hooks -> Hooks
++insertHook tag hook (Hooks m) =
++  Hooks (M.insert (typeOf tag) (unsafeCoerce hook) m)
++
++insertWithHook :: Typeable a => (Hook a -> Hook a -> Hook a)
++               -> a -> Hook a -> Hooks -> Hooks
++insertWithHook f tag hook h =
++  insertHook tag (maybe hook (f hook) $ lookupHook tag h) h
++
++deleteHook :: Typeable a  => a -> Hooks -> Hooks
++deleteHook tag (Hooks m) = Hooks (M.delete (typeOf tag) m)
++
++lookupHook :: Typeable a => a -> Hooks -> Maybe (Hook a)
++lookupHook tag (Hooks m) =
++  fmap unsafeCoerce (M.lookup (typeOf tag) m)
++
++newtype Hooks = Hooks (M.Map TypeRep Any)
++
++emptyHooks :: Hooks
++emptyHooks = Hooks M.empty
++#else
++lookupHook :: Typeable a => a -> Hooks -> Maybe (Hook a)
++lookupHook _ _ = Nothing
++
++data Hooks = Hooks
++
++emptyHooks :: Hooks
++emptyHooks = Hooks
++#endif
++
++
++\end{code}
++
 diff --git a/compiler/main/Packages.lhs b/compiler/main/Packages.lhs
 index cc8dfe3..6bcaa5f 100644
 --- a/compiler/main/Packages.lhs
@@ -236,20 +596,6 @@ index cc8dfe3..6bcaa5f 100644
  
          matches :: PackageConfig -> String -> Bool
          pc `matches` pid = display (pkgName (sourcePackageId pc)) == pid
-diff --git a/compiler/main/SysTools.lhs b/compiler/main/SysTools.lhs
-index 5926114..60ab0dc 100644
---- a/compiler/main/SysTools.lhs
-+++ b/compiler/main/SysTools.lhs
-@@ -342,7 +342,8 @@ initSysTools mbMinusB
-                     sOpt_windres = [],
-                     sOpt_lo      = [],
-                     sOpt_lc      = [],
--                    sPlatformConstants = platformConstants
-+                    sPlatformConstants = platformConstants,
-+                    sOverridePrimIface = Nothing
-              }
- \end{code}
- 
 diff --git a/compiler/nativeGen/AsmCodeGen.lhs b/compiler/nativeGen/AsmCodeGen.lhs
 index a999f8f..42eeb4f 100644
 --- a/compiler/nativeGen/AsmCodeGen.lhs
@@ -369,10 +715,10 @@ index f380534..378db10 100644
  
  
 diff --git a/compiler/parser/Lexer.x b/compiler/parser/Lexer.x
-index 6871210..7c39916 100644
+index c97d38f..9054bf1 100644
 --- a/compiler/parser/Lexer.x
 +++ b/compiler/parser/Lexer.x
-@@ -466,6 +466,7 @@ data Token
+@@ -470,6 +470,7 @@ data Token
    | ITccallconv
    | ITcapiconv
    | ITprimcallconv
@@ -380,7 +726,7 @@ index 6871210..7c39916 100644
    | ITmdo
    | ITfamily
    | ITgroup
-@@ -659,6 +660,7 @@ reservedWordsFM = listToUFM $
+@@ -666,6 +667,7 @@ reservedWordsFM = listToUFM $
           ( "ccall",          ITccallconv,     bit ffiBit),
           ( "capi",           ITcapiconv,      bit cApiFfiBit),
           ( "prim",           ITprimcallconv,  bit ffiBit),
@@ -389,10 +735,10 @@ index 6871210..7c39916 100644
           ( "rec",            ITrec,           bit arrowsBit .|. 
                                                bit recursiveDoBit),
 diff --git a/compiler/parser/Parser.y.pp b/compiler/parser/Parser.y.pp
-index 34c0bc6..7eb9f13 100644
+index b6f0c88..e1f826e 100644
 --- a/compiler/parser/Parser.y.pp
 +++ b/compiler/parser/Parser.y.pp
-@@ -260,6 +260,7 @@ incorrect.
+@@ -269,6 +269,7 @@ incorrect.
   'ccall'        { L _ ITccallconv }
   'capi'         { L _ ITcapiconv }
   'prim'         { L _ ITprimcallconv }
@@ -400,7 +746,7 @@ index 34c0bc6..7eb9f13 100644
   'proc'         { L _ ITproc }          -- for arrow notation extension
   'rec'          { L _ ITrec }           -- for arrow notation extension
   'group'    { L _ ITgroup }     -- for list transform extension
-@@ -978,6 +979,7 @@ callconv :: { CCallConv }
+@@ -995,6 +996,7 @@ callconv :: { CCallConv }
            | 'ccall'                     { CCallConv   }
            | 'capi'                      { CApiConv    }
            | 'prim'                      { PrimCallConv}
@@ -408,7 +754,7 @@ index 34c0bc6..7eb9f13 100644
  
  safety :: { Safety }
          : 'unsafe'                      { PlayRisky }
-@@ -2044,6 +2046,7 @@ special_id
+@@ -2067,6 +2069,7 @@ special_id
          | 'ccall'               { L1 (fsLit "ccall") }
          | 'capi'                { L1 (fsLit "capi") }
          | 'prim'                { L1 (fsLit "prim") }
@@ -417,10 +763,10 @@ index 34c0bc6..7eb9f13 100644
  
  special_sym :: { Located FastString }
 diff --git a/compiler/parser/RdrHsSyn.lhs b/compiler/parser/RdrHsSyn.lhs
-index 3695dae..9b50743 100644
+index 1e61cf9..93ebf00 100644
 --- a/compiler/parser/RdrHsSyn.lhs
 +++ b/compiler/parser/RdrHsSyn.lhs
-@@ -977,7 +977,10 @@ mkImport cconv safety (L loc entity, v, ty)
+@@ -973,7 +973,10 @@ mkImport cconv safety (L loc entity, v, ty)
    let funcTarget = CFunction (StaticTarget entity Nothing True)
        importSpec = CImport PrimCallConv safety Nothing funcTarget
    return (ForD (ForeignImport v ty noForeignImportCoercionYet importSpec))
@@ -488,7 +834,7 @@ index b53ae7c..5072908 100644
  instance Binary CType where
      put_ bh (CType mh fs) = do put_ bh mh
 diff --git a/compiler/prelude/PrelNames.lhs b/compiler/prelude/PrelNames.lhs
-index 09835fb..ee64982 100644
+index 8452092..f6b5ef3 100644
 --- a/compiler/prelude/PrelNames.lhs
 +++ b/compiler/prelude/PrelNames.lhs
 @@ -250,6 +250,7 @@ basicKnownKeyNames
@@ -526,7 +872,7 @@ index 09835fb..ee64982 100644
  mkThisGhcModule :: FastString -> Module
  mkThisGhcModule m = mkModule thisGhcPackageId (mkModuleNameFS m)
  
-@@ -1130,7 +1135,9 @@ typeNatExpTyFamName = tcQual  gHC_TYPELITS (fsLit "^")   typeNatExpTyFamNameKey
+@@ -1131,7 +1136,9 @@ typeNatExpTyFamName = tcQual  gHC_TYPELITS (fsLit "^")   typeNatExpTyFamNameKey
  ipClassName :: Name
  ipClassName         = clsQual gHC_IP (fsLit "IP")      ipClassNameKey
  
@@ -537,7 +883,7 @@ index 09835fb..ee64982 100644
  
  -- dotnet interop
  objectTyConName :: Name
-@@ -1359,6 +1366,9 @@ ptrTyConKey                             = mkPreludeTyConUnique 74
+@@ -1362,6 +1369,9 @@ ptrTyConKey                             = mkPreludeTyConUnique 74
  funPtrTyConKey                          = mkPreludeTyConUnique 75
  tVarPrimTyConKey                        = mkPreludeTyConUnique 76
  
@@ -547,11 +893,233 @@ index 09835fb..ee64982 100644
  -- Parallel array type constructor
  parrTyConKey :: Unique
  parrTyConKey                            = mkPreludeTyConUnique 82
+diff --git a/compiler/simplCore/CoreMonad.lhs b/compiler/simplCore/CoreMonad.lhs
+index 31547e1..5c57fef 100644
+--- a/compiler/simplCore/CoreMonad.lhs
++++ b/compiler/simplCore/CoreMonad.lhs
+@@ -11,7 +11,7 @@
+ --     http://hackage.haskell.org/trac/ghc/wiki/Commentary/CodingStyle#TabsvsSpaces
+ -- for details
+ 
+-{-# LANGUAGE UndecidableInstances #-}
++{-# LANGUAGE UndecidableInstances, TypeFamilies #-}
+ 
+ module CoreMonad (
+     -- * Configuration of the core-to-core passes
+@@ -23,6 +23,7 @@ module CoreMonad (
+     -- * Plugins
+     PluginPass, Plugin(..), CommandLineOption, 
+     defaultPlugin, bindsOnlyPass,
++    InstallCoreToDosHook(..), addCoreToDosHook,
+ 
+     -- * Counting
+     SimplCount, doSimplTick, doFreeSimplTick, simplCountN,
+@@ -94,6 +95,7 @@ import SrcLoc
+ import UniqSupply
+ import UniqFM       ( UniqFM, mapUFM, filterUFM )
+ import MonadUtils
++import Hooks
+ 
+ import Util ( split )
+ import ListSetOps	( runs )
+@@ -441,21 +443,39 @@ type CommandLineOption = String
+ -- compatability when we add fields to this.
+ --
+ -- Nonetheless, this API is preliminary and highly likely to change in the future.
+-data Plugin = Plugin { 
+-        installCoreToDos :: [CommandLineOption] -> [CoreToDo] -> CoreM [CoreToDo]
++data Plugin = Plugin
++     { installCoreToDos :: [CommandLineOption] -> [CoreToDo] -> CoreM [CoreToDo]
+                 -- ^ Modify the Core pipeline that will be used for compilation. 
+                 -- This is called as the Core pipeline is built for every module
+                 --  being compiled, and plugins get the opportunity to modify 
+                 -- the pipeline in a nondeterministic order.
++     , initPlugin :: [CommandLineOption] -> Maybe ModuleName -> Plugin -> DynFlags -> IO DynFlags
+      }
+ 
+--- | Default plugin: does nothing at all! For compatability reasons you should base all your
++-- | Default plugin: does nothing at all! For compatibility reasons you should base all your
+ -- plugin definitions on this default value.
+ defaultPlugin :: Plugin
+-defaultPlugin = Plugin {
+-        installCoreToDos = const return
++defaultPlugin = Plugin
++    { installCoreToDos = const return
++    , initPlugin = \_ mn p df -> return (addCoreToDosHook mn (installCoreToDos p) df)
+     }
+ 
++addCoreToDosHook :: Maybe ModuleName
++                 -> ([CommandLineOption] -> [CoreToDo] -> CoreM [CoreToDo])
++                 -> DynFlags
++                 -> DynFlags
++addCoreToDosHook mn h dflags
++#if STAGE > 1
++  = dflags { hooks = insertWithHook (++) InstallCoreToDosHook [(mn,h)] (hooks dflags) }
++#else
++  = dflags
++#endif
++
++data InstallCoreToDosHook = InstallCoreToDosHook deriving Typeable
++type instance Hook InstallCoreToDosHook =
++   [(Maybe ModuleName, [CommandLineOption] -> [CoreToDo] -> CoreM [CoreToDo])]
++
++
+ -- | A description of the plugin pass itself
+ type PluginPass = ModGuts -> CoreM ModGuts
+ 
+diff --git a/compiler/simplCore/SimplCore.lhs b/compiler/simplCore/SimplCore.lhs
+index 62e167a..7a55bbd 100644
+--- a/compiler/simplCore/SimplCore.lhs
++++ b/compiler/simplCore/SimplCore.lhs
+@@ -4,7 +4,7 @@
+ \section[SimplCore]{Driver for simplifying @Core@ programs}
+ 
+ \begin{code}
+-module SimplCore ( core2core, simplifyExpr ) where
++module SimplCore ( core2core, simplifyExpr, loadPlugins ) where
+ 
+ #include "HsVersions.h"
+ 
+@@ -47,14 +47,15 @@ import Maybes
+ import UniqSupply       ( UniqSupply, mkSplitUniqSupply, splitUniqSupply )
+ import Outputable
+ import Control.Monad
++import Data.List        ( (\\) )
+ 
+ #ifdef GHCI
++import Module           ( ModuleName )
+ import Type             ( mkTyConTy )
+ import RdrName          ( mkRdrQual )
+ import OccName          ( mkVarOcc )
+ import PrelNames        ( pluginTyConName )
+ import DynamicLoading   ( forceLoadTyCon, lookupRdrNameInModule, getValueSafely )
+-import Module           ( ModuleName )
+ import Panic
+ #endif
+ \end{code}
+@@ -302,30 +303,42 @@ Loading plugins
+ 
+ \begin{code}
+ addPluginPasses :: DynFlags -> [CoreToDo] -> CoreM [CoreToDo]
+-#ifndef GHCI
+-addPluginPasses _ builtin_passes = return builtin_passes
+-#else
+ addPluginPasses dflags builtin_passes
+-  = do { hsc_env <- getHscEnv
+-       ; named_plugins <- liftIO (loadPlugins hsc_env)
+-       ; foldM query_plug builtin_passes named_plugins }
++  = do { install <- getHooked InstallCoreToDosHook []
++       ; foldM query_plug builtin_passes install }
+   where
+-    query_plug todos (mod_nm, plug)
+-       = installCoreToDos plug options todos
++    query_plug todos (mb_mod_nm, plug)
++       = plug options todos
+        where
+          options = [ option | (opt_mod_nm, option) <- pluginModNameOpts dflags
+-                            , opt_mod_nm == mod_nm ]
+-
+-loadPlugins :: HscEnv -> IO [(ModuleName, Plugin)]
+-loadPlugins hsc_env
+-  = do { let to_load = pluginModNames (hsc_dflags hsc_env)
+-       ; plugins <- mapM (loadPlugin hsc_env) to_load
+-       ; return $ to_load `zip` plugins }
++                            , Just opt_mod_nm == mb_mod_nm ]
+ 
+-loadPlugin :: HscEnv -> ModuleName -> IO Plugin
+-loadPlugin hsc_env mod_name
++loadPlugins :: HscEnv -> DynFlags -> IO DynFlags
++loadPlugins hsc_env dflags
++#ifndef GHCI
++  = return dflags
++#else
++  = do { let to_load = pluginModNames dflags \\ loadedPlugins dflags
++       ; plugins <- mapM (loadPlugin hsc_env dflags) to_load
++       ; dflags0 <- foldM (\df (mn,p) -> initializePlugin df mn p) dflags
++             $ zip (map Just to_load) plugins
++       ; return dflags0 { loadedPlugins = to_load ++ loadedPlugins dflags } }
++
++initializePlugin :: DynFlags
++                 -> Maybe ModuleName
++                 -> Plugin
++                 -> IO DynFlags
++initializePlugin dflags mb_mod_nm plugin = do
++  dflags0 <- initPlugin plugin options mb_mod_nm plugin dflags
++  return $ dflags0 { loadedPlugins = maybeToList mb_mod_nm ++ loadedPlugins dflags0 }
++    where
++      options = [ option | (opt_mod_nm, option) <- pluginModNameOpts dflags
++                         , Just opt_mod_nm == mb_mod_nm ]
++
++loadPlugin :: HscEnv -> DynFlags -> ModuleName -> IO Plugin
++loadPlugin hsc_env dflags mod_name
+   = do { let plugin_rdr_name = mkRdrQual mod_name (mkVarOcc "plugin")
+-             dflags = hsc_dflags hsc_env
++--             dflags = hsc_dflags hsc_env
+        ; mb_name <- lookupRdrNameInModule hsc_env mod_name plugin_rdr_name
+        ; case mb_name of {
+             Nothing ->
 diff --git a/compiler/typecheck/TcForeign.lhs b/compiler/typecheck/TcForeign.lhs
-index 630157e..8a07ee6 100644
+index 9914f94..495b751 100644
 --- a/compiler/typecheck/TcForeign.lhs
 +++ b/compiler/typecheck/TcForeign.lhs
-@@ -267,7 +267,7 @@ tcCheckFIType sig_ty arg_tys res_ty idecl@(CImport cconv safety mh (CFunction ta
+@@ -12,10 +12,16 @@ is restricted to what the outside world understands (read C), and this
+ module checks to see if a foreign declaration has got a legal type.
+ 
+ \begin{code}
++{-# LANGUAGE TypeFamilies #-}
++
+ module TcForeign
+         (
+           tcForeignImports
++        , tcForeignImports'
++        , TcForeignImportsHook (..)
+         , tcForeignExports
++        , tcForeignExports'
++        , TcForeignExportsHook (..)
+         ) where
+ 
+ #include "HsVersions.h"
+@@ -29,7 +35,7 @@ import TcEnv
+ 
+ import FamInst
+ import FamInstEnv
+-import Coercion      
++import Coercion
+ import Type
+ import TypeRep
+ import ForeignCall
+@@ -47,8 +53,10 @@ import Platform
+ import SrcLoc
+ import Bag
+ import FastString
++import Hooks
+ 
+ import Control.Monad
++import Data.Typeable (Typeable)
+ \end{code}
+ 
+ \begin{code}
+@@ -191,10 +199,18 @@ to the module's usages.
+ %************************************************************************
+ 
+ \begin{code}
++data TcForeignImportsHook = TcForeignImportsHook deriving Typeable
++type instance Hook TcForeignImportsHook = [LForeignDecl Name]
++        -> TcM ([Id], [LForeignDecl Id], Bag GlobalRdrElt)
++
+ tcForeignImports :: [LForeignDecl Name] -> TcM ([Id], [LForeignDecl Id], Bag GlobalRdrElt)
++tcForeignImports decls
++  = getHooked TcForeignImportsHook tcForeignImports' >>= ($decls)
++
++tcForeignImports' :: [LForeignDecl Name] -> TcM ([Id], [LForeignDecl Id], Bag GlobalRdrElt)
+ -- For the (Bag GlobalRdrElt) result, 
+ -- see Note [Newtype constructor usage in foreign declarations]
+-tcForeignImports decls
++tcForeignImports' decls
+   = do { (ids, decls, gres) <- mapAndUnzip3M tcFImport $
+                                filter isForeignImport decls
+        ; return (ids, decls, unionManyBags gres) }
+@@ -282,7 +298,7 @@ tcCheckFIType sig_ty arg_tys res_ty idecl@(CImport cconv safety mh (CFunction ta
    | otherwise = do              -- Normal foreign import
        checkCg checkCOrAsmOrLlvmOrInterp
        cconv' <- checkCConv cconv
@@ -560,7 +1128,29 @@ index 630157e..8a07ee6 100644
        dflags <- getDynFlags
        checkForeignArgs (isFFIArgumentTy dflags safety) arg_tys
        checkForeignRes nonIOok checkSafe (isFFIImportResultTy dflags) res_ty
-@@ -347,8 +347,9 @@ tcFExport d = pprPanic "tcFExport" (ppr d)
+@@ -321,11 +337,20 @@ checkMissingAmpersand dflags arg_tys res_ty
+ %************************************************************************
+ 
+ \begin{code}
++data TcForeignExportsHook = TcForeignExportsHook deriving Typeable
++type instance Hook TcForeignExportsHook = [LForeignDecl Name] 
++                 -> TcM (LHsBinds TcId, [LForeignDecl TcId], Bag GlobalRdrElt)
++
+ tcForeignExports :: [LForeignDecl Name]
+                  -> TcM (LHsBinds TcId, [LForeignDecl TcId], Bag GlobalRdrElt)
++tcForeignExports decls =
++  getHooked TcForeignExportsHook tcForeignExports' >>= ($decls)
++
++tcForeignExports' :: [LForeignDecl Name]
++                 -> TcM (LHsBinds TcId, [LForeignDecl TcId], Bag GlobalRdrElt)
+ -- For the (Bag GlobalRdrElt) result, 
+ -- see Note [Newtype constructor usage in foreign declarations]
+-tcForeignExports decls
++tcForeignExports' decls
+   = foldlM combine (emptyLHsBinds, [], emptyBag) (filter isForeignExport decls)
+   where
+    combine (binds, fs, gres1) (L loc fe) = do
+@@ -362,8 +387,9 @@ tcFExport d = pprPanic "tcFExport" (ppr d)
  \begin{code}
  tcCheckFEType :: Type -> ForeignExport -> TcM ForeignExport
  tcCheckFEType sig_ty (CExport (CExportStatic str cconv)) = do
@@ -572,7 +1162,7 @@ index 630157e..8a07ee6 100644
      cconv' <- checkCConv cconv
      checkForeignArgs isFFIExternalTy arg_tys
      checkForeignRes nonIOok noCheckSafe isFFIExportResultTy res_ty
-@@ -466,6 +467,11 @@ checkCConv StdCallConv  = do dflags <- getDynFlags
+@@ -481,6 +507,11 @@ checkCConv StdCallConv  = do dflags <- getDynFlags
                                           return CCallConv
  checkCConv PrimCallConv = do addErrTc (text "The `prim' calling convention can only be used with `foreign import'")
                               return PrimCallConv
@@ -585,10 +1175,10 @@ index 630157e..8a07ee6 100644
  
  Warnings
 diff --git a/compiler/typecheck/TcType.lhs b/compiler/typecheck/TcType.lhs
-index a3d3156..147ac11 100644
+index 8a8de41..de2f7e1 100644
 --- a/compiler/typecheck/TcType.lhs
 +++ b/compiler/typecheck/TcType.lhs
-@@ -1522,8 +1522,9 @@ marshalableTyCon dflags tc
+@@ -1523,8 +1523,9 @@ marshalableTyCon dflags tc
        && isUnLiftedTyCon tc
        && not (isUnboxedTupleTyCon tc)
        && case tyConPrimRep tc of	-- Note [Marshalling VoidRep]
@@ -612,16 +1202,3 @@ index 617e691..f69bb4c 100644
          deriving (Read, Show, Eq)
  
  isARM :: Arch -> Bool
-diff --git a/mk/config.mk.in b/mk/config.mk.in
-index 5ef1f5c..42fd377 100644
---- a/mk/config.mk.in
-+++ b/mk/config.mk.in
-@@ -139,7 +139,7 @@ else ifeq "$(TargetOS_CPP)" "freebsd"
- # rtld(1)), so disable it by default (see #7819).
- DYNAMIC_GHC_PROGRAMS = NO
- else
--DYNAMIC_GHC_PROGRAMS = YES
-+DYNAMIC_GHC_PROGRAMS = NO
- endif
- 
- # Build a compiler that will build *unregisterised* libraries and
